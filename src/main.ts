@@ -46,7 +46,7 @@ let state: AppState = {
 function render() {
   const app = document.querySelector<HTMLDivElement>('#app')!
   if (!loaded) {
-    app.innerHTML = `<div class="quiz-container"><p style="color:var(--text-muted)">Loading questions...</p></div>`
+    app.innerHTML = `<div class="quiz-container question-container"><p style="color:var(--text-muted)">Loading questions...</p></div>`
     return
   }
 
@@ -88,7 +88,7 @@ function renderSectionSelection(app: HTMLDivElement) {
     .join('')
 
   app.innerHTML = `
-    <div class="quiz-container">
+    <div class="quiz-container selection-container">
       <div class="selection-header">
         <p class="section-label">CompTIA Security+ SY0-701</p>
         <h1>Choose Quiz Sections</h1>
@@ -169,7 +169,7 @@ function renderFinished(app: HTMLDivElement) {
   const total = questions.length
   const pct = Math.round((state.score / total) * 100)
   app.innerHTML = `
-    <div class="quiz-container finished">
+    <div class="quiz-container question-container finished">
       <h1>Quiz Complete!</h1>
       <p class="completed-section">${state.selectedSection}</p>
       <div class="score-circle ${pct >= 70 ? 'pass' : 'fail'}">${state.score}/${total}</div>
@@ -234,7 +234,7 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
   const submitDisabled = state.selectedIndex === null || state.answered ? 'disabled' : ''
 
   app.innerHTML = `
-    <div class="quiz-container">
+    <div class="quiz-container question-container">
       <div class="quiz-header">
         <div class="quiz-status">
           <span class="progress">${progress}</span>
