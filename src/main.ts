@@ -291,7 +291,7 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
 }
 
 async function init() {
-  const res = await fetch('/questions.json')
+  const res = await fetch(`${import.meta.env.BASE_URL}questions.json`)
   const quizData = await res.json() as QuizData
   sections = quizData.sections
   loaded = true
