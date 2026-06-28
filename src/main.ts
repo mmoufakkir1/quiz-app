@@ -5,9 +5,10 @@ type Question = {
   scenario?: string
   question: string
   options: string[]
-  answer: string
-  domain?: string
+  answer: string | string[]
   explanation?: string
+  topic: string
+  lesson?: string
   section: string
 }
 
@@ -20,12 +21,38 @@ type QuizData = {
   sections: QuestionSection[]
 }
 
+type SectionGroup = {
+  name: string
+  sectionNames: string[]
+}
+
+const SECTION_GROUPS: SectionGroup[] = [
+  {
+    name: 'CompTIA Exam Domains',
+    sectionNames: [
+      '1.0 General Security Concepts',
+      '2.0 Threats, Vulnerabilities, and Mitigations',
+      '3.0 Security Architecture',
+      '4.0 Security Operations',
+      '5.0 Security Program Management and Oversight',
+    ],
+  },
+]
+
+const FALLBACK_SECTION_TOPICS: Record<string, string> = {
+  '1.0 General Security Concepts': '1.0 General Security Concepts',
+  '2.0 Threats, Vulnerabilities, and Mitigations': '2.0 Threats, Vulnerabilities, and Mitigations',
+  '3.0 Security Architecture': '3.0 Security Architecture',
+  '4.0 Security Operations': '4.0 Security Operations',
+  '5.0 Security Program Management and Oversight': '5.0 Security Program Management and Oversight',
+}
+
 function getExplanation(q: Question): string {
   const existing = q.explanation?.trim()
   if (existing) return existing
 
-  const section = q.section.toLowerCase()
-  const answer = q.answer.trim()
+  const section = `${q.section} ${q.lesson ?? ''}`.toLowerCase()
+  const answer = getCorrectAnswers(q).join(', ')
 
   if (section.includes('ports and protocols')) {
     return `${answer} is the standard port or port pair for the service described in the scenario. The other choices belong to different services.`
@@ -216,7 +243,7 @@ type AppState = {
   selectedSection: string | null
   currentIndex: number
   responses: {
-    selectedIndex: number | null
+    selectedIndexes: number[]
     answered: boolean
   }[]
   score: number
@@ -256,23 +283,43 @@ function renderSectionSelection(app: HTMLDivElement) {
   const selectedQuestionCount = sections
     .filter((section) => pendingSectionNames.has(section.name))
     .reduce((total, section) => total + section.questions.length, 0)
-  const sectionButtons = sections
-    .map(
-      (section) => `
-        <button
-          class="section-card ${pendingSectionNames.has(section.name) ? 'selected' : ''}"
-          data-section="${section.name}"
-          aria-pressed="${pendingSectionNames.has(section.name)}"
-          type="button"
-        >
-          <span class="section-card-details">
-            <span class="section-checkbox" aria-hidden="true"></span>
-            <span class="section-card-name">${section.name}</span>
-          </span>
-          <span class="section-card-count">${section.questions.length} questions</span>
-        </button>
-      `,
-    )
+  const sectionGroups = getOrganizedSectionGroups()
+  const allSectionsButton = `
+    <button
+      class="section-card all-sections ${allSelected ? 'selected' : ''}"
+      data-section="all"
+      aria-pressed="${allSelected}"
+      type="button"
+    >
+      <span class="section-card-details">
+        <span class="section-checkbox" aria-hidden="true"></span>
+        <span class="section-card-name">All Sections</span>
+      </span>
+      <span class="section-card-count">${totalQuestions} questions</span>
+    </button>
+  `
+  const sectionGroupsHtml = sectionGroups
+    .map((group) => {
+      const groupQuestionCount = group.sections.reduce(
+        (total, section) => total + section.questions.length,
+        0,
+      )
+      const sectionButtons = group.sections
+        .map((section) => renderSectionCard(section))
+        .join('')
+
+      return `
+        <section class="section-group" aria-labelledby="${escapeHtml(group.id)}">
+          <div class="section-group-header">
+            <h2 id="${escapeHtml(group.id)}">${escapeHtml(group.name)}</h2>
+            <span>${group.sections.length} sections · ${groupQuestionCount} questions</span>
+          </div>
+          <div class="section-grid">
+            ${sectionButtons}
+          </div>
+        </section>
+      `
+    })
     .join('')
 
   app.innerHTML = `
@@ -280,22 +327,13 @@ function renderSectionSelection(app: HTMLDivElement) {
       <div class="selection-header">
         <p class="section-label">CompTIA Security+ SY0-701</p>
         <h1>Choose Quiz Sections</h1>
-        <p>Select one or more topics, then start your quiz.</p>
+        <p>Pick one or more official exam domains before starting.</p>
       </div>
-      <div class="section-grid">
-        ${sectionButtons}
-        <button
-          class="section-card all-sections ${allSelected ? 'selected' : ''}"
-          data-section="all"
-          aria-pressed="${allSelected}"
-          type="button"
-        >
-          <span class="section-card-details">
-            <span class="section-checkbox" aria-hidden="true"></span>
-            <span class="section-card-name">All Sections</span>
-          </span>
-          <span class="section-card-count">${totalQuestions} questions</span>
-        </button>
+      <div class="section-grid all-section-grid">
+        ${allSectionsButton}
+      </div>
+      <div class="section-groups">
+        ${sectionGroupsHtml}
       </div>
       <div class="selection-actions">
         <span class="selection-summary">
@@ -329,15 +367,64 @@ function renderSectionSelection(app: HTMLDivElement) {
   })
 }
 
+function renderSectionCard(section: QuestionSection): string {
+  return `
+    <button
+      class="section-card ${pendingSectionNames.has(section.name) ? 'selected' : ''}"
+      data-section="${escapeHtml(section.name)}"
+      aria-pressed="${pendingSectionNames.has(section.name)}"
+      type="button"
+    >
+      <span class="section-card-details">
+        <span class="section-checkbox" aria-hidden="true"></span>
+        <span class="section-card-name">${escapeHtml(section.name)}</span>
+      </span>
+      <span class="section-card-count">${section.questions.length} questions</span>
+    </button>
+  `
+}
+
+function getOrganizedSectionGroups() {
+  const sectionsByName = new Map(sections.map((section) => [section.name, section]))
+  const assignedSectionNames = new Set<string>()
+  const organizedGroups = SECTION_GROUPS
+    .map(
+      (group) => ({
+        id: `section-group-${group.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+        name: group.name,
+        sections: group.sectionNames.flatMap((sectionName) => {
+          const section = sectionsByName.get(sectionName)
+          if (!section) return []
+          assignedSectionNames.add(sectionName)
+          return [section]
+        }),
+      }),
+    )
+    .filter((group) => group.sections.length > 0)
+
+  const uncategorizedSections = sections.filter((section) => !assignedSectionNames.has(section.name))
+  if (uncategorizedSections.length === 0) return organizedGroups
+
+  return [
+    ...organizedGroups,
+    {
+      id: 'section-group-other',
+      name: 'Other',
+      sections: uncategorizedSections,
+    },
+  ]
+}
+
 function startQuiz(sectionNames: string[]) {
   const selectedSections = sections.filter((section) => sectionNames.includes(section.name))
 
   questions = selectedSections.flatMap((section) =>
     section.questions.map((question) => ({
       ...question,
+      topic: question.topic || FALLBACK_SECTION_TOPICS[section.name] || '1.0 General Security Concepts',
       section: section.name,
     })),
-  )
+  ).sort(compareQuestionsForStudy)
 
   state = {
     selectedSection:
@@ -346,13 +433,22 @@ function startQuiz(sectionNames: string[]) {
         : selectedSections.map((section) => section.name).join(', '),
     currentIndex: 0,
     responses: questions.map(() => ({
-      selectedIndex: null,
+      selectedIndexes: [],
       answered: false,
     })),
     score: 0,
     finished: false,
   }
   render()
+}
+
+function compareQuestionsForStudy(a: Question, b: Question): number {
+  return (
+    a.topic.localeCompare(b.topic) ||
+    (a.lesson ?? '').localeCompare(b.lesson ?? '') ||
+    a.section.localeCompare(b.section) ||
+    a.id - b.id
+  )
 }
 
 function renderFinished(app: HTMLDivElement) {
@@ -378,7 +474,7 @@ function renderFinished(app: HTMLDivElement) {
       ...state,
       currentIndex: 0,
       responses: questions.map(() => ({
-        selectedIndex: null,
+        selectedIndexes: [],
         answered: false,
       })),
       score: 0,
@@ -395,19 +491,22 @@ function renderFinished(app: HTMLDivElement) {
 
 function renderQuestion(app: HTMLDivElement, q: Question) {
   const response = state.responses[state.currentIndex] ?? {
-    selectedIndex: null,
+    selectedIndexes: [],
     answered: false,
   }
   const progress = `${state.currentIndex + 1} / ${questions.length}`
-  const correctIndex = q.options.indexOf(q.answer)
-  const isCorrect = response.answered && response.selectedIndex === correctIndex
+  const correctAnswers = getCorrectAnswers(q)
+  const correctIndexes = correctAnswers.map((answer) => q.options.indexOf(answer))
+  const isMultiAnswer = correctAnswers.length > 1
+  const isCorrect = response.answered && indexesMatch(response.selectedIndexes, correctIndexes)
 
   let feedbackHtml = ''
   if (response.answered) {
     const explanation = getExplanation(q)
+    const answerText = correctAnswers.map(escapeHtml).join(', ')
     feedbackHtml = `
       <div class="feedback ${isCorrect ? 'correct' : 'wrong'}">
-        ${isCorrect ? 'Correct!' : `Wrong. The correct answer is: <strong>${escapeHtml(q.answer)}</strong>`}
+        ${isCorrect ? 'Correct!' : `Wrong. The correct answer is: <strong>${answerText}</strong>`}
         <p class="answer-explanation">${escapeHtml(explanation)}</p>
       </div>
     `
@@ -417,10 +516,10 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
     .map((opt, i) => {
       let cls = 'option-btn'
       if (response.answered) {
-        if (i === correctIndex) cls += ' correct'
-        else if (i === response.selectedIndex && i !== correctIndex) cls += ' wrong'
+        if (correctIndexes.includes(i)) cls += ' correct'
+        else if (response.selectedIndexes.includes(i)) cls += ' wrong'
         else cls += ' disabled'
-      } else if (i === response.selectedIndex) {
+      } else if (response.selectedIndexes.includes(i)) {
         cls += ' selected'
       }
       const disabled = response.answered ? 'disabled' : ''
@@ -428,8 +527,9 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
     })
     .join('')
 
-  const submitDisabled = response.selectedIndex === null || response.answered ? 'disabled' : ''
+  const submitDisabled = response.selectedIndexes.length === 0 || response.answered ? 'disabled' : ''
   const showBackButton = state.currentIndex > 0
+  const supportingLabel = q.lesson && q.lesson !== q.topic ? q.lesson : ''
 
   app.innerHTML = `
     <div class="quiz-container question-container">
@@ -440,10 +540,11 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
         </div>
         <button class="header-section-btn" type="button">Choose Section</button>
       </div>
-      <p class="section-label">${escapeHtml(q.section)}</p>
-      ${q.domain ? `<p class="domain-label">${escapeHtml(q.domain)}</p>` : ''}
+      <p class="section-label">${escapeHtml(q.topic)}</p>
+      ${supportingLabel ? `<p class="lesson-label">${escapeHtml(supportingLabel)}</p>` : ''}
       ${q.scenario ? `<p class="question-scenario">${escapeHtml(q.scenario)}</p>` : ''}
       <h2 class="question-text">${escapeHtml(q.question)}</h2>
+      ${isMultiAnswer ? '<p class="multi-answer-hint">Select all correct answers.</p>' : ''}
       <div class="options">${optionsHtml}</div>
       ${feedbackHtml}
       <div class="actions">
@@ -472,14 +573,17 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
   if (!response.answered) {
     app.querySelectorAll('.option-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
-        response.selectedIndex = Number((btn as HTMLButtonElement).dataset.index)
+        const optionIndex = Number((btn as HTMLButtonElement).dataset.index)
+        response.selectedIndexes = isMultiAnswer
+          ? toggleSelectedIndex(response.selectedIndexes, optionIndex)
+          : [optionIndex]
         render()
       })
     })
     app.querySelector('.submit-btn')?.addEventListener('click', () => {
-      if (response.selectedIndex === null || response.answered) return
+      if (response.selectedIndexes.length === 0 || response.answered) return
       response.answered = true
-      if (response.selectedIndex === correctIndex) state.score++
+      if (indexesMatch(response.selectedIndexes, correctIndexes)) state.score++
       render()
     })
   } else {
@@ -492,6 +596,22 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
       render()
     })
   }
+}
+
+function getCorrectAnswers(q: Question): string[] {
+  return Array.isArray(q.answer) ? q.answer : [q.answer]
+}
+
+function toggleSelectedIndex(selectedIndexes: number[], optionIndex: number): number[] {
+  return selectedIndexes.includes(optionIndex)
+    ? selectedIndexes.filter((selectedIndex) => selectedIndex !== optionIndex)
+    : [...selectedIndexes, optionIndex]
+}
+
+function indexesMatch(selectedIndexes: number[], correctIndexes: number[]): boolean {
+  const validCorrectIndexes = correctIndexes.filter((index) => index >= 0)
+  if (selectedIndexes.length !== validCorrectIndexes.length) return false
+  return selectedIndexes.every((selectedIndex) => validCorrectIndexes.includes(selectedIndex))
 }
 
 async function init() {

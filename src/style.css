@@ -139,6 +139,41 @@ select {
   gap: 12px;
 }
 
+.all-section-grid {
+  margin-bottom: 24px;
+}
+
+.section-groups {
+  display: grid;
+  gap: 24px;
+}
+
+.section-group {
+  min-width: 0;
+}
+
+.section-group-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.section-group-header h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.section-group-header span {
+  flex: 0 0 auto;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .section-card {
   display: flex;
   align-items: center;
@@ -220,7 +255,7 @@ select {
 }
 
 .section-card.all-sections {
-  margin-top: 4px;
+  margin-top: 0;
 }
 
 .section-card-name {
@@ -334,7 +369,7 @@ select {
   animation: item-enter 180ms ease-out both;
 }
 
-.domain-label {
+.lesson-label {
   margin: 0 0 8px;
   color: var(--text-muted);
   font-size: 13px;
@@ -359,6 +394,14 @@ select {
   line-height: 1.4;
   overflow-wrap: anywhere;
   animation: item-enter 240ms ease-out both;
+}
+
+.multi-answer-hint {
+  margin: -12px 0 16px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .options {
@@ -623,6 +666,16 @@ select {
 
   .section-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section-group-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .section-group-header span {
+    white-space: normal;
   }
 }
 
