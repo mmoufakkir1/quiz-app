@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "validate:flashcards": "node scripts/validate-flashcards.mjs",
     "preview": "vite preview"
   },
   "devDependencies": {

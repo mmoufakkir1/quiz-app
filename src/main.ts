@@ -2,6 +2,7 @@ import './style.css'
 
 type Question = {
   id: number
+  type?: 'single' | 'multiple'
   scenario?: string
   question: string
   options: string[]
@@ -21,9 +22,22 @@ type QuizData = {
   sections: QuestionSection[]
 }
 
+type FlashcardData = {
+  flashcards: Flashcard[]
+}
+
 type SectionGroup = {
   name: string
   sectionNames: string[]
+}
+
+type Flashcard = {
+  term: string
+  definition: string
+  domains: string[]
+  topics?: string[]
+  aliases?: string[]
+  sourceQuestionIds?: number[]
 }
 
 const SECTION_GROUPS: SectionGroup[] = [
@@ -236,13 +250,16 @@ function escapeHtml(value: string): string {
 
 let sections: QuestionSection[] = []
 let questions: Question[] = []
+let flashcards: Flashcard[] = []
+let allFlashcards: Flashcard[] = []
 let loaded = false
 let pendingSectionNames = new Set<string>()
 
 type AppState = {
   selectedSection: string | null
-  mode: 'practice' | 'timed-test'
+  mode: 'practice' | 'timed-test' | 'flashcards'
   currentIndex: number
+  flashcardRevealed: boolean
   responses: {
     selectedIndexes: number[]
     answered: boolean
@@ -258,6 +275,7 @@ let state: AppState = {
   selectedSection: null,
   mode: 'practice',
   currentIndex: 0,
+  flashcardRevealed: false,
   responses: [],
   score: 0,
   finished: false,
@@ -283,8 +301,12 @@ function render() {
     return
   }
 
-  if (state.finished) {
+  if (state.finished && state.mode === 'flashcards') {
+    renderFlashcardsFinished(app)
+  } else if (state.finished) {
     renderFinished(app)
+  } else if (state.mode === 'flashcards') {
+    renderFlashcard(app, flashcards[state.currentIndex])
   } else {
     renderQuestion(app, questions[state.currentIndex])
   }
@@ -320,6 +342,15 @@ function renderSectionSelection(app: HTMLDivElement) {
       <span class="timed-test-count">${Math.min(TIMED_TEST_QUESTION_COUNT, totalQuestions)} questions</span>
     </button>
   `
+  const flashcardsButton = `
+    <button class="flashcard-launch-card" type="button">
+      <span>
+        <strong>Flashcards All</strong>
+        <span>Read the definition, then recall the term</span>
+      </span>
+      <span class="timed-test-count">${allFlashcards.length} cards</span>
+    </button>
+  `
   const sectionGroupsHtml = sectionGroups
     .map((group) => {
       const groupQuestionCount = group.sections.reduce(
@@ -353,6 +384,7 @@ function renderSectionSelection(app: HTMLDivElement) {
       </div>
       <div class="timed-test-panel">
         ${timedTestButton}
+        ${flashcardsButton}
       </div>
       <div class="section-grid all-section-grid">
         ${allSectionsButton}
@@ -393,6 +425,10 @@ function renderSectionSelection(app: HTMLDivElement) {
 
   app.querySelector('.timed-test-card')?.addEventListener('click', () => {
     startTimedTest()
+  })
+
+  app.querySelector('.flashcard-launch-card')?.addEventListener('click', () => {
+    startFlashcards()
   })
 }
 
@@ -463,6 +499,7 @@ function startQuiz(sectionNames: string[]) {
         : selectedSections.map((section) => section.name).join(', '),
     mode: 'practice',
     currentIndex: 0,
+    flashcardRevealed: false,
     responses: questions.map(() => ({
       selectedIndexes: [],
       answered: false,
@@ -484,6 +521,7 @@ function startTimedTest() {
     selectedSection: '90-question timed test',
     mode: 'timed-test',
     currentIndex: 0,
+    flashcardRevealed: false,
     responses: questions.map(() => ({
       selectedIndexes: [],
       answered: false,
@@ -495,6 +533,25 @@ function startTimedTest() {
     endsAt: now + TIMED_TEST_DURATION_SECONDS * 1000,
   }
   startTimer()
+  render()
+}
+
+function startFlashcards() {
+  stopTimer()
+  questions = []
+  flashcards = shuffleArray(allFlashcards)
+  state = {
+    selectedSection: 'Flashcards All',
+    mode: 'flashcards',
+    currentIndex: 0,
+    flashcardRevealed: false,
+    responses: [],
+    score: 0,
+    finished: false,
+    timedOut: false,
+    durationSeconds: null,
+    endsAt: null,
+  }
   render()
 }
 
@@ -624,6 +681,7 @@ function renderFinished(app: HTMLDivElement) {
         selectedIndexes: [],
         answered: false,
       })),
+      flashcardRevealed: false,
       score: 0,
       finished: false,
       timedOut: false,
@@ -643,8 +701,47 @@ function renderFinished(app: HTMLDivElement) {
   })
 }
 
+function renderFlashcardsFinished(app: HTMLDivElement) {
+  stopTimer()
+  app.innerHTML = `
+    <div class="quiz-container question-container finished">
+      <h1>Flashcards Complete</h1>
+      <p class="completed-section">Flashcards All</p>
+      <div class="score-circle pass">${flashcards.length}</div>
+      <p class="score-label">cards reviewed</p>
+      <div class="feedback">
+        Review the cards again in a new order to keep the answer terms fresh.
+      </div>
+      <div class="finished-actions">
+        <button class="btn secondary-btn choose-section-btn">Choose Section</button>
+        <button class="btn restart-btn">Shuffle Again</button>
+      </div>
+    </div>
+  `
+  app.querySelector('.restart-btn')!.addEventListener('click', () => {
+    flashcards = shuffleArray(flashcards)
+    state = {
+      ...state,
+      currentIndex: 0,
+      flashcardRevealed: false,
+      finished: false,
+    }
+    render()
+  })
+  app.querySelector('.choose-section-btn')!.addEventListener('click', () => {
+    state.selectedSection = null
+    flashcards = []
+    render()
+  })
+}
+
 function finishQuiz() {
   stopTimer()
+  if (state.mode === 'flashcards') {
+    state.finished = true
+    render()
+    return
+  }
   state.score = questions.reduce((score, question, index) => {
     const response = state.responses[index]
     if (!response?.answered) return score
@@ -653,6 +750,101 @@ function finishQuiz() {
   }, 0)
   state.finished = true
   render()
+}
+
+function renderFlashcard(app: HTMLDivElement, card: Flashcard) {
+  const progress = `${state.currentIndex + 1} / ${flashcards.length}`
+  const domainHtml = card.domains.map((domain) => `<span>${escapeHtml(domain)}</span>`).join('')
+  const topicHtml = card.topics?.length
+    ? `<p class="lesson-label">${escapeHtml(card.topics.slice(0, 2).join(' · '))}</p>`
+    : ''
+  const aliasHtml = card.aliases?.length
+    ? `<p class="flashcard-aliases">Also known as: ${escapeHtml(card.aliases.join(', '))}</p>`
+    : ''
+  const sourceHtml = card.sourceQuestionIds?.length
+    ? `<p class="flashcard-source">Source questions: ${escapeHtml(card.sourceQuestionIds.join(', '))}</p>`
+    : ''
+
+  app.innerHTML = `
+    <div class="quiz-container question-container flashcard-container">
+      <div class="quiz-header">
+        <div class="quiz-status">
+          <span class="progress">${escapeHtml(progress)}</span>
+          <span class="score">Definition to term</span>
+        </div>
+        <button class="header-section-btn" type="button">Choose Section</button>
+      </div>
+      <p class="section-label">Flashcards All</p>
+      <button class="flashcard" type="button" aria-pressed="${state.flashcardRevealed}">
+        <span class="flashcard-kicker">${state.flashcardRevealed ? 'Term' : 'Definition'}</span>
+        <span class="flashcard-answer">${escapeHtml(state.flashcardRevealed ? card.term : card.definition)}</span>
+        ${
+          state.flashcardRevealed
+            ? '<span class="flashcard-meta">Tap to return to the definition.</span>'
+            : '<span class="flashcard-meta">Say the term, then tap to reveal it.</span>'
+        }
+      </button>
+      ${
+        state.flashcardRevealed
+          ? `
+            <div class="flashcard-details">
+              <div class="flashcard-domains">${domainHtml}</div>
+              ${topicHtml}
+              ${aliasHtml}
+              <p class="answer-explanation">${escapeHtml(card.definition)}</p>
+              ${sourceHtml}
+            </div>
+          `
+          : ''
+      }
+      <div class="actions">
+        ${state.currentIndex > 0 ? '<button class="btn secondary-btn back-card-btn">Back</button>' : ''}
+        <button class="btn secondary-btn shuffle-card-btn">Shuffle</button>
+        <button class="btn reveal-card-btn">${state.flashcardRevealed ? 'Hide' : 'Reveal'}</button>
+        <button class="btn next-card-btn">${state.currentIndex < flashcards.length - 1 ? 'Next' : 'Finish'}</button>
+      </div>
+    </div>
+  `
+
+  app.querySelector('.header-section-btn')!.addEventListener('click', () => {
+    state.selectedSection = null
+    flashcards = []
+    render()
+  })
+
+  app.querySelector('.flashcard')!.addEventListener('click', () => {
+    state.flashcardRevealed = !state.flashcardRevealed
+    render()
+  })
+
+  app.querySelector('.reveal-card-btn')!.addEventListener('click', () => {
+    state.flashcardRevealed = !state.flashcardRevealed
+    render()
+  })
+
+  app.querySelector('.shuffle-card-btn')!.addEventListener('click', () => {
+    flashcards = shuffleArray(flashcards)
+    state.currentIndex = 0
+    state.flashcardRevealed = false
+    render()
+  })
+
+  app.querySelector('.back-card-btn')?.addEventListener('click', () => {
+    if (state.currentIndex === 0) return
+    state.currentIndex--
+    state.flashcardRevealed = false
+    render()
+  })
+
+  app.querySelector('.next-card-btn')!.addEventListener('click', () => {
+    if (state.currentIndex < flashcards.length - 1) {
+      state.currentIndex++
+      state.flashcardRevealed = false
+      render()
+      return
+    }
+    finishQuiz()
+  })
 }
 
 function renderQuestion(app: HTMLDivElement, q: Question) {
@@ -664,7 +856,7 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
   const remainingSeconds = state.mode === 'timed-test' ? getRemainingSeconds() : null
   const correctAnswers = getCorrectAnswers(q)
   const correctIndexes = correctAnswers.map((answer) => q.options.indexOf(answer))
-  const isMultiAnswer = correctAnswers.length > 1
+  const isMultiAnswer = getQuestionAnswerType(q) === 'multiple'
   const isCorrect = response.answered && indexesMatch(response.selectedIndexes, correctIndexes)
   const isTimedTest = state.mode === 'timed-test'
   const answeredCount = state.responses.filter((savedResponse) => savedResponse.answered).length
@@ -694,7 +886,12 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
         cls += ' selected'
       }
       const disabled = response.answered ? 'disabled' : ''
-      return `<button class="${cls}" data-index="${i}" ${disabled}>${escapeHtml(opt)}</button>`
+      return `
+        <button class="${cls}" data-index="${i}" ${disabled}>
+          <span class="option-control ${isMultiAnswer ? 'checkbox' : 'radio'}" aria-hidden="true"></span>
+          <span class="option-text">${escapeHtml(opt)}</span>
+        </button>
+      `
     })
     .join('')
 
@@ -776,6 +973,11 @@ function getCorrectAnswers(q: Question): string[] {
   return Array.isArray(q.answer) ? q.answer : [q.answer]
 }
 
+function getQuestionAnswerType(q: Question): 'single' | 'multiple' {
+  if (q.type === 'single' || q.type === 'multiple') return q.type
+  return Array.isArray(q.answer) ? 'multiple' : 'single'
+}
+
 function toggleSelectedIndex(selectedIndexes: number[], optionIndex: number): number[] {
   return selectedIndexes.includes(optionIndex)
     ? selectedIndexes.filter((selectedIndex) => selectedIndex !== optionIndex)
@@ -789,9 +991,14 @@ function indexesMatch(selectedIndexes: number[], correctIndexes: number[]): bool
 }
 
 async function init() {
-  const res = await fetch(`${import.meta.env.BASE_URL}questions.json`)
-  const quizData = await res.json() as QuizData
+  const [questionRes, flashcardRes] = await Promise.all([
+    fetch(`${import.meta.env.BASE_URL}questions.json`),
+    fetch(`${import.meta.env.BASE_URL}flashcards.json`),
+  ])
+  const quizData = await questionRes.json() as QuizData
+  const flashcardData = await flashcardRes.json() as FlashcardData
   sections = quizData.sections
+  allFlashcards = flashcardData.flashcards
   loaded = true
   render()
 }

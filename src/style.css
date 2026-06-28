@@ -144,10 +144,13 @@ select {
 }
 
 .timed-test-panel {
+  display: grid;
+  gap: 12px;
   margin-bottom: 18px;
 }
 
-.timed-test-card {
+.timed-test-card,
+.flashcard-launch-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -164,35 +167,52 @@ select {
   transition: background 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.15s;
 }
 
-.timed-test-card:hover {
+.timed-test-card:hover,
+.flashcard-launch-card:hover {
   background: #1f2937;
   border-color: #1f2937;
   transform: translateY(-1px);
   box-shadow: 0 14px 28px rgba(17, 24, 39, 0.18);
 }
 
-.timed-test-card:active {
+.timed-test-card:active,
+.flashcard-launch-card:active {
   transform: translateY(0) scale(0.995);
 }
 
-.timed-test-card span {
+.timed-test-card span,
+.flashcard-launch-card span {
   min-width: 0;
 }
 
 .timed-test-card strong,
-.timed-test-card span span {
+.timed-test-card span span,
+.flashcard-launch-card strong,
+.flashcard-launch-card span span {
   display: block;
 }
 
-.timed-test-card strong {
+.timed-test-card strong,
+.flashcard-launch-card strong {
   margin-bottom: 4px;
   font-size: 16px;
 }
 
-.timed-test-card span span {
+.timed-test-card span span,
+.flashcard-launch-card span span {
   color: #d1d5db;
   font-size: 13px;
   font-weight: 600;
+}
+
+.flashcard-launch-card {
+  border-color: #0f766e;
+  background: #0f766e;
+}
+
+.flashcard-launch-card:hover {
+  background: #115e59;
+  border-color: #115e59;
 }
 
 .timed-test-count {
@@ -471,6 +491,108 @@ select {
   overflow-wrap: anywhere;
 }
 
+.flashcard-container {
+  gap: 0;
+}
+
+.flashcard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 220px;
+  padding: 28px;
+  border: 2px solid #0f766e;
+  border-radius: 14px;
+  background: #f0fdfa;
+  color: #0f172a;
+  text-align: left;
+  cursor: pointer;
+  touch-action: manipulation;
+  box-shadow: 0 16px 32px rgba(15, 118, 110, 0.12);
+  transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+  animation: item-enter 220ms ease-out both;
+}
+
+.flashcard:hover {
+  background: #ccfbf1;
+  transform: translateY(-1px);
+  box-shadow: 0 20px 36px rgba(15, 118, 110, 0.16);
+}
+
+.flashcard:active {
+  transform: translateY(0) scale(0.995);
+}
+
+.flashcard-kicker {
+  margin-bottom: 16px;
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.flashcard-answer {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.flashcard-meta {
+  margin-top: auto;
+  padding-top: 22px;
+  color: #335c67;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.flashcard-details {
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  animation: feedback-enter 180ms ease-out both;
+}
+
+.flashcard-details .question-text {
+  margin-bottom: 12px;
+  font-size: 17px;
+}
+
+.flashcard-aliases,
+.flashcard-source {
+  margin: 8px 0 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.flashcard-source {
+  margin-top: 12px;
+}
+
+.flashcard-domains {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.flashcard-domains span {
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: #ecfdf5;
+  color: #047857;
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .options {
   display: flex;
   flex-direction: column;
@@ -479,7 +601,9 @@ select {
 }
 
 .option-btn {
-  display: block;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
   width: 100%;
   padding: 14px 18px;
   border: 2px solid var(--border);
@@ -495,6 +619,62 @@ select {
   transition: background 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.15s;
   color: var(--text);
   animation: item-enter 220ms ease-out both;
+}
+
+.option-control {
+  position: relative;
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  border: 2px solid #c7cad1;
+  background: #fff;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+.option-control.radio {
+  border-radius: 50%;
+}
+
+.option-control.checkbox {
+  border-radius: 5px;
+}
+
+.option-btn.selected .option-control,
+.option-btn.correct .option-control {
+  border-color: currentColor;
+  background: currentColor;
+}
+
+.option-btn.selected .option-control.radio::after,
+.option-btn.correct .option-control.radio::after {
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: #fff;
+  content: "";
+}
+
+.option-btn.selected .option-control.checkbox::after,
+.option-btn.correct .option-control.checkbox::after {
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  content: "";
+  transform: rotate(45deg);
+}
+
+.option-btn.wrong .option-control {
+  border-color: currentColor;
+}
+
+.option-text {
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .option-btn:nth-child(2) {
@@ -556,6 +736,7 @@ select {
 .actions {
   display: flex;
   justify-content: flex-end;
+  gap: 10px;
   margin-top: 20px;
   position: static;
   width: 100%;
@@ -717,8 +898,10 @@ select {
   }
 
   .section-card:hover,
+  .flashcard:hover,
   .option-btn:hover:not(:disabled),
   .section-card:active,
+  .flashcard:active,
   .option-btn:active:not(:disabled),
   .btn:active,
   .header-section-btn:active {
@@ -779,7 +962,8 @@ select {
     gap: 12px;
   }
 
-  .timed-test-card {
+  .timed-test-card,
+  .flashcard-launch-card {
     align-items: flex-start;
     flex-direction: column;
   }
@@ -831,6 +1015,19 @@ select {
     margin-bottom: 12px;
     font-size: 15px;
     line-height: 1.55;
+  }
+
+  .flashcard {
+    min-height: 190px;
+    padding: 22px;
+  }
+
+  .flashcard-answer {
+    font-size: 23px;
+  }
+
+  .flashcard-details {
+    padding: 14px;
   }
 
   .options {
