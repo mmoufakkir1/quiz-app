@@ -241,6 +241,7 @@ let pendingSectionNames = new Set<string>()
 
 type AppState = {
   selectedSection: string | null
+  mode: 'practice' | 'timed-test'
   currentIndex: number
   responses: {
     selectedIndexes: number[]
@@ -248,15 +249,27 @@ type AppState = {
   }[]
   score: number
   finished: boolean
+  timedOut: boolean
+  durationSeconds: number | null
+  endsAt: number | null
 }
 
 let state: AppState = {
   selectedSection: null,
+  mode: 'practice',
   currentIndex: 0,
   responses: [],
   score: 0,
   finished: false,
+  timedOut: false,
+  durationSeconds: null,
+  endsAt: null,
 }
+
+let timerHandle: number | null = null
+
+const TIMED_TEST_QUESTION_COUNT = 90
+const TIMED_TEST_DURATION_SECONDS = 90 * 60
 
 function render() {
   const app = document.querySelector<HTMLDivElement>('#app')!
@@ -298,6 +311,15 @@ function renderSectionSelection(app: HTMLDivElement) {
       <span class="section-card-count">${totalQuestions} questions</span>
     </button>
   `
+  const timedTestButton = `
+    <button class="timed-test-card" type="button">
+      <span>
+        <strong>90-question timed test</strong>
+        <span>Random mix from all sections · 1 hr 30 min</span>
+      </span>
+      <span class="timed-test-count">${Math.min(TIMED_TEST_QUESTION_COUNT, totalQuestions)} questions</span>
+    </button>
+  `
   const sectionGroupsHtml = sectionGroups
     .map((group) => {
       const groupQuestionCount = group.sections.reduce(
@@ -328,6 +350,9 @@ function renderSectionSelection(app: HTMLDivElement) {
         <p class="section-label">CompTIA Security+ SY0-701</p>
         <h1>Choose Quiz Sections</h1>
         <p>Pick one or more official exam domains before starting.</p>
+      </div>
+      <div class="timed-test-panel">
+        ${timedTestButton}
       </div>
       <div class="section-grid all-section-grid">
         ${allSectionsButton}
@@ -364,6 +389,10 @@ function renderSectionSelection(app: HTMLDivElement) {
 
   app.querySelector('.start-quiz-btn')?.addEventListener('click', () => {
     startQuiz([...pendingSectionNames])
+  })
+
+  app.querySelector('.timed-test-card')?.addEventListener('click', () => {
+    startTimedTest()
   })
 }
 
@@ -416,6 +445,7 @@ function getOrganizedSectionGroups() {
 }
 
 function startQuiz(sectionNames: string[]) {
+  stopTimer()
   const selectedSections = sections.filter((section) => sectionNames.includes(section.name))
 
   questions = selectedSections.flatMap((section) =>
@@ -431,6 +461,7 @@ function startQuiz(sectionNames: string[]) {
       selectedSections.length === sections.length
         ? 'All Sections'
         : selectedSections.map((section) => section.name).join(', '),
+    mode: 'practice',
     currentIndex: 0,
     responses: questions.map(() => ({
       selectedIndexes: [],
@@ -438,8 +469,122 @@ function startQuiz(sectionNames: string[]) {
     })),
     score: 0,
     finished: false,
+    timedOut: false,
+    durationSeconds: null,
+    endsAt: null,
   }
   render()
+}
+
+function startTimedTest() {
+  stopTimer()
+  questions = buildTimedTestQuestions()
+  const now = Date.now()
+  state = {
+    selectedSection: '90-question timed test',
+    mode: 'timed-test',
+    currentIndex: 0,
+    responses: questions.map(() => ({
+      selectedIndexes: [],
+      answered: false,
+    })),
+    score: 0,
+    finished: false,
+    timedOut: false,
+    durationSeconds: TIMED_TEST_DURATION_SECONDS,
+    endsAt: now + TIMED_TEST_DURATION_SECONDS * 1000,
+  }
+  startTimer()
+  render()
+}
+
+function buildTimedTestQuestions(): Question[] {
+  const shuffledSectionQuestions = shuffleArray(
+    sections.map((section) => ({
+      section,
+      questions: shuffleArray(
+        section.questions.map((question) => ({
+          ...question,
+          topic: question.topic || FALLBACK_SECTION_TOPICS[section.name] || '1.0 General Security Concepts',
+          section: section.name,
+        })),
+      ),
+    })),
+  )
+  const selectedQuestions: Question[] = []
+  let offset = 0
+
+  while (selectedQuestions.length < TIMED_TEST_QUESTION_COUNT) {
+    let addedThisRound = false
+
+    for (const sectionQuestions of shuffledSectionQuestions) {
+      const question = sectionQuestions.questions[offset]
+      if (!question) continue
+      selectedQuestions.push(question)
+      addedThisRound = true
+      if (selectedQuestions.length === TIMED_TEST_QUESTION_COUNT) break
+    }
+
+    if (!addedThisRound) break
+    offset++
+  }
+
+  return shuffleArray(selectedQuestions)
+}
+
+function shuffleArray<T>(items: T[]): T[] {
+  const shuffled = [...items]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+  return shuffled
+}
+
+function startTimer() {
+  if (timerHandle !== null) window.clearInterval(timerHandle)
+  timerHandle = window.setInterval(() => {
+    if (state.mode !== 'timed-test' || state.finished || state.endsAt === null) {
+      stopTimer()
+      return
+    }
+
+    if (getRemainingSeconds() <= 0) {
+      state.timedOut = true
+      finishQuiz()
+    } else {
+      updateTimerDisplay()
+    }
+  }, 1000)
+}
+
+function stopTimer() {
+  if (timerHandle === null) return
+  window.clearInterval(timerHandle)
+  timerHandle = null
+}
+
+function getRemainingSeconds(): number {
+  if (state.endsAt === null) return 0
+  return Math.max(0, Math.ceil((state.endsAt - Date.now()) / 1000))
+}
+
+function formatTime(totalSeconds: number): string {
+  const hours = Math.floor(totalSeconds / 3600)
+  const minutes = Math.floor((totalSeconds % 3600) / 60)
+  const seconds = totalSeconds % 60
+
+  if (hours > 0) {
+    return `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
+  }
+
+  return `${minutes}:${String(seconds).padStart(2, '0')}`
+}
+
+function updateTimerDisplay() {
+  const timer = document.querySelector<HTMLElement>('.timer')
+  if (!timer || state.mode !== 'timed-test') return
+  timer.textContent = `Time: ${formatTime(getRemainingSeconds())}`
 }
 
 function compareQuestionsForStudy(a: Question, b: Question): number {
@@ -452,11 +597,12 @@ function compareQuestionsForStudy(a: Question, b: Question): number {
 }
 
 function renderFinished(app: HTMLDivElement) {
+  stopTimer()
   const total = questions.length
   const pct = Math.round((state.score / total) * 100)
   app.innerHTML = `
     <div class="quiz-container question-container finished">
-      <h1>Quiz Complete!</h1>
+      <h1>${state.timedOut ? 'Time is up' : 'Quiz Complete!'}</h1>
       <p class="completed-section">${state.selectedSection}</p>
       <div class="score-circle ${pct >= 70 ? 'pass' : 'fail'}">${state.score}/${total}</div>
       <p class="score-label">${pct}% correct</p>
@@ -470,6 +616,7 @@ function renderFinished(app: HTMLDivElement) {
     </div>
   `
   app.querySelector('.restart-btn')!.addEventListener('click', () => {
+    const now = Date.now()
     state = {
       ...state,
       currentIndex: 0,
@@ -479,14 +626,33 @@ function renderFinished(app: HTMLDivElement) {
       })),
       score: 0,
       finished: false,
+      timedOut: false,
+      endsAt:
+        state.mode === 'timed-test' && state.durationSeconds !== null
+          ? now + state.durationSeconds * 1000
+          : null,
     }
+    if (state.mode === 'timed-test') startTimer()
     render()
   })
   app.querySelector('.choose-section-btn')!.addEventListener('click', () => {
+    stopTimer()
     state.selectedSection = null
     questions = []
     render()
   })
+}
+
+function finishQuiz() {
+  stopTimer()
+  state.score = questions.reduce((score, question, index) => {
+    const response = state.responses[index]
+    if (!response?.answered) return score
+    const correctIndexes = getCorrectAnswers(question).map((answer) => question.options.indexOf(answer))
+    return indexesMatch(response.selectedIndexes, correctIndexes) ? score + 1 : score
+  }, 0)
+  state.finished = true
+  render()
 }
 
 function renderQuestion(app: HTMLDivElement, q: Question) {
@@ -495,13 +661,16 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
     answered: false,
   }
   const progress = `${state.currentIndex + 1} / ${questions.length}`
+  const remainingSeconds = state.mode === 'timed-test' ? getRemainingSeconds() : null
   const correctAnswers = getCorrectAnswers(q)
   const correctIndexes = correctAnswers.map((answer) => q.options.indexOf(answer))
   const isMultiAnswer = correctAnswers.length > 1
   const isCorrect = response.answered && indexesMatch(response.selectedIndexes, correctIndexes)
+  const isTimedTest = state.mode === 'timed-test'
+  const answeredCount = state.responses.filter((savedResponse) => savedResponse.answered).length
 
   let feedbackHtml = ''
-  if (response.answered) {
+  if (response.answered && !isTimedTest) {
     const explanation = getExplanation(q)
     const answerText = correctAnswers.map(escapeHtml).join(', ')
     feedbackHtml = `
@@ -516,7 +685,9 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
     .map((opt, i) => {
       let cls = 'option-btn'
       if (response.answered) {
-        if (correctIndexes.includes(i)) cls += ' correct'
+        if (isTimedTest && response.selectedIndexes.includes(i)) cls += ' selected'
+        else if (isTimedTest) cls += ' disabled'
+        else if (correctIndexes.includes(i)) cls += ' correct'
         else if (response.selectedIndexes.includes(i)) cls += ' wrong'
         else cls += ' disabled'
       } else if (response.selectedIndexes.includes(i)) {
@@ -536,7 +707,8 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
       <div class="quiz-header">
         <div class="quiz-status">
           <span class="progress">${escapeHtml(progress)}</span>
-          <span class="score">Score: ${state.score}</span>
+          <span class="score">${isTimedTest ? `Answered: ${answeredCount}` : `Score: ${state.score}`}</span>
+          ${remainingSeconds !== null ? `<span class="timer">Time: ${formatTime(remainingSeconds)}</span>` : ''}
         </div>
         <button class="header-section-btn" type="button">Choose Section</button>
       </div>
@@ -559,6 +731,7 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
   `
 
   app.querySelector('.header-section-btn')!.addEventListener('click', () => {
+    stopTimer()
     state.selectedSection = null
     questions = []
     render()
@@ -591,7 +764,8 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
       if (state.currentIndex < questions.length - 1) {
         state.currentIndex++
       } else {
-        state.finished = true
+        finishQuiz()
+        return
       }
       render()
     })

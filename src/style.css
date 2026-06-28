@@ -143,6 +143,69 @@ select {
   margin-bottom: 24px;
 }
 
+.timed-test-panel {
+  margin-bottom: 18px;
+}
+
+.timed-test-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+  padding: 18px;
+  border: 2px solid #111827;
+  border-radius: 12px;
+  background: #111827;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.timed-test-card:hover {
+  background: #1f2937;
+  border-color: #1f2937;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(17, 24, 39, 0.18);
+}
+
+.timed-test-card:active {
+  transform: translateY(0) scale(0.995);
+}
+
+.timed-test-card span {
+  min-width: 0;
+}
+
+.timed-test-card strong,
+.timed-test-card span span {
+  display: block;
+}
+
+.timed-test-card strong {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.timed-test-card span span {
+  color: #d1d5db;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.timed-test-count {
+  flex: 0 0 auto;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #f9fafb;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
 .section-groups {
   display: grid;
   gap: 24px;
@@ -335,8 +398,12 @@ select {
   gap: 16px;
 }
 
-.progress, .score {
+.progress, .score, .timer {
   font-weight: 600;
+}
+
+.timer {
+  color: #b45309;
 }
 
 .header-section-btn {
@@ -710,6 +777,11 @@ select {
     min-height: 62px;
     padding: 14px;
     gap: 12px;
+  }
+
+  .timed-test-card {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .section-card-details {
