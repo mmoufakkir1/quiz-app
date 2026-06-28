@@ -14,6 +14,7 @@ for (const [index, card] of flashcardData.flashcards.entries()) {
   const key = normalize(term)
 
   if (!term) invalidCards.push({ index, field: 'term' })
+  if (!card.hint?.trim()) invalidCards.push({ index, field: 'hint' })
   if (!card.definition?.trim()) invalidCards.push({ index, field: 'definition' })
   if (!Array.isArray(card.domains) || card.domains.length === 0) {
     invalidCards.push({ index, field: 'domains' })
@@ -26,6 +27,24 @@ for (const [index, card] of flashcardData.flashcards.entries()) {
 
   for (const alias of card.aliases || []) {
     cardTerms.set(normalize(alias), index)
+  }
+}
+
+const leakedHints = []
+for (const [index, card] of flashcardData.flashcards.entries()) {
+  const forbiddenTerms = [card.term, ...(card.aliases || [])]
+    .filter(Boolean)
+    .flatMap((term) => {
+      const text = String(term).trim()
+      const parenthetical = text.match(/\(([^)]+)\)/)?.[1]
+      const withoutParenthetical = text.replace(/\s*\([^)]*\)\s*/g, ' ').trim()
+      return [text, parenthetical, withoutParenthetical].filter((value) => value && value.length >= 3)
+    })
+
+  const normalizedHint = normalize(card.hint || '')
+  const leaked = forbiddenTerms.find((term) => normalizedHint.includes(normalize(term)))
+  if (leaked) {
+    leakedHints.push({ index, term: card.term, leaked })
   }
 }
 
@@ -55,11 +74,12 @@ const result = {
   flashcards: flashcardData.flashcards.length,
   invalidCards,
   duplicateTerms,
+  leakedHints,
   missingCorrectTerms,
 }
 
 console.log(JSON.stringify(result, null, 2))
 
-if (invalidCards.length || duplicateTerms.length || missingCorrectTerms.length) {
+if (invalidCards.length || duplicateTerms.length || leakedHints.length || missingCorrectTerms.length) {
   process.exitCode = 1
 }

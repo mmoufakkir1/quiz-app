@@ -33,6 +33,7 @@ type SectionGroup = {
 
 type Flashcard = {
   term: string
+  hint: string
   definition: string
   domains: string[]
   topics?: string[]
@@ -346,7 +347,7 @@ function renderSectionSelection(app: HTMLDivElement) {
     <button class="flashcard-launch-card" type="button">
       <span>
         <strong>Flashcards All</strong>
-        <span>Read the definition, then recall the term</span>
+        <span>Read the hint, then recall the term</span>
       </span>
       <span class="timed-test-count">${allFlashcards.length} cards</span>
     </button>
@@ -770,17 +771,17 @@ function renderFlashcard(app: HTMLDivElement, card: Flashcard) {
       <div class="quiz-header">
         <div class="quiz-status">
           <span class="progress">${escapeHtml(progress)}</span>
-          <span class="score">Definition to term</span>
+          <span class="score">Hint to term</span>
         </div>
         <button class="header-section-btn" type="button">Choose Section</button>
       </div>
       <p class="section-label">Flashcards All</p>
       <button class="flashcard" type="button" aria-pressed="${state.flashcardRevealed}">
-        <span class="flashcard-kicker">${state.flashcardRevealed ? 'Term' : 'Definition'}</span>
-        <span class="flashcard-answer">${escapeHtml(state.flashcardRevealed ? card.term : card.definition)}</span>
+        <span class="flashcard-kicker">${state.flashcardRevealed ? 'Term' : 'Hint'}</span>
+        <span class="flashcard-answer">${escapeHtml(state.flashcardRevealed ? card.term : card.hint)}</span>
         ${
           state.flashcardRevealed
-            ? '<span class="flashcard-meta">Tap to return to the definition.</span>'
+            ? '<span class="flashcard-meta">Tap to return to the hint.</span>'
             : '<span class="flashcard-meta">Say the term, then tap to reveal it.</span>'
         }
       </button>
