@@ -113,7 +113,7 @@
           ],
           "answer": "Impact analysis",
           "scenario": "A security analyst is documenting evaluation of the possible business and security effects of a proposed change.",
-          "explanation": "Impact analysis is the review of what a proposed change could affect before it is approved. The goal is to understand business and security consequences before the change reaches production.",
+          "explanation": "Impact analysis identifies and assesses the potential implications of a proposed change, including how the change will impact all areas. Evaluation of changes in a test environment ensures they work as intended. Test results provide valuable insight into the likelihood of success without impacting business operations. A backout plan is for reversing changes and returning systems and software to their original state if the implementation plan fails. A well-defined backout plan helps to minimize downtime and reduces the risk of data loss or other severe impacts. Stakeholders are personnel with a vested interest in completing the change, but they are not components of a change management plan that would keep vulnerabilities from appearing.",
           "topic": "1.0 General Security Concepts",
           "lesson": "1.4 Explain the importance of using appropriate cryptographic solutions.",
           "type": "single"
@@ -129,7 +129,7 @@
           ],
           "answer": "Backout plan",
           "scenario": "A security analyst is documenting documented steps for safely reversing a failed change.",
-          "explanation": "A backout plan is the rollback path. If a change fails, the team already has documented steps for returning systems to a known working state.",
+          "explanation": "A backout plan is for reversing changes and returning systems and software to their original state if the implementation plan fails. A well-defined backout plan helps to minimize downtime and reduces the risk of data loss or other severe impacts. An impact analysis identifies and assesses the potential implications of a proposed change, including how the change will impact all areas. Evaluation of changes in a test environment ensures they work as intended. Test results provide valuable insight into the likelihood of success without impacting business operations. Standard operating procedures (SOPs) describe how to carry out routine operations or changes. In change management, SOPs ensure that change implementation is consistent and effective.",
           "topic": "1.0 General Security Concepts",
           "lesson": "1.4 Explain the importance of using appropriate cryptographic solutions.",
           "type": "single"
@@ -417,7 +417,7 @@
             "Cross-site scripting"
           ],
           "answer": "Injection attack",
-          "explanation": "Injection attacks exploit insecure request or query processing by altering submitted data so the application performs unintended commands or returns unauthorized data.",
+          "explanation": "An injection attack exploits some unsecure way the application processes requests and queries. For example, a threat actor queries for information but alters the request to return more users' data than authorized. A replay attack works by capturing or guessing the token value and then submitting it to reestablish the session illegitimately. A forgery attack attempts to hijack an ongoing authenticated session to perform some action without the user's consent. Cross-site Scripting (XSS) can compromise session cookies, which could then lead to the prediction of future session cookies, compromising all future sessions.",
           "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
           "lesson": "2.2 Explain common threat vectors and attack surfaces.",
           "type": "single"
@@ -435,7 +435,7 @@
             "Canonicalization attack",
             "Directory traversal attack"
           ],
-          "explanation": "A directory traversal attack occurs when a website user requests a file in an attempt to get to the parent directory. If settings are not correct on the web server, it could allow a malicious actor enhanced privileges to the network. A canonicalization attack attempts to circumvent certain web server command filtrations by using the canonicalization of plaintext. If it is successful, it may allow code injection or directory traversal. A command injection attack attempts to cause the server to run operating system (OS) shell commands and return the output to the browser. A server-side attack causes the server to do some processing or run a script or query in a way that is not authorized by the application design.",
+          "explanation": "A directory traversal attack occurs when a website user requests a file in an attempt to get to the parent directory. If settings are not correct on the web server, it could allow a malicious actor enhanced privileges to the network. A forgery attack attempts to hijack an ongoing authenticated session to perform some action without the user's consent. An injection attack exploits some unsecure way in which the application processes requests and queries. A replay attack works by capturing or guessing the token value and then submitting it to reestablish the session illegitimately.",
           "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
           "lesson": "2.2 Explain common threat vectors and attack surfaces.",
           "type": "multiple"
@@ -561,7 +561,7 @@
           ],
           "answer": "TPM",
           "scenario": "A security team is reviewing a hardware component used to securely store cryptographic keys and platform measurements.",
-          "explanation": "A TPM is a hardware security chip used to protect keys and store platform measurements. It helps support trusted boot and device-based cryptographic protection.",
+          "explanation": "The Trusted Platform Module (TPM) chip holds the cryptographic secrets and hardware state to help secure an encrypted hard drive. A Certificate Authority (CA) or owner can revoke or suspend a certificate for many reasons. A Certificate Revocation List (CRL) is a list of no longer valid certificates. A Central Processing Unit (CPU) is not directly involved with the encryption of a hard drive other than processing the action of encryption. Random Access Memory (RAM) is also not directly involved with the encryption of a hard drive other than the storage of the program running the encryption.",
           "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
           "lesson": "2.4 Given a scenario, analyze indicators of malicious activity.",
           "type": "single"
@@ -577,7 +577,7 @@
           ],
           "answer": "CRL",
           "scenario": "A security team is reviewing a published list of certificates revoked by a certificate authority.",
-          "explanation": "A certificate revocation list is published by a certificate authority to identify certificates that should no longer be trusted.",
+          "explanation": "A Certificate Authority (CA) or owner can revoke or suspend a certificate for many reasons. A Certificate Revocation List (CRL) is a list of no longer valid certificates. A Certificate Authority is a server that guarantees subject identities by issuing signed digital certificate wrappers for their public keys. A subject must complete a Certificate Signing Request (CSR) and submit it to the CA to get a certificate. Public key infrastructure (PKI) refers to a framework of Certificate Authorities, digital certificates, software, services, and other cryptographic components deployed to validate subject identities.",
           "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
           "lesson": "2.4 Given a scenario, analyze indicators of malicious activity.",
           "type": "single"
@@ -593,7 +593,7 @@
           ],
           "answer": "Insider threat",
           "scenario": "A security team is reviewing a risk originating from a person with authorized organizational access.",
-          "explanation": "An insider threat comes from someone with legitimate access, such as an employee, contractor, or partner. The risk is tied to trusted access being misused or abused.",
+          "explanation": "An insider threat is someone within the company who intentionally or unintentionally increases risk or takes company data outside the organization’s security controls. Nation-state actors are the root cause of many attacks, particularly on energy, health, and electoral systems. The goals of state actors are primarily disinformation and espionage for strategic advantage. Hacktivists might attempt to use data exfiltration to obtain and release confidential information to the public domain, perform service disruption attacks, or deface websites to spread disinformation. The term advanced persistent threat (APT) exists to understand the behavior underpinning modern cyber adversaries. APT refers to the ability of an adversary to achieve an ongoing compromise of network security.",
           "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
           "lesson": "2.4 Given a scenario, analyze indicators of malicious activity.",
           "type": "single"
@@ -625,7 +625,7 @@
           ],
           "answer": "Typosquatting",
           "scenario": "A security team is reviewing registering look-alike domain names based on common typing errors.",
-          "explanation": "Typosquatting relies on look-alike or mistyped domain names. Attackers use those domains to catch users who make common typing mistakes.",
+          "explanation": "Typosquatting means that the threat actor registers a domain name very similar to a real one, hoping that users will not notice the difference and assume they are browsing a trusted site. Phishing is a combination of social engineering and spoofing. It persuades or tricks the target into interacting with a malicious resource disguised as a trusted one. Brand impersonation occurs when the threat actor commits resources to accurately duplicating a company's logos and formatting to make a phishing message or pharming website visually compelling. A watering hole attack relies on a group of targets that use an unsecured third-party website. As a result, the attacker may be able to infect a company's computers.",
           "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
           "lesson": "2.4 Given a scenario, analyze indicators of malicious activity.",
           "type": "single"
@@ -641,7 +641,7 @@
           ],
           "answer": "Buffer overflow",
           "scenario": "A security team is reviewing writing beyond an allocated memory boundary.",
-          "explanation": "A buffer overflow happens when data is written past the memory space that was allocated for it. That can crash software or allow code execution.",
+          "explanation": "Buffer overflow vulnerabilities occur when an application receives more data than it can handle, resulting in the potential for unintended command execution. Privilege escalation refers to an attacker gaining unauthorized privileges on a system, usually through exploiting system misconfigurations or vulnerabilities that allow them to elevate their permissions. Side-channel attacks are techniques that gather information indirectly from the physical implementation of a computer system rather than from software vulnerabilities or direct intrusion attempts. Fingerprinting is the method used to determine the operating system running on a remote host, which does not involve exploiting a specific vulnerability within the operating system.",
           "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
           "lesson": "2.4 Given a scenario, analyze indicators of malicious activity.",
           "type": "single"
@@ -672,7 +672,7 @@
             "Ransomware"
           ],
           "answer": "Worm",
-          "explanation": "A worm self-replicates and spreads across networks without requiring user interaction.",
+          "explanation": "A worm is a standalone malware program that replicates itself to spread to other computers, often over a network. Worms consume bandwidth and system resources, slowing down or even crashing systems. Malicious code encompasses various types of harmful software, including worms, viruses, Trojans, and more. This option is too broad to be the best answer for this scenario. Trojans can create backdoors in a computer system to give malicious users access. The described scenario does not involve this disguise or unauthorized access method. While spyware is a form of malicious code, it does not self-replicate or spread across a network like the program in the given scenario.",
           "scenario": "Multiple systems become infected quickly after one vulnerable host is compromised, and bandwidth usage increases sharply.",
           "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
           "lesson": "2.4 Given a scenario, analyze indicators of malicious activity.",
@@ -1604,7 +1604,7 @@
           ],
           "answer": "Hacktivist",
           "scenario": "A security team is reviewing a threat actor motivated primarily by political or social beliefs.",
-          "explanation": "Hacktivist fits because the scenario is describing a threat actor motivated primarily by political or social beliefs. Focus on that behavior, not on the extra wording around it.",
+          "explanation": "Hacktivists might attempt to use data exfiltration to obtain and release confidential information to the public domain, perform service disruption attacks, or deface websites to spread disinformation. Nation-state actors are the root cause of many attacks, particularly on energy, health, and electoral systems. The goals of state actors are primarily disinformation and espionage for strategic advantage. An insider threat is someone within the company who intentionally or unintentionally increases risk or takes company data outside the organization’s security controls. The term advanced persistent threat (APT) exists to understand the behavior underpinning modern cyber adversaries. APT refers to the ability of an adversary to achieve an ongoing compromise of network security.",
           "topic": "3.0 Security Architecture",
           "lesson": "3.2 Given a scenario, apply security principles to secure enterprise infrastructure.",
           "type": "single"
@@ -1684,7 +1684,7 @@
           ],
           "answer": "Full-disk encryption",
           "scenario": "A security analyst is documenting encryption that protects an entire storage device.",
-          "explanation": "Full-disk encryption protects the entire storage device. It is commonly used to protect data if a laptop or drive is lost or stolen.",
+          "explanation": "Full-disk Encryption (FDE) involves encrypting the entire contents of a hard drive, including the operating system and all user data. By doing this, FDE ensures no one accesses the data on the hard drive without the decryption key. While network segmentation is a security measure, it does not involve encrypting all the data on a hard drive. Instead, it aims to limit the impact of a security breach by containing it within a specific network segment. Device isolation refers to limiting the interaction between devices on a network, which can prevent a security threat from spreading across the network. Patch management refers to applying updates to software and systems to fix vulnerabilities and improve security.",
           "topic": "3.0 Security Architecture",
           "lesson": "3.2 Given a scenario, apply security principles to secure enterprise infrastructure.",
           "type": "single"
@@ -1908,7 +1908,7 @@
           ],
           "answer": "Cross-site scripting",
           "scenario": "A malicious comment causes JavaScript to execute in other users' browsers.",
-          "explanation": "Cross-site scripting happens when untrusted content runs as JavaScript in another user's browser. The browser execution is the key detail.",
+          "explanation": "A replay attack captures or guesses the token value and then submits it to reestablish the session illegitimately. A session ending and then immediately reestablishing would most likely indicate this type of attack. Cross-site Scripting (XSS) can compromise session cookies, which could then lead to the prediction of future session cookies, compromising all future sessions. A forgery attack attempts to hijack an ongoing authenticated session to perform some action without the user's consent. This attack would not show disconnects and reestablishments within logs. An injection attack exploits in some unsecure way the application processes requests and queries. This attack would not show disconnects and reestablishments within logs.",
           "topic": "3.0 Security Architecture",
           "lesson": "3.2 Given a scenario, apply security principles to secure enterprise infrastructure.",
           "type": "single"
@@ -1923,7 +1923,7 @@
             "Worm"
           ],
           "answer": "Ransomware",
-          "explanation": "Encrypted files, renamed extensions, and a ransom note are classic ransomware indicators.",
+          "explanation": "Ransomware is a virus that infects a computer and threatens to perform actions unless the user pays a ransom before a particular deadline. Crypto-ransomware specifically requires monetary payment before destroying the key that would allow the decryption of the user's files. A logic bomb is a specific type of virus that will only launch once reaching a specific date or a pre-scripted event happens, such as the removal of a disgruntled ex-employee's admin account. An attacker typically uses cryptojacking malware as part of a botnet to utilize hundreds or thousands of computers to complete computations, such as mining the next bitcoin or digital currency.",
           "scenario": "A workstation suddenly has encrypted files, changed file extensions, and a ransom note displayed on the desktop.",
           "topic": "3.0 Security Architecture",
           "lesson": "3.2 Given a scenario, apply security principles to secure enterprise infrastructure.",
@@ -1972,7 +1972,7 @@
             "Boot sector virus"
           ],
           "answer": "Script virus",
-          "explanation": "A suspicious attachment using a script-related extension can indicate a script virus that relies on local scripting engines or browser scripting features.",
+          "explanation": "A script virus uses the programming features available in local scripting engines for the OS and/or browser, such as JavaScript. The scenario mentions an attached file with a .jar extension and is executable. While a memory resident virus could infect a file attached to an email, the scenario suggests a different type of virus. A boot sector virus infects the boot sector of a hard disk or a floppy disk. The suspicious file came through an email, which does not suggest a boot sector virus. Non-resident viruses or file infectors typically latch onto executable files and programs. Although the attachment is executable (.jar), the main indicator is the file's double extension, which suggests a script virus.",
           "topic": "3.0 Security Architecture",
           "lesson": "3.2 Given a scenario, apply security principles to secure enterprise infrastructure.",
           "type": "single"
@@ -1988,7 +1988,7 @@
             "Replay attack"
           ],
           "answer": "Directory traversal attack",
-          "explanation": "Directory traversal occurs when a user requests files or paths in an attempt to reach parent directories or restricted files outside the intended web root.",
+          "explanation": "A directory traversal attack occurs when a website user requests a file in an attempt to get to the parent directory. If settings are not correct on the web server, it could allow a malicious actor enhanced privileges to the network. A forgery attack attempts to hijack an ongoing authenticated session to perform some action without the user's consent. An injection attack exploits some unsecure way in which the application processes requests and queries. A replay attack works by capturing or guessing the token value and then submitting it to reestablish the session illegitimately.",
           "topic": "3.0 Security Architecture",
           "lesson": "3.2 Given a scenario, apply security principles to secure enterprise infrastructure.",
           "type": "single"
@@ -2426,7 +2426,7 @@
           ],
           "answer": "Asymmetric encryption",
           "scenario": "A security team is reviewing encryption that uses mathematically related public and private keys.",
-          "explanation": "Asymmetric encryption is the best match here because it names encryption that uses mathematically related public and private keys. The other options describe different ideas.",
+          "explanation": "Asymmetric encryption uses a pair of keys—public and private. The online store can encrypt the transaction details with the customer's public key, ensuring that only the customer, who holds the corresponding private key, can decrypt and access the details. Symmetric encryption provides confidentiality but fails to inherently provide authentication or non-repudiation, as the same key is for both encryption and decryption. Hashing techniques verify the integrity of the data, but they do not provide encryption or the capability to validate the sender's authenticity. While hybrid encryption provides the benefits of both symmetric and asymmetric encryption, it is more complex and allows for secure key exchange and efficient data encryption.",
           "topic": "3.0 Security Architecture",
           "lesson": "3.3 Compare and contrast concepts and strategies to protect data.",
           "type": "single"
@@ -2474,7 +2474,7 @@
           ],
           "answer": "Zero-day vulnerability",
           "scenario": "A security team is reviewing a vulnerability exploited before a fix is available or broadly deployed.",
-          "explanation": "The prompt is describing a vulnerability exploited before a fix is available or broadly deployed. In security terminology, that is Zero-day vulnerability.",
+          "explanation": "The term \"zero-day\" describes a software vulnerability that the vendor has yet to identify. Attackers exploit this vulnerability and jeopardize systems. In an on-path attack, an attacker intercepts and might alter communication between two parties. However, this threat does not connect to a software vulnerability unpatched and unknown by the vendor. Attackers crack encrypted passwords using this method, referencing a precomputed table of hash values for possible passwords. This method does not address a software vulnerability that the vendor has not identified or patched. While issues in public key infrastructure (PKI) introduce vulnerabilities into cryptographic systems, they do not point to an unpatched software flaw unknown to the vendor.",
           "topic": "3.0 Security Architecture",
           "lesson": "3.4 Explain the importance of resilience and recovery in security architecture.",
           "type": "single"
@@ -2490,7 +2490,7 @@
           ],
           "answer": "Ransomware",
           "scenario": "A security team is reviewing malware that denies access to data or systems and demands payment.",
-          "explanation": "Ransomware is the best match here because it names malware that denies access to data or systems and demands payment. The other options describe different ideas.",
+          "explanation": "Ransomware is a virus that infects a computer and threatens to perform actions unless the user pays a ransom before a particular deadline. Crypto-ransomware specifically requires monetary payment before destroying the key that would allow the decryption of the user's files. A logic bomb is a specific type of virus that will only launch once reaching a specific date or a pre-scripted event happens, such as the removal of a disgruntled ex-employee's admin account. An attacker typically uses cryptojacking malware as part of a botnet to utilize hundreds or thousands of computers to complete computations, such as mining the next bitcoin or digital currency.",
           "topic": "3.0 Security Architecture",
           "lesson": "3.4 Explain the importance of resilience and recovery in security architecture.",
           "type": "single"
@@ -2506,7 +2506,7 @@
           ],
           "answer": "Worm",
           "scenario": "A security team is reviewing self-replicating malware that can spread without attaching to another file.",
-          "explanation": "Worm fits because the scenario is describing self-replicating malware that can spread without attaching to another file. Focus on that behavior, not on the extra wording around it.",
+          "explanation": "A worm is a standalone malware program that replicates itself to spread to other computers, often over a network. Worms consume bandwidth and system resources, slowing down or even crashing systems. Malicious code encompasses various types of harmful software, including worms, viruses, Trojans, and more. This option is too broad to be the best answer for this scenario. Trojans can create backdoors in a computer system to give malicious users access. The described scenario does not involve this disguise or unauthorized access method. While spyware is a form of malicious code, it does not self-replicate or spread across a network like the program in the given scenario.",
           "topic": "3.0 Security Architecture",
           "lesson": "3.4 Explain the importance of resilience and recovery in security architecture.",
           "type": "single"
@@ -2554,7 +2554,7 @@
           ],
           "answer": "Network segmentation",
           "scenario": "A security team is reviewing dividing a network to limit access and reduce lateral movement.",
-          "explanation": "Network segmentation is the best match here because it names dividing a network to limit access and reduce lateral movement. The other options describe different ideas.",
+          "explanation": "The least privilege principle ensures that users have only the access they need, reducing the risk of insider threats and accidental data breaches. It is vital in both cloud and on-premises environments. Segmenting the network can isolate potential threats and prevent them from moving laterally across the enterprise. It is particularly essential as enterprises grow and diversify their digital assets. Allowing all outbound traffic without scrutiny can lead to data exfiltration or connections to malicious domains. It is essential to monitor and control outbound traffic based on organizational needs. While centralized storage can provide some benefits, not having backups poses a significant risk of data loss. Maintaining backups is crucial, especially with the rise of ransomware attacks targeting enterprise data.",
           "topic": "3.0 Security Architecture",
           "lesson": "3.4 Explain the importance of resilience and recovery in security architecture.",
           "type": "single"
@@ -4946,7 +4946,7 @@
           ],
           "answer": "False positive",
           "scenario": "A vulnerability scanner reports a critical flaw, but manual verification proves the flaw is absent.",
-          "explanation": "A false positive is an alert for a problem that is not actually there. The scanner reports an issue, but verification shows the system is not vulnerable.",
+          "explanation": "A vulnerability scanner gives a false positive when it flags a vulnerability the system does not have. In this scenario, the scanner flagged a \"Potential SQL Injection,\" but after manual inspection, the analyst confirmed it as not a genuine vulnerability. A true negative happens when a vulnerability scanner correctly confirms the absence of a vulnerability. In this scenario, however, the scanner incorrectly flagged a vulnerability. A scanner produces a false negative when it misses a genuine vulnerability. This result does not apply since the scanner incorrectly flagged a non-existent vulnerability. A true positive occurs when a vulnerability scanner correctly flags an existing vulnerability. However, the scanner incorrectly identified the \"Potential SQL Injection.\"",
           "topic": "4.0 Security Operations",
           "lesson": "4.3 Explain various activities associated with vulnerability management.",
           "type": "single"
@@ -4962,7 +4962,7 @@
           ],
           "answer": "False negative",
           "scenario": "A critical vulnerability exists, but the scanner reports no issue.",
-          "explanation": "A false negative is a missed real issue. The vulnerability exists, but the tool reports that everything is fine.",
+          "explanation": "A vulnerability scanner produces a false negative when it does not detect an existing vulnerability within the system's software or hardware. Despite its comprehensive algorithms, the scanner overlooked a known and documented vulnerability, leading to a classification of a false negative. When a scanner inaccurately flags a non-existent vulnerability in the system, it errs. This type of error did not manifest in the described scenario. In some instances, a scanner correctly determines the absence of any vulnerabilities. However, in the detailed scenario, the scanner, unfortunately, missed identifying a genuine vulnerability. Ideally, a scanner should accurately pinpoint vulnerabilities present in the system. In the given scenario, even with updated definitions, it failed to do so by overlooking the vulnerability.",
           "topic": "4.0 Security Operations",
           "lesson": "4.3 Explain various activities associated with vulnerability management.",
           "type": "single"
@@ -5418,7 +5418,7 @@
             "Rootkit"
           ],
           "answer": "Rootkit",
-          "explanation": "A rootkit uses high-level privileges to conceal its presence, hide files or activity, and maintain access while avoiding detection.",
+          "explanation": "A rootkit is a virus that has gained SYSTEM-level access and uses these permissions to spread itself throughout the system and network while concealing its presence within the system. A trojan virus can become a rootkit if it can gain the correct permission, but the scenario does not discuss permissions. Malware is any malicious software, such as a virus, ransomware, trojan, or rootkit. It is a broad term and does not specifically describe the type of virus infection in this scenario. Ransomware is a virus that infects a computer and threatens to perform actions unless the user pays a ransom before a particular deadline.",
           "topic": "4.0 Security Operations",
           "lesson": "4.4 Explain security alerting and monitoring concepts and tools.",
           "type": "single"
@@ -6669,7 +6669,7 @@
           ],
           "answer": "Dynamic analysis",
           "scenario": "A security team is reviewing examining application behavior while the application is running.",
-          "explanation": "Dynamic analysis is the best match here because it names examining application behavior while the application is running. The other options describe different ideas.",
+          "explanation": "Dynamic analysis evaluates the software application in its running state and looks for vulnerabilities during its execution, which aligns with the analyst's requirement in the scenario. Static code review evaluates the software's source code, bytecode, or application binaries without executing the software. While it is a valuable method, it does not meet the analyst's preference to assess the software while running. Manual penetration testing involves actively probing for vulnerabilities in a running application, but it is broader than just analyzing the software's execution and can involve various techniques not limited to the software's runtime behavior. Source code fingerprinting identifies software components and their versions by analyzing the software's source code.",
           "topic": "4.0 Security Operations",
           "lesson": "4.5 Given a scenario, modify enterprise capabilities to enhance security.",
           "type": "single"
@@ -7181,7 +7181,7 @@
           ],
           "answer": "Out-of-cycle logging",
           "scenario": "A security analyst is documenting log activity occurring at an unusual or unexpected time.",
-          "explanation": "The prompt is describing log activity occurring at an unusual or unexpected time. In security terminology, that is Out-of-cycle logging.",
+          "explanation": "Out-of-cycle logging refers to an anomaly where the log data occurs outside the expected or routine logging cycle. The generated logs occurring at unusual times point toward an out-of- cycle logging issue. There is no indication that incorrect documentation relates to the issue since the scenario suggests that the company follows a well-documented security protocol. Malware can cause unusual logging, although the scenario does not provide enough information to definitively link the increased logging with a malware attack. Spraying is a method attackers use to gain unauthorized access by attempting a common password across many accounts. However, this method is not an indicator of the unusual logging activity described in the scenario.",
           "topic": "4.0 Security Operations",
           "lesson": "4.5 Given a scenario, modify enterprise capabilities to enhance security.",
           "type": "single"
@@ -7261,7 +7261,7 @@
           ],
           "answer": "RTOS",
           "scenario": "A security analyst is documenting an operating system designed to meet deterministic timing requirements.",
-          "explanation": "RTOS is the best match here because it names an operating system designed to meet deterministic timing requirements. The other options describe different ideas.",
+          "explanation": "For this scenario, the purchase of a Real-Time Operation System (RTOS) would be most appropriate as it can assist in prioritizing deterministic execution of operations to ensure consistent response are received for time-critical tasks. A Supervisory Control and Data Acquisition (SCADA) system is a control system that manages large-scale, multiple-site devices and equipment spread over geographically large areas from a host computer. An Industrial Control System (ICS) provides mechanisms for workflow and process automation and is used in critical infrastructure. Zero Trust Architecture (ZTA) is not an operating system but more so a security design paradigm where any request must be authenticated before being allowed.",
           "topic": "4.0 Security Operations",
           "lesson": "4.5 Given a scenario, modify enterprise capabilities to enhance security.",
           "type": "single"
@@ -7357,7 +7357,7 @@
           ],
           "answer": "802.1X",
           "scenario": "A security analyst is documenting a standard for port-based network access control.",
-          "explanation": "This is 802.1X. The important detail is a standard for port-based network access control, which is what separates it from the other choices.",
+          "explanation": "The standard 802.1X provides port-based network access control, ensuring high security by rigorously authenticating both users and devices. It uses credentials or digital certificates to verify the identity of each entity before granting access. While Media Access Control (MAC) address filtering allows devices to connect based on their unique hardware MAC addresses, it falls short of authenticating individual users. Malicious actors can spoof MAC addresses, undermining their effectiveness. Virtual private network (VPN) concentrators mainly ensure secure remote access. Their primary function is to authenticate users rather than validate the identity of devices. Stateless firewalls inspect each packet individually without considering any prior connection history. They cannot remember the state of active connections, making them ineffective in authenticating users or devices.",
           "topic": "4.0 Security Operations",
           "lesson": "4.5 Given a scenario, modify enterprise capabilities to enhance security.",
           "type": "single"
@@ -9772,7 +9772,7 @@
           ],
           "answer": "Phishing",
           "scenario": "A security team is reviewing a social-engineering attack commonly delivered through deceptive email.",
-          "explanation": "Phishing is the best match here because it names a social-engineering attack commonly delivered through deceptive email. The other options describe different ideas.",
+          "explanation": "Phishing is a combination of social engineering and spoofing. It persuades or tricks the target into interacting with a malicious resource disguised as a trusted one. Typosquatting means that the threat actor registers a domain name very similar to a real one, hoping that users will not notice the difference and assume they are browsing a trusted site. Coercion or the use of urgency refers to the intimidation of the target with a bogus appeal to authority or penalty, such as getting fired or not acting quickly enough to prevent some dire outcome. The persuasive or consensus technique attempts to convince the target that the request is natural and it would be impolite or somehow \"odd\" to refuse.",
           "topic": "4.0 Security Operations",
           "lesson": "4.6 Given a scenario, implement and maintain identity and access management.",
           "type": "single"
@@ -9804,7 +9804,7 @@
           ],
           "answer": "Cross-site scripting",
           "scenario": "A security team is reviewing injecting script content that executes in another user browser.",
-          "explanation": "Cross-site scripting happens when untrusted content runs as JavaScript in another user's browser. The browser execution is the key detail.",
+          "explanation": "A replay attack captures or guesses the token value and then submits it to reestablish the session illegitimately. A session ending and then immediately reestablishing would most likely indicate this type of attack. Cross-site Scripting (XSS) can compromise session cookies, which could then lead to the prediction of future session cookies, compromising all future sessions. A forgery attack attempts to hijack an ongoing authenticated session to perform some action without the user's consent. This attack would not show disconnects and reestablishments within logs. An injection attack exploits in some unsecure way the application processes requests and queries. This attack would not show disconnects and reestablishments within logs.",
           "topic": "4.0 Security Operations",
           "lesson": "4.6 Given a scenario, implement and maintain identity and access management.",
           "type": "single"
@@ -9836,7 +9836,7 @@
           ],
           "answer": "Rootkit",
           "scenario": "A security team is reviewing malware designed to maintain privileged, concealed access.",
-          "explanation": "This is Rootkit. The important detail is malware designed to maintain privileged, concealed access, which is what separates it from the other choices.",
+          "explanation": "A rootkit is a virus that has gained SYSTEM-level access and uses these permissions to spread itself throughout the system and network while concealing its presence within the system. A trojan virus can become a rootkit if it can gain the correct permission, but the scenario does not discuss permissions. Malware is any malicious software, such as a virus, ransomware, trojan, or rootkit. It is a broad term and does not specifically describe the type of virus infection in this scenario. Ransomware is a virus that infects a computer and threatens to perform actions unless the user pays a ransom before a particular deadline.",
           "topic": "4.0 Security Operations",
           "lesson": "4.6 Given a scenario, implement and maintain identity and access management.",
           "type": "single"
@@ -9868,7 +9868,7 @@
           ],
           "answer": "Least privilege",
           "scenario": "A security team is reviewing granting only the minimum permissions needed to perform a task.",
-          "explanation": "Least privilege fits because the scenario is describing granting only the minimum permissions needed to perform a task. Focus on that behavior, not on the extra wording around it.",
+          "explanation": "The least privilege principle ensures that users have only the access they need, reducing the risk of insider threats and accidental data breaches. It is vital in both cloud and on-premises environments. Segmenting the network can isolate potential threats and prevent them from moving laterally across the enterprise. It is particularly essential as enterprises grow and diversify their digital assets. Allowing all outbound traffic without scrutiny can lead to data exfiltration or connections to malicious domains. It is essential to monitor and control outbound traffic based on organizational needs. While centralized storage can provide some benefits, not having backups poses a significant risk of data loss. Maintaining backups is crucial, especially with the rise of ransomware attacks targeting enterprise data.",
           "topic": "4.0 Security Operations",
           "lesson": "4.6 Given a scenario, implement and maintain identity and access management.",
           "type": "single"
@@ -10487,7 +10487,7 @@
           ],
           "answer": "False positive",
           "scenario": "A security team is reviewing a security tool reports a problem that is not actually present.",
-          "explanation": "A false positive is an alert for a problem that is not actually there. The scanner reports an issue, but verification shows the system is not vulnerable.",
+          "explanation": "A vulnerability scanner gives a false positive when it flags a vulnerability the system does not have. In this scenario, the scanner flagged a \"Potential SQL Injection,\" but after manual inspection, the analyst confirmed it as not a genuine vulnerability. A true negative happens when a vulnerability scanner correctly confirms the absence of a vulnerability. In this scenario, however, the scanner incorrectly flagged a vulnerability. A scanner produces a false negative when it misses a genuine vulnerability. This result does not apply since the scanner incorrectly flagged a non-existent vulnerability. A true positive occurs when a vulnerability scanner correctly flags an existing vulnerability. However, the scanner incorrectly identified the \"Potential SQL Injection.\"",
           "topic": "4.0 Security Operations",
           "lesson": "4.8 Explain appropriate incident response activities.",
           "type": "single"
@@ -10567,7 +10567,7 @@
             "Script"
           ],
           "answer": "Polymorphic",
-          "explanation": "A polymorphic virus changes or obfuscates its code to make detection, tracking, and removal more difficult.",
+          "explanation": "A polymorphic virus can change or attempt to obfuscate its code, making it more difficult to track and remove from an infected system. A trojan virus is malware inside another file that appears legitimate. When the legitimate file executes, the trojan comes out and infects the system. A boot virus is one in which the virus code writes to the disk boot sector or the partition table of a fixed disk. The virus executes each time the operating system (OS) starts. A script virus utilizes the programming features available in a local OS or browser scripting engine. It does not change its code.",
           "topic": "4.0 Security Operations",
           "lesson": "4.8 Explain appropriate incident response activities.",
           "type": "single"
@@ -11938,7 +11938,7 @@
           ],
           "answer": "False negative",
           "scenario": "A security team is reviewing a security tool fails to report a problem that is actually present.",
-          "explanation": "A false negative is a missed real issue. The vulnerability exists, but the tool reports that everything is fine.",
+          "explanation": "A vulnerability scanner produces a false negative when it does not detect an existing vulnerability within the system's software or hardware. Despite its comprehensive algorithms, the scanner overlooked a known and documented vulnerability, leading to a classification of a false negative. When a scanner inaccurately flags a non-existent vulnerability in the system, it errs. This type of error did not manifest in the described scenario. In some instances, a scanner correctly determines the absence of any vulnerabilities. However, in the detailed scenario, the scanner, unfortunately, missed identifying a genuine vulnerability. Ideally, a scanner should accurately pinpoint vulnerabilities present in the system. In the given scenario, even with updated definitions, it failed to do so by overlooking the vulnerability.",
           "topic": "5.0 Security Program Management and Oversight",
           "lesson": "5.2 Explain elements of the risk management process.",
           "type": "single"
@@ -12002,7 +12002,7 @@
           ],
           "answer": "Federation",
           "scenario": "A security team is reviewing establishing trust so identities from one domain can access another domain.",
-          "explanation": "Federation is the best match here because it names establishing trust so identities from one domain can access another domain. The other options describe different ideas.",
+          "explanation": "Federation directories allow two different subsets of accounts to work together for permissions and access. A site-to-site virtual private network (VPN) is similar to the VPN that employees use. However, they connect two or more location-separated corporate resources. Over time, merging companies will migrate employee accounts from one directory to another. However, they do not need to work with each other seamlessly. Location-based policies would cut down on the chance of pray-and-spray tactics of malicious actors. However, a downside could be malicious actors who use virtual private network (VPN) services to bypass this.",
           "topic": "5.0 Security Program Management and Oversight",
           "lesson": "5.2 Explain elements of the risk management process.",
           "type": "single"
@@ -12322,7 +12322,7 @@
           ],
           "answer": "SAML",
           "scenario": "A security team is reviewing an XML-based standard for exchanging authentication and authorization assertions.",
-          "explanation": "The prompt is describing an XML-based standard for exchanging authentication and authorization assertions. In security terminology, that is SAML.",
+          "explanation": "Security assertion markup language (SAML) allows for federating a network or cloud system. SAML assertions and claims between the principal, the relying party, and the identity provider use eXtensible Markup Language as their structure. A virtual private network (VPN) allows individuals to access corporate resources outside the corporate infrastructure. Employees cannot access a file share without a VPN if they are not at their office. Lightweight Directory Access Protocol (LDAP) is a protocol companies use for accessing network directory databases. LDAP stores information about authorized users, their privileges, and other organizational information. Local Security Authority Subsystem Service (LSASS) compares the credential to a hash stored in the Security Accounts Manager (SAM) database.",
           "topic": "5.0 Security Program Management and Oversight",
           "lesson": "5.3 Explain the processes associated with third-party risk assessment and management.",
           "type": "single"
@@ -12338,7 +12338,7 @@
           ],
           "answer": "Mandatory access control",
           "scenario": "A security team is reviewing access decisions enforced centrally using labels and classifications.",
-          "explanation": "Mandatory access control is the best match here because it names access decisions enforced centrally using labels and classifications. The other options describe different ideas.",
+          "explanation": "In the mandatory access control (MAC) model, the system grants access rights by examining the security classifications assigned to information and the clearances associated with the user. This model focuses on information confidentiality and classification, providing robust control over information flow. The role-based access control model assigns access rights based on user roles within the system. These roles reflect the user's responsibilities and authority in the system. In the discretionary access control (DAC) model, the data owner holds the authority to determine who can access specific resources. Contrary to role-based access control, rule-based access control refers to access allowed or denied based on a set of rules defined by a system or application administrator.",
           "topic": "5.0 Security Program Management and Oversight",
           "lesson": "5.3 Explain the processes associated with third-party risk assessment and management.",
           "type": "single"
@@ -12354,7 +12354,7 @@
           ],
           "answer": "Discretionary access control",
           "scenario": "A security team is reviewing resource owners decide who can access their resources.",
-          "explanation": "Discretionary access control fits because the scenario is describing resource owners decide who can access their resources. Focus on that behavior, not on the extra wording around it.",
+          "explanation": "The resource owner has primacy in a discretionary access control (DAC) model. Every resource has an owner who creates a file or service, although another user can receive ownership assignment. Security clearance levels form the basis of mandatory access control (MAC). Rather than defining access control lists (ACLs) on resources, each object receives a classification label. Depending on the clearance level, a subject receives access to that resource. An organization defines its permission requirements in role-based access control (RBAC) in terms of the tasks that an employee or service must be able to perform. Each set of permissions is a role. Multifactor authentication (MFA) is an authentication scheme that requires the user to present at least two different factors as credentials.",
           "topic": "5.0 Security Program Management and Oversight",
           "lesson": "5.3 Explain the processes associated with third-party risk assessment and management.",
           "type": "single"
@@ -12370,7 +12370,7 @@
           ],
           "answer": "Role-based access control",
           "scenario": "A security team is reviewing permissions are assigned according to job roles.",
-          "explanation": "This is Role-based access control. The important detail is permissions are assigned according to job roles, which is what separates it from the other choices.",
+          "explanation": "Role-based access control (RBAC) means an organization defines its permission requirements in terms of the tasks that an employee or service must be able to perform. Each set of permissions is a role. Multifactor authentication (MFA) is an authentication scheme that requires the user to present at least two different factors as credentials. The resource owner has primacy in a discretionary access control (DAC) model. Every resource has an owner who creates a file or service, although another user can receive ownership assignment. Security clearance levels form the basis of mandatory access control (MAC). Rather than defining access control lists (ACLs) on resources, each object receives a classification label. Depending on the clearance level, a subject receives access to that resource.",
           "topic": "5.0 Security Program Management and Oversight",
           "lesson": "5.3 Explain the processes associated with third-party risk assessment and management.",
           "type": "single"
@@ -14217,7 +14217,7 @@
           ],
           "answer": "Risk appetite",
           "scenario": "A security analyst is documenting the broad amount and type of risk an organization is willing to pursue or retain.",
-          "explanation": "Risk appetite fits because the scenario is describing the broad amount and type of risk an organization is willing to pursue or retain. Focus on that behavior, not on the extra wording around it.",
+          "explanation": "Risk appetite refers to the level of risk an organization is willing to accept in pursuit of its objectives. The company has an \"appetite\" for a certain amount of risk. The risk threshold is the point when risks become unacceptable. They're looking at the company's willingness to accept risk, not the point at which the risk becomes unacceptable. Risk intolerance is an organization's unwillingness to accept risk. The company is willing to accept higher risks for potentially higher returns, making it tolerant of some level of risk. Risk mitigation is the process of developing actions and plans to decrease the risks to an organization. The question is asking about the company's approach to accepting risks.",
           "topic": "5.0 Security Program Management and Oversight",
           "lesson": "5.5 Explain types and purposes of audits and assessments.",
           "type": "single"

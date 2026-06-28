@@ -34,6 +34,7 @@ const leakedHints = []
 for (const [index, card] of flashcardData.flashcards.entries()) {
   const forbiddenTerms = [card.term, ...(card.aliases || [])]
     .filter(Boolean)
+    .filter((term) => String(term).trim().length > 1)
     .flatMap((term) => {
       const text = String(term).trim()
       const parenthetical = text.match(/\(([^)]+)\)/)?.[1]
