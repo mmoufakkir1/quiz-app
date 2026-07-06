@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "validate:flashcards": "node scripts/validate-flashcards.mjs",
-    "sync:flashcards": "python scripts/sync-flashcards-from-pdf.py && node scripts/fix-flashcards.mjs",
+    "expand:flashcards": "node scripts/expand-flashcards-from-questions.mjs",
+    "fix:flashcards": "node scripts/fix-flashcards.mjs",
+    "build:concepts": "node scripts/build-concepts.mjs",
+    "sync:flashcards": "node scripts/expand-flashcards-from-questions.mjs && python scripts/sync-flashcards-from-pdf.py && node scripts/fix-flashcards.mjs",
     "sync:questions": "python scripts/sync-questions-from-pdf.py",
     "audit:questions-pdf": "python scripts/audit-questions-vs-pdf.py",
     "preview": "vite preview"

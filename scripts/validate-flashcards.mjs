@@ -14,8 +14,11 @@ for (const [index, card] of flashcardData.flashcards.entries()) {
   const key = normalize(term)
 
   if (!term) invalidCards.push({ index, field: 'term' })
-  if (!card.hint?.trim()) invalidCards.push({ index, field: 'hint' })
+  if (!card.front?.trim() && !card.hint?.trim()) invalidCards.push({ index, field: 'front' })
   if (!card.definition?.trim()) invalidCards.push({ index, field: 'definition' })
+  if (!card.keyDetails?.trim()) invalidCards.push({ index, field: 'keyDetails' })
+  if (!card.example?.trim()) invalidCards.push({ index, field: 'example' })
+  if (!card.memoryHook?.trim()) invalidCards.push({ index, field: 'memoryHook' })
   if (!Array.isArray(card.domains) || card.domains.length === 0) {
     invalidCards.push({ index, field: 'domains' })
   }
@@ -42,7 +45,8 @@ for (const [index, card] of flashcardData.flashcards.entries()) {
       return [text, parenthetical, withoutParenthetical].filter((value) => value && value.length >= 3)
     })
 
-  const normalizedHint = normalize(card.hint || '')
+  const frontText = card.front || card.hint || ''
+  const normalizedHint = normalize(frontText)
   const leaked = forbiddenTerms.find((term) => normalizedHint.includes(normalize(term)))
   if (leaked) {
     leakedHints.push({ index, term: card.term, leaked })
@@ -73,6 +77,12 @@ const result = {
   questions: questionsData.sections.flatMap((section) => section.questions).length,
   uniqueCorrectTerms: correctTerms.size,
   flashcards: flashcardData.flashcards.length,
+  correctAnswerCards: flashcardData.flashcards.filter((card) => correctTerms.has(normalize(card.term)))
+    .length,
+  relatedConceptCards: flashcardData.flashcards.filter(
+    (card) => !correctTerms.has(normalize(card.term)) && !card.supplemental,
+  ).length,
+  supplementalCards: flashcardData.flashcards.filter((card) => card.supplemental).length,
   invalidCards,
   duplicateTerms,
   leakedHints,

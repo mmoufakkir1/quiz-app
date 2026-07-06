@@ -33,12 +33,43 @@ type SectionGroup = {
 
 type Flashcard = {
   term: string
+  front: string
   hint: string
   definition: string
+  keyDetails: string
+  example: string
+  memoryHook: string
   domains: string[]
   topics?: string[]
   aliases?: string[]
   sourceQuestionIds?: number[]
+}
+
+type ConceptTerm = {
+  term: string
+  memorize: string
+  explanation: string
+  inFlashcards: boolean
+}
+
+type ConceptTopic = {
+  id: string
+  path: string
+  domain: string
+  summary: string
+  terms: ConceptTerm[]
+}
+
+type ConceptData = {
+  description?: string
+  topics: ConceptTopic[]
+  topicCount: number
+  termCount: number
+}
+
+type ConceptStudyItem = ConceptTerm & {
+  topicPath: string
+  domain: string
 }
 
 const SECTION_GROUPS: SectionGroup[] = [
@@ -253,12 +284,19 @@ let sections: QuestionSection[] = []
 let questions: Question[] = []
 let flashcards: Flashcard[] = []
 let allFlashcards: Flashcard[] = []
+let allConceptTopics: ConceptTopic[] = []
+let conceptStudyItems: ConceptStudyItem[] = []
+let conceptTermCount = 0
+let conceptDescription = ''
 let loaded = false
 let pendingSectionNames = new Set<string>()
 
 type AppState = {
   selectedSection: string | null
-  mode: 'practice' | 'timed-test' | 'flashcards'
+  mode: 'practice' | 'timed-test' | 'flashcards' | 'concepts'
+  conceptsView: 'topics' | 'study'
+  activeConceptTopicId: string | null
+  conceptRevealed: boolean
   currentIndex: number
   flashcardRevealed: boolean
   responses: {
@@ -275,6 +313,9 @@ type AppState = {
 let state: AppState = {
   selectedSection: null,
   mode: 'practice',
+  conceptsView: 'topics',
+  activeConceptTopicId: null,
+  conceptRevealed: false,
   currentIndex: 0,
   flashcardRevealed: false,
   responses: [],
@@ -304,8 +345,14 @@ function render() {
 
   if (state.finished && state.mode === 'flashcards') {
     renderFlashcardsFinished(app)
+  } else if (state.finished && state.mode === 'concepts') {
+    renderConceptsFinished(app)
   } else if (state.finished) {
     renderFinished(app)
+  } else if (state.mode === 'concepts' && state.conceptsView === 'topics') {
+    renderConceptTopics(app)
+  } else if (state.mode === 'concepts') {
+    renderConceptStudy(app, conceptStudyItems[state.currentIndex])
   } else if (state.mode === 'flashcards') {
     renderFlashcard(app, flashcards[state.currentIndex])
   } else {
@@ -347,9 +394,18 @@ function renderSectionSelection(app: HTMLDivElement) {
     <button class="flashcard-launch-card" type="button">
       <span>
         <strong>Flashcards All</strong>
-        <span>Read the hint, then recall the term</span>
+        <span>Definition prompt → recall the term</span>
       </span>
       <span class="timed-test-count">${allFlashcards.length} cards</span>
+    </button>
+  `
+  const conceptsButton = `
+    <button class="concepts-launch-card" type="button">
+      <span>
+        <strong>Concepts by Topic</strong>
+        <span>Browse exam topics and memorize key terms</span>
+      </span>
+      <span class="timed-test-count">${allConceptTopics.length} topics</span>
     </button>
   `
   const sectionGroupsHtml = sectionGroups
@@ -386,6 +442,7 @@ function renderSectionSelection(app: HTMLDivElement) {
       <div class="timed-test-panel">
         ${timedTestButton}
         ${flashcardsButton}
+        ${conceptsButton}
       </div>
       <div class="section-grid all-section-grid">
         ${allSectionsButton}
@@ -430,6 +487,10 @@ function renderSectionSelection(app: HTMLDivElement) {
 
   app.querySelector('.flashcard-launch-card')?.addEventListener('click', () => {
     startFlashcards()
+  })
+
+  app.querySelector('.concepts-launch-card')?.addEventListener('click', () => {
+    startConcepts()
   })
 }
 
@@ -499,6 +560,9 @@ function startQuiz(sectionNames: string[]) {
         ? 'All Sections'
         : selectedSections.map((section) => section.name).join(', '),
     mode: 'practice',
+    conceptsView: 'topics',
+    activeConceptTopicId: null,
+    conceptRevealed: false,
     currentIndex: 0,
     flashcardRevealed: false,
     responses: questions.map(() => ({
@@ -521,6 +585,9 @@ function startTimedTest() {
   state = {
     selectedSection: '90-question timed test',
     mode: 'timed-test',
+    conceptsView: 'topics',
+    activeConceptTopicId: null,
+    conceptRevealed: false,
     currentIndex: 0,
     flashcardRevealed: false,
     responses: questions.map(() => ({
@@ -544,6 +611,9 @@ function startFlashcards() {
   state = {
     selectedSection: 'Flashcards All',
     mode: 'flashcards',
+    conceptsView: 'topics',
+    activeConceptTopicId: null,
+    conceptRevealed: false,
     currentIndex: 0,
     flashcardRevealed: false,
     responses: [],
@@ -554,6 +624,310 @@ function startFlashcards() {
     endsAt: null,
   }
   render()
+}
+
+function getNextConceptTopicId(topicId: string | null): string | null {
+  if (!topicId) return null
+  const index = allConceptTopics.findIndex((topic) => topic.id === topicId)
+  if (index < 0 || index >= allConceptTopics.length - 1) return null
+  return allConceptTopics[index + 1]?.id ?? null
+}
+
+function returnToConceptTopics() {
+  state.conceptsView = 'topics'
+  state.activeConceptTopicId = null
+  state.conceptRevealed = false
+  state.currentIndex = 0
+  state.finished = false
+  state.selectedSection = 'Concepts'
+  window.scrollTo(0, 0)
+  render()
+}
+
+function startConcepts() {
+  stopTimer()
+  questions = []
+  flashcards = []
+  conceptStudyItems = []
+  state = {
+    selectedSection: 'Concepts',
+    mode: 'concepts',
+    conceptsView: 'topics',
+    activeConceptTopicId: null,
+    conceptRevealed: false,
+    currentIndex: 0,
+    flashcardRevealed: false,
+    responses: [],
+    score: 0,
+    finished: false,
+    timedOut: false,
+    durationSeconds: null,
+    endsAt: null,
+  }
+  render()
+}
+
+function startConceptStudy(topicId: string | null) {
+  const topic = topicId ? allConceptTopics.find((entry) => entry.id === topicId) : null
+  const items: ConceptStudyItem[] = topic
+    ? topic.terms.map((term) => ({
+        ...term,
+        topicPath: topic.path,
+        domain: topic.domain,
+      }))
+    : allConceptTopics.flatMap((entry) =>
+        entry.terms.map((term) => ({
+          ...term,
+          topicPath: entry.path,
+          domain: entry.domain,
+        })),
+      )
+
+  conceptStudyItems = shuffleArray(items)
+  state = {
+    ...state,
+    conceptsView: 'study',
+    activeConceptTopicId: topicId,
+    conceptRevealed: false,
+    currentIndex: 0,
+    finished: false,
+    selectedSection: topic ? topic.path : 'All concept terms',
+  }
+  window.scrollTo(0, 0)
+  render()
+}
+
+function getConceptTopicsByDomain() {
+  const groups = new Map<string, ConceptTopic[]>()
+  for (const topic of allConceptTopics) {
+    const list = groups.get(topic.domain) ?? []
+    list.push(topic)
+    groups.set(topic.domain, list)
+  }
+  return [...groups.entries()].map(([domain, topics]) => ({ domain, topics }))
+}
+
+function renderConceptTopics(app: HTMLDivElement) {
+  const domainGroups = getConceptTopicsByDomain()
+  const groupsHtml = domainGroups
+    .map(({ domain, topics }) => {
+      const topicButtons = topics
+        .map(
+          (topic) => `
+            <button class="concept-topic-card" type="button" data-topic-id="${escapeHtml(topic.id)}">
+              <span class="concept-topic-card-body">
+                <strong>${escapeHtml(topic.path)}</strong>
+                <span>${escapeHtml(topic.summary)}</span>
+              </span>
+              <span class="concept-topic-count">${topic.terms.length} terms</span>
+            </button>
+          `,
+        )
+        .join('')
+
+      return `
+        <section class="section-group" aria-labelledby="${escapeHtml(domain)}">
+          <div class="section-group-header">
+            <h2 id="${escapeHtml(domain)}">${escapeHtml(domain)}</h2>
+            <span>${topics.length} topics</span>
+          </div>
+          <div class="concept-topic-grid">
+            ${topicButtons}
+          </div>
+        </section>
+      `
+    })
+    .join('')
+
+  app.innerHTML = `
+    <div class="quiz-container selection-container concepts-container">
+      <div class="selection-header">
+        <p class="section-label">CompTIA Security+ SY0-701</p>
+        <h1>Concepts by Topic</h1>
+        <p>${allConceptTopics.length} exam topics · ${conceptTermCount} terms to memorize</p>
+      </div>
+      <div class="concept-actions">
+        <button class="btn study-all-concepts-btn" type="button">Study all ${conceptTermCount} terms</button>
+        <button class="btn secondary-btn header-section-btn" type="button">Back to Home</button>
+      </div>
+      <div class="concepts-intro">
+        <p class="concepts-intro-lead">${escapeHtml(conceptDescription)}</p>
+        <p>Each topic lists the terms CompTIA expects you to know. Study them like flashcards:</p>
+        <ol class="concepts-intro-steps">
+          <li>Pick a topic below (or study all terms at once).</li>
+          <li>Read the <strong>memorize</strong> prompt and recall the <strong>term</strong> in your head.</li>
+          <li>Tap the card or <strong>Reveal</strong> to check your answer.</li>
+          <li>Use <strong>Next Topic</strong> at the end to continue through the outline in order.</li>
+        </ol>
+      </div>
+      <div class="section-groups">
+        ${groupsHtml}
+      </div>
+    </div>
+  `
+
+  app.querySelector('.study-all-concepts-btn')!.addEventListener('click', () => {
+    startConceptStudy(null)
+  })
+
+  app.querySelector('.header-section-btn')!.addEventListener('click', () => {
+    state.selectedSection = null
+    conceptStudyItems = []
+    render()
+  })
+
+  app.querySelectorAll<HTMLButtonElement>('.concept-topic-card').forEach((button) => {
+    button.addEventListener('click', () => {
+      startConceptStudy(button.dataset.topicId!)
+    })
+  })
+}
+
+function renderConceptStudy(app: HTMLDivElement, item: ConceptStudyItem | undefined) {
+  if (!item) {
+    state.finished = true
+    render()
+    return
+  }
+
+  const progress = `${state.currentIndex + 1} / ${conceptStudyItems.length}`
+  const flashcardBadge = item.inFlashcards
+    ? '<span class="concept-flashcard-badge">In flashcards</span>'
+    : ''
+  const nextTopicId = getNextConceptTopicId(state.activeConceptTopicId)
+  const isLastCard = state.currentIndex >= conceptStudyItems.length - 1
+  const nextButtonLabel = isLastCard
+    ? nextTopicId
+      ? 'Next Topic'
+      : 'Topics'
+    : 'Next'
+
+  app.innerHTML = `
+    <div class="quiz-container question-container flashcard-container concept-study-container">
+      <div class="quiz-header">
+        <div class="quiz-status">
+          <span class="progress">${escapeHtml(progress)}</span>
+          <span class="score">Concept study</span>
+        </div>
+        <button class="header-section-btn" type="button">Topics</button>
+      </div>
+      <p class="section-label">${escapeHtml(item.topicPath)}</p>
+      <button class="flashcard concept-card" type="button" aria-pressed="${state.conceptRevealed}">
+        <span class="flashcard-kicker">${state.conceptRevealed ? 'Term' : 'Memorize'}</span>
+        <span class="flashcard-answer">${escapeHtml(state.conceptRevealed ? item.term : item.memorize)}</span>
+        ${
+          state.conceptRevealed
+            ? '<span class="flashcard-meta">Tap to return to the prompt.</span>'
+            : '<span class="flashcard-meta">Recall the term, then tap to reveal.</span>'
+        }
+      </button>
+      ${
+        state.conceptRevealed
+          ? `
+            <div class="flashcard-details">
+              <div class="flashcard-domains"><span>${escapeHtml(item.domain)}</span></div>
+              ${flashcardBadge}
+              <div class="flashcard-back-section">
+                <p class="flashcard-back-label">Explanation</p>
+                <p class="flashcard-back-text">${escapeHtml(item.explanation)}</p>
+              </div>
+              <div class="flashcard-back-section">
+                <p class="flashcard-back-label">Topic</p>
+                <p class="flashcard-back-text">${escapeHtml(item.topicPath)}</p>
+              </div>
+            </div>
+          `
+          : ''
+      }
+      <div class="actions">
+        ${state.currentIndex > 0 ? '<button class="btn secondary-btn back-concept-btn">Back</button>' : ''}
+        <button class="btn secondary-btn shuffle-concept-btn">Shuffle</button>
+        <button class="btn reveal-card-btn">${state.conceptRevealed ? 'Hide' : 'Reveal'}</button>
+        <button class="btn next-card-btn">${nextButtonLabel}</button>
+      </div>
+    </div>
+  `
+
+  app.querySelector('.header-section-btn')!.addEventListener('click', () => {
+    returnToConceptTopics()
+  })
+
+  app.querySelector('.concept-card')!.addEventListener('click', () => {
+    state.conceptRevealed = !state.conceptRevealed
+    render()
+  })
+
+  app.querySelector('.reveal-card-btn')!.addEventListener('click', () => {
+    state.conceptRevealed = !state.conceptRevealed
+    render()
+  })
+
+  app.querySelector('.shuffle-concept-btn')!.addEventListener('click', () => {
+    conceptStudyItems = shuffleArray(conceptStudyItems)
+    state.currentIndex = 0
+    state.conceptRevealed = false
+    render()
+  })
+
+  app.querySelector('.back-concept-btn')?.addEventListener('click', () => {
+    if (state.currentIndex === 0) return
+    state.currentIndex--
+    state.conceptRevealed = false
+    render()
+  })
+
+  app.querySelector('.next-card-btn')!.addEventListener('click', () => {
+    if (state.currentIndex < conceptStudyItems.length - 1) {
+      state.currentIndex++
+      state.conceptRevealed = false
+      render()
+      return
+    }
+
+    if (nextTopicId) {
+      startConceptStudy(nextTopicId)
+      return
+    }
+
+    returnToConceptTopics()
+  })
+}
+
+function renderConceptsFinished(app: HTMLDivElement) {
+  const nextTopicId = getNextConceptTopicId(state.activeConceptTopicId)
+
+  app.innerHTML = `
+    <div class="quiz-container finished-container">
+      <h1>Concepts Complete</h1>
+      <p class="completed-section">${escapeHtml(state.selectedSection ?? 'Concepts')}</p>
+      <div class="score-circle pass">${conceptStudyItems.length}</div>
+      <p class="score-label">terms reviewed</p>
+      <div class="actions">
+        <button class="btn secondary-btn review-concepts-btn">Study Again</button>
+        ${nextTopicId ? '<button class="btn next-topic-concepts-btn">Next Topic</button>' : ''}
+        <button class="btn topics-concepts-btn">Back to Topics</button>
+        <button class="btn secondary-btn home-concepts-btn">Home</button>
+      </div>
+    </div>
+  `
+
+  app.querySelector('.review-concepts-btn')!.addEventListener('click', () => {
+    startConceptStudy(state.activeConceptTopicId)
+  })
+
+  app.querySelector('.next-topic-concepts-btn')?.addEventListener('click', () => {
+    if (nextTopicId) startConceptStudy(nextTopicId)
+  })
+
+  app.querySelector('.topics-concepts-btn')!.addEventListener('click', () => {
+    returnToConceptTopics()
+  })
+
+  app.querySelector('.home-concepts-btn')!.addEventListener('click', () => {
+    state.selectedSection = null
+    conceptStudyItems = []
+    render()
+  })
 }
 
 function buildTimedTestQuestions(): Question[] {
@@ -738,7 +1112,7 @@ function renderFlashcardsFinished(app: HTMLDivElement) {
 
 function finishQuiz() {
   stopTimer()
-  if (state.mode === 'flashcards') {
+  if (state.mode === 'flashcards' || state.mode === 'concepts') {
     state.finished = true
     render()
     return
@@ -765,24 +1139,25 @@ function renderFlashcard(app: HTMLDivElement, card: Flashcard) {
   const sourceHtml = card.sourceQuestionIds?.length
     ? `<p class="flashcard-source">Source questions: ${escapeHtml(card.sourceQuestionIds.join(', '))}</p>`
     : ''
+  const front = card.front || card.hint
 
   app.innerHTML = `
     <div class="quiz-container question-container flashcard-container">
       <div class="quiz-header">
         <div class="quiz-status">
           <span class="progress">${escapeHtml(progress)}</span>
-          <span class="score">Hint to term</span>
+          <span class="score">Definition to term</span>
         </div>
         <button class="header-section-btn" type="button">Choose Section</button>
       </div>
       <p class="section-label">Flashcards All</p>
       <button class="flashcard" type="button" aria-pressed="${state.flashcardRevealed}">
-        <span class="flashcard-kicker">${state.flashcardRevealed ? 'Term' : 'Hint'}</span>
-        <span class="flashcard-answer">${escapeHtml(state.flashcardRevealed ? card.term : card.hint)}</span>
+        <span class="flashcard-kicker">${state.flashcardRevealed ? 'Term' : 'Prompt'}</span>
+        <span class="flashcard-answer">${escapeHtml(state.flashcardRevealed ? card.term : front)}</span>
         ${
           state.flashcardRevealed
-            ? '<span class="flashcard-meta">Tap to return to the hint.</span>'
-            : '<span class="flashcard-meta">Say the term, then tap to reveal it.</span>'
+            ? '<span class="flashcard-meta">Tap to return to the prompt.</span>'
+            : '<span class="flashcard-meta">Recall the term, then tap to reveal.</span>'
         }
       </button>
       ${
@@ -792,7 +1167,37 @@ function renderFlashcard(app: HTMLDivElement, card: Flashcard) {
               <div class="flashcard-domains">${domainHtml}</div>
               ${topicHtml}
               ${aliasHtml}
-              <p class="answer-explanation">${escapeHtml(card.definition)}</p>
+              <div class="flashcard-back-section">
+                <p class="flashcard-back-label">Definition</p>
+                <p class="flashcard-back-text">${escapeHtml(card.definition)}</p>
+              </div>
+              ${
+                card.keyDetails
+                  ? `
+              <div class="flashcard-back-section">
+                <p class="flashcard-back-label">Key details</p>
+                <p class="flashcard-back-text">${escapeHtml(card.keyDetails)}</p>
+              </div>`
+                  : ''
+              }
+              ${
+                card.example
+                  ? `
+              <div class="flashcard-back-section">
+                <p class="flashcard-back-label">Example</p>
+                <p class="flashcard-back-text">${escapeHtml(card.example)}</p>
+              </div>`
+                  : ''
+              }
+              ${
+                card.memoryHook
+                  ? `
+              <div class="flashcard-back-section">
+                <p class="flashcard-back-label">Memory hook</p>
+                <p class="flashcard-back-text">${escapeHtml(card.memoryHook)}</p>
+              </div>`
+                  : ''
+              }
               ${sourceHtml}
             </div>
           `
@@ -992,14 +1397,21 @@ function indexesMatch(selectedIndexes: number[], correctIndexes: number[]): bool
 }
 
 async function init() {
-  const [questionRes, flashcardRes] = await Promise.all([
+  const [questionRes, flashcardRes, conceptRes] = await Promise.all([
     fetch(`${import.meta.env.BASE_URL}questions.json`),
     fetch(`${import.meta.env.BASE_URL}flashcards.json`),
+    fetch(`${import.meta.env.BASE_URL}concepts.json`),
   ])
   const quizData = await questionRes.json() as QuizData
   const flashcardData = await flashcardRes.json() as FlashcardData
+  const conceptData = await conceptRes.json() as ConceptData
   sections = quizData.sections
   allFlashcards = flashcardData.flashcards
+  allConceptTopics = conceptData.topics
+  conceptTermCount = conceptData.termCount ?? conceptData.topics.reduce((sum, topic) => sum + topic.terms.length, 0)
+  conceptDescription =
+    conceptData.description ??
+    'Exam topic map with terms and concepts to memorize for CompTIA Security+.'
   loaded = true
   render()
 }
