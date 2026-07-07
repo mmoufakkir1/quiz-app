@@ -2,6 +2,7 @@ import fs from 'node:fs'
 
 const questionsData = JSON.parse(fs.readFileSync('public/questions.json', 'utf8'))
 const flashcardData = JSON.parse(fs.readFileSync('public/flashcards.json', 'utf8'))
+const flashcards = flashcardData.sections?.flatMap((section) => section.flashcards) ?? flashcardData.flashcards ?? []
 
 const normalize = (value) => String(value).trim().toLowerCase().replace(/\s+/g, ' ')
 
@@ -9,7 +10,7 @@ const cardTerms = new Map()
 const duplicateTerms = []
 const invalidCards = []
 
-for (const [index, card] of flashcardData.flashcards.entries()) {
+for (const [index, card] of flashcards.entries()) {
   const term = card.term?.trim()
   const key = normalize(term)
 
@@ -34,7 +35,7 @@ for (const [index, card] of flashcardData.flashcards.entries()) {
 }
 
 const leakedHints = []
-for (const [index, card] of flashcardData.flashcards.entries()) {
+for (const [index, card] of flashcards.entries()) {
   const forbiddenTerms = [card.term, ...(card.aliases || [])]
     .filter(Boolean)
     .filter((term) => String(term).trim().length > 1)
@@ -76,13 +77,12 @@ for (const section of questionsData.sections) {
 const result = {
   questions: questionsData.sections.flatMap((section) => section.questions).length,
   uniqueCorrectTerms: correctTerms.size,
-  flashcards: flashcardData.flashcards.length,
-  correctAnswerCards: flashcardData.flashcards.filter((card) => correctTerms.has(normalize(card.term)))
-    .length,
-  relatedConceptCards: flashcardData.flashcards.filter(
+  flashcards: flashcards.length,
+  correctAnswerCards: flashcards.filter((card) => correctTerms.has(normalize(card.term))).length,
+  relatedConceptCards: flashcards.filter(
     (card) => !correctTerms.has(normalize(card.term)) && !card.supplemental,
   ).length,
-  supplementalCards: flashcardData.flashcards.filter((card) => card.supplemental).length,
+  supplementalCards: flashcards.filter((card) => card.supplemental).length,
   invalidCards,
   duplicateTerms,
   leakedHints,

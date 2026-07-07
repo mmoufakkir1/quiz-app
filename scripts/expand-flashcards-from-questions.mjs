@@ -3,6 +3,32 @@ import fs from 'node:fs'
 const questionsData = JSON.parse(fs.readFileSync('public/questions.json', 'utf8'))
 const flashcardData = JSON.parse(fs.readFileSync('public/flashcards.json', 'utf8'))
 
+const DOMAIN_ORDER = [
+  '1.0 General Security Concepts',
+  '2.0 Threats, Vulnerabilities, and Mitigations',
+  '3.0 Security Architecture',
+  '4.0 Security Operations',
+  '5.0 Security Program Management and Oversight',
+  'Supplemental',
+]
+
+function getFlashcards(data) {
+  return data.sections?.flatMap((section) => section.flashcards) ?? data.flashcards ?? []
+}
+
+function setFlashcards(data, cards) {
+  const groups = new Map(DOMAIN_ORDER.map((domain) => [domain, []]))
+  for (const card of cards) {
+    const domain = card.domains?.[0] || (card.supplemental ? 'Supplemental' : 'Uncategorized')
+    if (!groups.has(domain)) groups.set(domain, [])
+    groups.get(domain).push(card)
+  }
+  data.sections = [...groups.entries()]
+    .filter(([, groupCards]) => groupCards.length > 0)
+    .map(([name, groupCards]) => ({ name, flashcards: groupCards }))
+  delete data.flashcards
+}
+
 const normalize = (value) => String(value).trim().toLowerCase().replace(/\s+/g, ' ')
 
 const GENERIC_SINGLE_WORD_BLOCKLIST = new Set([
@@ -259,7 +285,7 @@ function collectCorrectTerms() {
 
 const correctTerms = collectCorrectTerms()
 const existingByTerm = new Map(
-  flashcardData.flashcards.map((card) => [normalize(card.term), card]),
+  getFlashcards(flashcardData).map((card) => [normalize(card.term), card]),
 )
 
 const cards = []
@@ -422,7 +448,7 @@ for (const supplemental of SUPPLEMENTAL_TERMS) {
 
 cards.sort((a, b) => a.term.localeCompare(b.term, undefined, { sensitivity: 'base' }))
 
-flashcardData.flashcards = cards
+setFlashcards(flashcardData, cards)
 fs.writeFileSync('public/flashcards.json', `${JSON.stringify(flashcardData, null, 2)}\n`)
 
 const missingCorrect = [...correctTerms].filter((term) => !cardIndex.has(term))

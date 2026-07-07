@@ -1,47 +1,49 @@
 import fs from 'node:fs'
 
-const flashcardData = JSON.parse(fs.readFileSync('public/flashcards.json', 'utf8'))
-const flashcardTerms = new Set(flashcardData.flashcards.map((card) => card.term.trim().toLowerCase()))
-const flashcardByTerm = new Map(
-  flashcardData.flashcards.map((card) => [card.term.trim().toLowerCase(), card]),
-)
-
-function isBoilerplateExample(text) {
-  return /A security (team|analyst) is (reviewing|documenting)/i.test(text || '')
-}
-
-function isDomainOnlyKeyDetails(text) {
+function ensureSentence(text) {
   const trimmed = (text || '').trim()
-  return /^\d+\.\d+ [^.]+\.$/.test(trimmed) || /^\d+\.\d+ /.test(trimmed) && trimmed.length < 80
+  if (!trimmed) return ''
+  return /[.!?)]$/.test(trimmed) ? trimmed : `${trimmed}.`
 }
 
-function buildTermExplanation(entry) {
+function dedupeSentences(text) {
+  const seen = new Set()
+  return (text || '')
+    .split(/(?<=[.!?])\s+/)
+    .map((sentence) => sentence.trim())
+    .filter((sentence) => {
+      if (!sentence) return false
+      const key = sentence.toLowerCase()
+      if (seen.has(key)) return false
+      seen.add(key)
+      return true
+    })
+    .join(' ')
+}
+
+function removeQuizWording(text) {
+  return (text || '')
+    .replace(/\s*Focus on that behavior, not on the extra wording around it\./gi, '')
+    .replace(/\s*The other options describe different ideas\./gi, '')
+    .trim()
+}
+
+function buildEducationalExplanation(entry, topic, baseExplanation) {
+  const cleanedBase = ensureSentence(removeQuizWording(dedupeSentences(baseExplanation || entry.memorize)))
+  const topicContext = ensureSentence(`In ${topic.path}, connect it to this topic focus: ${topic.summary}`)
+  const examCue = ensureSentence(
+    `For Security+, recognize ${entry.term} when a question describes this clue: ${entry.memorize}`,
+  )
+
+  return dedupeSentences(`${cleanedBase} ${topicContext} ${examCue}`)
+}
+
+function buildTermExplanation(entry, topic) {
   if (entry.explanation?.trim()) {
-    return entry.explanation.trim()
+    return buildEducationalExplanation(entry, topic, entry.explanation.trim())
   }
 
-  const card = flashcardByTerm.get(entry.term.trim().toLowerCase())
-  const parts = []
-
-  if (card?.definition?.trim()) {
-    parts.push(card.definition.trim())
-  }
-
-  const keyDetails = card?.keyDetails?.trim()
-  if (keyDetails && !isDomainOnlyKeyDetails(keyDetails)) {
-    parts.push(keyDetails)
-  }
-
-  const example = card?.example?.trim()
-  if (example && !isBoilerplateExample(example)) {
-    parts.push(example)
-  }
-
-  if (parts.length > 0) {
-    return parts.join(' ')
-  }
-
-  return entry.memorize.trim()
+  return buildEducationalExplanation(entry, topic, entry.memorize)
 }
 
 const TOPICS = [
@@ -104,6 +106,7 @@ const TOPICS = [
     summary: 'Never trust, always verify — assume breach; authenticate every request.',
     terms: [
       { term: 'Zero trust', memorize: 'Verify explicitly; least privilege; assume breach.' },
+      { term: 'ZTA', memorize: 'Zero Trust Architecture applies verify-explicitly and assume-breach design.' },
       { term: 'Microsegmentation', memorize: 'Granular network isolation limits lateral movement.' },
       { term: 'ZTNA', memorize: 'Zero Trust Network Access replaces implicit VPN trust.' },
       { term: 'SASE', memorize: 'Secure Access Service Edge — cloud-delivered ZT networking.' },
@@ -196,6 +199,10 @@ const TOPICS = [
       { term: 'Buffer overflow', memorize: 'Extra input overwrites memory; may execute code.' },
       { term: 'SQL injection', memorize: 'Malicious SQL in input manipulates database.' },
       { term: 'Cross-site scripting (XSS)', memorize: 'Malicious script runs in victim browser.' },
+      { term: 'Cross-site Request Forgery (CSRF)', memorize: 'Tricks authenticated users into submitting unwanted requests.' },
+      { term: 'Command injection', memorize: 'Unsanitized input runs operating system commands.' },
+      { term: 'Directory traversal', memorize: 'Path manipulation accesses files outside intended directories.' },
+      { term: 'Race condition', memorize: 'Timing flaw allows actions in an unsafe order.' },
       { term: 'Zero-day vulnerability', memorize: 'Unknown flaw with no vendor patch yet.' },
       { term: 'CVE', memorize: 'Standard identifier for public vulnerabilities.' },
       { term: 'Application-level vulnerability', memorize: 'Flaw in app code or logic.' },
@@ -224,6 +231,9 @@ const TOPICS = [
       { term: 'Replay attack', memorize: 'Reuses captured valid transmission.' },
       { term: 'Open port', memorize: 'Unnecessary exposed service increases risk.' },
       { term: 'War driving', memorize: 'Scanning for wireless networks from vehicle.' },
+      { term: 'ARP', memorize: 'Address Resolution Protocol maps IPv4 addresses to MAC addresses.' },
+      { term: 'DNS', memorize: 'Domain Name System resolves names to IP addresses.' },
+      { term: 'URL', memorize: 'Uniform Resource Locator identifies a web resource.' },
     ],
   },
   {
@@ -246,11 +256,18 @@ const TOPICS = [
       { term: 'Social engineering', memorize: 'Psychological manipulation to gain access.' },
       { term: 'Pretexting', memorize: 'Fabricated scenario to extract information.' },
       { term: 'Baiting', memorize: 'Tempting item (USB drop) to trigger curiosity.' },
+      { term: 'Coercion', memorize: 'Social engineering pressure that uses threats or force.' },
       { term: 'Tailgating', memorize: 'Following authorized person through secure door.' },
       { term: 'Shoulder surfing', memorize: 'Observing credentials or data visually.' },
       { term: 'Dumpster diving', memorize: 'Recovering sensitive info from discarded materials.' },
       { term: 'Watering hole', memorize: 'Compromise site frequented by targets.' },
       { term: 'Honeytoken', memorize: 'Fake credential/data to detect misuse.' },
+      { term: 'Authority', memorize: 'Influence tactic that abuses perceived rank or expertise.' },
+      { term: 'Urgency', memorize: 'Pressure tactic that rushes victims into unsafe action.' },
+      { term: 'Consensus', memorize: 'Influence tactic claiming others already complied.' },
+      { term: 'Intimidation', memorize: 'Threat-based pressure to force compliance.' },
+      { term: 'Familiarity', memorize: 'Influence tactic using rapport or shared identity.' },
+      { term: 'Trust', memorize: 'Influence tactic that exploits established confidence.' },
     ],
   },
   {
@@ -260,6 +277,8 @@ const TOPICS = [
     terms: [
       { term: 'PKI', memorize: 'Framework of CAs, certificates, and revocation.' },
       { term: 'Certificate authority', memorize: 'Issues and signs digital certificates.' },
+      { term: 'Certificate Authorities', memorize: 'Plural form for CAs that issue and sign digital certificates.' },
+      { term: 'Certificate Signing Request (CSR)', memorize: 'Request sent to a CA to obtain a certificate.' },
       { term: 'CRL', memorize: 'Certificate Revocation List of revoked certs.' },
       { term: 'OCSP', memorize: 'Online real-time certificate status check.' },
       { term: 'Root of trust', memorize: 'Top-level CA anchors certificate chain.' },
@@ -279,6 +298,9 @@ const TOPICS = [
       { term: 'IPsec', memorize: 'Encrypts/authenticates IP packets (VPN).' },
       { term: 'FDE', memorize: 'Full disk encryption protects data at rest.' },
       { term: 'Database encryption', memorize: 'Protects stored records and fields.' },
+      { term: 'Plaintext', memorize: 'Readable data before encryption or after decryption.' },
+      { term: 'Ciphertext', memorize: 'Encrypted data that is unreadable without the key.' },
+      { term: 'Cryptanalysis', memorize: 'Study of breaking or evaluating cryptographic systems.' },
     ],
   },
   {
@@ -290,6 +312,7 @@ const TOPICS = [
       { term: 'SHA', memorize: 'Secure Hash Algorithm family (SHA-256).' },
       { term: 'MD5', memorize: 'Legacy hash; collision weaknesses — avoid.' },
       { term: 'Hash collision', memorize: 'Two inputs produce same hash.' },
+      { term: 'Collision', memorize: 'Condition where different inputs produce the same hash output.' },
       { term: 'HMAC', memorize: 'Hash with secret key for integrity/authentication.' },
       { term: 'Digital signature', memorize: 'Hash encrypted with private key.' },
     ],
@@ -388,11 +411,26 @@ const TOPICS = [
     summary: 'WPA3, enterprise auth, and rogue AP defense.',
     terms: [
       { term: 'WPA3', memorize: 'Latest Wi-Fi security; SAE replaces PSK weaknesses.' },
+      { term: 'WPA2', memorize: 'Wi-Fi security generation commonly using AES-CCMP.' },
+      { term: 'WPA', memorize: 'Older Wi-Fi Protected Access standard.' },
+      { term: 'WEP', memorize: 'Wired Equivalent Privacy is legacy Wi-Fi encryption and is insecure.' },
+      { term: 'Wired Equivalent Privacy', memorize: 'Legacy WEP Wi-Fi encryption is weak and should not be used.' },
+      { term: 'WPS', memorize: 'Wi-Fi Protected Setup; convenient but often insecure.' },
+      { term: 'Enhanced Open', memorize: 'Opportunistic Wi-Fi encryption for open networks without authentication.' },
+      { term: 'PSK', memorize: 'Pre-shared key used for personal Wi-Fi authentication.' },
+      { term: 'SAE', memorize: 'WPA3 Simultaneous Authentication of Equals handshake.' },
+      { term: 'EAP', memorize: 'Extensible Authentication Protocol supports enterprise authentication methods.' },
+      { term: 'Extensible Authentication Protocol', memorize: 'Authentication framework used by 802.1X and enterprise wireless.' },
+      { term: 'NFC', memorize: 'Near-field communication for short-range wireless exchange.' },
+      { term: 'Bluetooth', memorize: 'Short-range wireless protocol used by peripherals and mobile devices.' },
       { term: '802.1X', memorize: 'Port-based NAC for Wi-Fi and wired.' },
       { term: 'WIDS/WIPS', memorize: 'Wireless intrusion detection/prevention.' },
       { term: 'SSID cloaking', memorize: 'Weak obscurity — not real security.' },
       { term: 'Evil twin', memorize: 'Rogue AP with legitimate-looking SSID.' },
       { term: 'Bluetooth attacks', memorize: 'Bluesnarfing, bluejacking, pairing attacks.' },
+      { term: 'VLAN', memorize: 'Virtual LAN logically segments network traffic.' },
+      { term: 'WAP', memorize: 'Wireless access point connects wireless clients to a network.' },
+      { term: 'Wireless access point', memorize: 'Network device that connects Wi-Fi clients to wired infrastructure.' },
     ],
   },
   {
@@ -449,6 +487,7 @@ const TOPICS = [
     summary: 'Secure SDLC, testing, and runtime protection.',
     terms: [
       { term: 'WAF', memorize: 'Web Application Firewall filters HTTP attacks.' },
+      { term: 'API', memorize: 'Application Programming Interface used for service-to-service communication.' },
       { term: 'SAST', memorize: 'Static analysis — review source before runtime.' },
       { term: 'DAST', memorize: 'Dynamic analysis — test running application.' },
       { term: 'Fuzzing', memorize: 'Random/malformed input to find crashes.' },
@@ -462,10 +501,18 @@ const TOPICS = [
     summary: 'Something you know, have, are, or do.',
     terms: [
       { term: 'MFA', memorize: 'Two or more factor types required.' },
+      { term: 'PIN', memorize: 'Personal identification number used as a local authentication factor.' },
+      { term: 'Passwordless authentication', memorize: 'Authentication flow that avoids reusable shared secrets.' },
+      { term: 'Second-factor authentication', memorize: 'Additional proof beyond the primary authentication factor.' },
+      { term: 'Security key', memorize: 'Hardware authenticator used for phishing-resistant sign-in.' },
       { term: 'Biometrics', memorize: 'Fingerprint, retina, facial recognition.' },
       { term: 'TOTP', memorize: 'Time-based one-time password (authenticator app).' },
       { term: 'FIDO2', memorize: 'Phishing-resistant hardware security keys.' },
+      { term: 'WebAuthn', memorize: 'Browser API used with FIDO2 for passwordless authentication.' },
       { term: 'Fast IDentity Online', memorize: 'FIDO standard for passwordless auth.' },
+      { term: 'Relying party', memorize: 'Application or service that trusts an authenticator during passwordless login.' },
+      { term: 'Platform authenticator', memorize: 'Built-in authenticator such as a device biometric or secure enclave.' },
+      { term: 'Roaming authenticator', memorize: 'External authenticator such as a hardware security key.' },
       { term: 'SMS OTP', memorize: 'Weaker factor — SIM swap risk.' },
     ],
   },
@@ -475,8 +522,10 @@ const TOPICS = [
     summary: 'Policy, storage, and common attacks.',
     terms: [
       { term: 'Password complexity', memorize: 'Length and character variety requirements.' },
+      { term: 'Password length', memorize: 'Longer passwords resist guessing better than complexity alone.' },
       { term: 'Password age', memorize: 'Maximum lifetime before rotation.' },
       { term: 'Password history', memorize: 'Prevent reuse of recent passwords.' },
+      { term: 'Password management', memorize: 'Processes and tools for storing, rotating, and protecting passwords.' },
       { term: 'Password reuse', memorize: 'Same password on multiple sites — high risk.' },
       { term: 'Password spraying', memorize: 'Few common passwords against many accounts.' },
       { term: 'Credential stuffing', memorize: 'Reused breached credentials tried elsewhere.' },
@@ -529,8 +578,12 @@ const TOPICS = [
     terms: [
       { term: 'Federation', memorize: 'Trust IdPs across organizations.' },
       { term: 'SAML', memorize: 'XML federation standard for SSO.' },
+      { term: 'Security assertion markup language', memorize: 'Expanded name for SAML federation assertions.' },
+      { term: 'XML', memorize: 'Markup format used by SAML assertions and some configuration data.' },
       { term: 'OAuth', memorize: 'Delegated authorization framework.' },
+      { term: 'Open Authorization', memorize: 'Expanded name for OAuth delegated authorization.' },
       { term: 'OpenID Connect', memorize: 'Identity layer on OAuth for authentication.' },
+      { term: 'OIDC', memorize: 'OpenID Connect abbreviation for OAuth-based identity tokens.' },
       { term: 'Identity provider', memorize: 'Authenticates users (IdP).' },
       { term: 'Service provider', memorize: 'Application relying on IdP (SP).' },
     ],
@@ -543,6 +596,12 @@ const TOPICS = [
       { term: 'SSO', memorize: 'Single authentication event for multiple apps.' },
       { term: 'SAML', memorize: 'Common enterprise SSO protocol.' },
       { term: 'Kerberos', memorize: 'Ticket-granting SSO in Windows domains.' },
+      { term: 'NTLM', memorize: 'Legacy Microsoft challenge-response authentication replaced by Kerberos.' },
+      { term: 'SID', memorize: 'Windows security identifier uniquely represents an account or group.' },
+      { term: 'LSASS', memorize: 'Windows process that enforces local security policy and validates logons.' },
+      { term: 'Local Security Authority Subsystem Service', memorize: 'Expanded name for LSASS, which validates Windows logons.' },
+      { term: 'SAM', memorize: 'Security Account Manager stores local Windows account credential data.' },
+      { term: 'Security Accounts Manager', memorize: 'Expanded name for SAM, the local Windows account database.' },
       { term: 'Session token', memorize: 'Proof of auth for subsequent requests.' },
       { term: 'IdP-initiated SSO', memorize: 'Login starts at identity provider.' },
     ],
@@ -589,9 +648,13 @@ const TOPICS = [
       { term: 'IaaS', memorize: 'Infrastructure as a Service — you manage OS up.' },
       { term: 'PaaS', memorize: 'Platform as a Service — you manage apps.' },
       { term: 'SaaS', memorize: 'Software as a Service — provider manages stack.' },
+      { term: 'CSP', memorize: 'Cloud service provider offering hosted computing services.' },
+      { term: 'Serverless', memorize: 'Cloud execution model where provider manages servers and scaling.' },
       { term: 'Private cloud', memorize: 'Dedicated environment for one org.' },
       { term: 'Public cloud', memorize: 'Shared provider infrastructure.' },
       { term: 'Hybrid cloud', memorize: 'Mix of on-prem and cloud.' },
+      { term: 'Content delivery network', memorize: 'Distributed edge network that caches content closer to users.' },
+      { term: 'CDN', memorize: 'Content delivery network abbreviation.' },
       { term: 'Air gap', memorize: 'Physical isolation from other networks.' },
       { term: 'DMZ', memorize: 'Perimeter zone for public-facing services.' },
     ],
@@ -602,6 +665,7 @@ const TOPICS = [
     summary: 'Shared responsibility, tenancy, and blast radius.',
     terms: [
       { term: 'Shared responsibility model', memorize: 'Provider vs customer security duties.' },
+      { term: 'Centralized computing architecture', memorize: 'Central services or processing concentrated in one managed environment.' },
       { term: 'Multi-tenant architecture', memorize: 'Multiple customers on shared infrastructure.' },
       { term: 'Serverless architecture', memorize: 'Functions as a Service — event-driven.' },
       { term: 'Blast radius', memorize: 'Scope of damage if component compromised.' },
@@ -615,6 +679,9 @@ const TOPICS = [
     terms: [
       { term: 'Defense in depth', memorize: 'Multiple security layers.' },
       { term: 'Network segmentation', memorize: 'Isolate zones to limit lateral movement.' },
+      { term: 'Segmentation', memorize: 'Divide networks or systems into zones to reduce blast radius.' },
+      { term: 'Firewall', memorize: 'Filters traffic based on rules between networks or hosts.' },
+      { term: 'Proxy', memorize: 'Intermediary that brokers and can inspect client requests.' },
       { term: 'Jump server', memorize: 'Bastion for administrative access.' },
       { term: 'Inline deployment', memorize: 'Device in traffic path can block/modify.' },
       { term: 'Tap/SPAN', memorize: 'Passive copy of traffic for monitoring.' },
@@ -724,8 +791,11 @@ const TOPICS = [
     summary: 'COOP keeps critical functions running during disruption.',
     terms: [
       { term: 'COOP', memorize: 'Continuity of Operations Plan.' },
+      { term: 'Continuity of operations', memorize: 'Maintain mission functions during and after disruption.' },
       { term: 'BCP', memorize: 'Business Continuity Plan.' },
       { term: 'DRP', memorize: 'Disaster Recovery Plan — IT restoration.' },
+      { term: 'Mission essential functions', memorize: 'Critical business functions that must continue during disruption.' },
+      { term: 'Disaster recovery policy', memorize: 'Governance document defining recovery expectations and responsibilities.' },
       { term: 'Cold site', memorize: 'Facility only; no configured equipment.' },
       { term: 'Warm site', memorize: 'Partial equipment; faster recovery.' },
       { term: 'Hot site', memorize: 'Fully configured mirror; fastest recovery.' },
@@ -763,6 +833,7 @@ const TOPICS = [
       { term: 'Secure wipe', memorize: 'Overwrite data before reuse or sale.' },
       { term: 'Degaussing', memorize: 'Destroy magnetic data on drives.' },
       { term: 'Shredding', memorize: 'Physical destruction of media.' },
+      { term: 'USB', memorize: 'Removable storage or peripheral bus that can introduce data leakage or malware risk.' },
       { term: 'Certificate of destruction', memorize: 'Proof secure disposal occurred.' },
       { term: 'Data retention policy', memorize: 'When data may be destroyed.' },
     ],
@@ -786,11 +857,19 @@ const TOPICS = [
     summary: 'Preparation → Identification → Containment → Eradication → Recovery → Lessons learned.',
     terms: [
       { term: 'Incident response plan', memorize: 'Documented IR phases and roles.' },
+      { term: 'CIRT', memorize: 'Cyber Incident Response Team coordinates incident handling.' },
+      { term: 'Stakeholder management', memorize: 'Identify and coordinate people who need incident updates or decisions.' },
+      { term: 'Communication plan', memorize: 'Defines who communicates what, when, and through which channels during incidents.' },
+      { term: 'Preparation', memorize: 'IR phase that builds plans, tools, contacts, and training before incidents.' },
       { term: 'Incident containment', memorize: 'Limit spread and impact.' },
+      { term: 'Isolation', memorize: 'Separate affected systems to stop spread while preserving evidence.' },
+      { term: 'Device isolation', memorize: 'Limit a device network access to contain suspected compromise.' },
+      { term: 'Quarantine', memorize: 'Restrict a suspicious host or file until it is analyzed.' },
       { term: 'Incident eradication', memorize: 'Remove threat from environment.' },
       { term: 'Incident recovery', memorize: 'Restore normal operations safely.' },
       { term: 'Lessons learned', memorize: 'Post-incident review and improvements.' },
       { term: 'Chain of custody', memorize: 'Document evidence handling for legal use.' },
+      { term: 'Digital evidence', memorize: 'Electronically stored information collected for investigation or legal review.' },
     ],
   },
   {
@@ -836,9 +915,12 @@ const TOPICS = [
     summary: 'Specific technical requirements supporting policies.',
     terms: [
       { term: 'Security standard', memorize: 'Mandatory technical requirements.' },
+      { term: 'Benchmark', memorize: 'Reference configuration or metric used to compare secure state.' },
       { term: 'CIS Benchmarks', memorize: 'Hardening standards for systems.' },
+      { term: 'CIS', memorize: 'Center for Internet Security publishes benchmark hardening guidance.' },
       { term: 'NIST', memorize: 'US standards body (800 series).' },
       { term: 'ISO 27001', memorize: 'International ISMS standard.' },
+      { term: 'ISO/IEC', memorize: 'International standards bodies that publish security and technology standards.' },
       { term: 'PCI DSS', memorize: 'Payment card security standard.' },
     ],
   },
@@ -849,6 +931,7 @@ const TOPICS = [
     terms: [
       { term: 'Guideline', memorize: 'Recommended best practice — flexible.' },
       { term: 'Procedure', memorize: 'Step-by-step instructions to implement controls.' },
+      { term: 'SOP', memorize: 'Standard operating procedure for repeatable operational tasks.' },
       { term: 'Runbook', memorize: 'Operational steps for specific scenarios.' },
       { term: 'Playbook', memorize: 'Automated or manual IR workflow.' },
     ],
@@ -871,6 +954,7 @@ const TOPICS = [
     terms: [
       { term: 'Data owner', memorize: 'Sets classification and access rules.' },
       { term: 'Data custodian', memorize: 'Implements owner requirements technically.' },
+      { term: 'Data steward', memorize: 'Maintains data quality and policy alignment day to day.' },
       { term: 'Data controller', memorize: 'Decides why/how personal data processed.' },
       { term: 'Data processor', memorize: 'Processes data on behalf of controller.' },
       { term: 'System administrator', memorize: 'Maintains systems per policy.' },
@@ -976,6 +1060,8 @@ const TOPICS = [
     summary: 'Scanning, pentest, bug bounty, and threat feeds.',
     terms: [
       { term: 'Vulnerability scan', memorize: 'Automated tool finds known weaknesses.' },
+      { term: 'Credentialed scan', memorize: 'Scanner logs in to inspect local configuration and patch state.' },
+      { term: 'Non-credentialed scan', memorize: 'Scanner checks exposed services without login access.' },
       { term: 'Penetration test', memorize: 'Simulated attack to find exploitable flaws.' },
       { term: 'Bug bounty', memorize: 'Rewards external researchers for findings.' },
       { term: 'Threat feed', memorize: 'External IOC and vulnerability intelligence.' },
@@ -1014,9 +1100,12 @@ const TOPICS = [
       { term: 'SOAR', memorize: 'Automated response orchestration.' },
       { term: 'EDR', memorize: 'Endpoint Detection and Response.' },
       { term: 'XDR', memorize: 'Extended detection across email, cloud, endpoint.' },
+      { term: 'Application monitor', memorize: 'Monitoring tool that tracks application health and behavior.' },
+      { term: 'System monitor', memorize: 'Monitoring tool that tracks host or operating system health.' },
       { term: 'IDS', memorize: 'Detects suspicious activity — alerts.' },
       { term: 'IPS', memorize: 'Detects and blocks inline.' },
       { term: 'Packet capture', memorize: 'Full traffic recording for analysis.' },
+      { term: 'Memory dump', memorize: 'Snapshot of volatile memory for forensic analysis.' },
     ],
   },
   {
@@ -1025,6 +1114,9 @@ const TOPICS = [
     summary: 'CPU, memory, disk, and service health baselines.',
     terms: [
       { term: 'Baseline monitoring', memorize: 'Compare activity to normal patterns.' },
+      { term: 'CPU', memorize: 'Processor utilization can indicate overload or abnormal activity.' },
+      { term: 'RAM', memorize: 'Memory utilization affects system stability and investigation context.' },
+      { term: 'Operating system', memorize: 'Core platform software whose logs, patches, and hardening affect security.' },
       { term: 'SNMP monitoring', memorize: 'Poll device metrics.' },
       { term: 'Agent-based monitoring', memorize: 'Endpoint agent reports telemetry.' },
       { term: 'NetFlow analysis', memorize: 'Detect unusual traffic volumes/patterns.' },
@@ -1050,6 +1142,7 @@ const TOPICS = [
       { term: 'IDS', memorize: 'Passive detection — copies/monitors traffic.' },
       { term: 'IPS', memorize: 'Inline prevention — can drop traffic.' },
       { term: 'HIDS', memorize: 'Host-based intrusion detection.' },
+      { term: 'HIPS', memorize: 'Host-based intrusion prevention can block suspicious endpoint activity.' },
       { term: 'NIDS', memorize: 'Network-based intrusion detection.' },
       { term: 'Signature-based detection', memorize: 'Matches known attack patterns.' },
       { term: 'Anomaly-based detection', memorize: 'Deviations from baseline behavior.' },
@@ -1062,8 +1155,10 @@ const TOPICS = [
     terms: [
       { term: 'HTTPS', memorize: 'HTTP over TLS — encrypt web traffic.' },
       { term: 'SSH', memorize: 'Secure remote shell — replaces Telnet.' },
+      { term: 'FTP', memorize: 'Legacy plaintext file transfer protocol; replace with SFTP or FTPS.' },
       { term: 'SFTP', memorize: 'Secure file transfer over SSH.' },
       { term: 'DNSSEC', memorize: 'DNS response integrity/authentication.' },
+      { term: 'SMTP', memorize: 'Email transfer protocol that should use TLS protections.' },
       { term: 'SMTPS', memorize: 'SMTP with TLS for email in transit.' },
       { term: 'LDAPS', memorize: 'LDAP over TLS.' },
     ],
@@ -1084,6 +1179,7 @@ const TOPICS = [
     summary: 'UEBA detects anomalous user/account activity.',
     terms: [
       { term: 'UEBA', memorize: 'User and Entity Behavior Analytics.' },
+      { term: 'UBA', memorize: 'User Behavior Analytics focuses on anomalous user activity.' },
       { term: 'Anomalous behavior recognition', memorize: 'Spot unusual login or data access.' },
       { term: 'Impossible travel', memorize: 'Logins from distant locations too quickly.' },
       { term: 'Privilege misuse', memorize: 'Admin actions outside normal pattern.' },
@@ -1133,6 +1229,8 @@ const TOPICS = [
       { term: 'Whaling', memorize: 'Executives targeted.' },
       { term: 'Vishing', memorize: 'Voice-based phishing.' },
       { term: 'Smishing', memorize: 'SMS phishing.' },
+      { term: 'Caller ID', memorize: 'Phone metadata that can help screen suspicious voice calls.' },
+      { term: 'Email filtering', memorize: 'Mail control that blocks or flags suspicious messages.' },
     ],
   },
   {
@@ -1141,6 +1239,8 @@ const TOPICS = [
     summary: 'Onboarding training, refresher, and role-based content.',
     terms: [
       { term: 'Security awareness training', memorize: 'Teach policy, threats, reporting.' },
+      { term: 'Situational awareness training', memorize: 'Training that helps users recognize suspicious context and behavior.' },
+      { term: 'Data privacy course', memorize: 'Training focused on privacy rules and safe personal-data handling.' },
       { term: 'Clean desk policy', memorize: 'No sensitive papers left unattended.' },
       { term: 'Tailgating awareness', memorize: 'Do not hold secure doors open.' },
       { term: 'Password hygiene', memorize: 'Unique passwords, MFA, no sharing.' },
@@ -1174,6 +1274,7 @@ const TOPICS = [
       { term: 'Virus', memorize: 'Malware requiring host file to spread.' },
       { term: 'Worm', memorize: 'Self-replicating across network.' },
       { term: 'Trojan', memorize: 'Disguised as legitimate software.' },
+      { term: 'PUP', memorize: 'Potentially unwanted program that may be risky or intrusive.' },
       { term: 'Ransomware', memorize: 'Encrypts data; demands payment.' },
       { term: 'Rootkit', memorize: 'Hides presence on compromised system.' },
       { term: 'Spyware', memorize: 'Secretly monitors user activity.' },
@@ -1214,6 +1315,7 @@ const TOPICS = [
       { term: 'Credential stuffing', memorize: 'Breached creds tried on other sites.' },
       { term: 'Dictionary attack', memorize: 'Wordlist-based password guessing.' },
       { term: 'Rainbow table', memorize: 'Precomputed hash lookup — defeated by salt.' },
+      { term: 'Offline attack', memorize: 'Password cracking attempt against captured hashes outside the live system.' },
     ],
   },
   {
@@ -1247,8 +1349,10 @@ const TOPICS = [
     summary: 'Security review when business processes change.',
     terms: [
       { term: 'Change management', memorize: 'Controlled process for production changes.' },
+      { term: 'Change management policy', memorize: 'Policy defining how changes are requested, approved, tested, and documented.' },
       { term: 'Change advisory board', memorize: 'CAB reviews and approves changes.' },
       { term: 'Security impact analysis', memorize: 'Assess risk before implementing change.' },
+      { term: 'Impact analysis', memorize: 'Evaluate operational and security effects before making a change.' },
       { term: 'Version control', memorize: 'Track document and code changes.' },
     ],
   },
@@ -1260,6 +1364,7 @@ const TOPICS = [
       { term: 'Rollback plan', memorize: 'Restore prior state if change fails.' },
       { term: 'Maintenance window', memorize: 'Scheduled time for disruptive changes.' },
       { term: 'Staging environment', memorize: 'Test changes before production.' },
+      { term: 'Test results', memorize: 'Evidence from validation that a change behaved as expected.' },
       { term: 'Configuration baseline', memorize: 'Document expected post-change state.' },
     ],
   },
@@ -1364,6 +1469,7 @@ const TOPICS = [
       { term: 'ISA', memorize: 'Interconnection Security Agreement between orgs.' },
       { term: 'BPA', memorize: 'Business Partnership Agreement.' },
       { term: 'NDA', memorize: 'Non-Disclosure Agreement — protects confidential info.' },
+      { term: 'AUP', memorize: 'Acceptable Use Policy defines permitted technology use.' },
       { term: 'SOW', memorize: 'Statement of Work — project scope and deliverables.' },
     ],
   },
@@ -1374,6 +1480,7 @@ const TOPICS = [
     terms: [
       { term: 'Internal audit', memorize: 'Organization reviews its own controls.' },
       { term: 'Self-assessment', memorize: 'Team evaluates against framework.' },
+      { term: 'Audit committee', memorize: 'Governance group that oversees audit independence and findings.' },
       { term: 'Gap analysis', memorize: 'Compare current state to required state.' },
       { term: 'Compliance assessment', memorize: 'Check adherence to policies/standards.' },
     ],
@@ -1384,6 +1491,8 @@ const TOPICS = [
     summary: 'Third-party audits and regulatory examinations.',
     terms: [
       { term: 'External audit', memorize: 'Independent auditor evaluates controls.' },
+      { term: 'Third-party audit', memorize: 'Independent outside review of controls or compliance.' },
+      { term: 'Regulatory assessment', memorize: 'Review performed against legal or regulatory requirements.' },
       { term: 'SOC 2', memorize: 'Service organization controls attestation.' },
       { term: 'ISO 27001 certification', memorize: 'External ISMS certification audit.' },
       { term: 'Regulatory examination', memorize: 'Government oversight (e.g., HIPAA).' },
@@ -1396,9 +1505,12 @@ const TOPICS = [
     terms: [
       { term: 'Penetration test', memorize: 'Authorized exploit attempt on systems.' },
       { term: 'Rules of engagement', memorize: 'Scope, limits, and timing for pentest.' },
+      { term: 'ROE', memorize: 'Rules of engagement abbreviation for pentest scope and constraints.' },
       { term: 'Black box test', memorize: 'No prior knowledge of target.' },
+      { term: 'Unknown environment', memorize: 'Assessment starts with no prior knowledge of target details.' },
       { term: 'White box test', memorize: 'Full knowledge including source/docs.' },
       { term: 'Gray box test', memorize: 'Partial knowledge of environment.' },
+      { term: 'Partially known environment', memorize: 'Assessment starts with limited target knowledge.' },
     ],
   },
   {
@@ -1417,6 +1529,7 @@ const TOPICS = [
     summary: 'Fines, legal action, reputational damage.',
     terms: [
       { term: 'Regulatory fines', memorize: 'Penalties for violating laws (GDPR, HIPAA).' },
+      { term: 'Sanctions', memorize: 'Formal penalties imposed for violating laws, rules, or policy.' },
       { term: 'Legal liability', memorize: 'Lawsuits from affected parties.' },
       { term: 'Reputational damage', memorize: 'Loss of customer trust after breach.' },
       { term: 'License revocation', memorize: 'Loss of operating permission in regulated industries.' },
@@ -1438,8 +1551,11 @@ const TOPICS = [
     summary: 'GDPR, CCPA, data subject rights.',
     terms: [
       { term: 'GDPR', memorize: 'EU data protection regulation.' },
+      { term: 'CCPA', memorize: 'California Consumer Privacy Act for consumer privacy rights.' },
       { term: 'Data subject rights', memorize: 'Access, erasure, portability requests.' },
+      { term: 'Data protection authorities', memorize: 'Regulators that oversee privacy-law compliance and enforcement.' },
       { term: 'Privacy impact assessment', memorize: 'Evaluate privacy risk of new processing.' },
+      { term: 'Data retention policy enforcement', memorize: 'Ensure data is kept or disposed according to retention requirements.' },
       { term: 'Data minimization', memorize: 'Collect only necessary personal data.' },
       { term: 'Consent management', memorize: 'Track and honor user privacy choices.' },
     ],
@@ -1449,16 +1565,14 @@ const TOPICS = [
 function enrichTerms(topic) {
   return topic.terms.map((entry) => ({
     ...entry,
-    inFlashcards: flashcardTerms.has(entry.term.trim().toLowerCase()),
-    explanation: buildTermExplanation(entry),
+    explanation: buildTermExplanation(entry, topic),
   }))
 }
 
 const concepts = {
   version: 1,
   exam: 'CompTIA Security+ SY0-701',
-  description:
-    'Exam topic map with terms and concepts to memorize. Terms marked inFlashcards link to public/flashcards.json.',
+  description: 'Exam topic map with self-contained terms and educational explanations.',
   topicCount: TOPICS.length,
   topics: TOPICS.map((topic, index) => ({
     id: `topic-${String(index + 1).padStart(3, '0')}`,
@@ -1470,13 +1584,8 @@ const concepts = {
 }
 
 const totalTerms = concepts.topics.reduce((sum, topic) => sum + topic.terms.length, 0)
-const linkedTerms = concepts.topics.reduce(
-  (sum, topic) => sum + topic.terms.filter((entry) => entry.inFlashcards).length,
-  0,
-)
 
 concepts.termCount = totalTerms
-concepts.linkedFlashcardTerms = linkedTerms
 
 fs.writeFileSync('public/concepts.json', `${JSON.stringify(concepts, null, 2)}\n`)
 
@@ -1485,7 +1594,6 @@ console.log(
     {
       topics: concepts.topicCount,
       terms: totalTerms,
-      linkedToFlashcards: linkedTerms,
       output: 'public/concepts.json',
     },
     null,

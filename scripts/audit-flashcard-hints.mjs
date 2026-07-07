@@ -2,6 +2,7 @@ import fs from 'node:fs'
 
 const questionsData = JSON.parse(fs.readFileSync('public/questions.json', 'utf8'))
 const flashcardData = JSON.parse(fs.readFileSync('public/flashcards.json', 'utf8'))
+const flashcards = flashcardData.sections?.flatMap((section) => section.flashcards) ?? flashcardData.flashcards ?? []
 
 const questionById = new Map()
 for (const section of questionsData.sections) {
@@ -34,7 +35,7 @@ const emptyOrShortHints = []
 const duplicateHints = new Map()
 const suspiciousHints = []
 
-for (const [index, card] of flashcardData.flashcards.entries()) {
+for (const [index, card] of flashcards.entries()) {
   const hint = card.hint?.trim() || ''
   const term = card.term?.trim() || ''
 
@@ -103,7 +104,7 @@ const duplicateHintGroups = [...duplicateHints.entries()]
   .map(([hint, cards]) => ({ hint, cards }))
 
 const result = {
-  flashcards: flashcardData.flashcards.length,
+  flashcards: flashcards.length,
   leakedHints: leakedHints.length,
   sourceMismatches: sourceMismatches.length,
   emptyOrShortHints: emptyOrShortHints.length,

@@ -12,10 +12,42 @@ DEFAULT_PRACTICES_DIR = Path(
 REPO_ROOT = Path(__file__).resolve().parents[1]
 FLASHCARDS_PATH = REPO_ROOT / "public" / "flashcards.json"
 QUESTIONS_PATH = REPO_ROOT / "public" / "questions.json"
+DOMAIN_ORDER = [
+    "1.0 General Security Concepts",
+    "2.0 Threats, Vulnerabilities, and Mitigations",
+    "3.0 Security Architecture",
+    "4.0 Security Operations",
+    "5.0 Security Program Management and Oversight",
+    "Supplemental",
+]
 
 
 def normalize(value: str) -> str:
     return re.sub(r"\s+", " ", value.strip().lower())
+
+
+def get_flashcards(flashcard_data: dict) -> list[dict]:
+    if isinstance(flashcard_data.get("sections"), list):
+        cards: list[dict] = []
+        for section in flashcard_data["sections"]:
+            cards.extend(section.get("flashcards") or [])
+        return cards
+    return flashcard_data.get("flashcards") or []
+
+
+def set_flashcards(flashcard_data: dict, cards: list[dict]) -> None:
+    groups: dict[str, list[dict]] = {domain: [] for domain in DOMAIN_ORDER}
+    for card in cards:
+        domains = card.get("domains") or []
+        domain = domains[0] if domains else ("Supplemental" if card.get("supplemental") else "Uncategorized")
+        groups.setdefault(domain, []).append(card)
+
+    flashcard_data["sections"] = [
+        {"name": name, "flashcards": section_cards}
+        for name, section_cards in groups.items()
+        if section_cards
+    ]
+    flashcard_data.pop("flashcards", None)
 
 
 def clean_pdf_text(text: str) -> str:
@@ -156,13 +188,14 @@ def main() -> int:
     pdf_explanations = load_pdf_explanations(practices_dir)
     question_explanations = load_question_explanations()
     flashcard_data = json.loads(FLASHCARDS_PATH.read_text(encoding="utf-8"))
+    flashcards = get_flashcards(flashcard_data)
 
     pdf_added = pdf_updated = pdf_unchanged = 0
     question_added = question_updated = 0
     untouched = 0
     samples: list[dict] = []
 
-    for card in flashcard_data["flashcards"]:
+    for card in flashcards:
         previous = (card.get("definition") or "").strip()
         explanation, source = find_pdf_explanation(card, pdf_explanations)
 
@@ -211,6 +244,7 @@ def main() -> int:
                 }
             )
 
+    set_flashcards(flashcard_data, flashcards)
     FLASHCARDS_PATH.write_text(
         f"{json.dumps(flashcard_data, indent=2, ensure_ascii=False)}\n",
         encoding="utf-8",

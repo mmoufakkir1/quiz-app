@@ -3,6 +3,34 @@ import fs from 'node:fs'
 const questionsData = JSON.parse(fs.readFileSync('public/questions.json', 'utf8'))
 const flashcardData = JSON.parse(fs.readFileSync('public/flashcards.json', 'utf8'))
 
+const DOMAIN_ORDER = [
+  '1.0 General Security Concepts',
+  '2.0 Threats, Vulnerabilities, and Mitigations',
+  '3.0 Security Architecture',
+  '4.0 Security Operations',
+  '5.0 Security Program Management and Oversight',
+  'Supplemental',
+]
+
+function getFlashcards(data) {
+  return data.sections?.flatMap((section) => section.flashcards) ?? data.flashcards ?? []
+}
+
+function setFlashcards(data, cards) {
+  const groups = new Map(DOMAIN_ORDER.map((domain) => [domain, []]))
+  for (const card of cards) {
+    const domain = card.domains?.[0] || (card.supplemental ? 'Supplemental' : 'Uncategorized')
+    if (!groups.has(domain)) groups.set(domain, [])
+    groups.get(domain).push(card)
+  }
+  data.sections = [...groups.entries()]
+    .filter(([, groupCards]) => groupCards.length > 0)
+    .map(([name, groupCards]) => ({ name, flashcards: groupCards }))
+  delete data.flashcards
+}
+
+const flashcards = getFlashcards(flashcardData)
+
 const questionById = new Map()
 for (const section of questionsData.sections) {
   for (const question of section.questions) {
@@ -544,7 +572,7 @@ function buildStructuredCard(card, question) {
 
 const changes = []
 
-for (const card of flashcardData.flashcards) {
+for (const card of flashcards) {
   const question = findPrimaryQuestion(card)
   const previousHint = card.hint
   const previousDefinition = card.definition
@@ -606,10 +634,11 @@ for (const card of flashcardData.flashcards) {
   }
 }
 
+setFlashcards(flashcardData, flashcards)
 fs.writeFileSync('public/flashcards.json', `${JSON.stringify(flashcardData, null, 2)}\n`)
 
-const remainingBadHints = flashcardData.flashcards.filter((card) => isBadHint(card.hint, card.term))
-const remainingBadDefinitions = flashcardData.flashcards.filter((card) =>
+const remainingBadHints = flashcards.filter((card) => isBadHint(card.hint, card.term))
+const remainingBadDefinitions = flashcards.filter((card) =>
   isBadDefinition(card.definition, card.term),
 )
 
