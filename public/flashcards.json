@@ -20,11 +20,11 @@
             360
           ],
           "supplemental": false,
-          "hint": "Think of a security device that sits inline and can take action on traffic.",
-          "front": "Think of a security device that sits inline and can take action on traffic.",
-          "keyDetails": "Inline devices actively inspect and enforce policy. Passive sensors only monitor and generate alerts.",
-          "example": "An inline IPS blocks malicious packets before they reach internal systems.",
-          "memoryHook": "Active = Acts. Passive = Perceives."
+          "hint": "A security analyst is documenting a device that directly interacts with or modifies network traffic.",
+          "front": "A security analyst is documenting a device that directly interacts with or modifies network traffic.",
+          "keyDetails": "That is different from a passive sensor that only observes. Also known as: Inline security appliance, Active sensor.",
+          "example": "A security analyst is documenting a device that directly interacts with or modifies network traffic.",
+          "memoryHook": "\"Active\" + \"appliance\" → connect the words to the definition."
         },
         {
           "term": "Allow list",
@@ -85,9 +85,9 @@
           "supplemental": false,
           "hint": "Change management is not just for implementing software updates or hardware changes. For example, version control refers to capturing changes made to important documents a company needs. What are some documents or data that would utilize version control?",
           "front": "Change management is not just for implementing software updates or hardware changes. For example, version control refers to capturing changes made to important documents a company needs. What are some documents or data that would utilize version control?",
-          "keyDetails": "Capturing changes within diagrams ensures only the most recent diagrams will be available while archiving the previous documents, but still having them available for reference. Important data will vary from company to company, but tracking changes will allow references for only the most recent data and avoid confusion.",
+          "keyDetails": "Capturing changes within diagrams ensures only the most recent diagrams will be available while archiving the previous documents, but still having them available for reference. Important data will vary from company to company, but tracking changes ensures teams reference the current approved version instead of outdated copies.",
           "example": "Change management is not just for implementing software updates or hardware changes.",
-          "memoryHook": "Link \"Code\" to: capturing implemented changes in code is important as it will allow for a quick reversion to a known good state of the code if a change causes problems."
+          "memoryHook": "Important data will vary from company to company, but tracking changes ensures teams reference the current approved version instead of outdated copies."
         },
         {
           "term": "Data states",
@@ -143,9 +143,9 @@
           "supplemental": false,
           "hint": "Change management is not just for implementing software updates or hardware changes. For example, version control refers to capturing changes made to important documents a company needs. What are some documents or data that would utilize version control?",
           "front": "Change management is not just for implementing software updates or hardware changes. For example, version control refers to capturing changes made to important documents a company needs. What are some documents or data that would utilize version control?",
-          "keyDetails": "Capturing changes within diagrams ensures only the most recent diagrams will be available while archiving the previous documents, but still having them available for reference. Important data will vary from company to company, but tracking changes will allow references for only the most recent data and avoid confusion.",
+          "keyDetails": "Capturing changes within diagrams ensures only the most recent diagrams will be available while archiving the previous documents, but still having them available for reference. Important data will vary from company to company, but tracking changes ensures teams reference the current approved version instead of outdated copies.",
           "example": "Change management is not just for implementing software updates or hardware changes.",
-          "memoryHook": "Link \"Diagrams\" to: capturing implemented changes in code is important as it will allow for a quick reversion to a known good state of the code if a change causes problems."
+          "memoryHook": "Important data will vary from company to company, but tracking changes ensures teams reference the current approved version instead of outdated copies."
         },
         {
           "term": "Directive control",
@@ -254,7 +254,7 @@
         },
         {
           "term": "Important data",
-          "definition": "Important data will vary from company to company, but tracking changes will allow references for only the most recent data and avoid confusion.",
+          "definition": "Important data will vary from company to company, but tracking changes ensures teams reference the current approved version instead of outdated copies.",
           "domains": [
             "1.0 General Security Concepts"
           ],
@@ -268,7 +268,7 @@
           "supplemental": false,
           "hint": "Change management is not just for implementing software updates or hardware changes. For example, version control refers to capturing changes made to important documents a company needs. What are some documents or data that would utilize version control?",
           "front": "Change management is not just for implementing software updates or hardware changes. For example, version control refers to capturing changes made to important documents a company needs. What are some documents or data that would utilize version control?",
-          "keyDetails": "Capturing changes within diagrams ensures only the most recent diagrams will be available while archiving the previous documents, but still having them available for reference. Faxes do not fall under change management as they are one-time communications and do not need tracking or logging.",
+          "keyDetails": "Capturing changes within diagrams ensures only the most recent diagrams will be available while archiving the previous documents, but still having them available for reference. Important data will vary from company to company, but tracking changes ensures teams reference the current approved version instead of outdated copies.",
           "example": "Change management is not just for implementing software updates or hardware changes.",
           "memoryHook": "\"Important\" + \"data\" → connect the words to the definition."
         },
@@ -388,7 +388,7 @@
           "front": "The root of trust establishes trust in digital certificates and cryptographic operations.",
           "keyDetails": "OCSP is a protocol that verifies the validity of digital certificates. The root of trust and OCSP perform distinct roles and have different functions within the security infrastructure. The root of trust and OCSP are crucial components to establish trust in digital certificates. However, the root of trust is not a part of OCSP itself.",
           "example": "A company implements a new security infrastructure for its network and explores the root of trust and Online Certificate Status Protocol (OCSP) concepts to enhance security measures.",
-          "memoryHook": "\"The\" + \"certificates.\" → connect the words to the definition."
+          "memoryHook": "\"Root\" + \"relationship\" → connect the words to the definition."
         },
         {
           "term": "Salting",
@@ -407,11 +407,11 @@
             881
           ],
           "supplemental": false,
-          "hint": "A security team is reviewing adding random data before hashing to resist precomputed password attacks.",
-          "front": "A security team is reviewing adding random data before hashing to resist precomputed password attacks.",
-          "keyDetails": "adding random data before hashing to resist precomputed password attacks.",
+          "hint": "Adding random data before hashing to resist precomputed password attacks.",
+          "front": "Adding random data before hashing to resist precomputed password attacks.",
+          "keyDetails": "1.0 General Security Concepts.",
           "example": "A security team is reviewing adding random data before hashing to resist precomputed password attacks.",
-          "memoryHook": "Link \"Salting\" to: salting is a cryptography hash method where the user hashes data used for something like a password, and it cannot decrypt back to the plaintext password that generated it."
+          "memoryHook": "Link \"Salting\" to: adding random data before hashing to resist precomputed password attacks."
         },
         {
           "term": "Separation of duties",
@@ -468,9 +468,9 @@
           "supplemental": true,
           "hint": "Think of a monitoring device that observes traffic and alerts without blocking it.",
           "front": "Think of a monitoring device that observes traffic and alerts without blocking it.",
-          "keyDetails": "Passive sensors are typically connected to a SPAN port or network TAP. They detect and alert but do not stop traffic.",
-          "example": "A network IDS connected to a SPAN port detects suspicious traffic and sends an alert.",
-          "memoryHook": "Passive = Perceives. Active = Acts."
+          "keyDetails": "Also known as: Passive sensor, Out-of-band sensor.",
+          "example": "A security team applies this when a passive security sensor monitors network traffic without blocking, filtering, or modifying it.",
+          "memoryHook": "\"Passive\" + \"sensor\" → connect the words to the definition."
         }
       ]
     },
@@ -493,11 +493,11 @@
             174
           ],
           "supplemental": false,
-          "hint": "Think AAA: authentication, authorization, accounting.",
-          "front": "What does accounting mean in AAA?",
-          "keyDetails": "Accounting supports nonrepudiation and investigations by recording who did what and when.",
-          "example": "Authentication lets a user in; accounting records what the user did.",
-          "memoryHook": "Accounting = account for actions."
+          "hint": "A security team is reviewing recording and reviewing actions performed by identities.",
+          "front": "A security team is reviewing recording and reviewing actions performed by identities.",
+          "keyDetails": "It supports auditing because actions can be traced back to users, services, or systems. Also known as: Auditing.",
+          "example": "A security team is reviewing recording and reviewing actions performed by identities.",
+          "memoryHook": "Link \"Accounting\" to: accounting is the process of logging and reviewing actions performed by users, services, and systems so activity can be audited and attributed."
         },
         {
           "term": "Provisioning",
@@ -516,11 +516,11 @@
             850
           ],
           "supplemental": false,
-          "hint": "Think account creation and access assignment.",
-          "front": "What is provisioning?",
-          "keyDetails": "Provisioning should follow least privilege and approved onboarding workflows.",
-          "example": "Creating a new employee account and assigning required group memberships.",
-          "memoryHook": "Provisioning = provide access."
+          "hint": "An organization is designing access and identity controls and must choose the authentication method or relationship that best fits the requirement.",
+          "front": "An organization is designing access and identity controls and must choose the authentication method or relationship that best fits the requirement.",
+          "keyDetails": "Linking multiple systems together can increase the automation of onboarding procedures. Multifactor authentication is an authentication scheme that requires the user to present at least two different factors as credentials.",
+          "example": "An organization is designing access and identity controls and must choose the authentication method or relationship that best fits the requirement.",
+          "memoryHook": "Link \"Provisioning\" to: provisioning is the process of creating, configuring, and granting accounts, access, and resources for users or systems."
         },
         {
           "term": "Nation-state actor",
@@ -538,11 +538,11 @@
             195
           ],
           "supplemental": false,
-          "hint": "Government-backed attacker.",
-          "front": "What is a nation-state actor?",
-          "keyDetails": "Common motivations include espionage, disruption, influence operations, and strategic advantage.",
-          "example": "A state-backed group targets an energy provider for intelligence collection.",
-          "memoryHook": "Nation-state = national government backing."
+          "hint": "A security team is reviewing a government-backed threat actor often possessing substantial funding and capability.",
+          "front": "A security team is reviewing a government-backed threat actor often possessing substantial funding and capability.",
+          "keyDetails": "These attackers are often associated with strong funding, patience, and advanced capabilities. Also known as: State-sponsored actor.",
+          "example": "A security team is reviewing a government-backed threat actor often possessing substantial funding and capability.",
+          "memoryHook": "\"Nation-state\" + \"actor\" → connect the words to the definition."
         },
         {
           "term": "Hacktivist",
@@ -560,11 +560,11 @@
             921
           ],
           "supplemental": false,
-          "hint": "Political or social motive.",
-          "front": "What is a hacktivist?",
-          "keyDetails": "Common actions include website defacement, data leaks, denial-of-service attacks, and disinformation.",
-          "example": "A group defaces a public website to protest a policy.",
-          "memoryHook": "Hacktivist = hacking + activism."
+          "hint": "A security team is reviewing a threat actor motivated primarily by political or social beliefs.",
+          "front": "A security team is reviewing a threat actor motivated primarily by political or social beliefs.",
+          "keyDetails": "Nation-state actors are the root cause of many attacks, particularly on energy, health, and electoral systems. The goals of state actors are primarily disinformation and espionage for strategic advantage.",
+          "example": "A security team is reviewing a threat actor motivated primarily by political or social beliefs.",
+          "memoryHook": "Link \"Hacktivist\" to: a hacktivist is a threat actor motivated primarily by political, ideological, or social causes."
         },
         {
           "term": "Insider threat",
@@ -584,11 +584,11 @@
             774
           ],
           "supplemental": false,
-          "hint": "Threat originates from someone already inside the organization.",
-          "front": "What is an insider threat?",
-          "keyDetails": "Insiders may misuse access, exfiltrate data, bypass controls, or make negligent security mistakes.",
-          "example": "An employee copies confidential files to a personal drive before leaving the company.",
-          "memoryHook": "Insider = already has access."
+          "hint": "A security team is reviewing a risk originating from a person with authorized organizational access.",
+          "front": "A security team is reviewing a risk originating from a person with authorized organizational access.",
+          "keyDetails": "Nation-state actors are the root cause of many attacks, particularly on energy, health, and electoral systems. The goals of state actors are primarily disinformation and espionage for strategic advantage.",
+          "example": "A security team is reviewing a risk originating from a person with authorized organizational access.",
+          "memoryHook": "\"Insider\" + \"threat\" → connect the words to the definition."
         },
         {
           "term": "Application attack",
@@ -605,11 +605,11 @@
             834
           ],
           "supplemental": false,
-          "hint": "The weakness is in the app, not necessarily the network.",
-          "front": "What is an application attack?",
-          "keyDetails": "Examples include injection, XSS, CSRF, directory traversal, and insecure deserialization.",
-          "example": "A vulnerable web app lets an attacker access data outside their authorization.",
-          "memoryHook": "Application attack = abuse app behavior."
+          "hint": "A post describes a vulnerability in freeware that allows a remote user to gain access to a system with the same permissions as the vulnerable app.",
+          "front": "A post describes a vulnerability in freeware that allows a remote user to gain access to a system with the same permissions as the vulnerable app.",
+          "keyDetails": "The permissions gained depend on the vulnerable application context.",
+          "example": "A post describes a vulnerability in freeware that allows a remote user to gain access to a system with the same permissions as the vulnerable app.",
+          "memoryHook": "\"Application\" + \"attack\" → connect the words to the definition."
         },
         {
           "term": "Injection attack",
@@ -628,11 +628,11 @@
             835
           ],
           "supplemental": false,
-          "hint": "Attacker input changes what the system executes.",
-          "front": "What is an injection attack?",
-          "keyDetails": "Common examples include SQL injection, command injection, LDAP injection, and script injection.",
-          "example": "An attacker modifies a search field so the backend query returns unauthorized records.",
-          "memoryHook": "Injection = input becomes instructions."
+          "hint": "A threat actor sends data to a system in a way that changes the commands being sent to the observer and causes unauthorized processing.",
+          "front": "A threat actor sends data to a system in a way that changes the commands being sent to the observer and causes unauthorized processing.",
+          "keyDetails": "For example, a threat actor queries for information but alters the request to return more users' data than authorized. A replay attack works by capturing or guessing the token value and then submitting it to reestablish the session illegitimately.",
+          "example": "A threat actor sends data to a system in a way that changes the commands being sent to the observer and causes unauthorized processing.",
+          "memoryHook": "\"Injection\" + \"attack\" → connect the words to the definition."
         },
         {
           "term": "SQL injection",
@@ -652,11 +652,11 @@
             471
           ],
           "supplemental": false,
-          "hint": "Input changes a SQL query.",
-          "front": "What is SQL injection?",
-          "keyDetails": "Mitigations include parameterized queries, input validation, least privilege for database accounts, and safe error handling.",
-          "example": "' OR '1'='1 entered into a login field changes the SQL logic.",
-          "memoryHook": "SQLi = input changes SQL."
+          "hint": "A security team is reviewing injecting database commands through improperly validated application input.",
+          "front": "A security team is reviewing injecting database commands through improperly validated application input.",
+          "keyDetails": "The danger is that user-supplied text gets treated like SQL commands. Also known as: SQLi.",
+          "example": "A security team is reviewing injecting database commands through improperly validated application input.",
+          "memoryHook": "\"SQL\" + \"injection\" → connect the words to the definition."
         },
         {
           "term": "Command injection attack",
@@ -676,11 +676,11 @@
             834
           ],
           "supplemental": false,
-          "hint": "The application passes unsanitized input to the operating system.",
-          "front": "What is a command injection attack?",
-          "keyDetails": "Unlike SQL injection, command injection targets the operating system command interpreter.",
-          "example": "A vulnerable field accepts '; whoami' and runs it on the server.",
-          "memoryHook": "Command injection = execute OS commands."
+          "hint": "A post describes a vulnerability in freeware that allows a remote user to gain access to a system with the same permissions as the vulnerable app.",
+          "front": "A post describes a vulnerability in freeware that allows a remote user to gain access to a system with the same permissions as the vulnerable app.",
+          "keyDetails": "The permissions gained depend on the vulnerable application context. Also known as: OS command injection.",
+          "example": "A post describes a vulnerability in freeware that allows a remote user to gain access to a system with the same permissions as the vulnerable app.",
+          "memoryHook": "\"Command\" + \"attack\" → connect the words to the definition."
         },
         {
           "term": "Cross-site scripting (XSS)",
@@ -697,10 +697,10 @@
           "sourceQuestionIds": [],
           "supplemental": false,
           "hint": "Malicious script runs in the browser.",
-          "front": "What is cross-site scripting (XSS)?",
-          "keyDetails": "XSS can steal session cookies, perform actions as the user, or alter page content. Mitigate with output encoding, input validation, and Content Security Policy.",
-          "example": "A comment field stores JavaScript that runs when other users view the page.",
-          "memoryHook": "XSS = script crosses into the user browser."
+          "front": "Malicious script runs in the browser.",
+          "keyDetails": "Also known as: XSS.",
+          "example": "A security team applies this when cross-site scripting (xss) is an injection attack in which malicious scripts execute in a victim’s browser through a vulnerable web application.",
+          "memoryHook": "\"Cross-site\" + \"(XSS)\" → connect the words to the definition."
         },
         {
           "term": "CSRF",
@@ -724,11 +724,11 @@
             883
           ],
           "supplemental": false,
-          "hint": "The victim is already authenticated.",
-          "front": "What is CSRF?",
-          "keyDetails": "CSRF abuses trust between the browser and the web application. Anti-CSRF tokens and SameSite cookies help mitigate it.",
-          "example": "A hidden form causes a logged-in user to unknowingly submit a password-change request.",
-          "memoryHook": "CSRF = forged request from a trusted browser."
+          "hint": "A website receives increased visits and requests for files not listed on the site. Some requests appear to be attempts to reach a parent directory.",
+          "front": "A website receives increased visits and requests for files not listed on the site. Some requests appear to be attempts to reach a parent directory.",
+          "keyDetails": "If settings are not correct on the web server, it could allow a malicious actor enhanced privileges to the network. A forgery attack attempts to hijack an ongoing authenticated session to perform some action without the user's consent. An injection attack exploits some unsecure way in which the application processes requests and queries.",
+          "example": "A website receives increased visits and requests for files not listed on the site. Some requests appear to be attempts to reach a parent directory.",
+          "memoryHook": "Link \"CSRF\" to: cross-site request forgery (csrf) tricks an authenticated user’s browser into submitting an unwanted request to a web application."
         },
         {
           "term": "Directory traversal attack",
@@ -748,11 +748,11 @@
             883
           ],
           "supplemental": false,
-          "hint": "Look for ../ or encoded equivalents such as %2e%2e%2f.",
-          "front": "What is a directory traversal attack?",
-          "keyDetails": "Canonicalization errors can allow encoded traversal strings to bypass filters.",
-          "example": "A request for ../../../../etc/passwd attempts to read a sensitive system file.",
-          "memoryHook": "Directory traversal = climb out of the web folder."
+          "hint": "A website receives increased visits and requests for files not listed on the site. Some requests appear to be attempts to reach a parent directory.",
+          "front": "A website receives increased visits and requests for files not listed on the site. Some requests appear to be attempts to reach a parent directory.",
+          "keyDetails": "If settings are not correct on the web server, it could allow a malicious actor enhanced privileges to the network. A forgery attack attempts to hijack an ongoing authenticated session to perform some action without the user's consent. An injection attack exploits some unsecure way in which the application processes requests and queries.",
+          "example": "A website receives increased visits and requests for files not listed on the site. Some requests appear to be attempts to reach a parent directory.",
+          "memoryHook": "\"Directory\" + \"attack\" → connect the words to the definition."
         },
         {
           "term": "Canonicalization attack",
@@ -770,11 +770,11 @@
             830
           ],
           "supplemental": false,
-          "hint": "Encoded paths are normalized after filtering.",
-          "front": "What is a canonicalization attack?",
-          "keyDetails": "Examples include URL-encoded traversal strings such as %2e%2e%2f.",
-          "example": "A web server blocks ../ but permits %2e%2e%2f, which decodes to ../.",
-          "memoryHook": "Canonicalization = same path, different spelling."
+          "hint": "An IT admin receives an alert regarding an employee's web activity in which requested addresses are not written in plaintext, but contain entries such as %2e%2e%2f%2e%2e%2f%2e%2e%2f. What could this employee be attempting to do? (Select the two best options.)",
+          "front": "An IT admin receives an alert regarding an employee's web activity in which requested addresses are not written in plaintext, but contain entries such as %2e%2e%2f%2e%2e%2f%2e%2e%2f. What could this employee be attempting to do? (Select the two best options.)",
+          "keyDetails": "If settings are not correct on the web server, it could allow a malicious actor enhanced privileges to the network. A forgery attack attempts to hijack an ongoing authenticated session to perform some action without the user's consent. An injection attack exploits some unsecure way in which the application processes requests and queries.",
+          "example": "An IT admin receives an alert regarding an employee's web activity in which requested addresses are not written in plaintext, but contain entries such as %2e%2e%2f%2e%2e%2f%2e%2e%2f.",
+          "memoryHook": "\"Canonicalization\" + \"attack\" → connect the words to the definition."
         },
         {
           "term": "Replay attack",
@@ -793,11 +793,11 @@
             883
           ],
           "supplemental": false,
-          "hint": "The attacker reuses something valid.",
-          "front": "What is a replay attack?",
-          "keyDetails": "Mitigations include timestamps, nonces, session expiration, and mutual authentication.",
-          "example": "An attacker captures a valid token and resubmits it to reestablish a session.",
-          "memoryHook": "Replay = record and reuse."
+          "hint": "A website receives increased visits and requests for files not listed on the site. Some requests appear to be attempts to reach a parent directory.",
+          "front": "A website receives increased visits and requests for files not listed on the site. Some requests appear to be attempts to reach a parent directory.",
+          "keyDetails": "If settings are not correct on the web server, it could allow a malicious actor enhanced privileges to the network. A forgery attack attempts to hijack an ongoing authenticated session to perform some action without the user's consent. An injection attack exploits some unsecure way in which the application processes requests and queries.",
+          "example": "A website receives increased visits and requests for files not listed on the site. Some requests appear to be attempts to reach a parent directory.",
+          "memoryHook": "\"Replay\" + \"attack\" → connect the words to the definition."
         },
         {
           "term": "On-path attack",
@@ -817,11 +817,11 @@
             837
           ],
           "supplemental": false,
-          "hint": "The attacker is between sender and receiver.",
-          "front": "What is an on-path attack?",
-          "keyDetails": "Encryption, certificate validation, HSTS, and secure network design help reduce risk.",
-          "example": "An attacker intercepts traffic on an insecure Wi-Fi network.",
-          "memoryHook": "On-path = in the communication path."
+          "hint": "A company prepares to add additional protection to its networks due to ongoing attacks. It is adding resiliency and high availability services, such as load balancing and cluster services. What attacks could the company be experiencing?",
+          "front": "A company prepares to add additional protection to its networks due to ongoing attacks. It is adding resiliency and high availability services, such as load balancing and cluster services. What attacks could the company be experiencing?",
+          "keyDetails": "Companies without these protections in place would have a hard time dealing with constant DoS attacks. An on-path attack occurs when a malicious user has found a way to intercept data transmitted before it arrives to the intended recipient. The capabilities added to the system would not protect against this attack.",
+          "example": "A company prepares to add additional protection to its networks due to ongoing attacks.",
+          "memoryHook": "\"On-path\" + \"attack\" → connect the words to the definition."
         },
         {
           "term": "Phishing",
@@ -839,11 +839,11 @@
             918
           ],
           "supplemental": false,
-          "hint": "Often email-based deception.",
-          "front": "What is phishing?",
-          "keyDetails": "Phishing commonly combines spoofing, urgency, impersonation, and malicious links or attachments.",
-          "example": "A fake payroll email asks users to sign in through a lookalike site.",
-          "memoryHook": "Phishing = fishing for credentials."
+          "hint": "A security team is reviewing a social-engineering attack commonly delivered through deceptive email.",
+          "front": "A security team is reviewing a social-engineering attack commonly delivered through deceptive email.",
+          "keyDetails": "It persuades or tricks the target into interacting with a malicious resource disguised as a trusted one. Typosquatting means that the threat actor registers a domain name very similar to a real one, hoping that users will not notice the difference and assume they are browsing a trusted site.",
+          "example": "A security team is reviewing a social-engineering attack commonly delivered through deceptive email.",
+          "memoryHook": "Link \"Phishing\" to: phishing is a social engineering attack that uses deceptive messages to trick users into revealing information, opening malicious content, or visiting malicious sites."
         },
         {
           "term": "Vishing",
@@ -861,11 +861,11 @@
             200
           ],
           "supplemental": false,
-          "hint": "Phishing over voice.",
-          "front": "What is vishing?",
-          "keyDetails": "Attackers may impersonate support staff, banks, executives, or government agencies.",
-          "example": "A caller claims to be IT support and asks for MFA codes.",
-          "memoryHook": "Vishing = voice phishing."
+          "hint": "A security team is reviewing a social-engineering attack conducted through voice calls.",
+          "front": "A security team is reviewing a social-engineering attack conducted through voice calls.",
+          "keyDetails": "The attack happens through phone calls or voice messages instead of email or text. Also known as: Voice phishing.",
+          "example": "A security team is reviewing a social-engineering attack conducted through voice calls.",
+          "memoryHook": "The attack happens through phone calls or voice messages instead of email or text."
         },
         {
           "term": "Pretexting",
@@ -881,11 +881,11 @@
             202
           ],
           "supplemental": false,
-          "hint": "The attacker creates a believable story.",
-          "front": "What is pretexting?",
-          "keyDetails": "Pretexting often supports impersonation, phishing, vishing, and physical access attempts.",
-          "example": "An attacker claims to be from HR and asks an employee to verify sensitive information.",
-          "memoryHook": "Pretext = fake story."
+          "hint": "A security team is reviewing using a fabricated scenario to persuade a target to reveal information or act.",
+          "front": "A security team is reviewing using a fabricated scenario to persuade a target to reveal information or act.",
+          "keyDetails": "The fake scenario is the social-engineering hook.",
+          "example": "A security team is reviewing using a fabricated scenario to persuade a target to reveal information or act.",
+          "memoryHook": "Link \"Pretexting\" to: pretexting is social engineering that uses a fabricated scenario or identity to gain trust and extract information or access."
         },
         {
           "term": "Impersonation",
@@ -903,11 +903,11 @@
             902
           ],
           "supplemental": false,
-          "hint": "The attacker poses as someone trusted.",
-          "front": "What is impersonation?",
-          "keyDetails": "Impersonation may use urgency, authority, intimidation, or familiarity to influence the victim.",
-          "example": "An attacker poses as a manager and requests a wire transfer.",
-          "memoryHook": "Impersonation = pretend identity."
+          "hint": "is a social engineering attack that involves which of the following?",
+          "front": "is a social engineering attack that involves which of the following?",
+          "keyDetails": "This option describes a pharming attack, not impersonation. Pharming manipulates Domain Name System (DNS) settings to redirect users to fraudulent websites. This option refers to a phishing attack, not impersonation. Phishing uses deceptive emails to trick users into revealing sensitive information.",
+          "example": "is a social engineering attack that involves which of the following?",
+          "memoryHook": "Link \"Impersonation\" to: impersonation is pretending to be a trusted person, role, or organization to manipulate a target."
         },
         {
           "term": "Typosquatting",
@@ -926,11 +926,11 @@
             781
           ],
           "supplemental": false,
-          "hint": "Lookalike or misspelled domains.",
-          "front": "What is typosquatting?",
-          "keyDetails": "It is often used for phishing, credential theft, malware delivery, or ad fraud.",
-          "example": "examp1e.com is registered to trick users looking for example.com.",
-          "memoryHook": "Typosquatting = typo domain trap."
+          "hint": "A security team is reviewing registering look-alike domain names based on common typing errors.",
+          "front": "A security team is reviewing registering look-alike domain names based on common typing errors.",
+          "keyDetails": "Phishing is a combination of social engineering and spoofing. It persuades or tricks the target into interacting with a malicious resource disguised as a trusted one. Brand impersonation occurs when the threat actor commits resources to accurately duplicating a company's logos and formatting to make a phishing message or pharming website visually compelling.",
+          "example": "A security team is reviewing registering look-alike domain names based on common typing errors.",
+          "memoryHook": "Link \"Typosquatting\" to: typosquatting registers domains that closely resemble legitimate domains to exploit user typing mistakes or visual similarity."
         },
         {
           "term": "Watering-hole attack",
@@ -946,11 +946,11 @@
             203
           ],
           "supplemental": false,
-          "hint": "Attack the site the victims already visit.",
-          "front": "What is a watering-hole attack?",
-          "keyDetails": "The attacker targets a trusted third-party location rather than contacting victims directly.",
-          "example": "Attackers compromise an industry association website visited by employees of a target company.",
-          "memoryHook": "Watering hole = poison the place targets gather."
+          "hint": "A security team is reviewing compromising a site frequently visited by the intended targets.",
+          "front": "A security team is reviewing compromising a site frequently visited by the intended targets.",
+          "keyDetails": "The attacker waits for victims to come to the infected site.",
+          "example": "A security team is reviewing compromising a site frequently visited by the intended targets.",
+          "memoryHook": "\"Watering-hole\" + \"attack\" → connect the words to the definition."
         },
         {
           "term": "Removable media",
@@ -968,11 +968,11 @@
             922
           ],
           "supplemental": false,
-          "hint": "Portable storage can carry malware or data.",
-          "front": "Why is removable media a threat vector?",
-          "keyDetails": "Controls include disabling autorun, endpoint protection, device control, encryption, and user training.",
-          "example": "A user plugs in an unknown USB drive found in a parking lot.",
-          "memoryHook": "Removable media = portable risk."
+          "hint": "A group of hackers has been monitoring recent orders from a company involving new laptops and Universal Serial Bus (USB) thumb drives. The group infiltrated the shipping company and added malicious USB thumb drives to the order.",
+          "front": "A group of hackers has been monitoring recent orders from a company involving new laptops and Universal Serial Bus (USB) thumb drives. The group infiltrated the shipping company and added malicious USB thumb drives to the order.",
+          "keyDetails": "Malicious actors can replace parts of the laptop or hack the operating systems before it gets to the company. Adding malicious USB thumb drives to the order takes advantage of removable media to trick the user into plugging them into a computer where the hacker can carry out further attacks.",
+          "example": "A group of hackers has been monitoring recent orders from a company involving new laptops and Universal Serial Bus (USB) thumb drives.",
+          "memoryHook": "\"Removable\" + \"media\" → connect the words to the definition."
         },
         {
           "term": "Default credentials",
@@ -990,11 +990,11 @@
             871
           ],
           "supplemental": false,
-          "hint": "The password came from the vendor.",
-          "front": "What are default credentials?",
-          "keyDetails": "Attackers commonly scan for unchanged router, camera, switch, IoT, and application passwords.",
-          "example": "An attacker logs into a router using admin/admin.",
-          "memoryHook": "Default credentials = default compromise."
+          "hint": "A hacker targets CloudSecure's network devices, including routers and switches. The hacker knows that companies often neglect changing vendor default login credentials for these devices.",
+          "front": "A hacker targets CloudSecure's network devices, including routers and switches. The hacker knows that companies often neglect changing vendor default login credentials for these devices.",
+          "keyDetails": "A phishing attack involves deceiving users to reveal their sensitive information, but in this scenario, the attack does not involve tricking users or obtaining credentials through deceptive means.",
+          "example": "A hacker targets CloudSecure's network devices, including routers and switches.",
+          "memoryHook": "\"Default\" + \"credentials\" → connect the words to the definition."
         },
         {
           "term": "Denial-of-service (DoS)",
@@ -1014,11 +1014,11 @@
             833
           ],
           "supplemental": false,
-          "hint": "One or more attacks make a service unavailable.",
-          "front": "What is a denial-of-service attack?",
-          "keyDetails": "DoS consumes resources, crashes services, or disrupts availability. A DDoS is a distributed form of DoS.",
-          "example": "A server becomes unavailable after receiving more requests than it can handle.",
-          "memoryHook": "DoS = deny service."
+          "hint": "A company adds resiliency and high-availability services, including load balancing and cluster services, because of ongoing attacks.",
+          "front": "A company adds resiliency and high-availability services, including load balancing and cluster services, because of ongoing attacks.",
+          "keyDetails": "Also known as: DoS.",
+          "example": "A company adds resiliency and high-availability services, including load balancing and cluster services, because of ongoing attacks.",
+          "memoryHook": "\"Denial-of-service\" + \"(DoS)\" → connect the words to the definition."
         },
         {
           "term": "Distributed denial-of-service (DDoS)",
@@ -1037,11 +1037,11 @@
             920
           ],
           "supplemental": false,
-          "hint": "Multiple sources flood one target.",
-          "front": "What is a distributed denial-of-service attack?",
-          "keyDetails": "DDoS attacks are harder to block because traffic originates from many systems.",
-          "example": "A retailer sees massive traffic from thousands of compromised devices and its website becomes unavailable.",
-          "memoryHook": "Distributed = many sources."
+          "hint": "A major online retail company has recently been experiencing intermittent downtime of its website. Network analysts observe a massive influx of traffic from multiple sources to the server. However, the traffic seems redirected from other systems.",
+          "front": "A major online retail company has recently been experiencing intermittent downtime of its website. Network analysts observe a massive influx of traffic from multiple sources to the server. However, the traffic seems redirected from other systems.",
+          "keyDetails": "Collision is mainly used in the context of cryptographic hash functions and does not relate to the influx of traffic causing downtime. Injection attacks occur when an attacker sends harmful data to a system, tricking it into executing unintended commands. They typically do not result in a massive influx of traffic.",
+          "example": "A major online retail company has recently been experiencing intermittent downtime of its website.",
+          "memoryHook": "\"Distributed\" + \"(DDoS)\" → connect the words to the definition."
         },
         {
           "term": "Network attack",
@@ -1057,11 +1057,11 @@
             475
           ],
           "supplemental": false,
-          "hint": "Attack is visible in traffic or network behavior.",
-          "front": "What is a network attack?",
-          "keyDetails": "Examples include SYN floods, on-path attacks, rogue APs, DNS attacks, and DDoS.",
-          "example": "A sudden spike in SYN packets suggests a possible SYN flood.",
-          "memoryHook": "Network attack = traffic or protocol abuse."
+          "hint": "Thousands of SYN packets are detected hitting a public-facing server in a short period of time.",
+          "front": "Thousands of SYN packets are detected hitting a public-facing server in a short period of time.",
+          "keyDetails": "2.0 Threats, Vulnerabilities, and Mitigations.",
+          "example": "Thousands of SYN packets are detected hitting a public-facing server in a short period of time.",
+          "memoryHook": "\"Network\" + \"attack\" → connect the words to the definition."
         },
         {
           "term": "Worm",
@@ -1083,11 +1083,11 @@
             906
           ],
           "supplemental": false,
-          "hint": "Spreads by itself across the network.",
-          "front": "What is a worm?",
-          "keyDetails": "Indicators include scanning, unusual outbound connections, increased resource usage, and rapid spread.",
-          "example": "Several computers repeatedly connect to random IP addresses without user action.",
-          "memoryHook": "Worm = wiggles through the network by itself."
+          "hint": "A security team is reviewing self-replicating malware that can spread without attaching to another file.",
+          "front": "A security team is reviewing self-replicating malware that can spread without attaching to another file.",
+          "keyDetails": "Worms consume bandwidth and system resources, slowing down or even crashing systems. Malicious code encompasses various types of harmful software, including worms, viruses, Trojans, and more. This option is too broad to be the best answer for this scenario. Trojans can create backdoors in a computer system to give malicious users access.",
+          "example": "A security team is reviewing self-replicating malware that can spread without attaching to another file.",
+          "memoryHook": "Link \"Worm\" to: a worm is self-replicating malware that spreads across systems or networks without requiring user action after initial execution."
         },
         {
           "term": "Boot sector virus",
@@ -1104,11 +1104,11 @@
             832
           ],
           "supplemental": false,
-          "hint": "Runs when the system boots.",
-          "front": "What is a boot sector virus?",
-          "keyDetails": "This is not the best match for email attachments or script files.",
-          "example": "Malware modifies the boot sector so it loads before the operating system.",
-          "memoryHook": "Boot sector = starts at boot."
+          "hint": "Multiple employees receive an email attachment with an odd double extension, such as.docx and.ps1, and the email system flags it as potentially harmful.",
+          "front": "Multiple employees receive an email attachment with an odd double extension, such as.docx and.ps1, and the email system flags it as potentially harmful.",
+          "keyDetails": "The scenario mentions an attached file with a . jar extension and is executable. While a memory resident virus could infect a file attached to an email, the scenario suggests a different type of virus. A boot sector virus infects the boot sector of a hard disk or a floppy disk.",
+          "example": "Multiple employees receive an email attachment with an odd double extension, such as.docx and.ps1, and the email system flags it as potentially harmful.",
+          "memoryHook": "\"Boot\" + \"virus\" → connect the words to the definition."
         },
         {
           "term": "Memory resident virus",
@@ -1127,11 +1127,11 @@
             832
           ],
           "supplemental": false,
-          "hint": "Stays active in RAM.",
-          "front": "What is a memory resident virus?",
-          "keyDetails": "It can continue infecting files while the system is running.",
-          "example": "A virus remains active after the original infected file closes and infects other programs.",
-          "memoryHook": "Resident = remains in memory."
+          "hint": "Multiple employees receive an email attachment with an odd double extension, such as.docx and.ps1, and the email system flags it as potentially harmful.",
+          "front": "Multiple employees receive an email attachment with an odd double extension, such as.docx and.ps1, and the email system flags it as potentially harmful.",
+          "keyDetails": "The scenario mentions an attached file with a . jar extension and is executable. While a memory resident virus could infect a file attached to an email, the scenario suggests a different type of virus. A boot sector virus infects the boot sector of a hard disk or a floppy disk.",
+          "example": "Multiple employees receive an email attachment with an odd double extension, such as.docx and.ps1, and the email system flags it as potentially harmful.",
+          "memoryHook": "\"Memory\" + \"virus\" → connect the words to the definition."
         },
         {
           "term": "Non-resident file infector",
@@ -1151,11 +1151,11 @@
             832
           ],
           "supplemental": false,
-          "hint": "Latches onto executable files.",
-          "front": "What is a non-resident file infector?",
-          "keyDetails": "Unlike a resident virus, it does not stay continuously active in memory.",
-          "example": "A malicious .jar or executable attachment infects files when opened.",
-          "memoryHook": "File infector = attaches to files."
+          "hint": "Multiple employees receive an email attachment with an odd double extension, such as.docx and.ps1, and the email system flags it as potentially harmful.",
+          "front": "Multiple employees receive an email attachment with an odd double extension, such as.docx and.ps1, and the email system flags it as potentially harmful.",
+          "keyDetails": "The scenario mentions an attached file with a . jar extension and is executable. While a memory resident virus could infect a file attached to an email, the scenario suggests a different type of virus. A boot sector virus infects the boot sector of a hard disk or a floppy disk.",
+          "example": "Multiple employees receive an email attachment with an odd double extension, such as.docx and.ps1, and the email system flags it as potentially harmful.",
+          "memoryHook": "\"Non-resident\" + \"infector\" → connect the words to the definition."
         },
         {
           "term": "Script virus",
@@ -1172,11 +1172,11 @@
             832
           ],
           "supplemental": false,
-          "hint": "Look for script file types or interpreters.",
-          "front": "What is a script virus?",
-          "keyDetails": "It often arrives through email attachments, macros, or malicious downloads.",
-          "example": "An attachment with a .ps1 extension runs commands when opened.",
-          "memoryHook": "Script virus = malicious script."
+          "hint": "Multiple employees receive an email attachment with an odd double extension, such as.docx and.ps1, and the email system flags it as potentially harmful.",
+          "front": "Multiple employees receive an email attachment with an odd double extension, such as.docx and.ps1, and the email system flags it as potentially harmful.",
+          "keyDetails": "The scenario mentions an attached file with a . jar extension and is executable. While a memory resident virus could infect a file attached to an email, the scenario suggests a different type of virus. A boot sector virus infects the boot sector of a hard disk or a floppy disk.",
+          "example": "Multiple employees receive an email attachment with an odd double extension, such as.docx and.ps1, and the email system flags it as potentially harmful.",
+          "memoryHook": "\"Script\" + \"virus\" → connect the words to the definition."
         },
         {
           "term": "Logic bomb",
@@ -1192,11 +1192,11 @@
             214
           ],
           "supplemental": false,
-          "hint": "Malware waits for a trigger.",
-          "front": "What is a logic bomb?",
-          "keyDetails": "Common triggers include employee termination dates, account changes, or scheduled times.",
-          "example": "A script deletes files on a specific future date.",
-          "memoryHook": "Logic bomb = trigger then detonate."
+          "hint": "A security team is reviewing malicious code triggered by a specific condition or time.",
+          "front": "A security team is reviewing malicious code triggered by a specific condition or time.",
+          "keyDetails": "2.0 Threats, Vulnerabilities, and Mitigations.",
+          "example": "A security team is reviewing malicious code triggered by a specific condition or time.",
+          "memoryHook": "\"Logic\" + \"bomb\" → connect the words to the definition."
         },
         {
           "term": "Polymorphic malware",
@@ -1215,11 +1215,11 @@
             910
           ],
           "supplemental": false,
-          "hint": "Malware keeps changing shape.",
-          "front": "What is polymorphic malware?",
-          "keyDetails": "It is harder to detect because each variant may have a different signature.",
-          "example": "A virus changes its code each time it infects a new system.",
-          "memoryHook": "Polymorphic = many forms."
+          "hint": "A new virus is infecting computers on a network segment. Containment is difficult because the virus changes its code.",
+          "front": "A new virus is infecting computers on a network segment. Containment is difficult because the virus changes its code.",
+          "keyDetails": "A trojan virus is malware inside another file that appears legitimate. When the legitimate file executes, the trojan comes out and infects the system. A boot virus is one in which the virus code writes to the disk boot sector or the partition table of a fixed disk. The virus executes each time the operating system (OS) starts.",
+          "example": "A new virus is infecting computers on a network segment. Containment is difficult because the virus changes its code.",
+          "memoryHook": "\"Polymorphic\" + \"malware\" → connect the words to the definition."
         },
         {
           "term": "Remote Access Trojan (RAT)",
@@ -1238,11 +1238,11 @@
             831
           ],
           "supplemental": false,
-          "hint": "Remote control through malware.",
-          "front": "What is a Remote Access Trojan?",
-          "keyDetails": "RATs may enable file access, command execution, webcam access, keylogging, or lateral movement.",
-          "example": "A user installs a fake utility that opens a backdoor for remote control.",
-          "memoryHook": "RAT = remote attacker tool."
+          "hint": "A workstation repeatedly communicates with an unknown external IP address. Unauthorized software appears to be transmitting sensitive system data and receiving commands or files without the user noticing.",
+          "front": "A workstation repeatedly communicates with an unknown external IP address. Unauthorized software appears to be transmitting sensitive system data and receiving commands or files without the user noticing.",
+          "keyDetails": "Also known as: RAT.",
+          "example": "A workstation repeatedly communicates with an unknown external IP address. Unauthorized software appears to be transmitting sensitive system data and receiving commands or files without the user noticing.",
+          "memoryHook": "\"Remote\" + \"(RAT)\" → connect the words to the definition."
         },
         {
           "term": "Ransomware",
@@ -1260,11 +1260,11 @@
             489
           ],
           "supplemental": false,
-          "hint": "Malware demands payment.",
-          "front": "What is ransomware?",
-          "keyDetails": "Crypto-ransomware encrypts files. Double extortion adds data theft and leak threats.",
-          "example": "Files are encrypted and a ransom note demands cryptocurrency.",
-          "memoryHook": "Ransomware = ransom for access/data."
+          "hint": "A personal computer locks after receiving a file. The screen shows a countdown clock and threatens permanent file encryption unless money is paid.",
+          "front": "A personal computer locks after receiving a file. The screen shows a countdown clock and threatens permanent file encryption unless money is paid.",
+          "keyDetails": "Crypto-ransomware specifically encrypts files or threatens loss of the decryption key unless payment is made. Also known as: Crypto-ransomware.",
+          "example": "A personal computer locks after receiving a file. The screen shows a countdown clock and threatens permanent file encryption unless money is paid.",
+          "memoryHook": "Link \"Ransomware\" to: ransomware is malware that encrypts, locks, or threatens to disclose data to extort payment from the victim."
         },
         {
           "term": "Spyware",
@@ -1280,11 +1280,11 @@
             474
           ],
           "supplemental": false,
-          "hint": "Secret monitoring software.",
-          "front": "What is spyware?",
-          "keyDetails": "Examples include keyloggers, screen capture tools, browser trackers, and credential stealers.",
-          "example": "Malware records browsing activity and sends it to an attacker.",
-          "memoryHook": "Spyware = software that spies."
+          "hint": "A user's browser redirects unexpectedly, pop-ups appear frequently, and the SOC later confirms credential theft from the endpoint.",
+          "front": "A user's browser redirects unexpectedly, pop-ups appear frequently, and the SOC later confirms credential theft from the endpoint.",
+          "keyDetails": "2.0 Threats, Vulnerabilities, and Mitigations.",
+          "example": "A user's browser redirects unexpectedly, pop-ups appear frequently, and the SOC later confirms credential theft from the endpoint.",
+          "memoryHook": "Link \"Spyware\" to: spyware is software that secretly collects information about users, systems, or activity without proper consent."
         },
         {
           "term": "Hardware keylogger",
@@ -1300,11 +1300,11 @@
             476
           ],
           "supplemental": false,
-          "hint": "Small unknown device attached to keyboard path.",
-          "front": "What is a hardware keylogger?",
-          "keyDetails": "Physical inspections and port security can help detect or prevent it.",
-          "example": "A small USB device is found between a keyboard cable and workstation.",
-          "memoryHook": "Keylogger = logs keys."
+          "hint": "During a desk inspection, a small unknown device is found between a keyboard cable and the workstation.",
+          "front": "During a desk inspection, a small unknown device is found between a keyboard cable and the workstation.",
+          "keyDetails": "2.0 Threats, Vulnerabilities, and Mitigations.",
+          "example": "During a desk inspection, a small unknown device is found between a keyboard cable and the workstation.",
+          "memoryHook": "\"Hardware\" + \"keylogger\" → connect the words to the definition."
         },
         {
           "term": "Potentially Unwanted Program (PUP)",
@@ -1324,11 +1324,11 @@
             836
           ],
           "supplemental": false,
-          "hint": "Not always classified as malware, but still unwanted.",
-          "front": "What is a potentially unwanted program (PUP)?",
-          "keyDetails": "PUPs may include toolbars, adware, trialware, bundled software, or bloatware.",
-          "example": "A free installer adds an unwanted browser toolbar unless the user opts out.",
-          "memoryHook": "PUP = probably unwanted program."
+          "hint": "An IT intern prepares and connects used laptops to the company network. The intern discovers that some of the laptops have degraded performance and decreased storage. What is commonly associated with s? (Select the two best options.)",
+          "front": "An IT intern prepares and connects used laptops to the company network. The intern discovers that some of the laptops have degraded performance and decreased storage. What is commonly associated with s? (Select the two best options.)",
+          "keyDetails": "Potentially unwanted programs (PUPs) are sometimes described as grayware rather than malware and can also be referred to as bloatware. A trojan is a form of malware that is concealed within an installer package for software that appears to be legitimate.",
+          "example": "An IT intern prepares and connects used laptops to the company network.",
+          "memoryHook": "\"Potentially\" + \"(PUP)\" → connect the words to the definition."
         },
         {
           "term": "Buffer overflow",
@@ -1345,11 +1345,11 @@
             692
           ],
           "supplemental": false,
-          "hint": "Too much data for allocated memory.",
-          "front": "What is a buffer overflow?",
-          "keyDetails": "Mitigations include bounds checking, memory-safe languages, ASLR, DEP, and secure coding practices.",
-          "example": "An input field accepts excessive data and overwrites adjacent memory.",
-          "memoryHook": "Buffer overflow = too much data spills over."
+          "hint": "A security team is reviewing writing beyond an allocated memory boundary.",
+          "front": "A security team is reviewing writing beyond an allocated memory boundary.",
+          "keyDetails": "Privilege escalation refers to an attacker gaining unauthorized privileges on a system, usually through exploiting system misconfigurations or vulnerabilities that allow them to elevate their permissions.",
+          "example": "A security team is reviewing writing beyond an allocated memory boundary.",
+          "memoryHook": "\"Buffer\" + \"overflow\" → connect the words to the definition."
         },
         {
           "term": "Application-level vulnerability",
@@ -1365,11 +1365,11 @@
             710
           ],
           "supplemental": false,
-          "hint": "Weakness exists in the application layer.",
-          "front": "What is an application-level vulnerability?",
-          "keyDetails": "Third-party app stores, tampered packages, insecure code, and vulnerable libraries can introduce application-level risk.",
-          "example": "A mobile app downloaded from an unofficial store contains malicious code.",
-          "memoryHook": "Application vulnerability = app weakness."
+          "hint": "A company has recently deployed a new mobile application for its employees. During a security audit, observations show some employees downloaded the application from third- party app stores, not the official ones.",
+          "front": "A company has recently deployed a new mobile application for its employees. During a security audit, observations show some employees downloaded the application from third- party app stores, not the official ones.",
+          "keyDetails": "Using older versions of an operating system could expose the devices to vulnerabilities patched in later versions, leading to operating system-level vulnerabilities. The scenario does not mention any outdated hardware. The issue is with the operating system versions and the source of the application download.",
+          "example": "A company has recently deployed a new mobile application for its employees.",
+          "memoryHook": "\"Application-level\" + \"vulnerability\" → connect the words to the definition."
         },
         {
           "term": "Operating system-level vulnerability",
@@ -1387,11 +1387,11 @@
             710
           ],
           "supplemental": false,
-          "hint": "Weakness exists in the operating system.",
-          "front": "What is an operating system-level vulnerability?",
-          "keyDetails": "Outdated or unsupported operating systems often contain known vulnerabilities.",
-          "example": "A phone running an old OS version lacks security patches for known exploits.",
-          "memoryHook": "OS vulnerability = operating system weakness."
+          "hint": "A company has recently deployed a new mobile application for its employees. During a security audit, observations show some employees downloaded the application from third- party app stores, not the official ones.",
+          "front": "A company has recently deployed a new mobile application for its employees. During a security audit, observations show some employees downloaded the application from third- party app stores, not the official ones.",
+          "keyDetails": "Using older versions of an operating system could expose the devices to vulnerabilities patched in later versions, leading to operating system-level vulnerabilities. The scenario does not mention any outdated hardware. The issue is with the operating system versions and the source of the application download.",
+          "example": "A company has recently deployed a new mobile application for its employees.",
+          "memoryHook": "\"Operating\" + \"vulnerability\" → connect the words to the definition."
         },
         {
           "term": "Legacy system",
@@ -1410,11 +1410,11 @@
             840
           ],
           "supplemental": false,
-          "hint": "Old but still business-critical.",
-          "front": "What is a legacy system?",
-          "keyDetails": "Legacy systems may require compensating controls such as isolation, monitoring, access restrictions, or virtualization.",
-          "example": "A critical application runs only on an unsupported operating system.",
-          "memoryHook": "Legacy = old but still needed."
+          "hint": "Companies that have existed for a long time typically employ many different types of servers and software.",
+          "front": "Companies that have existed for a long time typically employ many different types of servers and software.",
+          "keyDetails": "Legacy systems pose their own unique problems when issues arise while attempting to install the latest software or patches. If the patch is uninstallable, the system is a security vulnerability waiting for exploitation.",
+          "example": "Companies that have existed for a long time typically employ many different types of servers and software.",
+          "memoryHook": "\"Legacy\" + \"system\" → connect the words to the definition."
         },
         {
           "term": "Default configuration vulnerability",
@@ -1432,11 +1432,11 @@
             871
           ],
           "supplemental": true,
-          "hint": "Installed without hardening.",
-          "front": "What is a default configuration vulnerability?",
-          "keyDetails": "Examples include default passwords, open services, sample files, weak permissions, and unnecessary admin interfaces.",
-          "example": "A network camera is reachable with the vendor default password.",
-          "memoryHook": "Default settings = default risk."
+          "hint": "A hacker targets CloudSecure's network devices, including routers and switches. The hacker knows that companies often neglect changing vendor default login credentials for these devices.",
+          "front": "A hacker targets CloudSecure's network devices, including routers and switches. The hacker knows that companies often neglect changing vendor default login credentials for these devices.",
+          "keyDetails": "A phishing attack involves deceiving users to reveal their sensitive information, but in this scenario, the attack does not involve tricking users or obtaining credentials through deceptive means.",
+          "example": "A hacker targets CloudSecure's network devices, including routers and switches.",
+          "memoryHook": "\"Default\" + \"vulnerability\" → connect the words to the definition."
         },
         {
           "term": "Input validation",
@@ -1454,11 +1454,11 @@
             914
           ],
           "supplemental": false,
-          "hint": "Reject unexpected input before it reaches sensitive logic.",
-          "front": "What is input validation?",
-          "keyDetails": "It helps reduce injection, XSS, malformed input, and application logic abuse. It should be combined with output encoding and parameterized queries.",
-          "example": "A form accepts only numeric account IDs of the expected length.",
-          "memoryHook": "Input validation = allow only expected input."
+          "hint": "A security practitioner is choosing the most direct control for an application security risk.",
+          "front": "A security practitioner is choosing the most direct control for an application security risk.",
+          "keyDetails": "It helps stop attacks such as SQL injection and cross-site scripting by rejecting unexpected input.",
+          "example": "A security practitioner is choosing the most direct control for an application security risk.",
+          "memoryHook": "\"Input\" + \"validation\" → connect the words to the definition."
         },
         {
           "term": "Allow list",
@@ -1475,10 +1475,10 @@
           "sourceQuestionIds": [],
           "supplemental": true,
           "hint": "Only approved items are allowed.",
-          "front": "What is an allow list?",
-          "keyDetails": "More restrictive than a deny list because unknown items are blocked.",
-          "example": "An application control policy allows only approved executables to run.",
-          "memoryHook": "Allow list = allowed by exception."
+          "front": "Only approved items are allowed.",
+          "keyDetails": "Also known as: Whitelist.",
+          "example": "A security team applies this when an allow list permits only explicitly approved items and denies everything else by default.",
+          "memoryHook": "\"Allow\" + \"list\" → connect the words to the definition."
         },
         {
           "term": "Deny list",
@@ -1496,11 +1496,11 @@
             326
           ],
           "supplemental": false,
-          "hint": "Known bad items are blocked.",
-          "front": "What is a deny list?",
-          "keyDetails": "Deny lists are useful for known threats but may miss new or unknown threats.",
-          "example": "A firewall blocks traffic from known malicious IP addresses.",
-          "memoryHook": "Deny list = block known bad."
+          "hint": "A security analyst is documenting a rule set that blocks explicitly prohibited items.",
+          "front": "A security analyst is documenting a rule set that blocks explicitly prohibited items.",
+          "keyDetails": "Items not on the list may still be allowed, which makes it less restrictive than an allow list. Also known as: Blacklist.",
+          "example": "A security analyst is documenting a rule set that blocks explicitly prohibited items.",
+          "memoryHook": "\"Deny\" + \"list\" → connect the words to the definition."
         },
         {
           "term": "Hashing",
@@ -1516,11 +1516,11 @@
             184
           ],
           "supplemental": false,
-          "hint": "One-way digest.",
-          "front": "What is hashing?",
-          "keyDetails": "Hashing supports integrity checks and password storage. It is not encryption because hashes are not decrypted.",
-          "example": "A downloaded file hash is compared to the vendor-published hash.",
-          "memoryHook": "Hashing = one-way fingerprint."
+          "hint": "A security team is reviewing a one-way operation that produces a fixed-length digest.",
+          "front": "A security team is reviewing a one-way operation that produces a fixed-length digest.",
+          "keyDetails": "It is one-way, so it is used for integrity checks and password storage rather than decryption.",
+          "example": "A security team is reviewing a one-way operation that produces a fixed-length digest.",
+          "memoryHook": "It is one-way, so it is used for integrity checks and password storage rather than decryption."
         },
         {
           "term": "CRL",
@@ -1539,11 +1539,11 @@
             580
           ],
           "supplemental": false,
-          "hint": "List of revoked certificates.",
-          "front": "What is a CRL?",
-          "keyDetails": "Clients can check the CRL to determine whether a certificate should no longer be trusted.",
-          "example": "A browser checks whether a TLS certificate appears on the CA’s revocation list.",
-          "memoryHook": "CRL = certificate revoked list."
+          "hint": "A security team is reviewing a published list of certificates revoked by a certificate authority.",
+          "front": "A security team is reviewing a published list of certificates revoked by a certificate authority.",
+          "keyDetails": "A Certificate Revocation List (CRL) is a list of no longer valid certificates. A Certificate Authority is a server that guarantees subject identities by issuing signed digital certificate wrappers for their public keys. A subject must complete a Certificate Signing Request (CSR) and submit it to the CA to get a certificate.",
+          "example": "A security team is reviewing a published list of certificates revoked by a certificate authority.",
+          "memoryHook": "\"CRL\" → Certificate Revocation List."
         },
         {
           "term": "TPM",
@@ -1562,11 +1562,11 @@
             572
           ],
           "supplemental": false,
-          "hint": "Hardware chip for secure key storage.",
-          "front": "What is a TPM?",
-          "keyDetails": "TPMs support features such as BitLocker, secure boot measurements, and hardware-backed key protection.",
-          "example": "A laptop uses TPM-backed keys to protect full-disk encryption.",
-          "memoryHook": "TPM = trusted platform module."
+          "hint": "A security team is reviewing a hardware component used to securely store cryptographic keys and platform measurements.",
+          "front": "A security team is reviewing a hardware component used to securely store cryptographic keys and platform measurements.",
+          "keyDetails": "A Certificate Authority (CA) or owner can revoke or suspend a certificate for many reasons. A Certificate Revocation List (CRL) is a list of no longer valid certificates. A Central Processing Unit (CPU) is not directly involved with the encryption of a hard drive other than processing the action of encryption.",
+          "example": "A security team is reviewing a hardware component used to securely store cryptographic keys and platform measurements.",
+          "memoryHook": "\"TPM\" → Trusted Platform Module."
         },
         {
           "term": "Virtualization",
@@ -1585,11 +1585,11 @@
             905
           ],
           "supplemental": false,
-          "hint": "One physical host can run multiple isolated virtual systems.",
-          "front": "What is virtualization?",
-          "keyDetails": "Security concerns include VM escape, hypervisor hardening, segmentation, snapshots, and image management.",
-          "example": "A server runs several isolated virtual machines on one hypervisor.",
-          "memoryHook": "Virtualization = virtual machines on real hardware."
+          "hint": "A software engineer trains new employees on the impacts of hardware and software vulnerabilities. The trainees must analyze and identify the vulnerability in their training session.",
+          "front": "A software engineer trains new employees on the impacts of hardware and software vulnerabilities. The trainees must analyze and identify the vulnerability in their training session.",
+          "keyDetails": "An end-of-life (EOL) system vulnerability includes instances where a specific product or version of a product that the manufacturer or vendor publicly declares as no longer supported. Legacy system vulnerabilities typically describe outdated software methods, technology, computer systems, or application programs with continued use despite known shortcomings.",
+          "example": "A software engineer trains new employees on the impacts of hardware and software vulnerabilities.",
+          "memoryHook": "Link \"Virtualization\" to: virtualization abstracts physical hardware into virtual machines or virtual resources, allowing isolation, consolidation, and flexible deployment."
         },
         {
           "term": "Honeyfile",
@@ -1607,11 +1607,11 @@
             180
           ],
           "supplemental": false,
-          "hint": "A fake file used as a tripwire.",
-          "front": "What is a honeyfile?",
-          "keyDetails": "Accessing a honeyfile can trigger an alert and reveal unauthorized activity.",
-          "example": "A file named Executive_Salaries.xlsx triggers an alert if opened.",
-          "memoryHook": "Honeyfile = sweet-looking decoy file."
+          "hint": "A security team is reviewing a decoy file whose access can indicate unauthorized activity.",
+          "front": "A security team is reviewing a decoy file whose access can indicate unauthorized activity.",
+          "keyDetails": "Access to it can signal that someone is browsing where they should not be. Also known as: Decoy file.",
+          "example": "A security team is reviewing a decoy file whose access can indicate unauthorized activity.",
+          "memoryHook": "Link \"Honeyfile\" to: a honeyfile is a decoy file placed to detect unauthorized access or suspicious browsing."
         },
         {
           "term": "Honeytoken",
@@ -1629,11 +1629,11 @@
             181
           ],
           "supplemental": false,
-          "hint": "A fake credential or data item.",
-          "front": "What is a honeytoken?",
-          "keyDetails": "Honeytokens are useful for early detection because legitimate users should not use them.",
-          "example": "A fake AWS access key is planted in a repository and alerts if used.",
-          "memoryHook": "Honeytoken = decoy token."
+          "hint": "A security team is reviewing a fake credential or data element used to detect misuse.",
+          "front": "A security team is reviewing a fake credential or data element used to detect misuse.",
+          "keyDetails": "If someone tries to use it, defenders get an early warning. Also known as: Decoy credential.",
+          "example": "A security team is reviewing a fake credential or data element used to detect misuse.",
+          "memoryHook": "Link \"Honeytoken\" to: a honeytoken is a fake credential, record, api key, or data item whose use indicates suspicious or unauthorized activity."
         },
         {
           "term": "Honeynet",
@@ -1651,11 +1651,11 @@
             179
           ],
           "supplemental": false,
-          "hint": "A network of honeypots.",
-          "front": "What is a honeynet?",
-          "keyDetails": "Honeynets provide threat intelligence while keeping attackers away from production assets.",
-          "example": "A lab network mimics production servers to study attacker behavior.",
-          "memoryHook": "Honeynet = network of decoys."
+          "hint": "A security team is reviewing a network of decoy systems designed to attract and study attacks.",
+          "front": "A security team is reviewing a network of decoy systems designed to attract and study attacks.",
+          "keyDetails": "It gives defenders visibility into attacker behavior without exposing real assets. Also known as: Decoy network.",
+          "example": "A security team is reviewing a network of decoy systems designed to attract and study attacks.",
+          "memoryHook": "Link \"Honeynet\" to: a honeynet is a network of decoy systems designed to attract attackers and observe their behavior."
         },
         {
           "term": "Backout plan",
@@ -1673,11 +1673,11 @@
             842
           ],
           "supplemental": false,
-          "hint": "Plan for undoing a change.",
-          "front": "What is a backout plan?",
-          "keyDetails": "A strong backout plan reduces downtime, data loss, and operational impact when implementation fails.",
-          "example": "A patch deployment plan includes steps to remove the patch and restore from backup if issues occur.",
-          "memoryHook": "Backout = back out the change."
+          "hint": "Due to the introduction of security vulnerabilities during a previous change, company leadership wants reassurance the vulnerabilities will not happen again. The IT department has made several changes to its change management plan.",
+          "front": "Due to the introduction of security vulnerabilities during a previous change, company leadership wants reassurance the vulnerabilities will not happen again. The IT department has made several changes to its change management plan.",
+          "keyDetails": "Evaluation of changes in a test environment ensures they work as intended. Test results provide valuable insight into the likelihood of success without impacting business operations. A backout plan is for reversing changes and returning systems and software to their original state if the implementation plan fails.",
+          "example": "Due to the introduction of security vulnerabilities during a previous change, company leadership wants reassurance the vulnerabilities will not happen again.",
+          "memoryHook": "\"Backout\" + \"plan\" → connect the words to the definition."
         },
         {
           "term": "Test results",
@@ -1693,11 +1693,11 @@
             842
           ],
           "supplemental": false,
-          "hint": "Evidence from testing before production.",
-          "front": "Why are test results important in change management?",
-          "keyDetails": "Testing reduces the chance of introducing outages or vulnerabilities into production.",
-          "example": "A security patch is tested in staging and results are reviewed before approval.",
-          "memoryHook": "Test results = proof before production."
+          "hint": "Due to the introduction of security vulnerabilities during a previous change, company leadership wants reassurance the vulnerabilities will not happen again. The IT department has made several changes to its change management plan.",
+          "front": "Due to the introduction of security vulnerabilities during a previous change, company leadership wants reassurance the vulnerabilities will not happen again. The IT department has made several changes to its change management plan.",
+          "keyDetails": "Evaluation of changes in a test environment ensures they work as intended. Test results provide valuable insight into the likelihood of success without impacting business operations. A backout plan is for reversing changes and returning systems and software to their original state if the implementation plan fails.",
+          "example": "Due to the introduction of security vulnerabilities during a previous change, company leadership wants reassurance the vulnerabilities will not happen again.",
+          "memoryHook": "\"Test\" + \"results\" → connect the words to the definition."
         },
         {
           "term": "Tabletop exercises",
@@ -1715,11 +1715,11 @@
             868
           ],
           "supplemental": false,
-          "hint": "Discussion exercise, not live technical recovery.",
-          "front": "What is a tabletop exercise?",
-          "keyDetails": "They help identify gaps in incident response, disaster recovery, and business continuity plans.",
-          "example": "A team walks through how it would respond to a ransomware incident.",
-          "memoryHook": "Tabletop = talk through the incident."
+          "hint": "The company’s security team notices a significant increase in security incidents stemming from employee errors and decides to focus on proactive strategies to reduce these incidents.",
+          "front": "The company’s security team notices a significant increase in security incidents stemming from employee errors and decides to focus on proactive strategies to reduce these incidents.",
+          "keyDetails": "Tabletop exercises allow employees to engage in simulated security scenarios, which can provide hands- on experience and education. Bolstering security policies could indirectly support educating employees by defining the expected standards and behaviors.",
+          "example": "The company’s security team notices a significant increase in security incidents stemming from employee errors and decides to focus on proactive strategies to reduce these incidents.",
+          "memoryHook": "\"Tabletop\" + \"exercises\" → connect the words to the definition."
         },
         {
           "term": "COOP",
@@ -1737,11 +1737,11 @@
             841
           ],
           "supplemental": false,
-          "hint": "Keep critical operations running.",
-          "front": "What is a COOP?",
-          "keyDetails": "COOP focuses on maintaining essential services, alternate facilities, personnel, communications, and continuity procedures.",
-          "example": "After an earthquake damages headquarters, the company shifts critical operations to an alternate site.",
-          "memoryHook": "COOP = continue operations."
+          "hint": "An earthquake occurred near the company HQ, causing severe damage in the area. The earthquake affected the building, which will not be usable for several weeks. What plan will the company follow to maintain its business? (Select the two best options.)",
+          "front": "An earthquake occurred near the company HQ, causing severe damage in the area. The earthquake affected the building, which will not be usable for several weeks. What plan will the company follow to maintain its business? (Select the two best options.)",
+          "keyDetails": "A disaster recovery plan details the steps required to recover from a catastrophic event such as a natural disaster. The goal is to restore operations as quickly and efficiently as possible. The incident response policy outlines the processes to follow after a security breach or cyberattack occurs.",
+          "example": "An earthquake occurred near the company HQ, causing severe damage in the area.",
+          "memoryHook": "Link \"COOP\" to: a continuity of operations plan (coop) identifies how essential functions will continue during and after a major disruption."
         },
         {
           "term": "Disaster recovery",
@@ -1759,11 +1759,11 @@
             841
           ],
           "supplemental": false,
-          "hint": "Recover systems after disaster.",
-          "front": "What is disaster recovery?",
-          "keyDetails": "DR focuses on restoration after disruption, while COOP focuses on keeping essential operations functioning.",
-          "example": "A company restores servers from backups after a flood damages the data center.",
-          "memoryHook": "Disaster recovery = restore after disaster."
+          "hint": "An earthquake occurred near the company HQ, causing severe damage in the area. The earthquake affected the building, which will not be usable for several weeks. What plan will the company follow to maintain its business? (Select the two best options.)",
+          "front": "An earthquake occurred near the company HQ, causing severe damage in the area. The earthquake affected the building, which will not be usable for several weeks. What plan will the company follow to maintain its business? (Select the two best options.)",
+          "keyDetails": "A disaster recovery plan details the steps required to recover from a catastrophic event such as a natural disaster. The goal is to restore operations as quickly and efficiently as possible. The incident response policy outlines the processes to follow after a security breach or cyberattack occurs.",
+          "example": "An earthquake occurred near the company HQ, causing severe damage in the area.",
+          "memoryHook": "\"Disaster\" + \"recovery\" → connect the words to the definition."
         },
         {
           "term": "Business Partnership Agreement (BPA)",
@@ -1781,11 +1781,11 @@
             855
           ],
           "supplemental": false,
-          "hint": "Formal agreement between business partners.",
-          "front": "What is a Business Partnership Agreement?",
-          "keyDetails": "A BPA may address roles, responsibilities, security requirements, compliance obligations, reporting, and contractual risk terms.",
-          "example": "A healthcare organization defines security responsibilities with a medical software partner.",
-          "memoryHook": "BPA = business partner agreement."
+          "hint": "A large healthcare organization is considering an alliance with a third-party medical software provider. The organization wants to ensure they well-document all aspects of the alliance, with both parties understanding their roles and responsibilities.",
+          "front": "A large healthcare organization is considering an alliance with a third-party medical software provider. The organization wants to ensure they well-document all aspects of the alliance, with both parties understanding their roles and responsibilities.",
+          "keyDetails": "The RoE establishes the boundaries and expectations of the partnership, covering roles, security requirements, compliance obligations, reporting and communication protocols, change management procedures, and contractual provisions related to risk management. Parties usually use an MOU and NDA as initial steps before entering a more formal agreement.",
+          "example": "A large healthcare organization is considering an alliance with a third-party medical software provider.",
+          "memoryHook": "\"Business\" + \"(BPA)\" → connect the words to the definition."
         },
         {
           "term": "Rules of Engagement (RoE)",
@@ -1803,11 +1803,11 @@
             855
           ],
           "supplemental": false,
-          "hint": "Defines what is allowed and out of scope.",
-          "front": "What are Rules of Engagement?",
-          "keyDetails": "RoE are especially important for penetration testing because they prevent unauthorized or disruptive testing activity.",
-          "example": "A penetration test RoE states which IP ranges may be tested and when testing may occur.",
-          "memoryHook": "RoE = rules for the engagement."
+          "hint": "A large healthcare organization is considering an alliance with a third-party medical software provider. The organization wants to ensure they well-document all aspects of the alliance, with both parties understanding their roles and responsibilities.",
+          "front": "A large healthcare organization is considering an alliance with a third-party medical software provider. The organization wants to ensure they well-document all aspects of the alliance, with both parties understanding their roles and responsibilities.",
+          "keyDetails": "The RoE establishes the boundaries and expectations of the partnership, covering roles, security requirements, compliance obligations, reporting and communication protocols, change management procedures, and contractual provisions related to risk management. Parties usually use an MOU and NDA as initial steps before entering a more formal agreement.",
+          "example": "A large healthcare organization is considering an alliance with a third-party medical software provider.",
+          "memoryHook": "\"Rules\" + \"(RoE)\" → connect the words to the definition."
         },
         {
           "term": "Compliance assessment",
@@ -1823,11 +1823,11 @@
             854
           ],
           "supplemental": false,
-          "hint": "Checks alignment with required rules.",
-          "front": "What is a compliance assessment?",
-          "keyDetails": "It may be internal or external and focuses on meeting defined compliance requirements.",
-          "example": "A company evaluates whether its data handling meets regulatory requirements.",
-          "memoryHook": "Compliance assessment = check against requirements."
+          "hint": "An organization must ensure its operating practices align with laws, regulations, standards, policies, and ethical requirements.",
+          "front": "An organization must ensure its operating practices align with laws, regulations, standards, policies, and ethical requirements.",
+          "keyDetails": "This approach is the most appropriate for the scenario described. While an audit committee may participate in the compliance process, it does not specifically evaluate compliance with laws and regulations. A self-assessment, which can serve various purposes, including compliance, does not specifically evaluate compliance with laws and regulations.",
+          "example": "An organization must ensure its operating practices align with laws, regulations, standards, policies, and ethical requirements.",
+          "memoryHook": "\"Compliance\" + \"assessment\" → connect the words to the definition."
         },
         {
           "term": "External assessment",
@@ -1845,11 +1845,11 @@
             852
           ],
           "supplemental": false,
-          "hint": "Outside experts evaluate the organization.",
-          "front": "What is an external assessment?",
-          "keyDetails": "External assessors can provide independent validation and reduce internal bias.",
-          "example": "A company hires consultants to assess its security controls.",
-          "memoryHook": "External = outside evaluator."
+          "hint": "An organization must hire nonaffiliated experts (consultants) to conduct an assessment.",
+          "front": "An organization must hire nonaffiliated experts (consultants) to conduct an assessment.",
+          "keyDetails": "Individuals or organizations conduct self-assessments internally to evaluate their performance, practices, and adherence to established criteria against predetermined metrics and measures without the involvement of external experts.",
+          "example": "An organization must hire nonaffiliated experts (consultants) to conduct an assessment.",
+          "memoryHook": "\"External\" + \"assessment\" → connect the words to the definition."
         },
         {
           "term": "Self-assessment",
@@ -1869,11 +1869,11 @@
             854
           ],
           "supplemental": false,
-          "hint": "Organization evaluates itself.",
-          "front": "What is a self-assessment?",
-          "keyDetails": "Self-assessments are useful for readiness checks but may lack the independence of an external assessment.",
-          "example": "A department reviews its own access control practices against policy.",
-          "memoryHook": "Self-assessment = assess yourself."
+          "hint": "An organization validates its security controls, processes, and adherence to industry standards and wants an unbiased evaluation to instill confidence among stakeholders. Which method should it employ for this purpose?",
+          "front": "An organization validates its security controls, processes, and adherence to industry standards and wants an unbiased evaluation to instill confidence among stakeholders. Which method should it employ for this purpose?",
+          "keyDetails": "The goal is to instill confidence among stakeholders, including customers, business partners, regulatory bodies, and investors. While compliance assessments help ensure that the organization's practices align with laws, regulations, standards, and policies, the company typically conducts them internally, making bias possible.",
+          "example": "An organization validates its security controls, processes, and adherence to industry standards and wants an unbiased evaluation to instill confidence among stakeholders.",
+          "memoryHook": "Link \"Self-assessment\" to: a self-assessment is an internal evaluation performed by an organization to measure its own controls, practices, risks, or compliance."
         },
         {
           "term": "Vendor risk",
@@ -1894,11 +1894,11 @@
             922
           ],
           "supplemental": false,
-          "hint": "Third parties can introduce risk.",
-          "front": "What is vendor risk?",
-          "keyDetails": "Organizations should evaluate vendor security posture, contracts, controls, dependencies, and incident responsibilities.",
-          "example": "A company reviews the security posture of a password manager vendor before adoption.",
-          "memoryHook": "Vendor risk = outside provider risk."
+          "hint": "A security analyst is reviewing threat behavior or attack relationships and must identify the most likely actor or event.",
+          "front": "A security analyst is reviewing threat behavior or attack relationships and must identify the most likely actor or event.",
+          "keyDetails": "It is important to analyze a vendor's security posture to protect against breaches. Costs are typically cheaper using a third party for a task or software. However, in the case of password managers, free alternatives eliminate this as an option. Simply using a third-party vendor does not necessarily lower the risk.",
+          "example": "A security analyst is reviewing threat behavior or attack relationships and must identify the most likely actor or event.",
+          "memoryHook": "\"Vendor\" + \"risk\" → connect the words to the definition."
         },
         {
           "term": "Vendor penetration testing",
@@ -1916,11 +1916,11 @@
             856
           ],
           "supplemental": false,
-          "hint": "Authorized testing of vendor security.",
-          "front": "Why require vendor penetration testing?",
-          "keyDetails": "Contracts should specify authorization, scope, frequency, reporting, remediation expectations, and Rules of Engagement.",
-          "example": "A cloud provider supplies annual penetration test summaries and remediation evidence.",
-          "memoryHook": "Vendor pentest = verify provider security."
+          "hint": "A large financial institution is considering outsourcing its IT infrastructure to a third-party cloud service provider. The company has concerns about the risks of giving its sensitive financial data to an external vendor.",
+          "front": "A large financial institution is considering outsourcing its IT infrastructure to a third-party cloud service provider. The company has concerns about the risks of giving its sensitive financial data to an external vendor.",
+          "keyDetails": "The company gains insights into the vendor's security resilience and vulnerabilities that attackers could exploit by conducting or requesting evidence of regular penetration tests. Simply entering a contract without provisions for regular assessments or audits may be insufficient.",
+          "example": "A large financial institution is considering outsourcing its IT infrastructure to a third-party cloud service provider.",
+          "memoryHook": "\"Vendor\" + \"testing\" → connect the words to the definition."
         },
         {
           "term": "Supply chain attack",
@@ -1938,11 +1938,11 @@
             922
           ],
           "supplemental": false,
-          "hint": "Attack comes through a trusted supplier or dependency.",
-          "front": "What is a supply chain attack?",
-          "keyDetails": "Mitigations include vendor due diligence, SBOMs, code signing, secure update channels, and dependency monitoring.",
-          "example": "A compromised software update distributes malware to customers.",
-          "memoryHook": "Supply chain = attack the supplier to reach the target."
+          "hint": "A group of hackers has been monitoring recent orders from a company involving new laptops and Universal Serial Bus (USB) thumb drives. The group infiltrated the shipping company and added malicious USB thumb drives to the order.",
+          "front": "A group of hackers has been monitoring recent orders from a company involving new laptops and Universal Serial Bus (USB) thumb drives. The group infiltrated the shipping company and added malicious USB thumb drives to the order.",
+          "keyDetails": "Malicious actors can replace parts of the laptop or hack the operating systems before it gets to the company. Adding malicious USB thumb drives to the order takes advantage of removable media to trick the user into plugging them into a computer where the hacker can carry out further attacks.",
+          "example": "A group of hackers has been monitoring recent orders from a company involving new laptops and Universal Serial Bus (USB) thumb drives.",
+          "memoryHook": "\"Supply\" + \"attack\" → connect the words to the definition."
         },
         {
           "term": "Shared responsibility model",
@@ -1961,11 +1961,11 @@
             860
           ],
           "supplemental": false,
-          "hint": "Provider and customer split security duties.",
-          "front": "What is the shared responsibility model?",
-          "keyDetails": "In cloud services, providers often secure the infrastructure while customers secure identities, data, configurations, and workloads depending on service model.",
-          "example": "A cloud provider secures the physical data center, while the customer configures IAM and storage permissions.",
-          "memoryHook": "Shared responsibility = provider part + customer part."
+          "hint": "During a team meeting, the head of IT security asks a newly hired network specialist to identify the primary security consideration when comparing cloud architecture to traditional network architecture.",
+          "front": "During a team meeting, the head of IT security asks a newly hired network specialist to identify the primary security consideration when comparing cloud architecture to traditional network architecture.",
+          "keyDetails": "Regularly updating firmware is crucial for defending against emerging threats. This practice is necessary for cloud and traditional network architectures to maintain a strong security posture. The phrase \"local networks\" emphasizes data transmission within the confines of a particular physical location or company infrastructure.",
+          "example": "During a team meeting, the head of IT security asks a newly hired network specialist to identify the primary security consideration when comparing cloud architecture to traditional network architecture.",
+          "memoryHook": "\"Shared\" + \"model\" → connect the words to the definition."
         },
         {
           "term": "Data controller",
@@ -1983,11 +1983,11 @@
             865
           ],
           "supplemental": false,
-          "hint": "Decides purpose and means of processing.",
-          "front": "What is a data controller?",
-          "keyDetails": "The controller defines processing purposes and often bears primary compliance responsibility.",
-          "example": "A company decides what customer data to collect and why.",
-          "memoryHook": "Controller = controls why/how data is processed."
+          "hint": "Which of the following accurately reflects the responsibilities of a data processor under data protection laws such as the General Data Protection Regulation (GDPR)?",
+          "front": "Which of the following accurately reflects the responsibilities of a data processor under data protection laws such as the General Data Protection Regulation (GDPR)?",
+          "keyDetails": "The data processor is not allowed to make decisions alone regarding the processing of the data. The responsibility of determining the purposes and means of processing personal data lies with the data controller, not the data processor. The data processor does not have independent decision-making power over personal data.",
+          "example": "Which of the following accurately reflects the responsibilities of a data processor under data protection laws such as the General Data Protection Regulation (GDPR)?",
+          "memoryHook": "\"Data\" + \"controller\" → connect the words to the definition."
         },
         {
           "term": "Data processor",
@@ -2005,11 +2005,11 @@
             865
           ],
           "supplemental": false,
-          "hint": "Processes data for the controller.",
-          "front": "What is a data processor?",
-          "keyDetails": "Processors follow controller instructions and must implement appropriate safeguards.",
-          "example": "A payroll vendor processes employee data for a client company.",
-          "memoryHook": "Processor = processes for controller."
+          "hint": "Which of the following accurately reflects the responsibilities of a under data protection laws such as the General Data Protection Regulation (GDPR)?",
+          "front": "Which of the following accurately reflects the responsibilities of a under data protection laws such as the General Data Protection Regulation (GDPR)?",
+          "keyDetails": "The data processor is not allowed to make decisions alone regarding the processing of the data. The responsibility of determining the purposes and means of processing personal data lies with the data controller, not the data processor. The data processor does not have independent decision-making power over personal data.",
+          "example": "Which of the following accurately reflects the responsibilities of a under data protection laws such as the General Data Protection Regulation (GDPR)?",
+          "memoryHook": "\"Data\" + \"processor\" → connect the words to the definition."
         },
         {
           "term": "Cross-border data transfer compliance",
@@ -2027,11 +2027,11 @@
             862
           ],
           "supplemental": false,
-          "hint": "Data moves across national borders.",
-          "front": "What is cross-border data transfer compliance?",
-          "keyDetails": "It may involve approved transfer mechanisms, contractual clauses, data residency rules, and privacy impact reviews.",
-          "example": "A cloud service stores customer data from multiple countries and must comply with each jurisdiction’s transfer rules.",
-          "memoryHook": "Cross-border data = follow transfer rules."
+          "hint": "A multinational corporation is preparing to launch a new cloud service that will store customer data from various countries.",
+          "front": "A multinational corporation is preparing to launch a new cloud service that will store customer data from various countries.",
+          "keyDetails": "This adherence to international frameworks reflects the global scale at which the CPO needs to ensure compliance. Auditing physical access controls at data centers is impractical to ensure compliance with cross-border data transfer regulations and individual rights under various national laws.",
+          "example": "A multinational corporation is preparing to launch a new cloud service that will store customer data from various countries.",
+          "memoryHook": "\"Cross-border\" + \"compliance\" → connect the words to the definition."
         },
         {
           "term": "Regulatory violation metrics",
@@ -2049,11 +2049,11 @@
             853
           ],
           "supplemental": false,
-          "hint": "Metric for compliance failures.",
-          "front": "What do regulatory violation metrics measure?",
-          "keyDetails": "An increase may indicate weak controls, poor training, ineffective governance, or changing regulatory exposure.",
-          "example": "A compliance dashboard tracks the number of violations reported by regulators each quarter.",
-          "memoryHook": "Violation metrics = count compliance misses."
+          "hint": "A risk manager at a large corporation conducts a Risk and Control Self-Assessment (RCSA) to identify and assess risks for a new market expansion. The manager identifies risks associated with new regulatory requirements, market volatility, and aggressive competitors.",
+          "front": "A risk manager at a large corporation conducts a Risk and Control Self-Assessment (RCSA) to identify and assess risks for a new market expansion. The manager identifies risks associated with new regulatory requirements, market volatility, and aggressive competitors.",
+          "keyDetails": "The risk manager must prioritize ensuring regulatory compliance in a new market. Non-compliance can result in fines, damage to reputation, and operational disruption. While important for business growth, customer acquisition does not directly measure risk exposure. The company cannot directly control market volatility, an external factor.",
+          "example": "A risk manager at a large corporation conducts a Risk and Control Self-Assessment (RCSA) to identify and assess risks for a new market expansion.",
+          "memoryHook": "\"Regulatory\" + \"metrics\" → connect the words to the definition."
         },
         {
           "term": "Standards",
@@ -2069,11 +2069,11 @@
             849
           ],
           "supplemental": false,
-          "hint": "Standards tell how to meet policy.",
-          "front": "What are standards in governance?",
-          "keyDetails": "Standards are more specific than policies and may define required technologies, configurations, or thresholds.",
-          "example": "A password standard requires minimum length, MFA, and lockout settings.",
-          "memoryHook": "Standards = specific rules for implementation."
+          "hint": "A manager reprimands an IT employee because the employee did not follow instructions on the server build. Each server's configuration was different, including different software and settings. What should the employee have followed to build the server correctly?",
+          "front": "A manager reprimands an IT employee because the employee did not follow instructions on the server build. Each server's configuration was different, including different software and settings. What should the employee have followed to build the server correctly?",
+          "keyDetails": "Following the standard for each build would ensure each server's configuration would match. Access control models define appropriate access models for different use cases. It does not deal with the configuration of servers. Organizational policies are vital in establishing effective governance and ensuring organizational compliance.",
+          "example": "A manager reprimands an IT employee because the employee did not follow instructions on the server build.",
+          "memoryHook": "Link \"Standards\" to: standards are mandatory or expected requirements that define how policies must be implemented in a consistent, measurable way."
         },
         {
           "term": "Automation and orchestration",
@@ -2093,11 +2093,11 @@
             848
           ],
           "supplemental": false,
-          "hint": "Automate routine work and coordinate workflows.",
-          "front": "What are automation and orchestration?",
-          "keyDetails": "They reduce manual workload, improve speed and consistency, and can reduce operator fatigue when implemented safely.",
-          "example": "A SOAR playbook enriches an alert, opens a ticket, blocks an indicator, and notifies an analyst.",
-          "memoryHook": "Automation = do task; orchestration = coordinate tasks."
+          "hint": "Automation executes repeatable tasks with minimal human effort, while orchestration coordinates multiple automated tasks into a larger workflow.",
+          "front": "Automation executes repeatable tasks with minimal human effort, while orchestration coordinates multiple automated tasks into a larger workflow.",
+          "keyDetails": "This reduces operator fatigue by allowing cybersecurity personnel to focus on more complex, strategic issues. While automation and orchestration might save costs in the long run due to increased efficiency and reduced errors, the initial cost of implementation can be high.",
+          "example": "A company has been experiencing issues with operator fatigue within the cybersecurity team, leading to decreased alertness and cognitive function.",
+          "memoryHook": "\"Automation\" + \"orchestration\" → connect the words to the definition."
         },
         {
           "term": "Service and access automation",
@@ -2115,11 +2115,11 @@
             847
           ],
           "supplemental": false,
-          "hint": "Automation manages services and permissions.",
-          "front": "How can automation help manage services and access?",
-          "keyDetails": "Automation must include safeguards such as testing, approvals, logging, and rollback to avoid scaling mistakes.",
-          "example": "A script disables inactive accounts and removes stale group memberships after approval.",
-          "memoryHook": "Access automation = manage permissions at scale."
+          "hint": "In an IT environment, automation and scripting play a critical role in managing services and access. How does automation assist security analysts in their daily tasks?",
+          "front": "In an IT environment, automation and scripting play a critical role in managing services and access. How does automation assist security analysts in their daily tasks?",
+          "keyDetails": "This includes enabling or disabling services, modifying access rights, and maintaining the lifecycle of IT resources, which directly aligns with the tasks of security analysts. While automation assists in user and resource provisioning, the question specifically asks how automation assists security analysts in managing services and access, not provisioning.",
+          "example": "In an IT environment, automation and scripting play a critical role in managing services and access.",
+          "memoryHook": "\"Service\" + \"automation\" → connect the words to the definition."
         },
         {
           "term": "Secure automation tools",
@@ -2137,11 +2137,11 @@
             846
           ],
           "supplemental": false,
-          "hint": "Automation needs security controls too.",
-          "front": "Why use automation tools with built-in security features?",
-          "keyDetails": "Poorly controlled automation can rapidly propagate misconfigurations or unauthorized changes.",
-          "example": "An automation platform requires approval before privileged changes and logs every action.",
-          "memoryHook": "Secure automation = fast but controlled."
+          "hint": "A healthcare provider's IT manager wants to automate routine tasks within its network security management. This automation will free up IT staff time and enhance system defenses. Potential risks are a concern, and the manager wants to implement automation securely.",
+          "front": "A healthcare provider's IT manager wants to automate routine tasks within its network security management. This automation will free up IT staff time and enhance system defenses. Potential risks are a concern, and the manager wants to implement automation securely.",
+          "keyDetails": "Implementing a manual approval process would significantly slow down automation, reducing efficiency and not aligning with the IT manager's goals for streamlined security management and automation for the healthcare provider.",
+          "example": "A healthcare provider's IT manager wants to automate routine tasks within its network security management.",
+          "memoryHook": "\"Secure\" + \"tools\" → connect the words to the definition."
         },
         {
           "term": "Phishing prevention execution phase",
@@ -2159,11 +2159,11 @@
             911
           ],
           "supplemental": false,
-          "hint": "After deployment, verify it works.",
-          "front": "What is the execution phase of a phishing prevention strategy?",
-          "keyDetails": "Activities may include monitoring, tuning filters, testing with simulations, and measuring user reporting behavior.",
-          "example": "After deploying email filtering, the team tests whether simulated phishing emails are detected.",
-          "memoryHook": "Execution = run and verify."
+          "hint": "The execution phase of phishing prevention validates that deployed controls and training function as intended after implementation.",
+          "front": "The execution phase of phishing prevention validates that deployed controls and training function as intended after implementation.",
+          "keyDetails": "The execution would involve monitoring and tweaking the tool's performance, possibly testing it with simulated phishing attempts. Recognizing a phishing attempt is an essential part of a comprehensive phishing prevention strategy, but it is more about educating users than validating the effectiveness of a tool.",
+          "example": "The cybersecurity department of a major bank has just finished deploying a new email security tool to detect and filter potential phishing emails.",
+          "memoryHook": "\"Phishing\" + \"phase\" → connect the words to the definition."
         },
         {
           "term": "Mean Time to Repair (MTTR)",
@@ -2182,11 +2182,11 @@
             857
           ],
           "supplemental": false,
-          "hint": "Average time to recover service.",
-          "front": "What is MTTR?",
-          "keyDetails": "Reducing MTTR improves resilience and availability by shortening outages.",
-          "example": "Automated failover and tested recovery procedures reduce server MTTR.",
-          "memoryHook": "MTTR = time to repair/restore."
+          "hint": "A risk manager for a company providing IT support services conducts a business impact analysis (BIA) and identifies a Mission Essential Function (MEF) that relies on a server with a Mean Time Between Failures (MTBF) of 2,500 hours and a of 4 hours.",
+          "front": "A risk manager for a company providing IT support services conducts a business impact analysis (BIA) and identifies a Mission Essential Function (MEF) that relies on a server with a Mean Time Between Failures (MTBF) of 2,500 hours and a of 4 hours.",
+          "keyDetails": "With an RTO of 6 hours and an MTTR of 4 hours, other activities have limited time, such as recovery during the maximum tolerable downtime. Lowering the MTTR provides more time for those activities. The current MTBF of 2,500 hours is substantial and not an immediate concern considering the MTD of 24 hours.",
+          "example": "A risk manager for a company providing IT support services conducts a business impact analysis (BIA) and identifies a Mission Essential Function (MEF) that relies on a server with a Mean Time Between Failures (MTBF) of 2,500 hours and a of 4 hours.",
+          "memoryHook": "\"Mean\" + \"(MTTR)\" → connect the words to the definition."
         },
         {
           "term": "Reporting and monitoring",
@@ -2202,11 +2202,11 @@
             869
           ],
           "supplemental": false,
-          "hint": "Watch activity and report findings.",
-          "front": "What are reporting and monitoring?",
-          "keyDetails": "Monitoring detects changes or anomalies; reporting communicates status, trends, risks, or compliance evidence.",
-          "example": "A SIEM dashboard monitors authentication failures and generates weekly risk reports.",
-          "memoryHook": "Monitor = watch; report = communicate."
+          "hint": "In an organization’s security operations center (SOC), analysts continuously identify anomalies, scrutinize network traffic patterns, and generate regular summaries of security incidents to inform senior management.",
+          "front": "In an organization’s security operations center (SOC), analysts continuously identify anomalies, scrutinize network traffic patterns, and generate regular summaries of security incidents to inform senior management.",
+          "keyDetails": "Monitoring involves continuously observing network and system activities to detect irregular patterns that may signify a security incident and regularly summarizing and communicating these findings to relevant stakeholders.",
+          "example": "In an organization’s security operations center (SOC), analysts continuously identify anomalies, scrutinize network traffic patterns, and generate regular summaries of security incidents to inform senior management.",
+          "memoryHook": "\"Reporting\" + \"monitoring\" → connect the words to the definition."
         },
         {
           "term": "URL analysis",
@@ -2222,11 +2222,11 @@
             838
           ],
           "supplemental": false,
-          "hint": "Inspect the link before trusting it.",
-          "front": "What is URL analysis?",
-          "keyDetails": "It helps identify phishing, typosquatting, malicious redirects, and suspicious downloads.",
-          "example": "An analyst checks whether a link uses a lookalike domain and redirects through unknown sites.",
-          "memoryHook": "URL analysis = inspect the link."
+          "hint": "An IT intern looks for information on previous network attacks, specifically indicators of attempted and successful replay, forgery, and injection attacks. Where could the intern find this information? (Select the two best options.)",
+          "front": "An IT intern looks for information on previous network attacks, specifically indicators of attempted and successful replay, forgery, and injection attacks. Where could the intern find this information? (Select the two best options.)",
+          "keyDetails": "Analysis of these URLs can provide indicators of session hijacking/replay, forgery, and injection attacks. An administrator typically configures web servers to log Hypertext Transfer Protocol (HTTP) traffic that encounters an error or traffic that matches some predefined rule set.",
+          "example": "An IT intern looks for information on previous network attacks, specifically indicators of attempted and successful replay, forgery, and injection attacks.",
+          "memoryHook": "\"URL\" + \"analysis\" → connect the words to the definition."
         },
         {
           "term": "Web server logs",
@@ -2244,11 +2244,11 @@
             838
           ],
           "supplemental": false,
-          "hint": "Logs of web requests.",
-          "front": "Why are web server logs useful?",
-          "keyDetails": "They can show directory traversal attempts, scanning, injection strings, unusual user agents, and spikes in traffic.",
-          "example": "Logs show repeated requests for ../../../../etc/passwd.",
-          "memoryHook": "Web logs = web request evidence."
+          "hint": "An IT intern looks for information on previous network attacks, specifically indicators of attempted and successful replay, forgery, and injection attacks. Where could the intern find this information? (Select the two best options.)",
+          "front": "An IT intern looks for information on previous network attacks, specifically indicators of attempted and successful replay, forgery, and injection attacks. Where could the intern find this information? (Select the two best options.)",
+          "keyDetails": "Analysis of these URLs can provide indicators of session hijacking/replay, forgery, and injection attacks. An administrator typically configures web servers to log Hypertext Transfer Protocol (HTTP) traffic that encounters an error or traffic that matches some predefined rule set.",
+          "example": "An IT intern looks for information on previous network attacks, specifically indicators of attempted and successful replay, forgery, and injection attacks.",
+          "memoryHook": "\"Web\" + \"logs\" → connect the words to the definition."
         },
         {
           "term": "User guidance and training",
@@ -2266,11 +2266,11 @@
             868
           ],
           "supplemental": false,
-          "hint": "Train users to make safer decisions.",
-          "front": "What is user guidance and training?",
-          "keyDetails": "Training is a preventive and detective support control when users are taught how and when to report suspicious activity.",
-          "example": "Employees learn how to report phishing messages using the mail client report button.",
-          "memoryHook": "Training = make users better sensors."
+          "hint": "The company’s security team notices a significant increase in security incidents stemming from employee errors and decides to focus on proactive strategies to reduce these incidents.",
+          "front": "The company’s security team notices a significant increase in security incidents stemming from employee errors and decides to focus on proactive strategies to reduce these incidents.",
+          "keyDetails": "Tabletop exercises allow employees to engage in simulated security scenarios, which can provide hands- on experience and education. Bolstering security policies could indirectly support educating employees by defining the expected standards and behaviors.",
+          "example": "The company’s security team notices a significant increase in security incidents stemming from employee errors and decides to focus on proactive strategies to reduce these incidents.",
+          "memoryHook": "\"User\" + \"training\" → connect the words to the definition."
         },
         {
           "term": "Threat modeling",
@@ -2286,11 +2286,11 @@
             844
           ],
           "supplemental": false,
-          "hint": "Find design risks before building.",
-          "front": "What is threat modeling?",
-          "keyDetails": "It helps teams identify likely threats early and select mitigations before deployment.",
-          "example": "A design team maps trust boundaries and identifies injection and authentication risks before coding.",
-          "memoryHook": "Threat modeling = model attacks before attackers do."
+          "hint": "A global logistics company implements a complex automation and orchestration system to enhance security infrastructure.",
+          "front": "A global logistics company implements a complex automation and orchestration system to enhance security infrastructure.",
+          "keyDetails": "Implementing automation without understanding underlying policies may lead to misconfigurations not aligning with the company's goals for a robust and secure deployment. Relying solely on vendor-supplied features without validation may not provide comprehensive security and not align with the company's objectives for minimizing risks.",
+          "example": "A global logistics company implements a complex automation and orchestration system to enhance security infrastructure.",
+          "memoryHook": "\"Threat\" + \"modeling\" → connect the words to the definition."
         },
         {
           "term": "Partially known environment penetration testing",
@@ -2309,11 +2309,11 @@
             858
           ],
           "supplemental": false,
-          "hint": "Tester has some but not full knowledge.",
-          "front": "What is partially known environment penetration testing?",
-          "keyDetails": "It sits between unknown/black-box and known/white-box testing.",
-          "example": "A tester receives user-level credentials and basic network ranges but not full architecture diagrams.",
-          "memoryHook": "Partially known = gray-box."
+          "hint": "The IT security team of a company has concerns about network vulnerabilities and hires an external penetration tester to evaluate its security controls and identify potential risks.",
+          "front": "The IT security team of a company has concerns about network vulnerabilities and hires an external penetration tester to evaluate its security controls and identify potential risks.",
+          "keyDetails": "During the test, the tester may employ reconnaissance techniques to gather additional information about the target.",
+          "example": "The IT security team of a company has concerns about network vulnerabilities and hires an external penetration tester to evaluate its security controls and identify potential risks.",
+          "memoryHook": "\"Partially\" + \"testing\" → connect the words to the definition."
         },
         {
           "term": "Reconnaissance",
@@ -2331,11 +2331,11 @@
             484
           ],
           "supplemental": false,
-          "hint": "Gather information before attack.",
-          "front": "What is reconnaissance?",
-          "keyDetails": "Recon may be passive or active and often precedes exploitation.",
-          "example": "An attacker searches public records, DNS, social media, and exposed services before targeting a company.",
-          "memoryHook": "Recon = research the target."
+          "hint": "An intern reviewing logs notices that for several weeks, several MBs of data have been sent out at the same time every day.",
+          "front": "An intern reviewing logs notices that for several weeks, several MBs of data have been sent out at the same time every day.",
+          "keyDetails": "Also known as: Recon.",
+          "example": "An intern reviewing logs notices that for several weeks, several MBs of data have been sent out at the same time every day.",
+          "memoryHook": "Link \"Reconnaissance\" to: reconnaissance is the information-gathering phase in which an attacker or tester collects details about targets, systems, users, technologies, or defenses."
         },
         {
           "term": "Data exfiltration",
@@ -2353,11 +2353,11 @@
             484
           ],
           "supplemental": false,
-          "hint": "Data leaves without authorization.",
-          "front": "What is data exfiltration?",
-          "keyDetails": "Indicators may include unusual outbound traffic, large transfers, cloud uploads, archive files, or transfers to unknown destinations.",
-          "example": "A compromised host uploads compressed customer records to an external server.",
-          "memoryHook": "Exfiltration = data exits."
+          "hint": "An intern reviewing logs notices that for several weeks, several MBs of data have been sent out at the same time every day.",
+          "front": "An intern reviewing logs notices that for several weeks, several MBs of data have been sent out at the same time every day.",
+          "keyDetails": "Also known as: Exfiltration.",
+          "example": "An intern reviewing logs notices that for several weeks, several MBs of data have been sent out at the same time every day.",
+          "memoryHook": "\"Data\" + \"exfiltration\" → connect the words to the definition."
         },
         {
           "term": "Hybrid work environment",
@@ -2373,11 +2373,11 @@
             863
           ],
           "supplemental": false,
-          "hint": "Work from office and remote locations.",
-          "front": "What is a hybrid work environment?",
-          "keyDetails": "Security controls often include MFA, conditional access, VPN or ZTNA, endpoint management, and collaboration security.",
-          "example": "Employees securely access critical systems from home and the office using MFA and managed devices.",
-          "memoryHook": "Hybrid work = office + remote."
+          "hint": "As part of a business continuity plan, a company wants to create a resilient work model that securely allows employees to access critical network resources, regardless of physical location.",
+          "front": "As part of a business continuity plan, a company wants to create a resilient work model that securely allows employees to access critical network resources, regardless of physical location.",
+          "keyDetails": "It aligns with the company's need for a resilient work model to maintain business operations under various conditions. While a fully remote work environment does allow for secure access controls and multifactor authentication, it does not facilitate on-site work capabilities.",
+          "example": "As part of a business continuity plan, a company wants to create a resilient work model that securely allows employees to access critical network resources, regardless of physical location.",
+          "memoryHook": "\"Hybrid\" + \"environment\" → connect the words to the definition."
         },
         {
           "term": "Attack category matching",
@@ -2395,11 +2395,11 @@
             477
           ],
           "supplemental": false,
-          "hint": "Match the indicator to the attack surface.",
-          "front": "How can attack indicators be quickly matched to categories?",
-          "keyDetails": "This is a memory aid, not a strict rule. Many attacks can cross categories.",
-          "example": "SYN flood = network; forced window = physical; SQL injection = application; ransomware = malware.",
-          "memoryHook": "Endpoint, hardware, traffic, input."
+          "hint": "For fast Security+ matching, malware usually affects endpoints, physical attacks involve facilities or hardware, network attacks involve traffic or protocols, and application attacks abuse software logic or input.",
+          "front": "For fast Security+ matching, malware usually affects endpoints, physical attacks involve facilities or hardware, network attacks involve traffic or protocols, and application attacks abuse software logic or input.",
+          "keyDetails": "Also known as: Malware physical network application matching.",
+          "example": "A student is building a quick memory aid for matching indicators of malicious activity to Security+ attack categories.",
+          "memoryHook": "\"Attack\" + \"matching\" → connect the words to the definition."
         }
       ]
     },
@@ -2460,11 +2460,11 @@
             610
           ],
           "supplemental": false,
-          "hint": "Protect NFC data during transmission.",
-          "front": "What is the primary security control for protecting NFC communications?",
-          "keyDetails": "Encryption preserves confidentiality and integrity of NFC communications.",
+          "hint": "Encrypt NFC communications to protect against eavesdropping and on-path attacks.",
+          "front": "Encrypt NFC communications to protect against eavesdropping and on-path attacks.",
+          "keyDetails": "Enabling an NFC chip to read all devices may increase connectivity options, but it can also expose them to potential risks and unauthorized access.",
           "example": "cybersecurity analyst is implementing security measures for Near Field Communication (NFC) usage in the organization's mobile devices.",
-          "memoryHook": "\"Apply\" + \"attacks.\" → connect the words to the definition."
+          "memoryHook": "\"NFC\" + \"encryption\" → connect the words to the definition."
         },
         {
           "term": "Assign each host to a different virtual local area network (VLAN).",
@@ -2829,9 +2829,9 @@
             433
           ],
           "supplemental": false,
-          "hint": "A web application reflects or stores attacker-controlled JavaScript.",
-          "front": "What is cross-site scripting (XSS)?",
-          "keyDetails": "XSS executes code in the victim's browser. Replay attacks reuse captured authentication data.",
+          "hint": "A security team is reviewing injecting script content that executes in another user browser.",
+          "front": "A security team is reviewing injecting script content that executes in another user browser.",
+          "keyDetails": "A session ending and then immediately reestablishing would most likely indicate this type of attack. Cross-site Scripting (XSS) can compromise session cookies, which could then lead to the prediction of future session cookies, compromising all future sessions.",
           "example": "A security team is reviewing injecting script content that executes in another user browser.",
           "memoryHook": "\"Cross-site\" + \"scripting\" → connect the words to the definition."
         },
@@ -3196,7 +3196,7 @@
           "front": "A security team is reviewing a dedicated device used to generate, protect, and manage cryptographic keys.",
           "keyDetails": "Focus on that behavior, not on the extra wording around it.",
           "example": "A security team is reviewing a dedicated device used to generate, protect, and manage cryptographic keys.",
-          "memoryHook": "Link \"HSM\" to: hsm is a dedicated device used to generate, protect, and manage cryptographic keys."
+          "memoryHook": "\"HSM\" → Hardware Security Module."
         },
         {
           "term": "Hybrid architecture",
@@ -3566,9 +3566,9 @@
             755
           ],
           "supplemental": false,
-          "hint": "Divide networks into smaller security zones.",
-          "front": "What is network segmentation?",
-          "keyDetails": "Segmentation limits lateral movement and enables granular security policies.",
+          "hint": "A security team is reviewing dividing a network to limit access and reduce lateral movement.",
+          "front": "A security team is reviewing dividing a network to limit access and reduce lateral movement.",
+          "keyDetails": "It is vital in both cloud and on-premises environments. Segmenting the network can isolate potential threats and prevent them from moving laterally across the enterprise. It is particularly essential as enterprises grow and diversify their digital assets.",
           "example": "A security team is reviewing dividing a network to limit access and reduce lateral movement.",
           "memoryHook": "\"Network\" + \"segmentation\" → connect the words to the definition."
         },
@@ -4086,7 +4086,7 @@
           "front": "A security analyst is documenting analytics that identifies anomalous user and entity behavior.",
           "keyDetails": "Focus on that behavior, not on the extra wording around it.",
           "example": "A security analyst is documenting analytics that identifies anomalous user and entity behavior.",
-          "memoryHook": "Link \"UEBA\" to: ueba is analytics that identifies anomalous user and entity behavior."
+          "memoryHook": "\"UEBA\" → User Entity Behavior Analytics."
         },
         {
           "term": "VM escape",
@@ -4128,7 +4128,7 @@
           "front": "Combining volume encryption with file encryption would solve the organization's needs.",
           "keyDetails": "It allows encryption of the storage resource and individual files, granting granular control for different users' access levels. Full disk encryption (FDE) encrypts the entire contents of a storage device. While this protects against physical theft of the disk, it does not offer granular control for multiple-user access.",
           "example": "A security team is evaluating cryptographic protections and must choose the method or component that best fits the need.",
-          "memoryHook": "\"A\" + \"encryption\" → connect the words to the definition."
+          "memoryHook": "\"Volume\" + \"encryption\" → connect the words to the definition."
         },
         {
           "term": "Zero-day vulnerability",
@@ -5394,11 +5394,11 @@
             9
           ],
           "supplemental": false,
-          "hint": "What ports does POP3 use.",
-          "front": "What port does POP3 use?",
+          "hint": "A network administrator is updating firewall rules for a system that must support Post Office Protocol (POP). The change request requires the administrator to allow only the standard traffic needed for that service.",
+          "front": "A network administrator is updating firewall rules for a system that must support Post Office Protocol (POP). The change request requires the administrator to allow only the standard traffic needed for that service.",
           "keyDetails": "In this scenario, A network administrator is updating firewall rules for a system that must support Post Office Protocol (POP). The change request requires the administrator to allow only the standard traffic needed for that service.",
           "example": "A network administrator is updating firewall rules for a system that must support Post Office Protocol (POP). The change request requires the administrator to allow only the standard traffic needed for that service.",
-          "memoryHook": "Link \"110\" to: pop3 uses tcp port 110 to retrieve email."
+          "memoryHook": "\"POP\" → Post Office Protocol."
         },
         {
           "term": "119",
@@ -5534,11 +5534,11 @@
             10
           ],
           "supplemental": false,
-          "hint": "What port is used for secure mail access.",
-          "front": "What ports do IMAP and IMAPS use?",
+          "hint": "IMAP uses TCP port 143, and IMAPS uses TCP port 993 for secure mail access.",
+          "front": "IMAP uses TCP port 143, and IMAPS uses TCP port 993 for secure mail access.",
           "keyDetails": "In this scenario, A network administrator is reviewing firewall and service documentation. They are given a case that asks them to evaluate: Which ports are listed for Internet Message Access Protocol (IMAP).",
           "example": "A network administrator is updating firewall and service documentation.",
-          "memoryHook": "\"143\" + \"993\" → connect the words to the definition."
+          "memoryHook": "\"IMAP\" + \"IMAPS\" → connect the words to the definition."
         },
         {
           "term": "1433",
@@ -5614,11 +5614,11 @@
             11
           ],
           "supplemental": false,
-          "hint": "What port is used for queries and UDP port 162 for traps.",
-          "front": "What ports does SNMP use?",
+          "hint": "A network administrator is updating firewall rules for a system that must support Simple Network Management Protocol (). The change request requires the administrator to allow only the standard traffic needed for that service.",
+          "front": "A network administrator is updating firewall rules for a system that must support Simple Network Management Protocol (). The change request requires the administrator to allow only the standard traffic needed for that service.",
           "keyDetails": "In this scenario, A network administrator is updating firewall rules for a system that must support Simple Network Management Protocol (SNMP). The change request requires the administrator to allow only the standard traffic needed for that service.",
-          "example": "A network administrator is updating firewall rules for a system that must support Simple Network Management Protocol (SNMP). The change request requires the administrator to allow only the standard traffic needed for that service.",
-          "memoryHook": "\"161\" + \"162\" → connect the words to the definition."
+          "example": "A network administrator is updating firewall rules for a system that must support Simple Network Management Protocol (). The change request requires the administrator to allow only the standard traffic needed for that service.",
+          "memoryHook": "\"SNMP\" → Simple Network Management Protocol."
         },
         {
           "term": "162",
@@ -5714,11 +5714,11 @@
             1
           ],
           "supplemental": false,
-          "hint": "What port is used for data and control connections.",
-          "front": "What ports does FTP use?",
+          "hint": "A network administrator is updating firewall rules for a system that must support File Transfer Protocol (). The change request requires the administrator to allow only the standard traffic needed for that service.",
+          "front": "A network administrator is updating firewall rules for a system that must support File Transfer Protocol (). The change request requires the administrator to allow only the standard traffic needed for that service.",
           "keyDetails": "In this scenario, A network administrator is updating firewall rules for a system that must support File Transfer Protocol (FTP). The change request requires the administrator to allow only the standard traffic needed for that service.",
-          "example": "A network administrator is updating firewall rules for a system that must support File Transfer Protocol (FTP). The change request requires the administrator to allow only the standard traffic needed for that service.",
-          "memoryHook": "\"20\" + \"21\" → connect the words to the definition."
+          "example": "A network administrator is updating firewall rules for a system that must support File Transfer Protocol (). The change request requires the administrator to allow only the standard traffic needed for that service.",
+          "memoryHook": "\"FTP\" → File Transfer Protocol."
         },
         {
           "term": "2049",
@@ -5755,11 +5755,11 @@
             3
           ],
           "supplemental": false,
-          "hint": "What port is used for secure remote access and file transfer.",
-          "front": "What port do SSH and SFTP use?",
+          "hint": "SSH and SFTP use TCP port 22 for secure remote access and file transfer.",
+          "front": "SSH and SFTP use TCP port 22 for secure remote access and file transfer.",
           "keyDetails": "In this scenario, A network administrator is updating firewall rules for a system that must support Secure Shell (SSH). The change request requires the administrator to allow only the standard traffic needed for that service.",
           "example": "A network administrator is updating firewall rules for a system that must support Secure Shell (SSH). The change request requires the administrator to allow only the standard traffic needed for that service.",
-          "memoryHook": "Link \"22\" to: ssh and sftp use tcp port 22 for secure remote access and file transfer."
+          "memoryHook": "\"SSH\" + \"SFTP\" → connect the words to the definition."
         },
         {
           "term": "23",
@@ -6304,7 +6304,7 @@
         },
         {
           "term": "802.1X",
-          "definition": "802.1X stands for IEEE 802.1X port-based Network Access Control. The standard 802. 1X provides port-based network access control, ensuring high security by rigorously authenticating both users and devices.",
+          "definition": "802. 1X stands for IEEE 802.",
           "domains": [
             "4.0 Security Operations"
           ],
@@ -6317,8 +6317,8 @@
             618
           ],
           "supplemental": false,
-          "hint": "The standard 802. 1X provides port-based network access control, ensuring high security by rigorously authenticating both users and devices.",
-          "front": "The standard 802. 1X provides port-based network access control, ensuring high security by rigorously authenticating both users and devices.",
+          "hint": "A security analyst is documenting a standard for port-based network access control.",
+          "front": "A security analyst is documenting a standard for port-based network access control.",
           "keyDetails": "1X provides port-based network access control, ensuring high security by rigorously authenticating both users and devices. It uses credentials or digital certificates to verify the identity of each entity before granting access.",
           "example": "A security analyst is documenting a standard for port-based network access control.",
           "memoryHook": "Their primary function is to authenticate users rather than validate the identity of devices."
@@ -7259,7 +7259,7 @@
           "front": "A security team is reviewing a deployment model in which users use personally owned devices for work.",
           "keyDetails": "The other options describe different ideas.",
           "example": "A security team is reviewing a deployment model in which users use personally owned devices for work.",
-          "memoryHook": "Link \"BYOD\" to: byod is the best match here because it names a deployment model in which users use personally owned devices for work."
+          "memoryHook": "\"BYOD\" → Bring Your Own Device."
         },
         {
           "term": "C",
@@ -7765,7 +7765,7 @@
           "front": "A security team is reviewing a deployment model using corporate-owned devices that permit personal use.",
           "keyDetails": "Focus on that behavior, not on the extra wording around it.",
           "example": "A security team is reviewing a deployment model using corporate-owned devices that permit personal use.",
-          "memoryHook": "Link \"COPE\" to: cope is a deployment model using corporate-owned devices that permit personal use."
+          "memoryHook": "\"COPE\" → Corporate-Owned, Personally Enabled."
         },
         {
           "term": "Corrective control",
@@ -7863,11 +7863,11 @@
             245
           ],
           "supplemental": false,
-          "hint": "A standardized identifier for a publicly known vulnerability.",
-          "front": "A standardized identifier for a publicly known vulnerability.",
-          "keyDetails": "4.0 Security Operations.",
+          "hint": "A security team is reviewing a standardized identifier for a publicly known vulnerability.",
+          "front": "A security team is reviewing a standardized identifier for a publicly known vulnerability.",
+          "keyDetails": "a standardized identifier for a publicly known vulnerability.",
           "example": "A security team is reviewing a standardized identifier for a publicly known vulnerability.",
-          "memoryHook": "Link \"CVE\" to: a standardized identifier for a publicly known vulnerability."
+          "memoryHook": "\"CVE\" → Common Vulnerabilities Exposures."
         },
         {
           "term": "cw",
@@ -7943,11 +7943,11 @@
             241
           ],
           "supplemental": false,
-          "hint": "A deployment model allowing users to select from approved device choices.",
-          "front": "A deployment model allowing users to select from approved device choices.",
-          "keyDetails": "4.0 Security Operations.",
+          "hint": "A security team is reviewing a deployment model allowing users to select from approved device choices.",
+          "front": "A security team is reviewing a deployment model allowing users to select from approved device choices.",
+          "keyDetails": "a deployment model allowing users to select from approved device choices.",
           "example": "A security team is reviewing a deployment model allowing users to select from approved device choices.",
-          "memoryHook": "Link \"CYOD\" to: a deployment model allowing users to select from approved device choices."
+          "memoryHook": "\"CYOD\" → Choose Your Own Device."
         },
         {
           "term": "D",
@@ -8563,11 +8563,11 @@
             249
           ],
           "supplemental": false,
-          "hint": "Technology designed to detect and prevent unauthorized disclosure of sensitive data.",
-          "front": "Technology designed to detect and prevent unauthorized disclosure of sensitive data.",
-          "keyDetails": "4.0 Security Operations.",
+          "hint": "A security team is reviewing technology designed to detect and prevent unauthorized disclosure of sensitive data.",
+          "front": "A security team is reviewing technology designed to detect and prevent unauthorized disclosure of sensitive data.",
+          "keyDetails": "technology designed to detect and prevent unauthorized disclosure of sensitive data.",
           "example": "A security team is reviewing technology designed to detect and prevent unauthorized disclosure of sensitive data.",
-          "memoryHook": "Link \"DLP\" to: technology designed to detect and prevent unauthorized disclosure of sensitive data."
+          "memoryHook": "\"DLP\" → Data Loss Prevention."
         },
         {
           "term": "DNS client cache poisoning",
@@ -8666,11 +8666,11 @@
             370
           ],
           "supplemental": false,
-          "hint": "A framework that supports multiple authentication methods for network access.",
-          "front": "A framework that supports multiple authentication methods for network access.",
-          "keyDetails": "4.0 Security Operations.",
+          "hint": "A security analyst is documenting a framework that supports multiple authentication methods for network access.",
+          "front": "A security analyst is documenting a framework that supports multiple authentication methods for network access.",
+          "keyDetails": "A framework that supports multiple authentication methods for network access.",
           "example": "A security analyst is documenting a framework that supports multiple authentication methods for network access.",
-          "memoryHook": "Link \"EAP\" to: a framework that supports multiple authentication methods for network access."
+          "memoryHook": "\"EAP\" → Extensible Authentication Protocol."
         },
         {
           "term": "Enable location-based authentication",
@@ -9648,11 +9648,11 @@
             357
           ],
           "supplemental": false,
-          "hint": "Technology used to monitor and control industrial processes.",
-          "front": "Technology used to monitor and control industrial processes.",
-          "keyDetails": "4.0 Security Operations.",
+          "hint": "A security analyst is documenting technology used to monitor and control industrial processes.",
+          "front": "A security analyst is documenting technology used to monitor and control industrial processes.",
+          "keyDetails": "technology used to monitor and control industrial processes.",
           "example": "A security analyst is documenting technology used to monitor and control industrial processes.",
-          "memoryHook": "Link \"ICS\" to: technology used to monitor and control industrial processes."
+          "memoryHook": "\"ICS\" → Industrial Control System."
         },
         {
           "term": "Identifying undisclosed open-source components",
@@ -9688,11 +9688,11 @@
             365
           ],
           "supplemental": false,
-          "hint": "A control that detects suspicious activity and generates alerts.",
-          "front": "A control that detects suspicious activity and generates alerts.",
-          "keyDetails": "4.0 Security Operations.",
+          "hint": "A security analyst is documenting a control that detects suspicious activity and generates alerts.",
+          "front": "A security analyst is documenting a control that detects suspicious activity and generates alerts.",
+          "keyDetails": "a control that detects suspicious activity and generates alerts.",
           "example": "A security analyst is documenting a control that detects suspicious activity and generates alerts.",
-          "memoryHook": "Link \"IDS\" to: a control that detects suspicious activity and generates alerts."
+          "memoryHook": "\"IDS\" → Intrusion Detection System."
         },
         {
           "term": "ifconfig",
@@ -10154,11 +10154,11 @@
             617
           ],
           "supplemental": false,
-          "hint": "A control that detects and can automatically block suspicious activity.",
-          "front": "A control that detects and can automatically block suspicious activity.",
+          "hint": "A security analyst is documenting a control that detects and can automatically block suspicious activity.",
+          "front": "A security analyst is documenting a control that detects and can automatically block suspicious activity.",
           "keyDetails": "Also known as: Intrusion Prevention System (IPS).",
           "example": "A security analyst is documenting a control that detects and can automatically block suspicious activity.",
-          "memoryHook": "Link \"IPS\" to: a control that detects and can automatically block suspicious activity."
+          "memoryHook": "\"IPS\" → Intrusion Prevention System."
         },
         {
           "term": "Isolate the affected server from the rest of the network by disabling its network access",
@@ -11340,7 +11340,7 @@
           "front": "A security analyst is documenting a firewall that adds application awareness, identity context, and advanced inspection.",
           "keyDetails": "Focus on that behavior, not on the extra wording around it.",
           "example": "A security analyst is documenting a firewall that adds application awareness, identity context, and advanced inspection.",
-          "memoryHook": "Link \"NGFW\" to: ngfw is a firewall that adds application awareness, identity context, and advanced inspection."
+          "memoryHook": "\"NGFW\" → Next-Generation Firewall."
         },
         {
           "term": "nice <command>",
@@ -11460,11 +11460,11 @@
             194
           ],
           "supplemental": false,
-          "hint": "A protocol used to check a certificate revocation status in near real time.",
-          "front": "A protocol used to check a certificate revocation status in near real time.",
-          "keyDetails": "4.0 Security Operations.",
+          "hint": "A security team is reviewing a protocol used to check a certificate revocation status in near real time.",
+          "front": "A security team is reviewing a protocol used to check a certificate revocation status in near real time.",
+          "keyDetails": "A protocol used to check a certificate revocation status in near real time.",
           "example": "A security team is reviewing a protocol used to check a certificate revocation status in near real time.",
-          "memoryHook": "Link \"OCSP\" to: a protocol used to check a certificate revocation status in near real time."
+          "memoryHook": "\"OCSP\" → Online Certificate Status Protocol."
         },
         {
           "term": "Offline attack",
@@ -12665,7 +12665,7 @@
         },
         {
           "term": "RTOS",
-          "definition": "RTOS stands for Real-Time Operating System. For this scenario, the purchase of a Real-Time Operation System (RTOS) would be most appropriate as it can assist in prioritizing deterministic execution of operations to ensure consistent response are received for time-critical tasks. A Supervisory Control and Data Acquisition (SCADA) system is a control system that manages large-scale, multiple-site devices and equipment spread over geographically large areas from a host computer.",
+          "definition": "RTOS stands for Real-Time Operating System. For this scenario, the purchase of a Real-Time Operation System (RTOS) would be most appropriate as it can assist in prioritizing deterministic execution of operations to ensure consistent response are received for time-critical tasks.",
           "domains": [
             "4.0 Security Operations"
           ],
@@ -12683,7 +12683,7 @@
           "front": "A security analyst is documenting an operating system designed to meet deterministic timing requirements.",
           "keyDetails": "A Supervisory Control and Data Acquisition (SCADA) system is a control system that manages large-scale, multiple-site devices and equipment spread over geographically large areas from a host computer. An Industrial Control System (ICS) provides mechanisms for workflow and process automation and is used in critical infrastructure.",
           "example": "A security analyst is documenting an operating system designed to meet deterministic timing requirements.",
-          "memoryHook": "\"RTOS\" → For Real-Time Operation System."
+          "memoryHook": "\"RTOS\" → Real-Time Operating System."
         },
         {
           "term": "s",
@@ -12825,11 +12825,11 @@
             226
           ],
           "supplemental": false,
-          "hint": "A cloud-delivered architecture combining networking and security capabilities.",
-          "front": "A cloud-delivered architecture combining networking and security capabilities.",
-          "keyDetails": "4.0 Security Operations.",
+          "hint": "A security team is reviewing a cloud-delivered architecture combining networking and security capabilities.",
+          "front": "A security team is reviewing a cloud-delivered architecture combining networking and security capabilities.",
+          "keyDetails": "A cloud-delivered architecture combining networking and security capabilities.",
           "example": "A security team is reviewing a cloud-delivered architecture combining networking and security capabilities.",
-          "memoryHook": "Link \"SASE\" to: a cloud-delivered architecture combining networking and security capabilities."
+          "memoryHook": "\"SASE\" → Secure Access Service Edge."
         },
         {
           "term": "SCADA",
@@ -12845,11 +12845,11 @@
             358
           ],
           "supplemental": false,
-          "hint": "A system used for supervisory monitoring and control of distributed industrial equipment.",
-          "front": "A system used for supervisory monitoring and control of distributed industrial equipment.",
-          "keyDetails": "4.0 Security Operations.",
+          "hint": "A security analyst is documenting a system used for supervisory monitoring and control of distributed industrial equipment.",
+          "front": "A security analyst is documenting a system used for supervisory monitoring and control of distributed industrial equipment.",
+          "keyDetails": "A system used for supervisory monitoring and control of distributed industrial equipment.",
           "example": "A security analyst is documenting a system used for supervisory monitoring and control of distributed industrial equipment.",
-          "memoryHook": "Link \"SCADA\" to: a system used for supervisory monitoring and control of distributed industrial equipment."
+          "memoryHook": "\"SCADA\" → Supervisory Control Data Acquisition."
         },
         {
           "term": "SCAP",
@@ -12865,11 +12865,11 @@
             386
           ],
           "supplemental": false,
-          "hint": "A standardized framework for automating vulnerability and configuration assessment.",
-          "front": "A standardized framework for automating vulnerability and configuration assessment.",
-          "keyDetails": "4.0 Security Operations.",
+          "hint": "A security analyst is documenting a standardized framework for automating vulnerability and configuration assessment.",
+          "front": "A security analyst is documenting a standardized framework for automating vulnerability and configuration assessment.",
+          "keyDetails": "A standardized framework for automating vulnerability and configuration assessment.",
           "example": "A security analyst is documenting a standardized framework for automating vulnerability and configuration assessment.",
-          "memoryHook": "Link \"SCAP\" to: a standardized framework for automating vulnerability and configuration assessment."
+          "memoryHook": "\"SCAP\" → Security Content Automation Protocol."
         },
         {
           "term": "Secure baseline",
@@ -13176,7 +13176,7 @@
           "front": "A security team is reviewing a platform that aggregates and correlates security event and log data.",
           "keyDetails": "It helps analysts spot patterns that would be hard to see in one log source.",
           "example": "A security team is reviewing a platform that aggregates and correlates security event and log data.",
-          "memoryHook": "Link \"SIEM\" to: a siem collects and correlates logs from multiple systems."
+          "memoryHook": "\"SIEM\" → Security Information Event Management."
         },
         {
           "term": "SIEM log aggregation",
@@ -13199,7 +13199,7 @@
           "front": "The primary function of a SIEM tool is to aggregate and correlate data from diverse sources.",
           "keyDetails": "It collects data from different systems and correlates it to identify patterns or events indicating a security incident. A SIEM tool does not automate the entire incident response process. While it can automate certain tasks like data aggregation, correlation, and alert generation, it does not eliminate the need for human analysts.",
           "example": "An incident response team is working through a case and must choose the next best response or investigative action.",
-          "memoryHook": "\"Aggregating\" + \"reporting\" → connect the words to the definition."
+          "memoryHook": "\"SIEM\" + \"aggregation\" → connect the words to the definition."
         },
         {
           "term": "Signature-based detection",
@@ -13382,7 +13382,7 @@
           "front": "A security analyst is documenting technology that coordinates security tools and automates response workflows.",
           "keyDetails": "It is used when the goal is repeatable, coordinated response work.",
           "example": "A security analyst is documenting technology that coordinates security tools and automates response workflows.",
-          "memoryHook": "Link \"SOAR\" to: soar connects security tools with playbooks and automation."
+          "memoryHook": "\"SOAR\" → Security Orchestration, Automation, Response."
         },
         {
           "term": "Social engineering",
@@ -13438,11 +13438,11 @@
             254
           ],
           "supplemental": false,
-          "hint": "A DNS-based method listing mail servers authorized to send for a domain.",
-          "front": "A DNS-based method listing mail servers authorized to send for a domain.",
-          "keyDetails": "4.0 Security Operations.",
+          "hint": "A security team is reviewing a DNS-based method listing mail servers authorized to send for a domain.",
+          "front": "A security team is reviewing a DNS-based method listing mail servers authorized to send for a domain.",
+          "keyDetails": "A DNS-based method listing mail servers authorized to send for a domain.",
           "example": "A security team is reviewing a DNS-based method listing mail servers authorized to send for a domain.",
-          "memoryHook": "Link \"SPF\" to: a dns-based method listing mail servers authorized to send for a domain."
+          "memoryHook": "\"SPF\" → Sender Policy Framework."
         },
         {
           "term": "ssh <user>@<host>",
@@ -14581,7 +14581,7 @@
           "front": "A security analyst is documenting a security appliance combining multiple protections such as firewall, filtering, and intrusion prevention.",
           "keyDetails": "The other options describe different ideas.",
           "example": "A security analyst is documenting a security appliance combining multiple protections such as firewall, filtering, and intrusion prevention.",
-          "memoryHook": "Link \"UTM\" to: utm is the best match here because it names a security appliance combining multiple protections such as firewall, filtering, and intrusion prevention."
+          "memoryHook": "\"UTM\" → Unified Threat Management."
         },
         {
           "term": "Validate input and output",
@@ -14698,11 +14698,11 @@
             225
           ],
           "supplemental": false,
-          "hint": "A firewall designed to inspect and protect web application traffic.",
-          "front": "A firewall designed to inspect and protect web application traffic.",
-          "keyDetails": "4.0 Security Operations.",
+          "hint": "A security team is reviewing a firewall designed to inspect and protect web application traffic.",
+          "front": "A security team is reviewing a firewall designed to inspect and protect web application traffic.",
+          "keyDetails": "a firewall designed to inspect and protect web application traffic.",
           "example": "A security team is reviewing a firewall designed to inspect and protect web application traffic.",
-          "memoryHook": "Link \"WAF\" to: a firewall designed to inspect and protect web application traffic."
+          "memoryHook": "\"WAF\" → Web Application Firewall."
         },
         {
           "term": "Warm site",
@@ -14904,10 +14904,10 @@
           ],
           "supplemental": false,
           "hint": "A company wants to estimate its expected yearly loss. A single incident would cost $40,000 and is expected once every four years.",
-          "front": "How do you calculate ALE if SLE is $40,000 and ARO is 0.25?",
+          "front": "A company wants to estimate its expected yearly loss. A single incident would cost $40,000 and is expected once every four years.",
           "keyDetails": "The other choices describe different tools, controls, or phases.",
           "example": "A company wants to estimate its expected yearly loss. A single incident would cost $40,000 and is expected once every four years.",
-          "memoryHook": "Link \"$10,000\" to: $10,000 is a security+ term related to its listed domain."
+          "memoryHook": "\"Annual\" + \"(ALE)\" → connect the words to the definition."
         },
         {
           "term": "Acceptable use policy (AUP)",
@@ -14983,11 +14983,11 @@
             274
           ],
           "supplemental": false,
-          "hint": "The expected annual loss calculated as SLE multiplied by ARO.",
-          "front": "The expected annual loss calculated as SLE multiplied by ARO.",
-          "keyDetails": "5.0 Security Program Management and Oversight.",
+          "hint": "A security team is reviewing the expected annual loss calculated as SLE multiplied by ARO.",
+          "front": "A security team is reviewing the expected annual loss calculated as SLE multiplied by ARO.",
+          "keyDetails": "The expected annual loss calculated as SLE multiplied by ARO.",
           "example": "A security team is reviewing the expected annual loss calculated as SLE multiplied by ARO.",
-          "memoryHook": "Link \"ALE\" to: the expected annual loss calculated as sle multiplied by aro."
+          "memoryHook": "\"ALE\" → Annualized Loss Expectancy."
         },
         {
           "term": "Annual cybersecurity training",
@@ -15004,11 +15004,11 @@
             628
           ],
           "supplemental": false,
-          "hint": "Annual cybersecurity training is important for overall cybersecurity posture but would not necessarily improve the incident response process.",
-          "front": "Annual cybersecurity training is important for overall cybersecurity posture but would not necessarily improve the incident response process.",
+          "hint": "An incident response team is working through a case and must choose the next best response or investigative action.",
+          "front": "An incident response team is working through a case and must choose the next best response or investigative action.",
           "keyDetails": "They can prevent information leakage and provide guidelines for responding to a crisis, reducing the damage to the organization's reputation. This is likely the main missing element in the incident response plan.",
           "example": "An incident response team is working through a case and must choose the next best response or investigative action.",
-          "memoryHook": "\"An\" + \"employees\" → connect the words to the definition."
+          "memoryHook": "\"Annual\" + \"training\" → connect the words to the definition."
         },
         {
           "term": "Analysis",
@@ -15046,8 +15046,8 @@
             653
           ],
           "supplemental": false,
-          "hint": "The team must contain the security breach, reduce the incident's reach, stop data theft, and eliminate the intruder's network access. Containment and eradication prevent further harm and ensure system safety.",
-          "front": "The team must contain the security breach, reduce the incident's reach, stop data theft, and eliminate the intruder's network access. Containment and eradication prevent further harm and ensure system safety.",
+          "hint": "The lessons learned phase analyzes the incident, identifies root causes, and improves procedures to prevent recurrence.",
+          "front": "The lessons learned phase analyzes the incident, identifies root causes, and improves procedures to prevent recurrence.",
           "keyDetails": "Containment and eradication prevent further harm and ensure system safety. The team must analyze the incident, identify the root cause, and assess its response. Knowing how the attacker infiltrated and removed data is crucial in preventing future occurrences.",
           "example": "An incident response team is working through a case and must choose the next best response or investigative action.",
           "memoryHook": "\"Analysis\" + \"learned\" → connect the words to the definition."
@@ -15087,11 +15087,11 @@
             649
           ],
           "supplemental": false,
-          "hint": "This phase involves preventing the incident from spreading further and notifying stakeholders.",
-          "front": "Which incident response phase analyzes the incident and improves procedures or systems?",
-          "keyDetails": "Restoring the affected system to a secure state is the goal of the eradication phase, which comes after containment and involves removing the incident's root cause.",
+          "hint": "An incident response team is working through a case and must choose the next best response or investigative action.",
+          "front": "An incident response team is working through a case and must choose the next best response or investigative action.",
+          "keyDetails": "This phase involves preventing the incident from spreading further and notifying stakeholders. Restoring the affected system to a secure state is the goal of the eradication phase, which comes after containment and involves removing the incident's root cause.",
           "example": "An incident response team is working through a case and must choose the next best response or investigative action.",
-          "memoryHook": "\"Analyzing\" + \"systems\" → connect the words to the definition."
+          "memoryHook": "\"Lessons\" + \"learned\" → connect the words to the definition."
         },
         {
           "term": "Analyzing the incident to improve procedures or systems",
@@ -15131,11 +15131,11 @@
             916
           ],
           "supplemental": false,
-          "hint": "The estimated frequency of a risk occurring in one year.",
-          "front": "The estimated frequency of a risk occurring in one year.",
-          "keyDetails": "Also known as: Annualized Rate of Occurrence (ARO).",
+          "hint": "A security team is reviewing the estimated frequency of a risk occurring in one year.",
+          "front": "A security team is reviewing the estimated frequency of a risk occurring in one year.",
+          "keyDetails": "the estimated frequency of a risk occurring in one year. Also known as: Annualized Rate of Occurrence (ARO).",
           "example": "A security team is reviewing the estimated frequency of a risk occurring in one year.",
-          "memoryHook": "Link \"ARO\" to: the estimated frequency of a risk occurring in one year."
+          "memoryHook": "\"ARO\" → Annualized Rate Occurrence."
         },
         {
           "term": "Assessing the environment for potential weak points",
@@ -15231,11 +15231,11 @@
             791
           ],
           "supplemental": false,
-          "hint": "Automation improves efficiency in security operations by quickly and consistently performing repetitive tasks, which reduces the incidence of human error often associated with such tasks. Automation and orchestration do not simplify the nature of threats nor reduce the volume of alerts.",
-          "front": "What is the primary benefit of automation and orchestration in security operations?",
+          "hint": "As a Security Operations Center (SOC) analyst for a large financial institution that deals with high volumes of alerts and potential threats, what crucial benefit does implementing in security operations provide?",
+          "front": "As a Security Operations Center (SOC) analyst for a large financial institution that deals with high volumes of alerts and potential threats, what crucial benefit does implementing in security operations provide?",
           "keyDetails": "Automation and orchestration do not simplify the nature of threats nor reduce the volume of alerts. They provide tools to handle them more efficiently and reduce manual workload. Human intervention remains a key part of security operations.",
-          "example": "As a Security Operations Center (SOC) analyst for a large financial institution that deals with high volumes of alerts and potential threats, what crucial benefit does implementing automation and orchestration in security operations provide?",
-          "memoryHook": "\"Automation\" + \"error.\" → connect the words to the definition."
+          "example": "As a Security Operations Center (SOC) analyst for a large financial institution that deals with high volumes of alerts and potential threats, what crucial benefit does implementing in security operations provide?",
+          "memoryHook": "\"Automation\" + \"orchestration\" → connect the words to the definition."
         },
         {
           "term": "Automation guard rail",
@@ -15334,7 +15334,7 @@
           "supplemental": false,
           "hint": "Upon learning that the organization is looking to enhance network security solutions for the corporate office, a software technician explores the benefits of deploying a Zero Trust Architecture (ZTA). What is not a key benefit of using a ZTA?",
           "front": "Upon learning that the organization is looking to enhance network security solutions for the corporate office, a software technician explores the benefits of deploying a Zero Trust Architecture (ZTA). What is not a key benefit of using a ZTA?",
-          "keyDetails": "Greater security is also a key benefit, as it requires all users, devices, and applications to be authenticated and verified before network access. Improved guidance and compliance is also a key benefit as it limits data access and provide greater operational visibility on user and device activity.",
+          "keyDetails": "Greater security is also a key benefit, as it requires all users, devices, and applications to be authenticated and verified before network access. Better access controls is also a benefit as it includes more stringent limits regarding who or what can access resources and from what locations.",
           "example": "Upon learning that the organization is looking to enhance network security solutions for the corporate office, a software technician explores the benefits of deploying a Zero Trust Architecture (ZTA).",
           "memoryHook": "\"Better\" + \"controls\" → connect the words to the definition."
         },
@@ -15780,7 +15780,7 @@
           "front": "A security team is reviewing a standardized system for scoring vulnerability severity.",
           "keyDetails": "Focus on that behavior, not on the extra wording around it.",
           "example": "A security team is reviewing a standardized system for scoring vulnerability severity.",
-          "memoryHook": "Link \"CVSS\" to: cvss is a standardized system for scoring vulnerability severity."
+          "memoryHook": "\"CVSS\" → Common Vulnerability Scoring System."
         },
         {
           "term": "Data controller",
@@ -16165,11 +16165,11 @@
             253
           ],
           "supplemental": false,
-          "hint": "An email authentication method that signs messages using a domain key.",
-          "front": "An email authentication method that signs messages using a domain key.",
-          "keyDetails": "5.0 Security Program Management and Oversight.",
+          "hint": "A security team is reviewing an email authentication method that signs messages using a domain key.",
+          "front": "A security team is reviewing an email authentication method that signs messages using a domain key.",
+          "keyDetails": "an email authentication method that signs messages using a domain key.",
           "example": "A security team is reviewing an email authentication method that signs messages using a domain key.",
-          "memoryHook": "Link \"DKIM\" to: an email authentication method that signs messages using a domain key."
+          "memoryHook": "\"DKIM\" → DomainKeys Identified Mail."
         },
         {
           "term": "DMARC",
@@ -16189,7 +16189,7 @@
           "front": "A security team is reviewing an email authentication policy and reporting mechanism built on SPF and DKIM.",
           "keyDetails": "Focus on that behavior, not on the extra wording around it.",
           "example": "A security team is reviewing an email authentication policy and reporting mechanism built on SPF and DKIM.",
-          "memoryHook": "Link \"DMARC\" to: dmarc is an email authentication policy and reporting mechanism built on spf and dkim."
+          "memoryHook": "\"DMARC\" → Domain-based Message Authentication, Reporting,."
         },
         {
           "term": "Due diligence",
@@ -16289,7 +16289,7 @@
           "front": "A security team is reviewing endpoint tooling for detecting, investigating, and responding to threats.",
           "keyDetails": "The other options describe different ideas.",
           "example": "A security team is reviewing endpoint tooling for detecting, investigating, and responding to threats.",
-          "memoryHook": "Link \"EDR\" to: edr is the best match here because it names endpoint tooling for detecting, investigating, and responding to threats."
+          "memoryHook": "\"EDR\" → Endpoint Detection Response."
         },
         {
           "term": "Employees choose poor passwords",
@@ -17413,11 +17413,11 @@
             238
           ],
           "supplemental": false,
-          "hint": "A platform used to manage and enforce policy on mobile devices.",
-          "front": "A platform used to manage and enforce policy on mobile devices.",
-          "keyDetails": "5.0 Security Program Management and Oversight.",
+          "hint": "A security team is reviewing a platform used to manage and enforce policy on mobile devices.",
+          "front": "A security team is reviewing a platform used to manage and enforce policy on mobile devices.",
+          "keyDetails": "A platform used to manage and enforce policy on mobile devices.",
           "example": "A security team is reviewing a platform used to manage and enforce policy on mobile devices.",
-          "memoryHook": "Link \"MDM\" to: a platform used to manage and enforce policy on mobile devices."
+          "memoryHook": "\"MDM\" → Mobile Device Management."
         },
         {
           "term": "Monitoring deep web sources for threat indicators",
@@ -17457,7 +17457,7 @@
           "front": "A security team is reviewing a document describing a mutual understanding that is generally less formal than a contract.",
           "keyDetails": "Focus on that behavior, not on the extra wording around it.",
           "example": "A security team is reviewing a document describing a mutual understanding that is generally less formal than a contract.",
-          "memoryHook": "Link \"MOU\" to: mou is a document describing a mutual understanding that is generally less formal than a contract."
+          "memoryHook": "\"MOU\" → Memorandum Understanding."
         },
         {
           "term": "MTBF",
@@ -17473,11 +17473,11 @@
             278
           ],
           "supplemental": false,
-          "hint": "The average operating time between failures.",
-          "front": "The average operating time between failures.",
-          "keyDetails": "5.0 Security Program Management and Oversight.",
+          "hint": "A security team is reviewing the average operating time between failures.",
+          "front": "A security team is reviewing the average operating time between failures.",
+          "keyDetails": "The average operating time between failures.",
           "example": "A security team is reviewing the average operating time between failures.",
-          "memoryHook": "Link \"MTBF\" to: the average operating time between failures."
+          "memoryHook": "\"MTBF\" → Mean Time Between Failures."
         },
         {
           "term": "MTBF: 2,920 hours/failure, MTTR: 6 hours",
@@ -17513,11 +17513,11 @@
             277
           ],
           "supplemental": false,
-          "hint": "The average time required to repair or recover a failed component.",
-          "front": "The average time required to repair or recover a failed component.",
-          "keyDetails": "5.0 Security Program Management and Oversight.",
+          "hint": "A security team is reviewing the average time required to repair or recover a failed component.",
+          "front": "A security team is reviewing the average time required to repair or recover a failed component.",
+          "keyDetails": "the average time required to repair or recover a failed component.",
           "example": "A security team is reviewing the average time required to repair or recover a failed component.",
-          "memoryHook": "Link \"MTTR\" to: the average time required to repair or recover a failed component."
+          "memoryHook": "\"MTTR\" → Mean Time To Repair."
         },
         {
           "term": "NDA",
@@ -17533,11 +17533,11 @@
             282
           ],
           "supplemental": false,
-          "hint": "An agreement requiring parties to protect confidential information.",
-          "front": "An agreement requiring parties to protect confidential information.",
-          "keyDetails": "5.0 Security Program Management and Oversight.",
+          "hint": "A security team is reviewing an agreement requiring parties to protect confidential information.",
+          "front": "A security team is reviewing an agreement requiring parties to protect confidential information.",
+          "keyDetails": "An agreement requiring parties to protect confidential information.",
           "example": "A security team is reviewing an agreement requiring parties to protect confidential information.",
-          "memoryHook": "Link \"NDA\" to: an agreement requiring parties to protect confidential information."
+          "memoryHook": "\"NDA\" → Non-Disclosure Agreement."
         },
         {
           "term": "NGFWs at network boundaries",
@@ -18480,7 +18480,7 @@
           "front": "A security team is reviewing the target maximum amount of data loss measured in time.",
           "keyDetails": "It answers how far back recovery can go without losing too much data.",
           "example": "A security team is reviewing the target maximum amount of data loss measured in time.",
-          "memoryHook": "Link \"RPO\" to: rpo is the maximum acceptable data loss measured in time."
+          "memoryHook": "\"RPO\" → Recovery Point Objective."
         },
         {
           "term": "RTO",
@@ -18498,11 +18498,11 @@
             446
           ],
           "supplemental": false,
-          "hint": "Command used to be restored within two hours after an outage.",
-          "front": "Command used to be restored within two hours after an outage.",
+          "hint": "A security team is reviewing the target maximum time to restore a service after disruption.",
+          "front": "A security team is reviewing the target maximum time to restore a service after disruption.",
           "keyDetails": "It answers how quickly a system must be restored after a disruption.",
           "example": "A security team is reviewing the target maximum time to restore a service after disruption.",
-          "memoryHook": "Link \"RTO\" to: command used to be restored within two hours after an outage."
+          "memoryHook": "\"RTO\" → Recovery Time Objective."
         },
         {
           "term": "RTO: 4 hours, RPO: 15 minutes",
@@ -18622,7 +18622,7 @@
           "front": "A security analyst is documenting software-defined management and optimization of wide-area network connectivity.",
           "keyDetails": "The other options describe different ideas.",
           "example": "A security analyst is documenting software-defined management and optimization of wide-area network connectivity.",
-          "memoryHook": "Link \"SD-WAN\" to: sd-wan is the best match here because it names software-defined management and optimization of wide-area network connectivity."
+          "memoryHook": "\"SDWAN\" → Software-Defined Wide Area Network."
         },
         {
           "term": "Securing data and limiting the immediate impact",
@@ -18723,7 +18723,7 @@
           "front": "A security team is reviewing a contract defining measurable service performance commitments.",
           "keyDetails": "The other options describe different ideas.",
           "example": "A security team is reviewing a contract defining measurable service performance commitments.",
-          "memoryHook": "Link \"SLA\" to: sla is the best match here because it names a contract defining measurable service performance commitments."
+          "memoryHook": "\"SLA\" → Service-Level Agreement."
         },
         {
           "term": "SLE",
@@ -18743,7 +18743,7 @@
           "front": "A security team is reviewing the expected monetary loss from one occurrence of a risk.",
           "keyDetails": "Focus on that behavior, not on the extra wording around it.",
           "example": "A security team is reviewing the expected monetary loss from one occurrence of a risk.",
-          "memoryHook": "Link \"SLE\" to: sle is the expected monetary loss from one occurrence of a risk."
+          "memoryHook": "\"SLE\" → Single Loss Expectancy."
         },
         {
           "term": "Software-defined networking",
@@ -18842,11 +18842,11 @@
             807
           ],
           "supplemental": false,
-          "hint": "A document defining project-specific work, deliverables, and timelines.",
-          "front": "A document defining project-specific work, deliverables, and timelines.",
-          "keyDetails": "Also known as: Statement of work (SOW).",
+          "hint": "A security team is reviewing a document defining project-specific work, deliverables, and timelines.",
+          "front": "A security team is reviewing a document defining project-specific work, deliverables, and timelines.",
+          "keyDetails": "a document defining project-specific work, deliverables, and timelines. Also known as: Statement of work (SOW).",
           "example": "A security team is reviewing a document defining project-specific work, deliverables, and timelines.",
-          "memoryHook": "Link \"SOW\" to: a document defining project-specific work, deliverables, and timelines."
+          "memoryHook": "\"SOW\" → Statement Work."
         },
         {
           "term": "SSO",
@@ -18866,7 +18866,7 @@
           "front": "A security team is reviewing allowing a user to authenticate once and access multiple systems.",
           "keyDetails": "Focus on that behavior, not on the extra wording around it.",
           "example": "A security team is reviewing allowing a user to authenticate once and access multiple systems.",
-          "memoryHook": "Link \"SSO\" to: sso is allowing a user to authenticate once and access multiple systems."
+          "memoryHook": "\"SSO\" → Single Sign-On."
         },
         {
           "term": "Stakeholders",
@@ -19183,11 +19183,11 @@
             341
           ],
           "supplemental": false,
-          "hint": "A race condition caused by a state change between checking a resource and using it.",
-          "front": "A race condition caused by a state change between checking a resource and using it.",
-          "keyDetails": "5.0 Security Program Management and Oversight.",
+          "hint": "A security analyst is documenting a race condition caused by a state change between checking a resource and using it.",
+          "front": "A security analyst is documenting a race condition caused by a state change between checking a resource and using it.",
+          "keyDetails": "a race condition caused by a state change between checking a resource and using it.",
           "example": "A security analyst is documenting a race condition caused by a state change between checking a resource and using it.",
-          "memoryHook": "Link \"TOCTOU\" to: a race condition caused by a state change between checking a resource and using it."
+          "memoryHook": "\"TOCTOU\" → Time-of-Check Time-of-Use."
         },
         {
           "term": "Trade secrets",
@@ -19330,7 +19330,7 @@
           "front": "A security analyst is documenting threat detection and response that correlates telemetry across multiple security layers.",
           "keyDetails": "The other options describe different ideas.",
           "example": "A security analyst is documenting threat detection and response that correlates telemetry across multiple security layers.",
-          "memoryHook": "Link \"XDR\" to: xdr is the best match here because it names threat detection and response that correlates telemetry across multiple security layers."
+          "memoryHook": "\"XDR\" → Extended Detection Response."
         }
       ]
     }

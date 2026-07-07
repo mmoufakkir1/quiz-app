@@ -81,7 +81,7 @@
             "Code",
             "Important data"
           ],
-          "explanation": "Capturing implemented changes in code is important as it will allow for a quick reversion to a known good state of the code if a change causes problems. Capturing changes within diagrams ensures only the most recent diagrams will be available while archiving the previous documents, but still having them available for reference. Important data will vary from company to company, but tracking changes will allow references for only the most recent data and avoid confusion. Faxes do not fall under change management as they are one-time communications and do not need tracking or logging.",
+          "explanation": "Capturing implemented changes in code is important as it will allow for a quick reversion to a known good state of the code if a change causes problems. Capturing changes within diagrams ensures only the most recent diagrams will be available while archiving the previous documents, but still having them available for reference. Important data will vary from company to company, but tracking changes ensures teams reference the current approved version instead of outdated copies. Faxes do not fall under change management as they are one-time communications and do not need tracking or logging.",
           "topic": "1.0 General Security Concepts",
           "lesson": "1.3 Explain the importance of change management processes and the impact to security.",
           "type": "multiple"

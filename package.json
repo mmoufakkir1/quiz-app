@@ -10,6 +10,7 @@
     "expand:flashcards": "node scripts/expand-flashcards-from-questions.mjs",
     "fix:flashcards": "node scripts/fix-flashcards.mjs",
     "build:concepts": "node scripts/build-concepts.mjs",
+    "enrich:concepts": "node scripts/enrich-concepts.mjs",
     "sync:flashcards": "node scripts/expand-flashcards-from-questions.mjs && python scripts/sync-flashcards-from-pdf.py && node scripts/fix-flashcards.mjs",
     "sync:questions": "python scripts/sync-questions-from-pdf.py",
     "audit:questions-pdf": "python scripts/audit-questions-vs-pdf.py",

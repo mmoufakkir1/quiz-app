@@ -1,0 +1,4742 @@
+[
+  {
+    "term": "Assess the security posture of an enterprise environment and recommend and implement",
+    "domain": "",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Monitor and secure hybrid environments, including cloud, mobile, and Internet of Things (IoT).",
+    "domain": "",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Operate with an awareness of applicable regulations and policies, including principles of",
+    "domain": "",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Identify, analyze, and respond to security events and incidents.",
+    "domain": "",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "f the questions is protected. When necessary, we will publish updated exams based on existing",
+    "domain": "",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Categories",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Technical",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Managerial",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Operational",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Physical",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Control types",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Preventive",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Deterrent",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Detective",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Corrective",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Compensating",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Directive",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Confidentiality, Integrity, and",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Non-repudiation",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Authentication, Authorization, and",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Authenticating people",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Authenticating systems",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Authorization models",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Gap analysis",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Zero Trust",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Control Plane",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Adaptive identity",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Threat scope reduction",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Policy-driven access control",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Policy Administrator",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Policy Engine",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Data Plane",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Implicit trust zones",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Subject/System",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Policy Enforcement Point",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Physical security",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Bollards",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Access control vestibule",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Fencing",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Video surveillance",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Security guard",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Access badge",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Lighting",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Sensors",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Infrared",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Pressure",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Microwave",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Ultrasonic",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Deception and disruption",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Honeypot",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Honeynet",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Honeyfile",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Honeytoken",
+    "domain": "1.0 General Security Concepts",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Public key infrastructure (PKI)",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Public key",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Private key",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Key escrow",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Encryption",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Level",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Full-disk",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Partition",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "File",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Volume",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Database",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Record",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Transport/communication",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Asymmetric",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Symmetric",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Key exchange",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Algorithms",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Key length",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Tools",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Trusted Platform Module (TPM)",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Hardware security module",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Key management system",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Secure enclave",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Obfuscation",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Steganography",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Tokenization",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Data masking",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Hashing",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Salting",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Digital signatures",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Key stretching",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Blockchain",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Open public ledger",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Certificates",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Certificate authorities",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Certificate revocation lists",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Online Certificate Status",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Self-signed",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Third-party",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Root of trust",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Certificate signing request (CSR)",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Wildcard",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of using appropriate cryptographic",
+    "subsection": ""
+  },
+  {
+    "term": "Business processes impacting",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Approval process",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Ownership",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Stakeholders",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Impact analysis",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Test results",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Backout plan",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Maintenance window",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Standard operating procedure",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Technical implications",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Allow lists/deny lists",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Restricted activities",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Downtime",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Service restart",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Application restart",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Legacy applications",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Dependencies",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Documentation",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Updating diagrams",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Updating policies/procedures",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Version control",
+    "domain": "1.0 General Security Concepts",
+    "section": "Explain the importance of change management processes",
+    "subsection": ""
+  },
+  {
+    "term": "Threat actors",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Nation-state",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Unskilled attacker",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Hacktivist",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Insider threat",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Organized crime",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Shadow IT",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Attributes of actors",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Internal/external",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Resources/funding",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Level of sophistication/capability",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Motivations",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Data exfiltration",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Espionage",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Service disruption",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Blackmail",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Financial gain",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Philosophical/political beliefs",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Ethical",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Revenge",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Disruption/chaos",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "War",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Message-based",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Email",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Short Message Service (SMS)",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Instant messaging (IM)",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Image-based",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "File-based",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Voice call",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Removable device",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Vulnerable software",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Client-based vs. agentless",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Unsupported systems and",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Unsecure networks",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Wireless",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Wired",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Bluetooth",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Open service ports",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Default credentials",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Supply chain",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Managed service providers",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Vendors",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Suppliers",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Human vectors/social engineering",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Phishing",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Vishing",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Smishing",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Misinformation/disinformation",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Impersonation",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Business email compromise",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Pretexting",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Watering hole",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Brand impersonation",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Typosquatting",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Application",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Memory injection",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Buffer overflow",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Race conditions",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Time-of-check (TOC)",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Time-of-use (TOU)",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Malicious update",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Operating system (OS)-based",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Web-based",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Structured Query Language",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Cross-site scripting (XSS)",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Hardware",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Firmware",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "End-of-life",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Legacy",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Virtualization",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Virtual machine (VM) escape",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Resource reuse",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Cloud-specific",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Service provider",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Hardware provider",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Software provider",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Cryptographic",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Misconfiguration",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Mobile device",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Side loading",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Jailbreaking",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Zero-day",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Malware attacks",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Ransomware",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Trojan",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Worm",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Spyware",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Bloatware",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Virus",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Keylogger",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Logic bomb",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Rootkit",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Physical attacks",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Brute force",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Radio frequency identification",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Environmental",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Network attacks",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Distributed denial-of-service",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Amplified",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Reflected",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Domain Name System (DNS)",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "On-path",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Credential replay",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Malicious code",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Application attacks",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Injection",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Replay",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Privilege escalation",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Forgery",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Directory traversal",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Cryptographic attacks",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Downgrade",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Collision",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Birthday",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Password attacks",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Spraying",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Indicators",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Account lockout",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Concurrent session usage",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Blocked content",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Impossible travel",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Resource consumption",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Resource inaccessibility",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Out-of-cycle logging",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Published/documented",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Missing logs",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Segmentation",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Access control",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Access control list (ACL)",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Permissions",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Application allow list",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Isolation",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Patching",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Monitoring",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Least privilege",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Configuration enforcement",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Decommissioning",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Hardening techniques",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Installation of endpoint",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Host-based firewall",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Host-based intrusion prevention",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Disabling ports/protocols",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Default password changes",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Removal of unnecessary",
+    "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Architecture and infrastructure",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Cloud",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Responsibility matrix",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Hybrid considerations",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Third-party vendors",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Infrastructure as code (IaC)",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Serverless",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Microservices",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Network infrastructure",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Physical isolation",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Logical segmentation",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Software-defined",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "On-premises",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Centralized vs. decentralized",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Containerization",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "IoT",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Industrial control systems (ICS)/",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Real-time operating system",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Embedded systems",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "High availability",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Considerations",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Availability",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Resilience",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Cost",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Responsiveness",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Scalability",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Ease of deployment",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Risk transference",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Ease of recovery",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Patch availability",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Inability to patch",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Power",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Compute",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Infrastructure considerations",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Device placement",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Security zones",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Attack surface",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Connectivity",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Failure modes",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Fail-open",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Fail-closed",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Device attribute",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Active vs. passive",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Inline vs. tap/monitor",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Network appliances",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Jump server",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Proxy server",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Intrusion prevention system",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Load balancer",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Port security",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "802.1X",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Extensible Authentication",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Firewall types",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Web application firewall",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Unified threat management",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Next-generation firewall",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Layer 4/Layer 7",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Secure communication/access",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Virtual private network (VPN)",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Remote access",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Tunneling",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Transport Layer Security (TLS)",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Internet protocol security",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Software-defined wide area",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Secure access service edge",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Selection of effective controls",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Data types",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Regulated",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Trade secret",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Intellectual property",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Legal information",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Financial information",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Human- and non-human-",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Data classifications",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Sensitive",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Confidential",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Public",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Restricted",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Private",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Critical",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "General data considerations",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Data states",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Data at rest",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Data in transit",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Data in use",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Data sovereignty",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Geolocation",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Methods to secure data",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Geographic restrictions",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Masking",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Permission restrictions",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Load balancing vs. clustering",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Site considerations",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Hot",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Cold",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Warm",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Geographic dispersion",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Platform diversity",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Multi-cloud systems",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Continuity of operations",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Capacity planning",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "People",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Technology",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Infrastructure",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Testing",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Tabletop exercises",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Fail over",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Simulation",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Parallel processing",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Backups",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Onsite/offsite",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Frequency",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Snapshots",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Recovery",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Replication",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Journaling",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Generators",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Uninterruptible power supply",
+    "domain": "3.0 Security Architecture",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Secure baselines",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Establish",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Deploy",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Maintain",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Hardening targets",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Mobile devices",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Workstations",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Switches",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Routers",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Cloud infrastructure",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Servers",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "ICS/SCADA",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "RTOS",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "IoT devices",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Wireless devices",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Installation considerations",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Site surveys",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Heat maps",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Mobile solutions",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Mobile device management",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Deployment models",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Bring your own device (BYOD)",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Corporate-owned, personally",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Choose your own device",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Connection methods",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Cellular",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Wi-Fi",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Wireless security settings",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Wi-Fi Protected Access 3",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "AAA/Remote Authentication",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Cryptographic protocols",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Authentication protocols",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Application security",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Input validation",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Secure cookies",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Static code analysis",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Code signing",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Sandboxing",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Acquisition/procurement process",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Assignment/accounting",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Classification",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Monitoring/asset tracking",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Inventory",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Enumeration",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Disposal/decommissioning",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Sanitization",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Destruction",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Certification",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Data retention",
+    "domain": "4.0 Security Operations",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Monitoring computing resources",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Systems",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Applications",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Activities",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Log aggregation",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Alerting",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Scanning",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Reporting",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Archiving",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Alert response and remediation/",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Quarantine",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Alert tuning",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Security Content Automation",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Benchmarks",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Agents/agentless",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Security information and event",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Antivirus",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Data loss prevention (DLP)",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Simple Network Management",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "NetFlow",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Vulnerability scanners",
+    "domain": "4.0 Security Operations",
+    "section": "Explain security alerting and monitoring concepts and tools.",
+    "subsection": ""
+  },
+  {
+    "term": "Identification methods",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Vulnerability scan",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Static analysis",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Dynamic analysis",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Package monitoring",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Threat feed",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Open-source intelligence",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Proprietary/third-party",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Information-sharing",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "rganization",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Dark web",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Penetration testing",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Responsible disclosure program",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Bug bounty program",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "System/process audit",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Analysis",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Confirmation",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "False positive",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "False negative",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Prioritize",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Common Vulnerability Scoring",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Common Vulnerability",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Vulnerability classification",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Exposure factor",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Environmental variables",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Industry/organizational impact",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Risk tolerance",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Vulnerability response and",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Insurance",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Compensating controls",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Exceptions and exemptions",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Validation of remediation",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Rescanning",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Audit",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Verification",
+    "domain": "4.0 Security Operations",
+    "section": "Explain various activities associated with vulnerability",
+    "subsection": ""
+  },
+  {
+    "term": "Firewall",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Rules",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Access lists",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Ports/protocols",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Screened subnets",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "IDS/IPS",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Trends",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Signatures",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Web filter",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Agent-based",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Centralized proxy",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Universal Resource Locator",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Content categorization",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Block rules",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Reputation",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Operating system security",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Group Policy",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "SELinux",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Implementation of secure",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Protocol selection",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Port selection",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Transport method",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "DNS filtering",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Email security",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Domain-based Message",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "DomainKeys Identified Mail",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Sender Policy Framework (SPF)",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Gateway",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "File integrity monitoring",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "DLP",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Network access control (NAC)",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Endpoint detection and response",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "User behavior analytics",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Provisioning/de-provisioning user",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Permission assignments and",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Identity proofing",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Federation",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Single sign-on (SSO)",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Lightweight Directory Access",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Open authorization (OAuth)",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Security Assertions Markup",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Interoperability",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Attestation",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Access controls",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Mandatory",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Discretionary",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Role-based",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Rule-based",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Attribute-based",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Time-of-day restrictions",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Multifactor authentication",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Implementations",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Biometrics",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Hard/soft authentication",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Security keys",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Factors",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Something you know",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Something you have",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Something you are",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Somewhere you are",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Password concepts",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Password best practices",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Length",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Complexity",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Reuse",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Expiration",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Age",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Password managers",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Passwordless",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Privileged access management",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Just-in-time permissions",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Password vaulting",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Ephemeral credentials",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Use cases of automation and",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "User provisioning",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Resource provisioning",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Guard rails",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Security groups",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Ticket creation",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Escalation",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Enabling/disabling services",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Continuous integration and testing",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Integrations and Application",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Benefits",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Efficiency/time saving",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Enforcing baselines",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Standard infrastructure",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Scaling in a secure manner",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Employee retention",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Reaction time",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Workforce multiplier",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Other considerations",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Single point of failure",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Technical debt",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Ongoing supportability",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Process",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Preparation",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Detection",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Containment",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Eradication",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Lessons learned",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Training",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Tabletop exercise",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Root cause analysis",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Threat hunting",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Digital forensics",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Legal hold",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Chain of custody",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Acquisition",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Preservation",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "E-discovery",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Log data",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Firewall logs",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Application logs",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Endpoint logs",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "OS-specific security logs",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "IPS/IDS logs",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Network logs",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Metadata",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Data sources",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Vulnerability scans",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Automated reports",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Dashboards",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Packet captures",
+    "domain": "4.0 Security Operations",
+    "section": "Given a scenario, implement and maintain identity and access",
+    "subsection": ""
+  },
+  {
+    "term": "Guidelines",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Policies",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Acceptable use policy (AUP)",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Information security policies",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Business continuity",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Disaster recovery",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Incident response",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Software development lifecycle",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Change management",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Standards",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Password",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Procedures",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Onboarding/offboarding",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Playbooks",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "External considerations",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Regulatory",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Legal",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Industry",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Local/regional",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "National",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Global",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Monitoring and revision",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Types of governance structures",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Boards",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Committees",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Government entities",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Centralized/decentralized",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Roles and responsibilities for",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Owners",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Controllers",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Processors",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Custodians/stewards",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Risk identification",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Risk assessment",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Ad hoc",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Recurring",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "One-time",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Continuous",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Risk analysis",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Qualitative",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Quantitative",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Single loss expectancy (SLE)",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Annualized loss expectancy",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Annualized rate of occurrence",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Probability",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Likelihood",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Impact",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Risk register",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Key risk indicators",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Risk owners",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Risk threshold",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Risk appetite",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Expansionary",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Conservative",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Neutral",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Risk management strategies",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Transfer",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Accept",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Exemption",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Exception",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Avoid",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Mitigate",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Risk reporting",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Business impact analysis",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Recovery time objective (RTO)",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Recovery point objective (RPO)",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Mean time to repair (MTTR)",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Mean time between failures",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Vendor assessment",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Right-to-audit clause",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Evidence of internal audits",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Independent assessments",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Supply chain analysis",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Vendor selection",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Due diligence",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Conflict of interest",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Agreement types",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Service-level agreement (SLA)",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Memorandum of agreement",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Memorandum of understanding",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Master service agreement (MSA)",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Work order (WO)/statement of",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Non-disclosure agreement",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Business partners agreement",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Vendor monitoring",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Questionnaires",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Rules of engagement",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Compliance reporting",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Internal",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "External",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Consequences of non-compliance",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Fines",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Sanctions",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Reputational damage",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Loss of license",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Contractual impacts",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Compliance monitoring",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Due diligence/care",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Attestation and",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Internal and external",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Automation",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Privacy",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Legal implications",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Data subject",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Controller vs. processor",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Data inventory and retention",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Right to be forgotten",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Compliance",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Audit committee",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Self-assessments",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Examinations",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Assessment",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Independent third-",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Offensive",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Defensive",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Integrated",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Known environment",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Partially known environment",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Unknown environment",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Reconnaissance",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Passive",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Active",
+    "domain": "5.0 Security Program Management",
+    "section": "",
+    "subsection": ""
+  },
+  {
+    "term": "Campaigns",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Recognizing a phishing attempt",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Responding to reported",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Anomalous behavior recognition",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Risky",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Unexpected",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Unintentional",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "User guidance and training",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Policy/handbooks",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Situational awareness",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Password management",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Removable media and cables",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Social engineering",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Operational security",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Hybrid/remote work",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Reporting and monitoring",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Initial",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Development",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Execution",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Tablet",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Laptop",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Web server",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Router",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Switch",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "IDS",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "IPS",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Wireless access point",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Virtual machines",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Email system",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Internet access",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "DNS server",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Hardware tokens",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Smartphone",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "NICs",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Power supplies",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "GBICs",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "SFPs",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Managed Switch",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "UPS",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Wi-Fi analyzer",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Network mapper",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "NetFlow analyzer",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Windows OS",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Linux OS",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Kali Linux",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Packet capture software",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Pen testing software",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Static and dynamic analysis tools",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Vulnerability scanner",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Network emulators",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Sample code",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Code editor",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "SIEM",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Keyloggers",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "MDM software",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "VPN",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "DHCP service",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "DNS service",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Access to cloud environments",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Sample network documentation/diagrams",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  },
+  {
+    "term": "Sample logs",
+    "domain": "5.0 Security Program Management",
+    "section": "Given a scenario, implement security awareness practices.",
+    "subsection": ""
+  }
+]

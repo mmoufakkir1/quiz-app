@@ -30,12 +30,27 @@ function removeQuizWording(text) {
 
 function buildEducationalExplanation(entry, topic, baseExplanation) {
   const cleanedBase = ensureSentence(removeQuizWording(dedupeSentences(baseExplanation || entry.memorize)))
-  const topicContext = ensureSentence(`In ${topic.path}, connect it to this topic focus: ${topic.summary}`)
-  const examCue = ensureSentence(
-    `For Security+, recognize ${entry.term} when a question describes this clue: ${entry.memorize}`,
-  )
+  const topicSummary = topic.summary?.trim()
 
-  return dedupeSentences(`${cleanedBase} ${topicContext} ${examCue}`)
+  if (/^[A-Z]{2,6}$/.test(entry.term.trim()) && /stands for/i.test(entry.memorize || '')) {
+    const expanded = (entry.memorize || '').replace(
+      new RegExp(`^${entry.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')} stands for (.+)$`, 'i'),
+      '$1',
+    )
+    if (expanded !== entry.memorize) {
+      return ensureSentence(
+        `${entry.term} (${expanded}) is a Security+ term you should understand in context, not just as an abbreviation.`,
+      )
+    }
+  }
+
+  if (topicSummary && cleanedBase) {
+    return dedupeSentences(
+      `${cleanedBase} ${ensureSentence(`This matters in ${topic.path} because ${topicSummary.charAt(0).toLowerCase()}${topicSummary.slice(1)}`)}`,
+    )
+  }
+
+  return cleanedBase
 }
 
 function buildTermExplanation(entry, topic) {
