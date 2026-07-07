@@ -2166,11 +2166,7 @@
     },
     {
       "term": "802.1X",
-<<<<<<< HEAD
       "definition": "The standard 802. 1X provides port-based network access control, ensuring high security by rigorously authenticating both users and devices.",
-=======
-      "definition": "Port-based network access control that authenticates users or devices before granting access.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -2313,13 +2309,8 @@
       "memoryHook": "\"A\" + \"encryption\" → connect the words to the definition."
     },
     {
-<<<<<<< HEAD
       "term": "A credentialed scan provides login rights for a more thorough analysis of potential vulnerabilities.",
       "definition": "A credentialed scan comes with a user account that has login rights to various hosts, enabling it to conduct a more in-depth analysis, which is particularly useful in detecting misconfigured applications or security settings. A non-credentialed scan does not have login rights, and its view only includes what the host exposes to an unprivileged user on the network.",
-=======
-      "term": "Credentialed scan analysis",
-      "definition": "A credentialed scan comes with a user account that has login rights to various hosts, enabling it to conduct a more in-depth analysis, which is particularly useful in detecting misconfigured applications or security settings. A non-credentialed scan does not have login rights, and its view only includes what the host exposes to an unprivileged user on the network. Given the goal of a thorough and in-depth analysis, a credentialed scan would be more effective because it has more access and can uncover more potential vulnerabilities. Vulnerability scans, particularly credentialed ones, can be extremely effective in identifying potential vulnerabilities within a system or network.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -2341,13 +2332,8 @@
       "memoryHook": "\"A\" + \"vulnerabilities.\" → connect the words to the definition."
     },
     {
-<<<<<<< HEAD
       "term": "A jurisdiction can restrict or prevent processing and storage of data on systems that do not physically reside within that jurisdiction.",
       "definition": "Data sovereignty is the principle that a jurisdiction can impose restrictions or prevent the processing and storage of data on systems that do not physically reside within that jurisdiction. It often requires organizations to use location-specific storage facilities or cloud services.",
-=======
-      "term": "Data sovereignty restrictions",
-      "definition": "Data sovereignty is the principle that a jurisdiction can impose restrictions or prevent the processing and storage of data on systems that do not physically reside within that jurisdiction. It often requires organizations to use location-specific storage facilities or cloud services. The physical location of a data center often directly determines the jurisdiction and laws applicable to the data stored within it. Data sovereignty is the opposite of this, often placing restrictions and regulations on how and where the user can move and store data. While data ownership is a complex issue and can depend on various factors, data sovereignty refers to the laws and regulations on how and where the user can move and store data.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations",
         "5.0 Security Program Management and Oversight"
@@ -2403,16 +2389,12 @@
       "sourceQuestionIds": [
         315
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting a two-door physical access control designed to prevent tailgating.",
       "front": "A security analyst is documenting a two-door physical access control designed to prevent tailgating.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting a two-door physical access control designed to prevent tailgating.",
       "memoryHook": "\"Access\" + \"vestibule\" → connect the words to the definition."
-=======
-      "hint": "It names a two-door physical access control designed to prevent tailgating."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Access point logs",
@@ -2496,11 +2478,7 @@
     },
     {
       "term": "Active reconnaissance",
-<<<<<<< HEAD
       "definition": "Gathering information through direct interaction with target systems.",
-=======
-      "definition": "gathering information through direct interaction with target systems.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -2511,16 +2489,12 @@
       "sourceQuestionIds": [
         421
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Gathering information through direct interaction with target systems.",
       "front": "Gathering information through direct interaction with target systems.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting gathering information through direct interaction with target systems.",
       "memoryHook": "\"Active\" + \"reconnaissance\" → connect the words to the definition."
-=======
-      "hint": "Gathering information through direct interaction with target systems."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Active security appliance",
@@ -2584,11 +2558,7 @@
     },
     {
       "term": "Advanced Endpoint Protection with EDR",
-<<<<<<< HEAD
       "definition": "Advanced Endpoint Protection (AEP) solution with Endpoint Detection and Response (EDR) capability would be the most effective. This approach doesn't just attempt to prevent initial execution of threats, but provides real-time and historical visibility into potential compromises and aids in the remediation process.",
-=======
-      "definition": "Endpoint protection with detection and response capabilities.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -2599,7 +2569,6 @@
       "sourceQuestionIds": [
         546
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Advanced Endpoint Protection (AEP) solution with Endpoint Detection and Response (EDR) capability would be the most effective. This approach doesn't just attempt to prevent initial execution of threats, but provides real-time and historical visibility into potential compromises and aids in the remediation process.",
       "front": "Advanced Endpoint Protection (AEP) solution with Endpoint Detection and Response (EDR) capability would be the most effective. This approach doesn't just attempt to prevent initial execution of threats, but provides real-time and historical visibility into potential compromises and aids in the remediation process.",
@@ -2628,9 +2597,6 @@
       "keyDetails": "The goals of state actors are primarily disinformation and espionage for strategic advantage. An insider threat is someone within the company who intentionally or unintentionally increases risk or takes company data outside the organization's security controls.",
       "example": "A security analyst is reviewing threat behavior or attack relationships and must identify the most likely actor or event.",
       "memoryHook": "\"Advanced\" + \"threat\" → connect the words to the definition."
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Agent-based monitoring",
@@ -2654,11 +2620,7 @@
     },
     {
       "term": "Agentless monitoring",
-<<<<<<< HEAD
       "definition": "Monitoring that collects data remotely without installing endpoint software.",
-=======
-      "definition": "monitoring that collects data remotely without installing endpoint software.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -2669,16 +2631,12 @@
       "sourceQuestionIds": [
         389
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Monitoring that collects data remotely without installing endpoint software.",
       "front": "Monitoring that collects data remotely without installing endpoint software.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting monitoring that collects data remotely without installing endpoint software.",
       "memoryHook": "\"Agentless\" + \"monitoring\" → connect the words to the definition."
-=======
-      "hint": "Monitoring that collects data remotely without installing endpoint software."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "SIEM log aggregation",
@@ -2725,11 +2683,7 @@
     },
     {
       "term": "Air gap",
-<<<<<<< HEAD
       "definition": "Physical isolation of a system or network from other networks.",
-=======
-      "definition": "physical isolation of a system or network from other networks.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "3.0 Security Architecture"
       ],
@@ -2740,16 +2694,12 @@
       "sourceQuestionIds": [
         221
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Physical isolation of a system or network from other networks.",
       "front": "Physical isolation of a system or network from other networks.",
       "keyDetails": "3.0 Security Architecture.",
       "example": "A security team is reviewing physical isolation of a system or network from other networks.",
       "memoryHook": "\"Air\" + \"gap\" → connect the words to the definition."
-=======
-      "hint": "Physical isolation of a system or network from other networks."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "ALE",
@@ -2764,16 +2714,12 @@
       "sourceQuestionIds": [
         274
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "The expected annual loss calculated as SLE multiplied by ARO.",
       "front": "The expected annual loss calculated as SLE multiplied by ARO.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security team is reviewing the expected annual loss calculated as SLE multiplied by ARO.",
       "memoryHook": "Link \"ALE\" to: the expected annual loss calculated as sle multiplied by aro."
-=======
-      "hint": "The expected annual loss calculated as SLE multiplied by ARO."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Alert fatigue",
@@ -3110,11 +3056,7 @@
     },
     {
       "term": "Application Programming Interface",
-<<<<<<< HEAD
       "definition": "An Application Programming Interface (API) is a scripting method to expose a service, allowing other scripts or programs to use it. For example, an API enables software developers to access Transmission Control Protocol/Internet Protocol (TCP/IP) network stack functions under a particular operating system.",
-=======
-      "definition": "An interface that exposes a service for other programs or scripts to use.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -3185,16 +3127,12 @@
       "sourceQuestionIds": [
         610
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Applying encryption to NFC data is crucial to prevent eavesdropping and on-path attacks, ensuring that sensitive information remains secure during communication. Enabling an NFC chip to read all devices may increase connectivity options, but it can also expose them to potential risks and unauthorized access.",
       "front": "Applying encryption to NFC data is crucial to prevent eavesdropping and on-path attacks, ensuring that sensitive information remains secure during communication. Enabling an NFC chip to read all devices may increase connectivity options, but it can also expose them to potential risks and unauthorized access.",
       "keyDetails": "Enabling an NFC chip to read all devices may increase connectivity options, but it can also expose them to potential risks and unauthorized access.",
       "example": "cybersecurity analyst is implementing security measures for Near Field Communication (NFC) usage in the organization's mobile devices.",
       "memoryHook": "\"Apply\" + \"attacks.\" → connect the words to the definition."
-=======
-      "hint": "Cybersecurity analyst is implementing security measures for Near Field Communication (NFC) usage in the organization's mobile devices. Which technique should the analyst consider applying to mitigate potential risks associated with NFC technology?"
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Applying context-aware authentication to restrict resource access based on user location",
@@ -3209,16 +3147,12 @@
       "sourceQuestionIds": [
         606
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Context-aware authentication uses factors such as the user's location and device attributes to determine whether to grant access to certain resources. Context-aware authentication ensures that authorized users can only access sensitive data and resources when they are in a trusted location.",
       "front": "Context-aware authentication uses factors such as the user's location and device attributes to determine whether to grant access to certain resources. Context-aware authentication ensures that authorized users can only access sensitive data and resources when they are in a trusted location.",
       "keyDetails": "Context-aware authentication ensures that authorized users can only access sensitive data and resources when they are in a trusted location. GPS tagging adds geographical identification metadata to media files, but it does not serve as a security technique for securing computing resources.",
       "example": "large multinational company wants to enhance the security of its computing resources.",
       "memoryHook": "\"Applying\" + \"location\" → connect the words to the definition."
-=======
-      "hint": "Large multinational company wants to enhance the security of its computing resources. It considers applying common security techniques to protect sensitive data and prevent unauthorized access. Which security technique would be MOST suitable for securing computing resources?"
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Approval process",
@@ -3262,11 +3196,7 @@
     },
     {
       "term": "ARO",
-<<<<<<< HEAD
       "definition": "The estimated frequency of a risk occurring in one year.",
-=======
-      "definition": "the estimated frequency of a risk occurring in one year.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -3281,16 +3211,12 @@
         273,
         916
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "The estimated frequency of a risk occurring in one year.",
       "front": "The estimated frequency of a risk occurring in one year.",
       "keyDetails": "Also known as: Annualized Rate of Occurrence (ARO).",
       "example": "A security team is reviewing the estimated frequency of a risk occurring in one year.",
       "memoryHook": "Link \"ARO\" to: the estimated frequency of a risk occurring in one year."
-=======
-      "hint": "The estimated frequency of a risk occurring in one year."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "ARP poisoning and on-path attack",
@@ -3365,16 +3291,12 @@
       "sourceQuestionIds": [
         379
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting identifying and cataloging systems, devices, software, or services.",
       "front": "A security analyst is documenting identifying and cataloging systems, devices, software, or services.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting identifying and cataloging systems, devices, software, or services.",
       "memoryHook": "\"Asset\" + \"enumeration\" → connect the words to the definition."
-=======
-      "hint": "It names identifying and cataloging systems, devices, software, or services."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Asset identification and naming conventions",
@@ -3472,16 +3394,12 @@
         183,
         582
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing encryption that uses mathematically related public and private keys.",
       "front": "A security team is reviewing encryption that uses mathematically related public and private keys.",
       "keyDetails": "The online store can encrypt the transaction details with the customer's public key, ensuring that only the customer, who holds the corresponding private key, can decrypt and access the details.",
       "example": "A security team is reviewing encryption that uses mathematically related public and private keys.",
       "memoryHook": "\"Asymmetric\" + \"encryption\" → connect the words to the definition."
-=======
-      "hint": "It names encryption that uses mathematically related public and private keys."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Attack surface",
@@ -3556,16 +3474,12 @@
       "sourceQuestionIds": [
         262
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Access decisions use attributes of subjects, resources, actions, and context.",
       "front": "Access decisions use attributes of subjects, resources, actions, and context.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security team is reviewing access decisions use attributes of subjects, resources, actions, and context.",
       "memoryHook": "\"Attribute-based\" + \"control\" → connect the words to the definition."
-=======
-      "hint": "Access decisions use attributes of subjects, resources, actions, and context."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Attribute-Based Access Control (ABAC)",
@@ -3609,11 +3523,7 @@
     },
     {
       "term": "Authorization",
-<<<<<<< HEAD
       "definition": "Determining which resources an authenticated identity may access.",
-=======
-      "definition": "determining which resources an authenticated identity may access.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -3624,16 +3534,12 @@
       "sourceQuestionIds": [
         173
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Determining which resources an authenticated identity may access.",
       "front": "Determining which resources an authenticated identity may access.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing determining which resources an authenticated identity may access.",
       "memoryHook": "Link \"Authorization\" to: determining which resources an authenticated identity may access."
-=======
-      "hint": "Determining which resources an authenticated identity may access."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Automation and orchestration perform repetitive tasks quickly and consistently, reducing human error.",
@@ -3688,16 +3594,12 @@
       "sourceQuestionIds": [
         170
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "The CIA property that keeps systems and data accessible when needed.",
       "front": "The CIA property that keeps systems and data accessible when needed.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security team is reviewing the CIA property that keeps systems and data accessible when needed.",
       "memoryHook": "Link \"Availability\" to: the cia property that keeps systems and data accessible when needed."
-=======
-      "hint": "The CIA property that keeps systems and data accessible when needed."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Backout plan",
@@ -3715,16 +3617,12 @@
         322,
         789
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting documented steps for safely reversing a failed change.",
       "front": "A security analyst is documenting documented steps for safely reversing a failed change.",
       "keyDetails": "A well-defined backout plan helps to minimize downtime and reduces the risk of data loss or other severe impacts. An impact analysis identifies and assesses the potential implications of a proposed change, including how the change will impact all areas. Evaluation of changes in a test environment ensures they work as intended.",
       "example": "A security analyst is documenting documented steps for safely reversing a failed change.",
       "memoryHook": "\"Backout\" + \"plan\" → connect the words to the definition."
-=======
-      "hint": "Documented steps for safely reversing a failed change."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Backout plans",
@@ -3819,16 +3717,12 @@
       "sourceQuestionIds": [
         541
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "front": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "keyDetails": "It helps identify zero-day attacks, insider threats, and other malicious activities without a specific signature. Signature-based detection relies on a database of attack patterns to identify malicious traffic. It is effective against known threats, but signature-based detection may miss new or evolving attacks.",
       "example": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "memoryHook": "\"Behavioral-\" + \"detection\" → connect the words to the definition."
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Behavioral-based detection",
@@ -3904,16 +3798,12 @@
       "sourceQuestionIds": [
         218
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Exploiting collision probability in a hash function.",
       "front": "Exploiting collision probability in a hash function.",
       "keyDetails": "3.0 Security Architecture.",
       "example": "A security team is reviewing exploiting collision probability in a hash function.",
       "memoryHook": "\"Birthday\" + \"attack\" → connect the words to the definition."
-=======
-      "hint": "Exploiting collision probability in a hash function."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Bloatware",
@@ -3928,16 +3818,12 @@
       "sourceQuestionIds": [
         343
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting unnecessary preinstalled software that consumes resources or increases attack surface.",
       "front": "A security analyst is documenting unnecessary preinstalled software that consumes resources or increases attack surface.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting unnecessary preinstalled software that consumes resources or increases attack surface.",
       "memoryHook": "Link \"Bloatware\" to: bloatware is the best match here because it names unnecessary preinstalled software that consumes resources or increases attack surface."
-=======
-      "hint": "It names unnecessary preinstalled software that consumes resources or increases attack surface."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Blocked content",
@@ -3972,16 +3858,12 @@
       "sourceQuestionIds": [
         338
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A class of Bluetooth vulnerabilities that can permit attacks without pairing.",
       "front": "A class of Bluetooth vulnerabilities that can permit attacks without pairing.",
       "keyDetails": "3.0 Security Architecture.",
       "example": "A security analyst is documenting a class of Bluetooth vulnerabilities that can permit attacks without pairing.",
       "memoryHook": "Link \"BlueBorne\" to: a class of bluetooth vulnerabilities that can permit attacks without pairing."
-=======
-      "hint": "A class of Bluetooth vulnerabilities that can permit attacks without pairing."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Bluejacking",
@@ -4005,11 +3887,7 @@
     },
     {
       "term": "Bluesnarfing",
-<<<<<<< HEAD
       "definition": "Unauthorized retrieval of information from a Bluetooth device.",
-=======
-      "definition": "unauthorized retrieval of information from a Bluetooth device.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "3.0 Security Architecture"
       ],
@@ -4020,16 +3898,12 @@
       "sourceQuestionIds": [
         337
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Unauthorized retrieval of information from a Bluetooth device.",
       "front": "Unauthorized retrieval of information from a Bluetooth device.",
       "keyDetails": "3.0 Security Architecture.",
       "example": "A security analyst is documenting unauthorized retrieval of information from a Bluetooth device.",
       "memoryHook": "Link \"Bluesnarfing\" to: unauthorized retrieval of information from a bluetooth device."
-=======
-      "hint": "Unauthorized retrieval of information from a Bluetooth device."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Bollard",
@@ -4044,7 +3918,6 @@
       "sourceQuestionIds": [
         314
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A physical barrier intended to prevent vehicles from reaching a protected area.",
       "front": "A physical barrier intended to prevent vehicles from reaching a protected area.",
@@ -4074,9 +3947,6 @@
       "keyDetails": "The scenario mentions an attached file with a . jar extension and is executable. While a memory resident virus could infect a file attached to an email, the scenario suggests a different type of virus. The suspicious file came through an email, which does not suggest a boot sector virus.",
       "example": "Multiple employees receive an email attachment with an odd double extension, such as.docx and.ps1, and the email system flags it as potentially harmful.",
       "memoryHook": "\"Boot\" + \"virus\" → connect the words to the definition."
-=======
-      "hint": "A physical barrier intended to prevent vehicles from reaching a protected area."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Both General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA)",
@@ -4195,16 +4065,12 @@
       "sourceQuestionIds": [
         383
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting a program that rewards researchers for responsibly reporting vulnerabilities.",
       "front": "A security analyst is documenting a program that rewards researchers for responsibly reporting vulnerabilities.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting a program that rewards researchers for responsibly reporting vulnerabilities.",
       "memoryHook": "\"Bug\" + \"program\" → connect the words to the definition."
-=======
-      "hint": "It names a program that rewards researchers for responsibly reporting vulnerabilities."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Bundled software and grayware or bloatware",
@@ -4239,16 +4105,12 @@
       "sourceQuestionIds": [
         414
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Determining how disruptions affect critical business functions and recovery priorities.",
       "front": "Determining how disruptions affect critical business functions and recovery priorities.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security analyst is documenting determining how disruptions affect critical business functions and recovery priorities.",
       "memoryHook": "\"Business\" + \"analysis\" → connect the words to the definition."
-=======
-      "hint": "Determining how disruptions affect critical business functions and recovery priorities."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Business Partnership Agreement (BPA) and Rules of Engagement (RoE)",
@@ -4323,16 +4185,12 @@
       "sourceQuestionIds": [
         239
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing a deployment model in which users use personally owned devices for work.",
       "front": "A security team is reviewing a deployment model in which users use personally owned devices for work.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security team is reviewing a deployment model in which users use personally owned devices for work.",
       "memoryHook": "Link \"BYOD\" to: byod is the best match here because it names a deployment model in which users use personally owned devices for work."
-=======
-      "hint": "It names a deployment model in which users use personally owned devices for work."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "C",
@@ -4387,16 +4245,12 @@
       "sourceQuestionIds": [
         478
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "/ sequences can indicate directory traversal.",
       "front": "/ sequences can indicate directory traversal.",
       "keyDetails": "Canonicalization attacks use encoded or alternate representations to bypass filtering and may enable traversal or code injection.",
       "example": "An IT admin receives an alert about employee web activity. The requested addresses are not plaintext and include encoded entries such as %2e%2e%2f%2e%2e%2f%2e%2e%2f.",
       "memoryHook": "\"Canonicalization\" + \"attack\" → connect the words to the definition."
-=======
-      "hint": "Sequences can indicate directory traversal."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "cat <file1> <file2> > <file3>",
@@ -4916,16 +4770,12 @@
       "sourceQuestionIds": [
         235
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing operating coordinated systems together to provide service resilience.",
       "front": "A security team is reviewing operating coordinated systems together to provide service resilience.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security team is reviewing operating coordinated systems together to provide service resilience.",
       "memoryHook": "Link \"Clustering\" to: clustering is the best match here because it names operating coordinated systems together to provide service resilience."
-=======
-      "hint": "It names operating coordinated systems together to provide service resilience."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "COBO",
@@ -4940,16 +4790,12 @@
       "sourceQuestionIds": [
         544
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "front": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "keyDetails": "Bring Your Own Device (BYOD) involves employees using their own devices, which poses security risks due to the mix of personal and professional data. Choose Your Own Device (CYOD) offers the organization a list of devices for employees to choose from, providing some control but not as strict as COBO.",
       "example": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "memoryHook": "\"COBO\" → Corporate-Owned Business Only."
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Code",
@@ -4984,7 +4830,6 @@
       "sourceQuestionIds": [
         375
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting using a digital signature to verify software publisher identity and code integrity.",
       "front": "A security analyst is documenting using a digital signature to verify software publisher identity and code integrity.",
@@ -5017,13 +4862,6 @@
     {
       "term": "Cold site",
       "definition": "A recovery location with basic facilities but little or no configured equipment.",
-=======
-      "hint": "It names using a digital signature to verify software publisher identity and code integrity."
-    },
-    {
-      "term": "Cold site",
-      "definition": "a recovery location with basic facilities but little or no configured equipment.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -5034,7 +4872,6 @@
       "sourceQuestionIds": [
         233
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A recovery location with basic facilities but little or no configured equipment.",
       "front": "A recovery location with basic facilities but little or no configured equipment.",
@@ -5065,9 +4902,6 @@
       "keyDetails": "The permissions gained depend on the vulnerable application context.",
       "example": "A post describes a vulnerability in freeware that allows a remote user to gain access to a system with the same permissions as the vulnerable app.",
       "memoryHook": "\"Command\" + \"attack\" → connect the words to the definition."
-=======
-      "hint": "A recovery location with basic facilities but little or no configured equipment."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Company assets",
@@ -5102,16 +4936,12 @@
       "sourceQuestionIds": [
         166
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "An alternative control used when the preferred control is not feasible.",
       "front": "An alternative control used when the preferred control is not feasible.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing an alternative control used when the preferred control is not feasible.",
       "memoryHook": "\"Compensating\" + \"control\" → connect the words to the definition."
-=======
-      "hint": "An alternative control used when the preferred control is not feasible."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Compliance assessment",
@@ -5482,11 +5312,7 @@
     },
     {
       "term": "Corrective control",
-<<<<<<< HEAD
       "definition": "A control intended to reduce damage and restore systems after an event.",
-=======
-      "definition": "a control intended to reduce damage and restore systems after an event.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -5497,16 +5323,12 @@
       "sourceQuestionIds": [
         165
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A control intended to reduce damage and restore systems after an event.",
       "front": "A control intended to reduce damage and restore systems after an event.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing a control intended to reduce damage and restore systems after an event.",
       "memoryHook": "\"Corrective\" + \"control\" → connect the words to the definition."
-=======
-      "hint": "A control intended to reduce damage and restore systems after an event."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Credential replay",
@@ -5521,16 +5343,12 @@
       "sourceQuestionIds": [
         346
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Reusing captured authentication material to impersonate a valid user.",
       "front": "Reusing captured authentication material to impersonate a valid user.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting reusing captured authentication material to impersonate a valid user.",
       "memoryHook": "\"Credential\" + \"replay\" → connect the words to the definition."
-=======
-      "hint": "Reusing captured authentication material to impersonate a valid user."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Credentialed scan",
@@ -5718,11 +5536,7 @@
     },
     {
       "term": "CVE",
-<<<<<<< HEAD
       "definition": "A standardized identifier for a publicly known vulnerability.",
-=======
-      "definition": "a standardized identifier for a publicly known vulnerability.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -5733,16 +5547,12 @@
       "sourceQuestionIds": [
         245
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A standardized identifier for a publicly known vulnerability.",
       "front": "A standardized identifier for a publicly known vulnerability.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing a standardized identifier for a publicly known vulnerability.",
       "memoryHook": "Link \"CVE\" to: a standardized identifier for a publicly known vulnerability."
-=======
-      "hint": "A standardized identifier for a publicly known vulnerability."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "CVSS",
@@ -5826,11 +5636,7 @@
     },
     {
       "term": "CYOD",
-<<<<<<< HEAD
       "definition": "A deployment model allowing users to select from approved device choices.",
-=======
-      "definition": "a deployment model allowing users to select from approved device choices.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -5841,16 +5647,12 @@
       "sourceQuestionIds": [
         241
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A deployment model allowing users to select from approved device choices.",
       "front": "A deployment model allowing users to select from approved device choices.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing a deployment model allowing users to select from approved device choices.",
       "memoryHook": "Link \"CYOD\" to: a deployment model allowing users to select from approved device choices."
-=======
-      "hint": "A deployment model allowing users to select from approved device choices."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "D",
@@ -5885,16 +5687,12 @@
       "sourceQuestionIds": [
         382
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Searching restricted online services for leaked data or threat activity.",
       "front": "Searching restricted online services for leaked data or threat activity.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting searching restricted online services for leaked data or threat activity.",
       "memoryHook": "\"Dark\" + \"monitoring\" → connect the words to the definition."
-=======
-      "hint": "Searching restricted online services for leaked data or threat activity."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Data at rest",
@@ -5909,16 +5707,12 @@
       "sourceQuestionIds": [
         227
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing data stored on media and not actively moving between systems.",
       "front": "A security team is reviewing data stored on media and not actively moving between systems.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security team is reviewing data stored on media and not actively moving between systems.",
       "memoryHook": "\"Data\" + \"rest\" → connect the words to the definition."
-=======
-      "hint": "It names data stored on media and not actively moving between systems."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Data controller",
@@ -5984,11 +5778,7 @@
     },
     {
       "term": "Data in use",
-<<<<<<< HEAD
       "definition": "Data actively being processed in memory or by an application.",
-=======
-      "definition": "data actively being processed in memory or by an application.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -5999,16 +5789,12 @@
       "sourceQuestionIds": [
         229
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Data actively being processed in memory or by an application.",
       "front": "Data actively being processed in memory or by an application.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing data actively being processed in memory or by an application.",
       "memoryHook": "\"Data\" + \"use\" → connect the words to the definition."
-=======
-      "hint": "Data actively being processed in memory or by an application."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Data loss prevention",
@@ -6023,16 +5809,12 @@
       "sourceQuestionIds": [
         601
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "large hospital uses email for communication. However, to ensure security, they want to ensure that sensitive information is not transmitted out. What security function would accomplish this need?",
       "front": "large hospital uses email for communication. However, to ensure security, they want to ensure that sensitive information is not transmitted out. What security function would accomplish this need?",
       "keyDetails": "Simple Network Management Protocol is an application protocol used for monitoring and managing network devices. SNMP works over UDP ports 161 and 162 by default. File Transfer Protocol is an application protocol used to transfer files between network hosts. It is an insecure transfer protocol and should not be used in the transfer of sensitive data.",
       "example": "large hospital uses email for communication.",
       "memoryHook": "\"Data\" + \"prevention\" → connect the words to the definition."
-=======
-      "hint": "Large hospital uses email for communication. However, to ensure security, they want to ensure that sensitive information is not transmitted out. What security function would accomplish this need?"
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Data masking",
@@ -6047,7 +5829,6 @@
       "sourceQuestionIds": [
         190
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Obscuring portions of sensitive data while retaining a usable format.",
       "front": "Obscuring portions of sensitive data while retaining a usable format.",
@@ -6076,9 +5857,6 @@
       "keyDetails": "While a data custodian, or data steward, is responsible for the safe custody, transport, and storage of data, this role is more about the implementation of business rules rather than the revision of high-level policies. The role of a data processor is mainly to process personal data on behalf of the controller.",
       "example": "A multinational company discovered its existing cybersecurity policies were no longer adequate due to evolving cybersecurity threats and updated industry regulations.",
       "memoryHook": "\"Data\" + \"processor\" → connect the words to the definition."
-=======
-      "hint": "Obscuring portions of sensitive data while retaining a usable format."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Data protection",
@@ -6113,16 +5891,12 @@
       "sourceQuestionIds": [
         230
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "The requirement that data is subject to laws where it is stored or processed.",
       "front": "The requirement that data is subject to laws where it is stored or processed.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing the requirement that data is subject to laws where it is stored or processed.",
       "memoryHook": "\"Data\" + \"sovereignty\" → connect the words to the definition."
-=======
-      "hint": "The requirement that data is subject to laws where it is stored or processed."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Data states",
@@ -6277,16 +6051,12 @@
       "sourceQuestionIds": [
         351
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting securely retiring a system or asset from service.",
       "front": "A security analyst is documenting securely retiring a system or asset from service.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting securely retiring a system or asset from service.",
       "memoryHook": "Link \"Decommissioning\" to: decommissioning is the best match here because it names securely retiring a system or asset from service."
-=======
-      "hint": "It names securely retiring a system or asset from service."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Decrease in network latency",
@@ -6419,16 +6189,12 @@
       "sourceQuestionIds": [
         812
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A financial institution has hired a team of security professionals to evaluate its defensive security measures and incident response procedures. The institution wants to assess how effectively it can detect and respond to cyber threats and identify areas for improvement.",
       "front": "A financial institution has hired a team of security professionals to evaluate its defensive security measures and incident response procedures. The institution wants to assess how effectively it can detect and respond to cyber threats and identify areas for improvement.",
       "keyDetails": "This method is the most suitable type of penetration testing for the financial institution, as it is specifically interested in evaluating its ability to detect and respond to cyber threats.",
       "example": "A financial institution has hired a team of security professionals to evaluate its defensive security measures and incident response procedures.",
       "memoryHook": "\"Defensive\" + \"testing\" → connect the words to the definition."
-=======
-      "hint": "Assessing defensive security measures, detection capabilities, and incident response procedures."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Denial of Service",
@@ -6448,16 +6214,12 @@
         500,
         833
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A company adds resiliency and high-availability services, including load balancing and cluster services, because of ongoing attacks.",
       "front": "A company adds resiliency and high-availability services, including load balancing and cluster services, because of ongoing attacks.",
       "keyDetails": "These attacks consume enormous amounts of resources and can lead to inaccessibility.",
       "example": "A company adds resiliency and high-availability services, including load balancing and cluster services, because of ongoing attacks.",
       "memoryHook": "\"Denial\" + \"Service\" → connect the words to the definition."
-=======
-      "hint": "DoS attack protections include high availability services such as load balancing and cluster services."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Deny all traffic and allow exceptions based on requirement",
@@ -6692,7 +6454,6 @@
       "sourceQuestionIds": [
         378
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Physically rendering storage media unusable and its data unrecoverable.",
       "front": "Physically rendering storage media unusable and its data unrecoverable.",
@@ -6741,9 +6502,6 @@
       "keyDetails": "Containment and eradication prevent further harm and ensure system safety. The team must analyze the incident, identify the root cause, and assess its response. Knowing how the attacker infiltrated and removed data is crucial in preventing future occurrences. However, in this scenario, containment and eradication take precedence.",
       "example": "An incident response team is working through a case and must choose the next best response or investigative action.",
       "memoryHook": "\"Detection\" + \"recovery\" → connect the words to the definition."
-=======
-      "hint": "Physically rendering storage media unusable and its data unrecoverable."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Detective control",
@@ -6798,16 +6556,12 @@
       "sourceQuestionIds": [
         163
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing a control intended to discourage an attacker from acting.",
       "front": "A security team is reviewing a control intended to discourage an attacker from acting.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security team is reviewing a control intended to discourage an attacker from acting.",
       "memoryHook": "\"Deterrent\" + \"control\" → connect the words to the definition."
-=======
-      "hint": "It names a control intended to discourage an attacker from acting."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Develop and enforce a risk acceptance policy for low-impact threats.",
@@ -7002,16 +6756,12 @@
       "sourceQuestionIds": [
         186
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A cryptographic mechanism that supports integrity, authentication, and non-repudiation.",
       "front": "A cryptographic mechanism that supports integrity, authentication, and non-repudiation.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing a cryptographic mechanism that supports integrity, authentication, and non-repudiation.",
       "memoryHook": "\"Digital\" + \"signature\" → connect the words to the definition."
-=======
-      "hint": "A cryptographic mechanism that supports integrity, authentication, and non-repudiation."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Directive control",
@@ -7046,16 +6796,12 @@
       "sourceQuestionIds": [
         347
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting manipulating file paths to access data outside an intended directory.",
       "front": "A security analyst is documenting manipulating file paths to access data outside an intended directory.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting manipulating file paths to access data outside an intended directory.",
       "memoryHook": "\"Directory\" + \"traversal\" → connect the words to the definition."
-=======
-      "hint": "It names manipulating file paths to access data outside an intended directory."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Directory traversal attack",
@@ -7229,11 +6975,7 @@
     },
     {
       "term": "DKIM",
-<<<<<<< HEAD
       "definition": "An email authentication method that signs messages using a domain key.",
-=======
-      "definition": "an email authentication method that signs messages using a domain key.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -7244,7 +6986,6 @@
       "sourceQuestionIds": [
         253
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "An email authentication method that signs messages using a domain key.",
       "front": "An email authentication method that signs messages using a domain key.",
@@ -7255,13 +6996,6 @@
     {
       "term": "DLP",
       "definition": "Technology designed to detect and prevent unauthorized disclosure of sensitive data.",
-=======
-      "hint": "An email authentication method that signs messages using a domain key."
-    },
-    {
-      "term": "DLP",
-      "definition": "technology designed to detect and prevent unauthorized disclosure of sensitive data.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -7272,16 +7006,12 @@
       "sourceQuestionIds": [
         249
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Technology designed to detect and prevent unauthorized disclosure of sensitive data.",
       "front": "Technology designed to detect and prevent unauthorized disclosure of sensitive data.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing technology designed to detect and prevent unauthorized disclosure of sensitive data.",
       "memoryHook": "Link \"DLP\" to: technology designed to detect and prevent unauthorized disclosure of sensitive data."
-=======
-      "hint": "Technology designed to detect and prevent unauthorized disclosure of sensitive data."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "DMARC",
@@ -7325,11 +7055,7 @@
     },
     {
       "term": "DNS filtering",
-<<<<<<< HEAD
       "definition": "Blocking resolution of domains based on policy, reputation, or threat intelligence.",
-=======
-      "definition": "blocking resolution of domains based on policy, reputation, or threat intelligence.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -7340,16 +7066,12 @@
       "sourceQuestionIds": [
         393
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Blocking resolution of domains based on policy, reputation, or threat intelligence.",
       "front": "Blocking resolution of domains based on policy, reputation, or threat intelligence.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting blocking resolution of domains based on policy, reputation, or threat intelligence.",
       "memoryHook": "\"DNS\" + \"filtering\" → connect the words to the definition."
-=======
-      "hint": "Blocking resolution of domains based on policy, reputation, or threat intelligence."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Due care",
@@ -7364,16 +7086,12 @@
       "sourceQuestionIds": [
         415
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting taking reasonable actions to protect assets after risks are understood.",
       "front": "A security analyst is documenting taking reasonable actions to protect assets after risks are understood.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting taking reasonable actions to protect assets after risks are understood.",
       "memoryHook": "\"Due\" + \"care\" → connect the words to the definition."
-=======
-      "hint": "It names taking reasonable actions to protect assets after risks are understood."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Due diligence",
@@ -7388,16 +7106,12 @@
       "sourceQuestionIds": [
         283
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing investigating and evaluating risk before making a decision or entering an agreement.",
       "front": "A security team is reviewing investigating and evaluating risk before making a decision or entering an agreement.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security team is reviewing investigating and evaluating risk before making a decision or entering an agreement.",
       "memoryHook": "\"Due\" + \"diligence\" → connect the words to the definition."
-=======
-      "hint": "It names investigating and evaluating risk before making a decision or entering an agreement."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Due diligence and care",
@@ -7475,16 +7189,12 @@
         243,
         689
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing examining application behavior while the application is running.",
       "front": "A security team is reviewing examining application behavior while the application is running.",
       "keyDetails": "Static code review evaluates the software's source code, bytecode, or application binaries without executing the software. While it is a valuable method, it does not meet the analyst's preference to assess the software while running.",
       "example": "A security team is reviewing examining application behavior while the application is running.",
       "memoryHook": "\"Dynamic\" + \"analysis\" → connect the words to the definition."
-=======
-      "hint": "It names examining application behavior while the application is running."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "E-discovery",
@@ -7499,16 +7209,12 @@
       "sourceQuestionIds": [
         410
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Identifying, collecting, and producing electronically stored information for legal proceedings.",
       "front": "Identifying, collecting, and producing electronically stored information for legal proceedings.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security analyst is documenting identifying, collecting, and producing electronically stored information for legal proceedings.",
       "memoryHook": "Link \"E-discovery\" to: identifying, collecting, and producing electronically stored information for legal proceedings."
-=======
-      "hint": "Identifying, collecting, and producing electronically stored information for legal proceedings."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "EAP",
@@ -7523,16 +7229,12 @@
       "sourceQuestionIds": [
         370
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A framework that supports multiple authentication methods for network access.",
       "front": "A framework that supports multiple authentication methods for network access.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting a framework that supports multiple authentication methods for network access.",
       "memoryHook": "Link \"EAP\" to: a framework that supports multiple authentication methods for network access."
-=======
-      "hint": "A framework that supports multiple authentication methods for network access."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "EDR",
@@ -7547,16 +7249,12 @@
       "sourceQuestionIds": [
         251
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing endpoint tooling for detecting, investigating, and responding to threats.",
       "front": "A security team is reviewing endpoint tooling for detecting, investigating, and responding to threats.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security team is reviewing endpoint tooling for detecting, investigating, and responding to threats.",
       "memoryHook": "Link \"EDR\" to: edr is the best match here because it names endpoint tooling for detecting, investigating, and responding to threats."
-=======
-      "hint": "It names endpoint tooling for detecting, investigating, and responding to threats."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Employ network gateways that scrutinize incoming traffic for malicious activity",
@@ -7854,16 +7552,12 @@
       "sourceQuestionIds": [
         403
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting a short-lived credential created for temporary access.",
       "front": "A security analyst is documenting a short-lived credential created for temporary access.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting a short-lived credential created for temporary access.",
       "memoryHook": "\"Ephemeral\" + \"credential\" → connect the words to the definition."
-=======
-      "hint": "It names a short-lived credential created for temporary access."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Eradication",
@@ -7986,13 +7680,8 @@
       "memoryHook": "\"Establish\" + \"intelligence\" → connect the words to the definition."
     },
     {
-<<<<<<< HEAD
       "term": "Establish multiple control categories and functions to enforce multiple layers of protection.",
       "definition": "Establishing multiple control categories and functions enforces multiple layers of protection. Known as \"defense-in-depth,\" this involves deploying multiple security controls to prevent, detect, and correct attacks at various network layers.",
-=======
-      "term": "Defense-in-depth strategy",
-      "definition": "Establishing multiple control categories and functions enforces multiple layers of protection. Known as \"defense-in-depth,\" this involves deploying multiple security controls to prevent, detect, and correct attacks at various network layers. If the engineer connects all hosts to the same broadcast domain, it increases the attack surface, as it would allow unauthorized hosts to communicate with others in the same domain easily. While we value service availability, compromising security to ensure this availability can lead to long-term risks and potential breaches. Over-reliance can lead to increased vulnerability because if an attacker penetrates the network edge, the attacker could freely move within the network. Implementing network segmentation can help mitigate this risk.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "1.0 General Security Concepts"
       ],
@@ -8073,13 +7762,8 @@
       "memoryHook": "\"Establishing\" + \"software\" → connect the words to the definition."
     },
     {
-<<<<<<< HEAD
       "term": "Establishing a redundant data center",
       "definition": "An organization can notably strengthen its resilience and recovery capabilities by establishing a redundant data center. The redundant site swiftly takes over operations in case of a system failure or cyberattack, reducing downtime.",
-=======
-      "term": "Redundant data center resilience",
-      "definition": "An organization can notably strengthen its resilience and recovery capabilities by establishing a redundant data center. The redundant site swiftly takes over operations in case of a system failure or cyberattack, reducing downtime. Formulating a detailed incident response plan is key to guaranteeing an effective, coordinated response to incidents. This plan specifies the procedures for identifying, reacting to, and recovering from security incidents. While recruiting more developers could amplify an organization's capacity to manage and improve its systems, it does not directly impact resilience and recovery in the context of a COOP. Though enhancing firewall systems can fortify an organization's capacity to fend off certain cyberattacks, it does not directly contribute to resilience and recovery.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -8181,11 +7865,7 @@
     },
     {
       "term": "Evaluating the strength of cryptographic keys",
-<<<<<<< HEAD
       "definition": "Evaluating the strength of cryptographic keys is crucial in determining the resilience of encryption algorithms against attacks. A cybersecurity specialist would assess key lengths and the algorithms in use to ensure they meet current standards and are not vulnerable to brute force or cryptographic attacks.",
-=======
-      "definition": "Assessing cryptographic key length and algorithm strength to resist attack.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -8228,11 +7908,7 @@
     },
     {
       "term": "Evidence preservation",
-<<<<<<< HEAD
       "definition": "Protecting digital evidence from alteration or destruction.",
-=======
-      "definition": "protecting digital evidence from alteration or destruction.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -8243,16 +7919,12 @@
       "sourceQuestionIds": [
         409
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Protecting digital evidence from alteration or destruction.",
       "front": "Protecting digital evidence from alteration or destruction.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security analyst is documenting protecting digital evidence from alteration or destruction.",
       "memoryHook": "\"Evidence\" + \"preservation\" → connect the words to the definition."
-=======
-      "hint": "Protecting digital evidence from alteration or destruction."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Execution phase of the prevention strategy",
@@ -8287,16 +7959,12 @@
       "sourceQuestionIds": [
         543
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "By explicitly disabling unused network interfaces, the company can significantly reduce its attack surface and protect against unauthorized access via these interfaces, addressing the specific vulnerability that led to the data breach.",
       "front": "By explicitly disabling unused network interfaces, the company can significantly reduce its attack surface and protect against unauthorized access via these interfaces, addressing the specific vulnerability that led to the data breach.",
       "keyDetails": "While employee awareness of phishing threats is essential to cybersecurity, it would not directly address the vulnerability exposed in this incident. A strict device control policy for USB ports would primarily protect against threats originating from external devices connected to the system.",
       "example": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "memoryHook": "\"Explicitly\" + \"interfaces\" → connect the words to the definition."
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Exposure factor",
@@ -8351,7 +8019,6 @@
       "sourceQuestionIds": [
         419
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting an independent assessment performed by an outside party.",
       "front": "A security analyst is documenting an independent assessment performed by an outside party.",
@@ -8362,13 +8029,6 @@
     {
       "term": "Face-to-face cyber risk awareness training",
       "definition": "Applying automation and orchestration may not bring as much efficiency and effectiveness to face-to-face cybersecurity risk awareness training due to the direct interaction between trainers and learners. It plays a critical role in effectively communicating and understanding complex cybersecurity issues.",
-=======
-      "hint": "It names an independent assessment performed by an outside party."
-    },
-    {
-      "term": "Face-to-face cyber risk awareness training",
-      "definition": "Instructor-led awareness training that depends on direct interaction.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -8399,16 +8059,12 @@
       "sourceQuestionIds": [
         223
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing a failure mode that blocks access when a control fails.",
       "front": "A security team is reviewing a failure mode that blocks access when a control fails.",
       "keyDetails": "If the control fails or cannot decide, access is blocked; fail-open does the opposite and allows access.",
       "example": "A security team is reviewing a failure mode that blocks access when a control fails.",
       "memoryHook": "If the control fails or cannot decide, access is blocked; fail-open does the opposite and allows access."
-=======
-      "hint": "A failure mode that blocks access when a control fails."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Fail-open",
@@ -8431,16 +8087,8 @@
       "memoryHook": "If the control fails or cannot decide, access is allowed; fail-closed does the opposite and blocks access."
     },
     {
-<<<<<<< HEAD
       "term": "Fail-open means that network or host access is preserved, if possible, while fail-closed means that access is blocked or that the system enters the most secure state available.",
       "definition": "In a fail-open configuration, the system maintains network or host access, if possible, in the event of a failure. In a fail-closed configuration, the system blocks access or enters the most secure state available in the event of a failure.",
-=======
-      "term": "Fail-open vs fail-closed",
-      "aliases": [
-        "Fail-open means that network or host access is preserved, if possible, while fail-closed means that access is blocked or that the system enters the most secure state available."
-      ],
-      "definition": "In a fail-open configuration, the system maintains network or host access, if possible, in the event of a failure. In a fail-closed configuration, the system blocks access or enters the most secure state available in the event of a failure. Fail-open prioritizes availability over confidentiality and integrity, while fail-closed prioritizes confidentiality and integrity over availability. Fail-open means preservation of network or host access, if possible, while fail-closed means blocked access or the system entering the most secure state available. Fail-open prioritizes availability over confidentiality and integrity, while fail-closed prioritizes confidentiality and integrity over availability.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -8603,16 +8251,12 @@
       "sourceQuestionIds": [
         329
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting encryption applied to individual files.",
       "front": "A security analyst is documenting encryption applied to individual files.",
       "keyDetails": "It is useful when specific files need protection without encrypting the whole disk or database.",
       "example": "A security analyst is documenting encryption applied to individual files.",
       "memoryHook": "\"File\" + \"encryption\" → connect the words to the definition."
-=======
-      "hint": "Encryption applied to individual files."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "File integrity monitoring",
@@ -8627,16 +8271,12 @@
       "sourceQuestionIds": [
         394
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Detecting unauthorized changes to important files.",
       "front": "Detecting unauthorized changes to important files.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting detecting unauthorized changes to important files.",
       "memoryHook": "\"File\" + \"monitoring\" → connect the words to the definition."
-=======
-      "hint": "Detecting unauthorized changes to important files."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "File metadata",
@@ -8701,13 +8341,8 @@
       "memoryHook": "Link \"Fines\" to: sanctions refer to penalties, disciplinary actions, or measures imposed due to noncompliance with laws, regulations, or rules."
     },
     {
-<<<<<<< HEAD
       "term": "firewall is typically at the network border and serves as a preventive control to enforce access rules for ingress and egress traffic.",
       "definition": "In a network with a defense-in-depth strategy, a firewall is usually at the network border and serves as a preventive control. Its main function is to enforce access rules for traffic entering (ingress) and leaving (egress) the network.",
-=======
-      "term": "Firewall placement",
-      "definition": "In a network with a defense-in-depth strategy, a firewall is usually at the network border and serves as a preventive control. Its main function is to enforce access rules for traffic entering (ingress) and leaving (egress) the network. A firewall serves primarily as a preventive control to enforce access rules, not as a detective control to identify malicious traffic. A firewall is typically at the network border, not inline behind another firewall, to enforce access rules. While a firewall can mitigate certain types of attacks, it is not typically on internal routers and is not primarily a corrective control for DoS attacks.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -8880,11 +8515,7 @@
     },
     {
       "term": "Gap analysis",
-<<<<<<< HEAD
       "definition": "Comparing the current security state with a desired state to identify remediation needs.",
-=======
-      "definition": "comparing the current security state with a desired state to identify remediation needs.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -8895,16 +8526,12 @@
       "sourceQuestionIds": [
         313
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Comparing the current security state with a desired state to identify remediation needs.",
       "front": "Comparing the current security state with a desired state to identify remediation needs.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting comparing the current security state with a desired state to identify remediation needs.",
       "memoryHook": "\"Gap\" + \"analysis\" → connect the words to the definition."
-=======
-      "hint": "Comparing the current security state with a desired state to identify remediation needs."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Gather and analyze the vendor's financial stability, reputation, and technical capabilities",
@@ -9205,16 +8832,12 @@
       "sourceQuestionIds": [
         180
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing a decoy file whose access can indicate unauthorized activity.",
       "front": "A security team is reviewing a decoy file whose access can indicate unauthorized activity.",
       "keyDetails": "Access to it can signal that someone is browsing where they should not be.",
       "example": "A security team is reviewing a decoy file whose access can indicate unauthorized activity.",
       "memoryHook": "Link \"Honeyfile\" to: a honeyfile is a decoy file."
-=======
-      "hint": "A decoy file whose access can indicate unauthorized activity."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Honeynet",
@@ -9249,16 +8872,12 @@
       "sourceQuestionIds": [
         178
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A decoy system designed to attract and observe attackers.",
       "front": "A decoy system designed to attract and observe attackers.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing a decoy system designed to attract and observe attackers.",
       "memoryHook": "Link \"Honeypot\" to: a decoy system designed to attract and observe attackers."
-=======
-      "hint": "A decoy system designed to attract and observe attackers."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Honeytoken",
@@ -9365,11 +8984,7 @@
     },
     {
       "term": "HttpOnly cookie flag",
-<<<<<<< HEAD
       "definition": "A cookie attribute that blocks client-side scripts from reading the cookie.",
-=======
-      "definition": "a cookie attribute that blocks client-side scripts from reading the cookie.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -9380,16 +8995,12 @@
       "sourceQuestionIds": [
         373
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A cookie attribute that blocks client-side scripts from reading the cookie.",
       "front": "A cookie attribute that blocks client-side scripts from reading the cookie.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting a cookie attribute that blocks client-side scripts from reading the cookie.",
       "memoryHook": "\"HttpOnly\" + \"flag\" → connect the words to the definition."
-=======
-      "hint": "A cookie attribute that blocks client-side scripts from reading the cookie."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "HTTPS",
@@ -9404,16 +9015,12 @@
       "sourceQuestionIds": [
         605
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "defense contractor has tasked its local network administrator with securing communications between the organization's web server and clients to protect sensitive user information. Which protocol should the network administrator choose to achieve this security objective?",
       "front": "defense contractor has tasked its local network administrator with securing communications between the organization's web server and clients to protect sensitive user information. Which protocol should the network administrator choose to achieve this security objective?",
       "keyDetails": "It uses encryption to protect transmitted data, making it the appropriate choice for securing sensitive user information, such as login credentials and data entered in form fields. In contrast, HTTP, an insecure protocol, transmits data in clear text format, which makes it unsuitable for securing sensitive information.",
       "example": "defense contractor has tasked its local network administrator with securing communications between the organization's web server and clients to protect sensitive user information.",
       "memoryHook": "\"HTTPS\" → Hypertext Transfer Protocol Secure."
-=======
-      "hint": "Defense contractor has tasked its local network administrator with securing communications between the organization's web server and clients to protect sensitive user information. Which protocol should the network administrator choose to achieve this security objective?"
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Human-readable data",
@@ -9437,11 +9044,7 @@
     },
     {
       "term": "Hybrid architecture",
-<<<<<<< HEAD
       "definition": "In this scenario, a hybrid architecture provides greater flexibility and control over sensitive data and applications, allowing customers to store data on private cloud infrastructure while using public cloud infrastructure for less sensitive workloads. A multi-tenant architecture is a cost-effective model by allowing multiple customers to share the same infrastructure, with each customer’s data and applications being separated logically between the customers.",
-=======
-      "definition": "A mix of private and public cloud infrastructure.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "3.0 Security Architecture"
       ],
@@ -9546,11 +9149,7 @@
     },
     {
       "term": "ICS",
-<<<<<<< HEAD
       "definition": "Technology used to monitor and control industrial processes.",
-=======
-      "definition": "technology used to monitor and control industrial processes.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -9561,7 +9160,6 @@
       "sourceQuestionIds": [
         357
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Technology used to monitor and control industrial processes.",
       "front": "Technology used to monitor and control industrial processes.",
@@ -9589,9 +9187,6 @@
       "keyDetails": "This phase involves preventing the incident from spreading further and notifying stakeholders. Restoring the affected system to a secure state is the goal of the eradication phase, which comes after containment and involves removing the incident's root cause.",
       "example": "An incident response team is working through a case and must choose the next best response or investigative action.",
       "memoryHook": "\"Identifying\" + \"activity\" → connect the words to the definition."
-=======
-      "hint": "Technology used to monitor and control industrial processes."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Identifying undisclosed open-source components",
@@ -9615,11 +9210,7 @@
     },
     {
       "term": "Identity proofing",
-<<<<<<< HEAD
       "definition": "Verifying that a person is the real-world identity they claim to be.",
-=======
-      "definition": "verifying that a person is the real-world identity they claim to be.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -9630,7 +9221,6 @@
       "sourceQuestionIds": [
         397
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Verifying that a person is the real-world identity they claim to be.",
       "front": "Verifying that a person is the real-world identity they claim to be.",
@@ -9641,13 +9231,6 @@
     {
       "term": "IDS",
       "definition": "A control that detects suspicious activity and generates alerts.",
-=======
-      "hint": "Verifying that a person is the real-world identity they claim to be."
-    },
-    {
-      "term": "IDS",
-      "definition": "a control that detects suspicious activity and generates alerts.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -9658,16 +9241,12 @@
       "sourceQuestionIds": [
         365
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A control that detects suspicious activity and generates alerts.",
       "front": "A control that detects suspicious activity and generates alerts.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting a control that detects suspicious activity and generates alerts.",
       "memoryHook": "Link \"IDS\" to: a control that detects suspicious activity and generates alerts."
-=======
-      "hint": "A control that detects suspicious activity and generates alerts."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "ifconfig",
@@ -9765,16 +9344,12 @@
       "sourceQuestionIds": [
         532
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Implementing stricter Group Policy in a Windows environment allows for centralized control over the configuration of operating systems, applications, and user settings. While system audits can help identify potential vulnerabilities or compliance issues, they are reactive measures.",
       "front": "Implementing stricter Group Policy in a Windows environment allows for centralized control over the configuration of operating systems, applications, and user settings. While system audits can help identify potential vulnerabilities or compliance issues, they are reactive measures.",
       "keyDetails": "While system audits can help identify potential vulnerabilities or compliance issues, they are reactive measures. They do not offer real-time prevention of unauthorized changes.",
       "example": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "memoryHook": "\"Implement\" + \"Policy\" → connect the words to the definition."
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Implement a system for employees to report detected suspicious emails",
@@ -10020,13 +9595,8 @@
       "memoryHook": "\"Implement\" + \"connections\" → connect the words to the definition."
     },
     {
-<<<<<<< HEAD
       "term": "Implementing a detailed incident response plan",
       "definition": "An organization can notably strengthen its resilience and recovery capabilities by establishing a redundant data center. The redundant site swiftly takes over operations in case of a system failure or cyberattack, reducing downtime.",
-=======
-      "term": "Incident response plan recovery",
-      "definition": "An organization can notably strengthen its resilience and recovery capabilities by establishing a redundant data center. The redundant site swiftly takes over operations in case of a system failure or cyberattack, reducing downtime. Formulating a detailed incident response plan is key to guaranteeing an effective, coordinated response to incidents. This plan specifies the procedures for identifying, reacting to, and recovering from security incidents. While recruiting more developers could amplify an organization's capacity to manage and improve its systems, it does not directly impact resilience and recovery in the context of a COOP. Though enhancing firewall systems can fortify an organization's capacity to fend off certain cyberattacks, it does not directly contribute to resilience and recovery.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -10241,16 +9811,12 @@
       "sourceQuestionIds": [
         266
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Limiting the scope and impact of an active security incident.",
       "front": "Limiting the scope and impact of an active security incident.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security team is reviewing limiting the scope and impact of an active security incident.",
       "memoryHook": "\"Incident\" + \"containment\" → connect the words to the definition."
-=======
-      "hint": "Limiting the scope and impact of an active security incident."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Incident eradication",
@@ -10265,16 +9831,12 @@
       "sourceQuestionIds": [
         267
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing removing the cause and artifacts of an incident from the environment.",
       "front": "A security team is reviewing removing the cause and artifacts of an incident from the environment.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security team is reviewing removing the cause and artifacts of an incident from the environment.",
       "memoryHook": "\"Incident\" + \"eradication\" → connect the words to the definition."
-=======
-      "hint": "It names removing the cause and artifacts of an incident from the environment."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Incorporate self-encrypting drives (SEDs) into its storage infrastructure",
@@ -10547,11 +10109,7 @@
     },
     {
       "term": "Inspecting network traffic for encrypted malicious payloads",
-<<<<<<< HEAD
       "definition": "Evaluating the strength of cryptographic keys is crucial in determining the resilience of encryption algorithms against attacks. A cybersecurity specialist would assess key lengths and the algorithms in use to ensure they meet current standards and are not vulnerable to brute force or cryptographic attacks.",
-=======
-      "definition": "Analyzing encrypted traffic for hidden malicious payloads.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -10671,11 +10229,7 @@
     },
     {
       "term": "Integrity",
-<<<<<<< HEAD
       "definition": "The CIA property that protects information from unauthorized alteration.",
-=======
-      "definition": "the CIA property that protects information from unauthorized alteration.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -10686,16 +10240,12 @@
       "sourceQuestionIds": [
         169
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "The CIA property that protects information from unauthorized alteration.",
       "front": "The CIA property that protects information from unauthorized alteration.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security team is reviewing the CIA property that protects information from unauthorized alteration.",
       "memoryHook": "Link \"Integrity\" to: the cia property that protects information from unauthorized alteration."
-=======
-      "hint": "The CIA property that protects information from unauthorized alteration."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Internal",
@@ -10730,16 +10280,12 @@
       "sourceQuestionIds": [
         418
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "An assessment performed by or on behalf of the organization itself.",
       "front": "An assessment performed by or on behalf of the organization itself.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security analyst is documenting an assessment performed by or on behalf of the organization itself.",
       "memoryHook": "\"Internal\" + \"audit\" → connect the words to the definition."
-=======
-      "hint": "An assessment performed by or on behalf of the organization itself."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Internet of things (IoT )",
@@ -10833,7 +10379,6 @@
       "aliases": [
         "Intrusion Prevention System (IPS)"
       ],
-<<<<<<< HEAD
       "sourceQuestionIds": [
         366,
         617
@@ -10844,9 +10389,6 @@
       "keyDetails": "Also known as: Intrusion Prevention System (IPS).",
       "example": "A security analyst is documenting a control that detects and can automatically block suspicious activity.",
       "memoryHook": "Link \"IPS\" to: a control that detects and can automatically block suspicious activity."
-=======
-      "hint": "A control that detects and can automatically block suspicious activity."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Isolate the affected server from the rest of the network by disabling its network access",
@@ -11408,16 +10950,12 @@
       "sourceQuestionIds": [
         531
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Physical device port hardening aims to restrict access to physical interfaces on a device, such as a universal serial bus (USB), high-definition multimedia interface (HDMI), or serial ports.",
       "front": "Physical device port hardening aims to restrict access to physical interfaces on a device, such as a universal serial bus (USB), high-definition multimedia interface (HDMI), or serial ports.",
       "keyDetails": "It reduces potential avenues of physical attack and prevents unauthorized data transfer, malicious software installation, or direct system access. Encryption of data on USB drives constitutes a separate security measure not linked to physical device port hardening.",
       "example": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "memoryHook": "\"It\" + \"interfaces.\" → connect the words to the definition."
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Its process uses specialized techniques, such as data wiping, degaussing, or encryption.",
@@ -11524,11 +11062,7 @@
     },
     {
       "term": "Key escrow",
-<<<<<<< HEAD
       "definition": "Secure storage of a copy of an encryption key by a trusted party.",
-=======
-      "definition": "secure storage of a copy of an encryption key by a trusted party.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "3.0 Security Architecture"
       ],
@@ -11539,16 +11073,12 @@
       "sourceQuestionIds": [
         333
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Secure storage of a copy of an encryption key by a trusted party.",
       "front": "Secure storage of a copy of an encryption key by a trusted party.",
       "keyDetails": "3.0 Security Architecture.",
       "example": "A security analyst is documenting secure storage of a copy of an encryption key by a trusted party.",
       "memoryHook": "\"Key\" + \"escrow\" → connect the words to the definition."
-=======
-      "hint": "Secure storage of a copy of an encryption key by a trusted party."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Key stretching",
@@ -11563,16 +11093,12 @@
       "sourceQuestionIds": [
         187
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing increasing the computational cost of deriving a key from a password.",
       "front": "A security team is reviewing increasing the computational cost of deriving a key from a password.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security team is reviewing increasing the computational cost of deriving a key from a password.",
       "memoryHook": "\"Key\" + \"stretching\" → connect the words to the definition."
-=======
-      "hint": "It names increasing the computational cost of deriving a key from a password."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Keylogger",
@@ -11636,11 +11162,7 @@
     },
     {
       "term": "Known-environment test",
-<<<<<<< HEAD
       "definition": "A penetration test in which testers receive extensive environment information.",
-=======
-      "definition": "a penetration test in which testers receive extensive environment information.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -11651,16 +11173,12 @@
       "sourceQuestionIds": [
         285
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A penetration test in which testers receive extensive environment information.",
       "front": "A penetration test in which testers receive extensive environment information.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security team is reviewing a penetration test in which testers receive extensive environment information.",
       "memoryHook": "\"Known-environment\" + \"test\" → connect the words to the definition."
-=======
-      "hint": "A penetration test in which testers receive extensive environment information."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Layer 3",
@@ -11768,11 +11286,7 @@
     },
     {
       "term": "Legal hold",
-<<<<<<< HEAD
       "definition": "A requirement to preserve potentially relevant data for litigation or investigation.",
-=======
-      "definition": "a requirement to preserve potentially relevant data for litigation or investigation.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -11783,16 +11297,12 @@
       "sourceQuestionIds": [
         265
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A requirement to preserve potentially relevant data for litigation or investigation.",
       "front": "A requirement to preserve potentially relevant data for litigation or investigation.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security team is reviewing a requirement to preserve potentially relevant data for litigation or investigation.",
       "memoryHook": "\"Legal\" + \"hold\" → connect the words to the definition."
-=======
-      "hint": "A requirement to preserve potentially relevant data for litigation or investigation."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Lightweight Directory Access Protocol",
@@ -11908,16 +11418,12 @@
       "sourceQuestionIds": [
         234
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Distributing requests across multiple resources to improve availability.",
       "front": "Distributing requests across multiple resources to improve availability.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing distributing requests across multiple resources to improve availability.",
       "memoryHook": "\"Load\" + \"balancing\" → connect the words to the definition."
-=======
-      "hint": "Distributing requests across multiple resources to improve availability."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "locate <filename>",
@@ -12024,11 +11530,7 @@
     },
     {
       "term": "Logical segmentation",
-<<<<<<< HEAD
       "definition": "Logical segmentation involves dividing the network into several segments, each operating independently. This approach not only confines potential security breaches within each segment but also provides more granular control over network traffic.",
-=======
-      "definition": "Dividing a network into isolated segments for control and containment.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "3.0 Security Architecture"
       ],
@@ -12239,16 +11741,12 @@
       "sourceQuestionIds": [
         323
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting a scheduled period for upgrades, patching, or planned downtime.",
       "front": "A security analyst is documenting a scheduled period for upgrades, patching, or planned downtime.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting a scheduled period for upgrades, patching, or planned downtime.",
       "memoryHook": "\"Maintenance\" + \"window\" → connect the words to the definition."
-=======
-      "hint": "It names a scheduled period for upgrades, patching, or planned downtime."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Malicious update",
@@ -12263,16 +11761,12 @@
       "sourceQuestionIds": [
         342
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A software update intentionally modified to deliver harmful code.",
       "front": "A software update intentionally modified to deliver harmful code.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting a software update intentionally modified to deliver harmful code.",
       "memoryHook": "\"Malicious\" + \"update\" → connect the words to the definition."
-=======
-      "hint": "A software update intentionally modified to deliver harmful code."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Malware = endpoint, Physical = hardware, Network = traffic, Application = software input",
@@ -12327,16 +11821,12 @@
       "sourceQuestionIds": [
         159
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing a security control focused on risk management, policy, and administrative oversight.",
       "front": "A security team is reviewing a security control focused on risk management, policy, and administrative oversight.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security team is reviewing a security control focused on risk management, policy, and administrative oversight.",
       "memoryHook": "\"Managerial\" + \"control\" → connect the words to the definition."
-=======
-      "hint": "It names a security control focused on risk management, policy, and administrative oversight."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Mandatory access control",
@@ -12354,16 +11844,12 @@
         555,
         720
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing access decisions enforced centrally using labels and classifications.",
       "front": "A security team is reviewing access decisions enforced centrally using labels and classifications.",
       "keyDetails": "This model focuses on information confidentiality and classification, providing robust control over information flow. The role-based access control model assigns access rights based on user roles within the system. These roles reflect the user's responsibilities and authority in the system.",
       "example": "A security team is reviewing access decisions enforced centrally using labels and classifications.",
       "memoryHook": "\"Mandatory\" + \"control\" → connect the words to the definition."
-=======
-      "hint": "It names access decisions enforced centrally using labels and classifications."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "MDM",
@@ -12378,16 +11864,12 @@
       "sourceQuestionIds": [
         238
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A platform used to manage and enforce policy on mobile devices.",
       "front": "A platform used to manage and enforce policy on mobile devices.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security team is reviewing a platform used to manage and enforce policy on mobile devices.",
       "memoryHook": "Link \"MDM\" to: a platform used to manage and enforce policy on mobile devices."
-=======
-      "hint": "A platform used to manage and enforce policy on mobile devices."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Memorandum of Understanding (MOU)",
@@ -12466,16 +11948,12 @@
       "sourceQuestionIds": [
         354
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "An architecture composed of small independently deployable services.",
       "front": "An architecture composed of small independently deployable services.",
       "keyDetails": "3.0 Security Architecture.",
       "example": "A security analyst is documenting an architecture composed of small independently deployable services.",
       "memoryHook": "Link \"Microservices\" to: an architecture composed of small independently deployable services."
-=======
-      "hint": "An architecture composed of small independently deployable services."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Microwave sensor",
@@ -12630,16 +12108,12 @@
       "sourceQuestionIds": [
         278
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "The average operating time between failures.",
       "front": "The average operating time between failures.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security team is reviewing the average operating time between failures.",
       "memoryHook": "Link \"MTBF\" to: the average operating time between failures."
-=======
-      "hint": "The average operating time between failures."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "MTBF: 2,920 hours/failure, MTTR: 6 hours",
@@ -12663,11 +12137,7 @@
     },
     {
       "term": "MTTR",
-<<<<<<< HEAD
       "definition": "The average time required to repair or recover a failed component.",
-=======
-      "definition": "the average time required to repair or recover a failed component.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -12678,7 +12148,6 @@
       "sourceQuestionIds": [
         277
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "The average time required to repair or recover a failed component.",
       "front": "The average time required to repair or recover a failed component.",
@@ -12706,9 +12175,6 @@
       "keyDetails": "A serverless architecture involves a cloud provider managing the infrastructure and automatically scaling resources up or down based on demand. A single-tenet architecture provides dedicated infrastructure to a single customer, ensuring that only the customer can access the customer.",
       "example": "A network engineer reviews the security implications tied to cloud architecture models as the company plans to move data off-premises at the end of the year.",
       "memoryHook": "\"Multi-tenant\" + \"architecture\" → connect the words to the definition."
-=======
-      "hint": "The average time required to repair or recover a failed component."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Multifactor authentication",
@@ -12844,7 +12310,6 @@
       "sourceQuestionIds": [
         282
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "An agreement requiring parties to protect confidential information.",
       "front": "An agreement requiring parties to protect confidential information.",
@@ -12869,9 +12334,6 @@
       "keyDetails": "1.0 General Security Concepts.",
       "example": "A security team applies this when access principle limiting information to only what a user requires to perform their job.",
       "memoryHook": "\"Need\" + \"know\" → connect the words to the definition."
-=======
-      "hint": "An agreement requiring parties to protect confidential information."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "NetFlow",
@@ -12934,16 +12396,12 @@
         545,
         755
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "The least privilege principle ensures that users have only the access they need, reducing the risk of insider threats and accidental data breaches. It is vital in both cloud and on-premises environments.",
       "front": "The least privilege principle ensures that users have only the access they need, reducing the risk of insider threats and accidental data breaches. It is vital in both cloud and on-premises environments.",
       "keyDetails": "It is vital in both cloud and on-premises environments. Segmenting the network can isolate potential threats and prevent them from moving laterally across the enterprise. It is particularly essential as enterprises grow and diversify their digital assets.",
       "example": "A security team is reviewing dividing a network to limit access and reduce lateral movement.",
       "memoryHook": "\"Network\" + \"segmentation\" → connect the words to the definition."
-=======
-      "hint": "It names dividing a network to limit access and reduce lateral movement."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "NGFW",
@@ -13039,7 +12497,6 @@
       "sourceQuestionIds": [
         171
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing assurance that a party cannot credibly deny performing an action.",
       "front": "A security team is reviewing assurance that a party cannot credibly deny performing an action.",
@@ -13069,9 +12526,6 @@
       "keyDetails": "The scenario mentions an attached file with a . jar extension and is executable. While a memory resident virus could infect a file attached to an email, the scenario suggests a different type of virus. A boot sector virus infects the boot sector of a hard disk or a floppy disk.",
       "example": "Multiple employees receive an email attachment with an odd double extension, such as.docx and.ps1, and the email system flags it as potentially harmful.",
       "memoryHook": "\"Non-resident\" + \"infector\" → connect the words to the definition."
-=======
-      "hint": "It names assurance that a party cannot credibly deny performing an action."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "o",
@@ -13129,7 +12583,6 @@
       "sourceQuestionIds": [
         194
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A protocol used to check a certificate revocation status in near real time.",
       "front": "A protocol used to check a certificate revocation status in near real time.",
@@ -13157,9 +12610,6 @@
       "keyDetails": "Defensive penetration testing, or \"blue teaming,\" evaluates an organization's defensive security measures, detection capabilities, and overall resilience against cyber threats. Physical penetration testing assesses an organization's physical security practices and controls.",
       "example": "A multinational corporation hires a team of penetration testers to assess the security of its operations across both digital and physical domains.",
       "memoryHook": "\"Offensive\" + \"testing\" → connect the words to the definition."
-=======
-      "hint": "A protocol used to check a certificate revocation status in near real time."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Offline attack",
@@ -13204,11 +12654,7 @@
     },
     {
       "term": "On-path attack",
-<<<<<<< HEAD
       "definition": "Intercepting or altering communication between two parties.",
-=======
-      "definition": "intercepting or altering communication between two parties.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "3.0 Security Architecture"
       ],
@@ -13219,7 +12665,6 @@
       "sourceQuestionIds": [
         217
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Intercepting or altering communication between two parties.",
       "front": "Intercepting or altering communication between two parties.",
@@ -13230,13 +12675,6 @@
     {
       "term": "Onboarding",
       "definition": "Onboarding includes welcoming new employees, setting up their computer system access accounts, designating appropriate privileges, securely transmitting credentials, allocating assets, and organizing security awareness and role-specific training. Offboarding refers to the process of facilitating a secure and seamless transition when an employee departs from a company.",
-=======
-      "hint": "Intercepting or altering communication between two parties."
-    },
-    {
-      "term": "Onboarding",
-      "definition": "Welcoming a new employee and provisioning access, credentials, assets, and training.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -13256,11 +12694,7 @@
     },
     {
       "term": "Open Authorization",
-<<<<<<< HEAD
       "definition": "The Open Authorization (OAuth) protocol is a system that facilitates the sharing of information (resources) within a user profile between sites. OAuth can be used to implement SSO by allowing users to log in once and access multiple applications without passing credentials through to each piece of software.",
-=======
-      "definition": "A protocol that lets sites request limited user-granted access and support SSO.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -13311,7 +12745,6 @@
       "sourceQuestionIds": [
         160
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing a security control carried out by people and day-to-day processes.",
       "front": "A security team is reviewing a security control carried out by people and day-to-day processes.",
@@ -13322,13 +12755,6 @@
     {
       "term": "OSINT threat feed",
       "definition": "Threat intelligence gathered from publicly available sources.",
-=======
-      "hint": "A security control carried out by people and day-to-day processes."
-    },
-    {
-      "term": "OSINT threat feed",
-      "definition": "threat intelligence gathered from publicly available sources.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -13339,16 +12765,12 @@
       "sourceQuestionIds": [
         381
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Threat intelligence gathered from publicly available sources.",
       "front": "Threat intelligence gathered from publicly available sources.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting threat intelligence gathered from publicly available sources.",
       "memoryHook": "\"OSINT\" + \"feed\" → connect the words to the definition."
-=======
-      "hint": "Threat intelligence gathered from publicly available sources."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Out-of-cycle logging",
@@ -13365,16 +12787,12 @@
         350,
         875
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting log activity occurring at an unusual or unexpected time.",
       "front": "A security analyst is documenting log activity occurring at an unusual or unexpected time.",
       "keyDetails": "The generated logs occurring at unusual times point toward an out-of- cycle logging issue. There is no indication that incorrect documentation relates to the issue since the scenario suggests that the company follows a well-documented security protocol.",
       "example": "A security analyst is documenting log activity occurring at an unusual or unexpected time.",
       "memoryHook": "\"Out-of-cycle\" + \"logging\" → connect the words to the definition."
-=======
-      "hint": "Log activity occurring at an unusual or unexpected time."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Owner",
@@ -13469,16 +12887,12 @@
       "sourceQuestionIds": [
         286
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A penetration test in which testers receive limited environment information.",
       "front": "A penetration test in which testers receive limited environment information.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security team is reviewing a penetration test in which testers receive limited environment information.",
       "memoryHook": "\"Partially\" + \"test\" → connect the words to the definition."
-=======
-      "hint": "A penetration test in which testers receive limited environment information."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Partition encryption",
@@ -13522,11 +12936,7 @@
     },
     {
       "term": "Passive security appliance",
-<<<<<<< HEAD
       "definition": "A device that observes traffic without directly modifying it.",
-=======
-      "definition": "a device that observes traffic without directly modifying it.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -13537,7 +12947,6 @@
       "sourceQuestionIds": [
         361
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A device that observes traffic without directly modifying it.",
       "front": "A device that observes traffic without directly modifying it.",
@@ -13567,9 +12976,6 @@
       "keyDetails": "Location-based access policies prevent access to company systems outside a specified area (typically the company's state). Password management would not aid in accessing a system set up to prevent access outside specific locations. However, it would provide a better way for employees to save passwords securely.",
       "example": "An organization is designing access and identity controls and must choose the authentication method or relationship that best fits the requirement.",
       "memoryHook": "\"Password\" + \"age\" → connect the words to the definition."
-=======
-      "hint": "A device that observes traffic without directly modifying it."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Password and hardware token",
@@ -13726,7 +13132,6 @@
       "sourceQuestionIds": [
         402
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Secure centralized storage and controlled retrieval of privileged passwords.",
       "front": "Secure centralized storage and controlled retrieval of privileged passwords.",
@@ -13781,9 +13186,6 @@
       "keyDetails": "In this model, clients request services, and servers provide those services. This model is more suitable for segmentation as each segment can have its own server that manages its resources and security controls.",
       "example": "To improve security, the security team at a growing tech company aims to update its infrastructure.",
       "memoryHook": "\"Peer-to-peer\" + \"model\" → connect the words to the definition."
-=======
-      "hint": "Secure centralized storage and controlled retrieval of privileged passwords."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Penetration testers identify vulnerabilities to improve security.",
@@ -13930,11 +13332,7 @@
     },
     {
       "term": "Physical control",
-<<<<<<< HEAD
       "definition": "A security control that protects facilities, equipment, or physical access.",
-=======
-      "definition": "a security control that protects facilities, equipment, or physical access.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -13945,16 +13343,12 @@
       "sourceQuestionIds": [
         161
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security control that protects facilities, equipment, or physical access.",
       "front": "A security control that protects facilities, equipment, or physical access.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security team is reviewing a security control that protects facilities, equipment, or physical access.",
       "memoryHook": "\"Physical\" + \"control\" → connect the words to the definition."
-=======
-      "hint": "A security control that protects facilities, equipment, or physical access."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Physical device security and controlled access gain heightened importance in traditional network architectures due to onsite storage of devices.",
@@ -14120,11 +13514,7 @@
     },
     {
       "term": "Policy enforcement point",
-<<<<<<< HEAD
       "definition": "The Zero Trust data-plane component that allows, monitors, and terminates connections.",
-=======
-      "definition": "the Zero Trust data-plane component that allows, monitors, and terminates connections.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -14135,16 +13525,12 @@
       "sourceQuestionIds": [
         177
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "The Zero Trust data-plane component that allows, monitors, and terminates connections.",
       "front": "The Zero Trust data-plane component that allows, monitors, and terminates connections.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security team is reviewing the Zero Trust data-plane component that allows, monitors, and terminates connections.",
       "memoryHook": "\"Policy\" + \"point\" → connect the words to the definition."
-=======
-      "hint": "The Zero Trust data-plane component that allows, monitors, and terminates connections."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Policy engine",
@@ -14159,16 +13545,12 @@
       "sourceQuestionIds": [
         175
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing the Zero Trust control-plane component that evaluates access policy and makes decisions.",
       "front": "A security team is reviewing the Zero Trust control-plane component that evaluates access policy and makes decisions.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security team is reviewing the Zero Trust control-plane component that evaluates access policy and makes decisions.",
       "memoryHook": "\"Policy\" + \"engine\" → connect the words to the definition."
-=======
-      "hint": "It names the Zero Trust control-plane component that evaluates access policy and makes decisions."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Policy-driven access control",
@@ -14419,11 +13801,7 @@
     },
     {
       "term": "Pressure sensor",
-<<<<<<< HEAD
       "definition": "A sensor that detects weight or movement on a surface.",
-=======
-      "definition": "a sensor that detects weight or movement on a surface.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -14434,16 +13812,12 @@
       "sourceQuestionIds": [
         317
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A sensor that detects weight or movement on a surface.",
       "front": "A sensor that detects weight or movement on a surface.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security analyst is documenting a sensor that detects weight or movement on a surface.",
       "memoryHook": "\"Pressure\" + \"sensor\" → connect the words to the definition."
-=======
-      "hint": "A sensor that detects weight or movement on a surface."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Pretending to be someone else and may use persuasive or coercive approaches to manipulate the target.",
@@ -14498,16 +13872,12 @@
       "sourceQuestionIds": [
         536
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "The key benefit of web filtering is the prevention of malware, including ransomware and phishing attacks, which often originate from malicious websites. By restricting access to these sites, web filters significantly reduce the risk of malware infections.",
       "front": "The key benefit of web filtering is the prevention of malware, including ransomware and phishing attacks, which often originate from malicious websites. By restricting access to these sites, web filters significantly reduce the risk of malware infections.",
       "keyDetails": "By restricting access to these sites, web filters significantly reduce the risk of malware infections. Web filtering typically focuses on specific URLs, IP addresses, content categories, or keywords. Blocking all encrypted traffic would be overly restrictive and negatively impact legitimate activities.",
       "example": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "memoryHook": "\"Preventing\" + \"websites\" → connect the words to the definition."
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Preventive",
@@ -14542,16 +13912,12 @@
       "sourceQuestionIds": [
         162
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A control intended to stop an unwanted event before it occurs.",
       "front": "A control intended to stop an unwanted event before it occurs.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security team is reviewing a control intended to stop an unwanted event before it occurs.",
       "memoryHook": "\"Preventive\" + \"control\" → connect the words to the definition."
-=======
-      "hint": "A control intended to stop an unwanted event before it occurs."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Prioritization",
@@ -14586,16 +13952,12 @@
       "sourceQuestionIds": [
         535
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "front": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "keyDetails": "For example, location services can monitor movements, which may lead to stalking, social manipulation, and identity theft. While enabling location services may drain the battery, it does not inherently reveal sensitive information about the user's physical whereabouts to unauthorized individuals or applications.",
       "example": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "memoryHook": "Link \"Privacy\" to: navigation and mapping use location services, but it also raises privacy concerns."
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Processor",
@@ -14837,16 +14199,12 @@
       "sourceQuestionIds": [
         584
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is evaluating cryptographic protections and must choose the method or component that best fits the need.",
       "front": "A security team is evaluating cryptographic protections and must choose the method or component that best fits the need.",
       "keyDetails": "A Certificate Authority is a server that guarantees subject identities by issuing signed digital certificate wrappers for their public keys. Cryptanalysis is the art of cracking encoded information. For example, attackers use cryptanalysis to find information that others are attempting to hide.",
       "example": "A security team is evaluating cryptographic protections and must choose the method or component that best fits the need.",
       "memoryHook": "\"Public\" + \"infrastructure\" → connect the words to the definition."
-=======
-      "hint": "PKI refers to a framework of Certificate Authorities (CAs), digital certificates, software, services, and other cryptographic components deployed to validate subject identities."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Puppet",
@@ -15113,11 +14471,7 @@
     },
     {
       "term": "Reflected DDoS",
-<<<<<<< HEAD
       "definition": "A denial-of-service attack that directs third-party responses toward a victim.",
-=======
-      "definition": "a denial-of-service attack that directs third-party responses toward a victim.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -15128,16 +14482,12 @@
       "sourceQuestionIds": [
         345
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A denial-of-service attack that directs third-party responses toward a victim.",
       "front": "A denial-of-service attack that directs third-party responses toward a victim.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting a denial-of-service attack that directs third-party responses toward a victim.",
       "memoryHook": "\"Reflected\" + \"DDoS\" → connect the words to the definition."
-=======
-      "hint": "A denial-of-service attack that directs third-party responses toward a victim."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Regularly testing and updating data backup and recovery solutions",
@@ -15392,11 +14742,7 @@
     },
     {
       "term": "Rescanning",
-<<<<<<< HEAD
       "definition": "Repeating a vulnerability scan to validate remediation.",
-=======
-      "definition": "repeating a vulnerability scan to validate remediation.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -15407,7 +14753,6 @@
       "sourceQuestionIds": [
         385
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Repeating a vulnerability scan to validate remediation.",
       "front": "Repeating a vulnerability scan to validate remediation.",
@@ -15439,13 +14784,6 @@
     {
       "term": "Retrospective network analysis",
       "definition": "Retrospective network analysis (RNA) involves recording the totality of network events at a packet header or payload level. It allows detailed analysis of captured traffic to identify attack tools, data exfiltration attempts, and suspicious domains.",
-=======
-      "hint": "Repeating a vulnerability scan to validate remediation."
-    },
-    {
-      "term": "Retrospective network analysis",
-      "definition": "Recording and analyzing packet headers or payloads after the fact to investigate activity.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -15457,16 +14795,12 @@
         507,
         647
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "An incident response team is working through a case and must choose the next best response or investigative action.",
       "front": "An incident response team is working through a case and must choose the next best response or investigative action.",
       "keyDetails": "It allows detailed analysis of captured traffic to identify attack tools, data exfiltration attempts, and suspicious domains. Protocol-level summarization involves aggregating and summarizing information from network packets to show overall protocol usage and endpoint activity. It does not involve deep packet analysis.",
       "example": "An incident response team is working through a case and must choose the next best response or investigative action.",
       "memoryHook": "\"Retrospective\" + \"analysis\" → connect the words to the definition."
-=======
-      "hint": "RNA involves recording the totality of network events at a packet header or payload level."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Review logs",
@@ -15530,11 +14864,7 @@
     },
     {
       "term": "Right to be forgotten",
-<<<<<<< HEAD
       "definition": "A privacy right allowing eligible individuals to request deletion of personal data.",
-=======
-      "definition": "a privacy right allowing eligible individuals to request deletion of personal data.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -15545,16 +14875,12 @@
       "sourceQuestionIds": [
         417
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A privacy right allowing eligible individuals to request deletion of personal data.",
       "front": "A privacy right allowing eligible individuals to request deletion of personal data.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security analyst is documenting a privacy right allowing eligible individuals to request deletion of personal data.",
       "memoryHook": "\"Right\" + \"forgotten\" → connect the words to the definition."
-=======
-      "hint": "A privacy right allowing eligible individuals to request deletion of personal data."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Right-to-audit clause",
@@ -15611,16 +14937,12 @@
         269,
         885
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing acknowledging a risk and choosing not to apply additional mitigation.",
       "front": "A security team is reviewing acknowledging a risk and choosing not to apply additional mitigation.",
       "keyDetails": "acknowledging a risk and choosing not to apply additional mitigation.",
       "example": "A security team is reviewing acknowledging a risk and choosing not to apply additional mitigation.",
       "memoryHook": "\"Risk\" + \"acceptance\" → connect the words to the definition."
-=======
-      "hint": "Acknowledging a risk and choosing not to apply additional mitigation."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Risk appetite",
@@ -15657,16 +14979,12 @@
       "sourceQuestionIds": [
         270
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Eliminating the activity or condition that creates a risk.",
       "front": "Eliminating the activity or condition that creates a risk.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security team is reviewing eliminating the activity or condition that creates a risk.",
       "memoryHook": "\"Risk\" + \"avoidance\" → connect the words to the definition."
-=======
-      "hint": "Eliminating the activity or condition that creates a risk."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Risk mitigation",
@@ -15681,16 +14999,12 @@
       "sourceQuestionIds": [
         271
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing applying controls to reduce risk likelihood or impact.",
       "front": "A security team is reviewing applying controls to reduce risk likelihood or impact.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security team is reviewing applying controls to reduce risk likelihood or impact.",
       "memoryHook": "\"Risk\" + \"mitigation\" → connect the words to the definition."
-=======
-      "hint": "It names applying controls to reduce risk likelihood or impact."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Risk owners",
@@ -15725,7 +15039,6 @@
       "sourceQuestionIds": [
         411
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting a record of identified risks, owners, ratings, and planned responses.",
       "front": "A security analyst is documenting a record of identified risks, owners, ratings, and planned responses.",
@@ -15758,13 +15071,6 @@
     {
       "term": "Risk tolerance",
       "definition": "The acceptable variation around specific risk objectives.",
-=======
-      "hint": "It names a record of identified risks, owners, ratings, and planned responses."
-    },
-    {
-      "term": "Risk tolerance",
-      "definition": "the acceptable variation around specific risk objectives.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -15775,16 +15081,12 @@
       "sourceQuestionIds": [
         413
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "The acceptable variation around specific risk objectives.",
       "front": "The acceptable variation around specific risk objectives.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security analyst is documenting the acceptable variation around specific risk objectives.",
       "memoryHook": "\"Risk\" + \"tolerance\" → connect the words to the definition."
-=======
-      "hint": "The acceptable variation around specific risk objectives."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Risk transfer",
@@ -15888,16 +15190,12 @@
         553,
         720
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing permissions are assigned according to job roles.",
       "front": "A security team is reviewing permissions are assigned according to job roles.",
       "keyDetails": "Each set of permissions is a role. Multifactor authentication (MFA) is an authentication scheme that requires the user to present at least two different factors as credentials. The resource owner has primacy in a discretionary access control (DAC) model.",
       "example": "A security team is reviewing permissions are assigned according to job roles.",
       "memoryHook": "\"Role-based\" + \"control\" → connect the words to the definition."
-=======
-      "hint": "Permissions are assigned according to job roles."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Root cause analysis",
@@ -15912,16 +15210,12 @@
       "sourceQuestionIds": [
         406
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Identifying the underlying reason an incident occurred.",
       "front": "Identifying the underlying reason an incident occurred.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security analyst is documenting identifying the underlying reason an incident occurred.",
       "memoryHook": "\"Root\" + \"analysis\" → connect the words to the definition."
-=======
-      "hint": "Identifying the underlying reason an incident occurred."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Rootkit",
@@ -16044,16 +15338,12 @@
         359,
         723
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting an operating system designed to meet deterministic timing requirements.",
       "front": "A security analyst is documenting an operating system designed to meet deterministic timing requirements.",
       "keyDetails": "A Supervisory Control and Data Acquisition (SCADA) system is a control system that manages large-scale, multiple-site devices and equipment spread over geographically large areas from a host computer. An Industrial Control System (ICS) provides mechanisms for workflow and process automation and is used in critical infrastructure.",
       "example": "A security analyst is documenting an operating system designed to meet deterministic timing requirements.",
       "memoryHook": "\"RTOS\" → For Real-Time Operation System."
-=======
-      "hint": "An operating system designed to meet deterministic timing requirements."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Running exploitation tools against known vulnerabilities",
@@ -16132,16 +15422,12 @@
         185,
         881
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing adding random data before hashing to resist precomputed password attacks.",
       "front": "A security team is reviewing adding random data before hashing to resist precomputed password attacks.",
       "keyDetails": "adding random data before hashing to resist precomputed password attacks.",
       "example": "A security team is reviewing adding random data before hashing to resist precomputed password attacks.",
       "memoryHook": "Link \"Salting\" to: salting is a cryptography hash method where the user hashes data used for something like a password, and it cannot decrypt back to the plaintext password that generated it."
-=======
-      "hint": "Adding random data before hashing to resist precomputed password attacks."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "SameSite cookie flag",
@@ -16156,16 +15442,12 @@
       "sourceQuestionIds": [
         374
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A cookie attribute that restricts cross-site transmission.",
       "front": "A cookie attribute that restricts cross-site transmission.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting a cookie attribute that restricts cross-site transmission.",
       "memoryHook": "\"SameSite\" + \"flag\" → connect the words to the definition."
-=======
-      "hint": "A cookie attribute that restricts cross-site transmission."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "SAML",
@@ -16214,11 +15496,7 @@
     },
     {
       "term": "Sanitization",
-<<<<<<< HEAD
       "definition": "Removing data from media so it cannot be recovered through ordinary means.",
-=======
-      "definition": "removing data from media so it cannot be recovered through ordinary means.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -16229,16 +15507,12 @@
       "sourceQuestionIds": [
         377
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Removing data from media so it cannot be recovered through ordinary means.",
       "front": "Removing data from media so it cannot be recovered through ordinary means.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting removing data from media so it cannot be recovered through ordinary means.",
       "memoryHook": "Link \"Sanitization\" to: removing data from media so it cannot be recovered through ordinary means."
-=======
-      "hint": "Removing data from media so it cannot be recovered through ordinary means."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Sarbanes-Oxley (SOX) Act",
@@ -16273,16 +15547,12 @@
       "sourceQuestionIds": [
         226
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A cloud-delivered architecture combining networking and security capabilities.",
       "front": "A cloud-delivered architecture combining networking and security capabilities.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing a cloud-delivered architecture combining networking and security capabilities.",
       "memoryHook": "Link \"SASE\" to: a cloud-delivered architecture combining networking and security capabilities."
-=======
-      "hint": "A cloud-delivered architecture combining networking and security capabilities."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "SCADA",
@@ -16297,16 +15567,12 @@
       "sourceQuestionIds": [
         358
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A system used for supervisory monitoring and control of distributed industrial equipment.",
       "front": "A system used for supervisory monitoring and control of distributed industrial equipment.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting a system used for supervisory monitoring and control of distributed industrial equipment.",
       "memoryHook": "Link \"SCADA\" to: a system used for supervisory monitoring and control of distributed industrial equipment."
-=======
-      "hint": "A system used for supervisory monitoring and control of distributed industrial equipment."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "SCAP",
@@ -16321,16 +15587,12 @@
       "sourceQuestionIds": [
         386
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A standardized framework for automating vulnerability and configuration assessment.",
       "front": "A standardized framework for automating vulnerability and configuration assessment.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security analyst is documenting a standardized framework for automating vulnerability and configuration assessment.",
       "memoryHook": "Link \"SCAP\" to: a standardized framework for automating vulnerability and configuration assessment."
-=======
-      "hint": "A standardized framework for automating vulnerability and configuration assessment."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Scheduling service restarts during non-business hours to minimize application downtime",
@@ -16408,7 +15670,6 @@
       "sourceQuestionIds": [
         371
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting software-defined management and optimization of wide-area network connectivity.",
       "front": "A security analyst is documenting software-defined management and optimization of wide-area network connectivity.",
@@ -16419,13 +15680,6 @@
     {
       "term": "Secure baseline",
       "definition": "An approved standard configuration used to consistently harden systems.",
-=======
-      "hint": "It names software-defined management and optimization of wide-area network connectivity."
-    },
-    {
-      "term": "Secure baseline",
-      "definition": "an approved standard configuration used to consistently harden systems.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -16436,16 +15690,12 @@
       "sourceQuestionIds": [
         237
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "An approved standard configuration used to consistently harden systems.",
       "front": "An approved standard configuration used to consistently harden systems.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing an approved standard configuration used to consistently harden systems.",
       "memoryHook": "\"Secure\" + \"baseline\" → connect the words to the definition."
-=======
-      "hint": "An approved standard configuration used to consistently harden systems."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Secure baselines",
@@ -16502,16 +15752,12 @@
         608,
         914
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Input validation is critical to protect against Structured Query Language (SQL) and Cross-site Scripting (XSS) attacks. Input validation involves ensuring the input matches expected patterns or data types.",
       "front": "Input validation is critical to protect against Structured Query Language (SQL) and Cross-site Scripting (XSS) attacks. Input validation involves ensuring the input matches expected patterns or data types.",
       "keyDetails": "Input validation involves ensuring the input matches expected patterns or data types.",
       "example": "large finance company's software developers are working on a new web application for their customers.",
       "memoryHook": "\"Secure\" + \"cookies\" → connect the words to the definition."
-=======
-      "hint": "Large finance company's software developers are working on a new web application for their customers. The team has concerns about potential security vulnerabilities."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Securing data and limiting the immediate impact",
@@ -16547,16 +15793,12 @@
       "sourceQuestionIds": [
         387
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting a documented secure-configuration baseline such as a CIS benchmark.",
       "front": "A security analyst is documenting a documented secure-configuration baseline such as a CIS benchmark.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting a documented secure-configuration baseline such as a CIS benchmark.",
       "memoryHook": "\"Security\" + \"benchmark\" → connect the words to the definition."
-=======
-      "hint": "It names a documented secure-configuration baseline such as a CIS benchmark."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Security Content Automation Protocol and Common Vulnerabilities and Exposures",
@@ -16676,16 +15918,12 @@
       "sourceQuestionIds": [
         534
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "front": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "keyDetails": "It allows granular permission control over every process and system object, strictly limiting the resources a process can access and what operations it can perform. Group policy is a feature of the Microsoft Windows operating system and provides centralized management and configuration of applications and user settings.",
       "example": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "memoryHook": "Link \"SELinux\" to: selinux is a security feature of the linux kernel that supports access control security policies, including mandatory access controls."
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Sensitive",
@@ -16769,11 +16007,7 @@
     },
     {
       "term": "Serverless computing",
-<<<<<<< HEAD
       "definition": "A cloud model where the provider manages servers and customers deploy functions or services.",
-=======
-      "definition": "a cloud model where the provider manages servers and customers deploy functions or services.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "3.0 Security Architecture"
       ],
@@ -16784,16 +16018,12 @@
       "sourceQuestionIds": [
         353
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A cloud model where the provider manages servers and customers deploy functions or services.",
       "front": "A cloud model where the provider manages servers and customers deploy functions or services.",
       "keyDetails": "3.0 Security Architecture.",
       "example": "A security analyst is documenting a cloud model where the provider manages servers and customers deploy functions or services.",
       "memoryHook": "\"Serverless\" + \"computing\" → connect the words to the definition."
-=======
-      "hint": "A cloud model where the provider manages servers and customers deploy functions or services."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Service disruption",
@@ -16828,16 +16058,12 @@
       "sourceQuestionIds": [
         603
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "university's IT team must securely transfer large files containing sensitive financial data between two offices in different cities. Which protocol would be the MOST suitable and secure option for this file transfer?",
       "front": "university's IT team must securely transfer large files containing sensitive financial data between two offices in different cities. Which protocol would be the MOST suitable and secure option for this file transfer?",
       "keyDetails": "SFTP ensures the confidentiality and integrity of the data during transit. Hypertext Transfer Protocol (HTTP) is not a secure file transfer protocol, and it transmits data in clear text, which exposes sensitive financial data to potential interception and compromise.",
       "example": "university's IT team must securely transfer large files containing sensitive financial data between two offices in different cities.",
       "memoryHook": "\"SFTP\" → Secure File Transfer Protocol."
-=======
-      "hint": "University's IT team must securely transfer large files containing sensitive financial data between two offices in different cities. Which protocol would be the MOST suitable and secure option for this file transfer?"
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Shadow IT",
@@ -16852,16 +16078,12 @@
       "sourceQuestionIds": [
         198
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Technology used without approval or oversight from the organization IT function.",
       "front": "Technology used without approval or oversight from the organization IT function.",
       "keyDetails": "5.0 Security Program Management and Oversight.",
       "example": "A security team is reviewing technology used without approval or oversight from the organization IT function.",
       "memoryHook": "\"Shadow\" + \"IT\" → connect the words to the definition."
-=======
-      "hint": "Technology used without approval or oversight from the organization IT function."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Shared responsibility between service providers and customers",
@@ -16885,11 +16107,7 @@
     },
     {
       "term": "Shared responsibility model with service providers",
-<<<<<<< HEAD
       "definition": "In cloud services, the division of security responsibilities between the cloud service provider and the customer creates a shared responsibility model. Regularly updating firmware is crucial for defending against emerging threats.",
-=======
-      "definition": "The split of security duties between a cloud provider and the customer.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "2.0 Threats, Vulnerabilities, and Mitigations",
         "5.0 Security Program Management and Oversight"
@@ -16943,16 +16161,12 @@
       "sourceQuestionIds": [
         339
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting installing an application from outside an approved application store.",
       "front": "A security analyst is documenting installing an application from outside an approved application store.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting installing an application from outside an approved application store.",
       "memoryHook": "Link \"Sideloading\" to: sideloading is the best match here because it names installing an application from outside an approved application store."
-=======
-      "hint": "It names installing an application from outside an approved application store."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "SIEM",
@@ -16970,16 +16184,12 @@
         248,
         428
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing a platform that aggregates and correlates security event and log data.",
       "front": "A security team is reviewing a platform that aggregates and correlates security event and log data.",
       "keyDetails": "It helps analysts spot patterns that would be hard to see in one log source.",
       "example": "A security team is reviewing a platform that aggregates and correlates security event and log data.",
       "memoryHook": "Link \"SIEM\" to: a siem collects and correlates logs from multiple systems."
-=======
-      "hint": "Collects and correlates logs from multiple systems."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Signature-based detection",
@@ -17003,11 +16213,7 @@
     },
     {
       "term": "Signature-based detection relies on known attack patterns, while anomaly-based detection identifies deviations from normal behavior.",
-<<<<<<< HEAD
       "definition": "Signature-based detection uses known patterns of malicious behavior (or \"signatures\") to identify potential threats. This method can quickly and accurately detect known threats but may fail to identify new, unrecorded types of attacks.",
-=======
-      "definition": "Comparison of known signatures versus behavioral anomalies.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -17107,11 +16313,7 @@
     },
     {
       "term": "Single-tenant architecture",
-<<<<<<< HEAD
       "definition": "In this scenario, a single-tenant architecture provides dedicated infrastructure to a single customer, ensuring that only the customer can access the customer. This model offers the highest level of security as the customer has complete control of the infrastructure.",
-=======
-      "definition": "Dedicated infrastructure for one customer.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "3.0 Security Architecture"
       ],
@@ -17162,16 +16364,12 @@
       "sourceQuestionIds": [
         279
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing a contract defining measurable service performance commitments.",
       "front": "A security team is reviewing a contract defining measurable service performance commitments.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security team is reviewing a contract defining measurable service performance commitments.",
       "memoryHook": "Link \"SLA\" to: sla is the best match here because it names a contract defining measurable service performance commitments."
-=======
-      "hint": "It names a contract defining measurable service performance commitments."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "SLE",
@@ -17195,11 +16393,7 @@
     },
     {
       "term": "Smishing",
-<<<<<<< HEAD
       "definition": "A social-engineering attack conducted through SMS messages.",
-=======
-      "definition": "a social-engineering attack conducted through SMS messages.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -17210,16 +16404,12 @@
       "sourceQuestionIds": [
         201
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A social-engineering attack conducted through SMS messages.",
       "front": "A social-engineering attack conducted through SMS messages.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing a social-engineering attack conducted through SMS messages.",
       "memoryHook": "Link \"Smishing\" to: a social-engineering attack conducted through sms messages."
-=======
-      "hint": "A social-engineering attack conducted through SMS messages."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "SNMP trap",
@@ -17234,16 +16424,12 @@
       "sourceQuestionIds": [
         391
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting an unsolicited notification sent by a managed network device.",
       "front": "A security analyst is documenting an unsolicited notification sent by a managed network device.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting an unsolicited notification sent by a managed network device.",
       "memoryHook": "\"SNMP\" + \"trap\" → connect the words to the definition."
-=======
-      "hint": "It names an unsolicited notification sent by a managed network device."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "SOAR",
@@ -17321,16 +16507,12 @@
       "sourceQuestionIds": [
         355
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting centralized programmable control of network behavior separated from forwarding.",
       "front": "A security analyst is documenting centralized programmable control of network behavior separated from forwarding.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting centralized programmable control of network behavior separated from forwarding.",
       "memoryHook": "\"Software-defined\" + \"networking\" → connect the words to the definition."
-=======
-      "hint": "It names centralized programmable control of network behavior separated from forwarding."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Something you are",
@@ -17365,16 +16547,12 @@
       "sourceQuestionIds": [
         399
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting an authentication factor such as a token, phone, or smart card.",
       "front": "A security analyst is documenting an authentication factor such as a token, phone, or smart card.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting an authentication factor such as a token, phone, or smart card.",
       "memoryHook": "\"Something\" + \"have\" → connect the words to the definition."
-=======
-      "hint": "It names an authentication factor such as a token, phone, or smart card."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Something you know",
@@ -17389,7 +16567,6 @@
       "sourceQuestionIds": [
         398
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "An authentication factor such as a password or PIN.",
       "front": "An authentication factor such as a password or PIN.",
@@ -17400,13 +16577,6 @@
     {
       "term": "Somewhere you are",
       "definition": "An authentication factor based on physical or network location.",
-=======
-      "hint": "An authentication factor such as a password or PIN."
-    },
-    {
-      "term": "Somewhere you are",
-      "definition": "an authentication factor based on physical or network location.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -17417,7 +16587,6 @@
       "sourceQuestionIds": [
         401
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "An authentication factor based on physical or network location.",
       "front": "An authentication factor based on physical or network location.",
@@ -17428,13 +16597,6 @@
     {
       "term": "SOW",
       "definition": "A document defining project-specific work, deliverables, and timelines.",
-=======
-      "hint": "An authentication factor based on physical or network location."
-    },
-    {
-      "term": "SOW",
-      "definition": "a document defining project-specific work, deliverables, and timelines.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -17444,7 +16606,6 @@
       "aliases": [
         "Statement of work (SOW)"
       ],
-<<<<<<< HEAD
       "sourceQuestionIds": [
         281,
         807
@@ -17455,9 +16616,6 @@
       "keyDetails": "Also known as: Statement of work (SOW).",
       "example": "A security team is reviewing a document defining project-specific work, deliverables, and timelines.",
       "memoryHook": "Link \"SOW\" to: a document defining project-specific work, deliverables, and timelines."
-=======
-      "hint": "A document defining project-specific work, deliverables, and timelines."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "SPF",
@@ -17472,16 +16630,12 @@
       "sourceQuestionIds": [
         254
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A DNS-based method listing mail servers authorized to send for a domain.",
       "front": "A DNS-based method listing mail servers authorized to send for a domain.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing a DNS-based method listing mail servers authorized to send for a domain.",
       "memoryHook": "Link \"SPF\" to: a dns-based method listing mail servers authorized to send for a domain."
-=======
-      "hint": "A DNS-based method listing mail servers authorized to send for a domain."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Spyware",
@@ -17642,16 +16796,12 @@
       "sourceQuestionIds": [
         242
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Examining source or compiled code without executing the application.",
       "front": "Examining source or compiled code without executing the application.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing examining source or compiled code without executing the application.",
       "memoryHook": "\"Static\" + \"analysis\" → connect the words to the definition."
-=======
-      "hint": "Examining source or compiled code without executing the application."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Stealing information from someone else's phone by using an exploit in Bluetooth",
@@ -17666,16 +16816,12 @@
       "sourceQuestionIds": [
         600
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Using an exploit in Bluetooth, bluesnarfing allows attackers to steal information from someone else's phone, circumventing the authentication mechanism and accessing sensitive information without the user's knowledge or consent.",
       "front": "Using an exploit in Bluetooth, bluesnarfing allows attackers to steal information from someone else's phone, circumventing the authentication mechanism and accessing sensitive information without the user's knowledge or consent.",
       "keyDetails": "Sending unsolicited text messages or vCards to a discoverable device is bluejacking, where an attacker sends an unsolicited message or contact details. Connecting to malicious peripherals presents a risk of launching highly effective attacks using a peripheral device with malicious firmware. However, it is not specifically related to bluesnarfing.",
       "example": "large hospital uses Bluetooth technology for short-range personal area networking.",
       "memoryHook": "\"Stealing\" + \"Bluetooth\" → connect the words to the definition."
-=======
-      "hint": "Large hospital uses Bluetooth technology for short-range personal area networking. The organization has a security concern with bluesnarfing. What is the attacker doing to the organization?"
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Steganography",
@@ -17790,16 +16936,12 @@
       "sourceQuestionIds": [
         182
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Encryption that uses the same secret key for encryption and decryption.",
       "front": "Encryption that uses the same secret key for encryption and decryption.",
       "keyDetails": "3.0 Security Architecture.",
       "example": "A security team is reviewing encryption that uses the same secret key for encryption and decryption.",
       "memoryHook": "\"Symmetric\" + \"encryption\" → connect the words to the definition."
-=======
-      "hint": "Encryption that uses the same secret key for encryption and decryption."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Symmetric encryption for data and asymmetric for key exchange",
@@ -17918,16 +17060,12 @@
       "sourceQuestionIds": [
         363
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting providing a monitoring device a copy of traffic outside the direct path.",
       "front": "A security analyst is documenting providing a monitoring device a copy of traffic outside the direct path.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting providing a monitoring device a copy of traffic outside the direct path.",
       "memoryHook": "\"Tap\" + \"deployment\" → connect the words to the definition."
-=======
-      "hint": "It names providing a monitoring device a copy of traffic outside the direct path."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Technical control",
@@ -17942,16 +17080,12 @@
       "sourceQuestionIds": [
         158
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security control implemented through technology, such as a firewall or access control list.",
       "front": "A security control implemented through technology, such as a firewall or access control list.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing a security control implemented through technology, such as a firewall or access control list.",
       "memoryHook": "\"Technical\" + \"control\" → connect the words to the definition."
-=======
-      "hint": "A security control implemented through technology, such as a firewall or access control list."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Test results",
@@ -18350,16 +17484,12 @@
       "sourceQuestionIds": [
         407
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting proactively searching for threats that have not triggered alerts.",
       "front": "A security analyst is documenting proactively searching for threats that have not triggered alerts.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting proactively searching for threats that have not triggered alerts.",
       "memoryHook": "\"Threat\" + \"hunting\" → connect the words to the definition."
-=======
-      "hint": "It names proactively searching for threats that have not triggered alerts."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Threat vector",
@@ -18515,7 +17645,6 @@
       "sourceQuestionIds": [
         539
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "The purpose of implementing the principle of least privilege (PoLP) in endpoint protection is to grant users, applications, and processes the minimum necessary permissions required to perform their specific duties and tasks.",
       "front": "The purpose of implementing the principle of least privilege (PoLP) in endpoint protection is to grant users, applications, and processes the minimum necessary permissions required to perform their specific duties and tasks.",
@@ -18543,9 +17672,6 @@
       "keyDetails": "Organizations can detect and mitigate threats by actively seeking out potential threats before they cause significant damage. Instead, it aims to identify potential threats before they escalate into full-blown security incidents. Hardening systems and creating incident response resources are components of the incident response preparation phase.",
       "example": "An incident response team is working through a case and must choose the next best response or investigative action.",
       "memoryHook": "\"To\" + \"resources.\" → connect the words to the definition."
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "To identify potential security vulnerabilities in the application's source code",
@@ -18580,16 +17706,12 @@
       "sourceQuestionIds": [
         540
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "An IDS's analysis engine scans and interprets the captured traffic to identify suspicious activity, classify events (e. g.",
       "front": "An IDS's analysis engine scans and interprets the captured traffic to identify suspicious activity, classify events (e. g.",
       "keyDetails": "g. , ignore, log, alert, or block), and generate incident reports. The sensor, not the analysis engine, is responsible for capturing network traffic in an IDS. While the analysis engine generates incident information, its primary purpose is to scan and interpret traffic, not just to generate reports.",
       "example": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "memoryHook": "\"To\" + \"activity\" → connect the words to the definition."
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "To investigate the data and determine the type of incident and its severity.",
@@ -18624,16 +17746,12 @@
       "sourceQuestionIds": [
         538
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Using a sandbox in endpoint security isolates and contains potentially malicious files or processes. It is in a controlled environment where the system can execute suspicious or untrusted applications separately from the rest of the system, allowing security analysts to observe and analyze their behavior.",
       "front": "Using a sandbox in endpoint security isolates and contains potentially malicious files or processes. It is in a controlled environment where the system can execute suspicious or untrusted applications separately from the rest of the system, allowing security analysts to observe and analyze their behavior.",
       "keyDetails": "It is in a controlled environment where the system can execute suspicious or untrusted applications separately from the rest of the system, allowing security analysts to observe and analyze their behavior. Restricting internet access on endpoint devices is not the primary purpose of using a sandbox.",
       "example": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "memoryHook": "\"To\" + \"processes\" → connect the words to the definition."
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "To isolate the attack to prevent further exploitation",
@@ -18669,16 +17787,12 @@
       "sourceQuestionIds": [
         547
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "UBA, or UEBA, monitors and analyzes the behavior of users within an organization, detecting anomalies indicative of potential threats. It leverages machine learning, data science, and statistical analysis, establishing a baseline profile for users and entities.",
       "front": "UBA, or UEBA, monitors and analyzes the behavior of users within an organization, detecting anomalies indicative of potential threats. It leverages machine learning, data science, and statistical analysis, establishing a baseline profile for users and entities.",
       "keyDetails": "It leverages machine learning, data science, and statistical analysis, establishing a baseline profile for users and entities. It continuously monitors new behavior against the established baseline, detecting unusual or suspicious activities.",
       "example": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "memoryHook": "\"To\" + \"threats\" → connect the words to the definition."
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "To monitor and protect individual hosts, like a computer or server, from unauthorized access or malicious activities",
@@ -18693,16 +17807,12 @@
       "sourceQuestionIds": [
         537
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "HIDS/HIPS tools continuously monitor and analyze endpoints, using signature-based detection, anomaly detection, and behavior analysis to identify suspicious activities.",
       "front": "HIDS/HIPS tools continuously monitor and analyze endpoints, using signature-based detection, anomaly detection, and behavior analysis to identify suspicious activities.",
       "keyDetails": "With such visibility, security personnel promptly detect and respond to potential security threats and compromises within the enterprise's endpoint devices. To contain a malware within a single host and facilitate remediation of the host to its original state on endpoint devices is a function of EDR.",
       "example": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "memoryHook": "\"To\" + \"activities\" → connect the words to the definition."
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "To prevent unauthorized access to data on a stolen device",
@@ -18820,7 +17930,6 @@
       "sourceQuestionIds": [
         542
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Access control lists regulate and manage permissions for users, software, systems, and networks to access resources or perform specific actions. They specify which users or groups can or cannot have access to resources and define permitted or prohibited actions.",
       "front": "Access control lists regulate and manage permissions for users, software, systems, and networks to access resources or perform specific actions. They specify which users or groups can or cannot have access to resources and define permitted or prohibited actions.",
@@ -18831,13 +17940,6 @@
     {
       "term": "TOCTOU",
       "definition": "A race condition caused by a state change between checking a resource and using it.",
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
-    },
-    {
-      "term": "TOCTOU",
-      "definition": "a race condition caused by a state change between checking a resource and using it.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "5.0 Security Program Management and Oversight"
       ],
@@ -18848,7 +17950,6 @@
       "sourceQuestionIds": [
         341
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A race condition caused by a state change between checking a resource and using it.",
       "front": "A race condition caused by a state change between checking a resource and using it.",
@@ -18859,13 +17960,6 @@
     {
       "term": "Tokenization",
       "definition": "Replacing sensitive data with a non-sensitive substitute token.",
-=======
-      "hint": "A race condition caused by a state change between checking a resource and using it."
-    },
-    {
-      "term": "Tokenization",
-      "definition": "replacing sensitive data with a non-sensitive substitute token.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "3.0 Security Architecture"
       ],
@@ -18876,16 +17970,12 @@
       "sourceQuestionIds": [
         189
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Replacing sensitive data with a non-sensitive substitute token.",
       "front": "Replacing sensitive data with a non-sensitive substitute token.",
       "keyDetails": "3.0 Security Architecture.",
       "example": "A security team is reviewing replacing sensitive data with a non-sensitive substitute token.",
       "memoryHook": "Link \"Tokenization\" to: replacing sensitive data with a non-sensitive substitute token."
-=======
-      "hint": "Replacing sensitive data with a non-sensitive substitute token."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "top",
@@ -19239,16 +18329,12 @@
       "sourceQuestionIds": [
         319
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting a motion sensor that uses high-frequency sound waves.",
       "front": "A security analyst is documenting a motion sensor that uses high-frequency sound waves.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting a motion sensor that uses high-frequency sound waves.",
       "memoryHook": "\"Ultrasonic\" + \"sensor\" → connect the words to the definition."
-=======
-      "hint": "It names a motion sensor that uses high-frequency sound waves."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Unauthorized access becomes easier for potential attackers.",
@@ -19283,16 +18369,12 @@
       "sourceQuestionIds": [
         287
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing a penetration test in which testers begin with little or no internal information.",
       "front": "A security team is reviewing a penetration test in which testers begin with little or no internal information.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security team is reviewing a penetration test in which testers begin with little or no internal information.",
       "memoryHook": "\"Unknown-environment\" + \"test\" → connect the words to the definition."
-=======
-      "hint": "A penetration test in which testers begin with little or no internal information."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Unsupported systems no longer receive vendor updates or patches, making their attack surfaces more susceptible to known exploits.",
@@ -19457,11 +18539,7 @@
     },
     {
       "term": "User Behavior Analytics (UBA)/User and Entity Behavior Analytics (UEBA)",
-<<<<<<< HEAD
       "definition": "UEBA detects anomalies that could indicate potential threats, such as insider threats, compromised accounts, or fraudulent activities. It leverages machine learning and statistical analysis to establish a baseline profile for users and entities and then continuously compares new behavior against this baseline.",
-=======
-      "definition": "Analytics that baseline user and entity behavior to detect anomalies.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -19472,16 +18550,12 @@
       "sourceQuestionIds": [
         533
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "UEBA detects anomalies that could indicate potential threats, such as insider threats, compromised accounts, or fraudulent activities. It leverages machine learning and statistical analysis to establish a baseline profile for users and entities and then continuously compares new behavior against this baseline.",
       "front": "UEBA detects anomalies that could indicate potential threats, such as insider threats, compromised accounts, or fraudulent activities. It leverages machine learning and statistical analysis to establish a baseline profile for users and entities and then continuously compares new behavior against this baseline.",
       "keyDetails": "It leverages machine learning and statistical analysis to establish a baseline profile for users and entities and then continuously compares new behavior against this baseline. Endpoint Detection and Response focuses on detecting and responding to advanced threats that may bypass traditional security measures on endpoint devices.",
       "example": "A security team is reviewing endpoint hardening or mitigation options and must choose the best control for the device or system.",
       "memoryHook": "\"User\" + \"(UEBA)\" → connect the words to the definition."
-=======
-      "hint": "Endpoint hardening or mitigation options and must choose the best control for the device or system."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "User guidance and training",
@@ -19596,16 +18670,12 @@
       "sourceQuestionIds": [
         367
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting a security appliance combining multiple protections such as firewall, filtering, and intrusion prevention.",
       "front": "A security analyst is documenting a security appliance combining multiple protections such as firewall, filtering, and intrusion prevention.",
       "keyDetails": "The other options describe different ideas.",
       "example": "A security analyst is documenting a security appliance combining multiple protections such as firewall, filtering, and intrusion prevention.",
       "memoryHook": "Link \"UTM\" to: utm is the best match here because it names a security appliance combining multiple protections such as firewall, filtering, and intrusion prevention."
-=======
-      "hint": "It names a security appliance combining multiple protections such as firewall, filtering, and intrusion prevention."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Validate input and output",
@@ -19700,7 +18770,6 @@
       "sourceQuestionIds": [
         200
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security team is reviewing a social-engineering attack conducted through voice calls.",
       "front": "A security team is reviewing a social-engineering attack conducted through voice calls.",
@@ -19711,13 +18780,6 @@
     {
       "term": "VM escape",
       "definition": "Breaking isolation to access the hypervisor or another virtual machine.",
-=======
-      "hint": "A social-engineering attack conducted through voice calls."
-    },
-    {
-      "term": "VM escape",
-      "definition": "breaking isolation to access the hypervisor or another virtual machine.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "3.0 Security Architecture"
       ],
@@ -19728,16 +18790,12 @@
       "sourceQuestionIds": [
         209
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "Breaking isolation to access the hypervisor or another virtual machine.",
       "front": "Breaking isolation to access the hypervisor or another virtual machine.",
       "keyDetails": "3.0 Security Architecture.",
       "example": "A security team is reviewing breaking isolation to access the hypervisor or another virtual machine.",
       "memoryHook": "\"VM\" + \"escape\" → connect the words to the definition."
-=======
-      "hint": "Breaking isolation to access the hypervisor or another virtual machine."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Volatile memory",
@@ -19802,11 +18860,7 @@
     },
     {
       "term": "WAF",
-<<<<<<< HEAD
       "definition": "A firewall designed to inspect and protect web application traffic.",
-=======
-      "definition": "a firewall designed to inspect and protect web application traffic.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -19817,16 +18871,12 @@
       "sourceQuestionIds": [
         225
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A firewall designed to inspect and protect web application traffic.",
       "front": "A firewall designed to inspect and protect web application traffic.",
       "keyDetails": "4.0 Security Operations.",
       "example": "A security team is reviewing a firewall designed to inspect and protect web application traffic.",
       "memoryHook": "Link \"WAF\" to: a firewall designed to inspect and protect web application traffic."
-=======
-      "hint": "A firewall designed to inspect and protect web application traffic."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Warm site",
@@ -19961,16 +19011,12 @@
       "sourceQuestionIds": [
         623
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A company's IT security specialist decides to upgrade the wireless network infrastructure to enhance data protection during transmissions. Recognizing the importance of strong encryption for wireless data, the specialist evaluates the various encryption standards available.",
       "front": "A company's IT security specialist decides to upgrade the wireless network infrastructure to enhance data protection during transmissions. Recognizing the importance of strong encryption for wireless data, the specialist evaluates the various encryption standards available.",
       "keyDetails": "It rectifies vulnerabilities found in WPA2 and represents the latest standard. People view wired equivalent privacy (WEP) as a dated wireless encryption standard and deem it weak due to its identifiable vulnerabilities. It does not measure up to WPA3 in security.",
       "example": "A company's IT security specialist decides to upgrade the wireless network infrastructure to enhance data protection during transmissions.",
       "memoryHook": "\"Wi-Fi\" + \"3\" → connect the words to the definition."
-=======
-      "hint": "WPA3) enhances security beyond its predecessors and is the most robust wireless data protection encryption standard."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Wi-Fi Protected Access 3-Enterprise",
@@ -20005,7 +19051,6 @@
       "sourceQuestionIds": [
         335
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting a certificate that secures multiple hosts within the same domain namespace.",
       "front": "A security analyst is documenting a certificate that secures multiple hosts within the same domain namespace.",
@@ -20033,9 +19078,6 @@
       "keyDetails": "While WPA3 Pre-shared Key (WPA3-PSK) offers enhanced security over its predecessors, it does not distinctly validate device identity, and its foundation was originally a shared passphrase that generated the key to encrypt communications for a group of users.",
       "example": "A medium-sized enterprise is revamping its wireless network infrastructure to improve security.",
       "memoryHook": "\"Wired\" + \"Privacy\" → connect the words to the definition."
-=======
-      "hint": "It names a certificate that secures multiple hosts within the same domain namespace."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     },
     {
       "term": "Wireless access point",
@@ -20155,7 +19197,6 @@
       "sourceQuestionIds": [
         395
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "A security analyst is documenting threat detection and response that correlates telemetry across multiple security layers.",
       "front": "A security analyst is documenting threat detection and response that correlates telemetry across multiple security layers.",
@@ -20166,13 +19207,6 @@
     {
       "term": "Zero-day",
       "definition": "Zero-day vulnerabilities refer to previously unknown software or hardware flaws that attackers can exploit before developers or vendors become aware of or have a chance to fix them. The term “zero-day” signifies that developers have “zero days” to fix the problem once the vulnerability becomes known.",
-=======
-      "hint": "It names threat detection and response that correlates telemetry across multiple security layers."
-    },
-    {
-      "term": "Zero-day",
-      "definition": "A previously unknown vulnerability exploited before a fix is available.",
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
       "domains": [
         "4.0 Security Operations"
       ],
@@ -20206,16 +19240,12 @@
         210,
         702
       ],
-<<<<<<< HEAD
       "supplemental": false,
       "hint": "The term \"zero-day\" describes a software vulnerability that the vendor has yet to identify. Attackers exploit this vulnerability and jeopardize systems.",
       "front": "The term \"zero-day\" describes a software vulnerability that the vendor has yet to identify. Attackers exploit this vulnerability and jeopardize systems.",
       "keyDetails": "Attackers exploit this vulnerability and jeopardize systems. In an on-path attack, an attacker intercepts and might alter communication between two parties. However, this threat does not connect to a software vulnerability unpatched and unknown by the vendor.",
       "example": "A security team is reviewing a vulnerability exploited before a fix is available or broadly deployed.",
       "memoryHook": "\"Zero-day\" + \"vulnerability\" → connect the words to the definition."
-=======
-      "hint": "A vulnerability exploited before a fix is available or broadly deployed."
->>>>>>> 3a086a097725cdd4977a5417d863798234e1e945
     }
   ]
 }
