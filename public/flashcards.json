@@ -191,7 +191,7 @@
         },
         {
           "term": "Fail-open",
-          "definition": "Fail-open favors availability.",
+          "definition": "In a fail-open mode, if the IPS fails, it will still allow traffic to pass through, maintaining network connectivity. In a fail-closed mode, if the IPS fails, it will block all traffic, disrupting network connectivity.",
           "domains": [
             "1.0 General Security Concepts"
           ],
@@ -205,9 +205,9 @@
           "supplemental": false,
           "hint": "A security team is reviewing a failure mode that permits access when a control fails.",
           "front": "A security team is reviewing a failure mode that permits access when a control fails.",
-          "keyDetails": "If the control fails or cannot decide, access is allowed; fail-closed does the opposite and blocks access.",
+          "keyDetails": "In a fail-closed mode, if the IPS fails, it will block all traffic, disrupting network connectivity. Active mode is also an IPS operation mode, not a failure mode. In active mode, the IPS monitors traffic and blocks threats. A fail-open mode ensures traffic flow if the IPS fails. Passive mode is an IPS operation mode, not a failure mode.",
           "example": "A security team is reviewing a failure mode that permits access when a control fails.",
-          "memoryHook": "If the control fails or cannot decide, access is allowed; fail-closed does the opposite and blocks access."
+          "memoryHook": "Link \"Fail-open\" to: in a fail-open mode, if the ips fails, it will still allow traffic to pass through, maintaining network connectivity."
         },
         {
           "term": "File encryption",
@@ -268,7 +268,7 @@
           "supplemental": false,
           "hint": "Change management is not just for implementing software updates or hardware changes. For example, version control refers to capturing changes made to important documents a company needs. What are some documents or data that would utilize version control?",
           "front": "Change management is not just for implementing software updates or hardware changes. For example, version control refers to capturing changes made to important documents a company needs. What are some documents or data that would utilize version control?",
-          "keyDetails": "Capturing changes within diagrams ensures only the most recent diagrams will be available while archiving the previous documents, but still having them available for reference. Important data will vary from company to company, but tracking changes ensures teams reference the current approved version instead of outdated copies.",
+          "keyDetails": "Capturing changes within diagrams ensures only the most recent diagrams will be available while archiving the previous documents, but still having them available for reference. Faxes do not fall under change management as they are one-time communications and do not need tracking or logging.",
           "example": "Change management is not just for implementing software updates or hardware changes.",
           "memoryHook": "\"Important\" + \"data\" → connect the words to the definition."
         },
@@ -501,7 +501,7 @@
         },
         {
           "term": "Provisioning",
-          "definition": "Provisioning is the process of creating, configuring, and granting accounts, access, and resources for users or systems.",
+          "definition": "Provisioning is the process of setting up a service according to a standard procedure or best practice checklist. Linking multiple systems together can increase the automation of onboarding procedures.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -520,7 +520,7 @@
           "front": "An organization is designing access and identity controls and must choose the authentication method or relationship that best fits the requirement.",
           "keyDetails": "Linking multiple systems together can increase the automation of onboarding procedures. Multifactor authentication is an authentication scheme that requires the user to present at least two different factors as credentials.",
           "example": "An organization is designing access and identity controls and must choose the authentication method or relationship that best fits the requirement.",
-          "memoryHook": "Link \"Provisioning\" to: provisioning is the process of creating, configuring, and granting accounts, access, and resources for users or systems."
+          "memoryHook": "Link \"Provisioning\" to: provisioning is the process of setting up a service according to a standard procedure or best practice checklist."
         },
         {
           "term": "Nation-state actor",
@@ -546,7 +546,7 @@
         },
         {
           "term": "Hacktivist",
-          "definition": "A hacktivist is a threat actor motivated primarily by political, ideological, or social causes.",
+          "definition": "Hacktivists might attempt to use data exfiltration to obtain and release confidential information to the public domain, perform service disruption attacks, or deface websites to spread disinformation. Nation-state actors are the root cause of many attacks, particularly on energy, health, and electoral systems.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -564,11 +564,11 @@
           "front": "A security team is reviewing a threat actor motivated primarily by political or social beliefs.",
           "keyDetails": "Nation-state actors are the root cause of many attacks, particularly on energy, health, and electoral systems. The goals of state actors are primarily disinformation and espionage for strategic advantage.",
           "example": "A security team is reviewing a threat actor motivated primarily by political or social beliefs.",
-          "memoryHook": "Link \"Hacktivist\" to: a hacktivist is a threat actor motivated primarily by political, ideological, or social causes."
+          "memoryHook": "Link \"Hacktivist\" to: hacktivists might attempt to use data exfiltration to obtain and release confidential information to the public domain, perform service disruption attacks, or deface websites to spread disinformation."
         },
         {
           "term": "Insider threat",
-          "definition": "An insider threat is risk caused by someone with authorized organizational access, either maliciously or accidentally.",
+          "definition": "An insider threat is someone within the company who intentionally or unintentionally increases risk or takes company data outside the organization’s security controls. Nation-state actors are the root cause of many attacks, particularly on energy, health, and electoral systems.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -613,7 +613,7 @@
         },
         {
           "term": "Injection attack",
-          "definition": "An injection attack occurs when untrusted input is interpreted as code, commands, or queries by an application or backend system.",
+          "definition": "An injection attack exploits some unsecure way the application processes requests and queries. For example, a threat actor queries for information but alters the request to return more users' data than authorized.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -732,7 +732,7 @@
         },
         {
           "term": "Directory traversal attack",
-          "definition": "A directory traversal attack uses path manipulation, such as ../ sequences, to access files outside the intended web directory.",
+          "definition": "A directory traversal attack occurs when a website user requests a file in an attempt to get to the parent directory. If settings are not correct on the web server, it could allow a malicious actor enhanced privileges to the network.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -825,7 +825,7 @@
         },
         {
           "term": "Phishing",
-          "definition": "Phishing is a social engineering attack that uses deceptive messages to trick users into revealing information, opening malicious content, or visiting malicious sites.",
+          "definition": "Phishing is a combination of social engineering and spoofing. It persuades or tricks the target into interacting with a malicious resource disguised as a trusted one.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -843,7 +843,7 @@
           "front": "A security team is reviewing a social-engineering attack commonly delivered through deceptive email.",
           "keyDetails": "It persuades or tricks the target into interacting with a malicious resource disguised as a trusted one. Typosquatting means that the threat actor registers a domain name very similar to a real one, hoping that users will not notice the difference and assume they are browsing a trusted site.",
           "example": "A security team is reviewing a social-engineering attack commonly delivered through deceptive email.",
-          "memoryHook": "Link \"Phishing\" to: phishing is a social engineering attack that uses deceptive messages to trick users into revealing information, opening malicious content, or visiting malicious sites."
+          "memoryHook": "Link \"Phishing\" to: phishing is a combination of social engineering and spoofing."
         },
         {
           "term": "Vishing",
@@ -889,7 +889,7 @@
         },
         {
           "term": "Impersonation",
-          "definition": "Impersonation is pretending to be a trusted person, role, or organization to manipulate a target.",
+          "definition": "Impersonation simply means pretending to be someone else. Impersonation is possible when the target cannot easily verify the attacker's identity, such as over the phone or via email.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -907,11 +907,11 @@
           "front": "is a social engineering attack that involves which of the following?",
           "keyDetails": "This option describes a pharming attack, not impersonation. Pharming manipulates Domain Name System (DNS) settings to redirect users to fraudulent websites. This option refers to a phishing attack, not impersonation. Phishing uses deceptive emails to trick users into revealing sensitive information.",
           "example": "is a social engineering attack that involves which of the following?",
-          "memoryHook": "Link \"Impersonation\" to: impersonation is pretending to be a trusted person, role, or organization to manipulate a target."
+          "memoryHook": "Link \"Impersonation\" to: impersonation simply means pretending to be someone else."
         },
         {
           "term": "Typosquatting",
-          "definition": "Typosquatting registers domains that closely resemble legitimate domains to exploit user typing mistakes or visual similarity.",
+          "definition": "Typosquatting means that the threat actor registers a domain name very similar to a real one, hoping that users will not notice the difference and assume they are browsing a trusted site. Phishing is a combination of social engineering and spoofing.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -930,7 +930,7 @@
           "front": "A security team is reviewing registering look-alike domain names based on common typing errors.",
           "keyDetails": "Phishing is a combination of social engineering and spoofing. It persuades or tricks the target into interacting with a malicious resource disguised as a trusted one. Brand impersonation occurs when the threat actor commits resources to accurately duplicating a company's logos and formatting to make a phishing message or pharming website visually compelling.",
           "example": "A security team is reviewing registering look-alike domain names based on common typing errors.",
-          "memoryHook": "Link \"Typosquatting\" to: typosquatting registers domains that closely resemble legitimate domains to exploit user typing mistakes or visual similarity."
+          "memoryHook": "Link \"Typosquatting\" to: typosquatting means that the threat actor registers a domain name very similar to a real one, hoping that users will not notice the difference and assume they are browsing a trusted site."
         },
         {
           "term": "Watering-hole attack",
@@ -1065,7 +1065,7 @@
         },
         {
           "term": "Worm",
-          "definition": "A worm is self-replicating malware that spreads across systems or networks without requiring user action after initial execution.",
+          "definition": "A worm is a standalone malware program that replicates itself to spread to other computers, often over a network. Worms consume bandwidth and system resources, slowing down or even crashing systems.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -1087,7 +1087,7 @@
           "front": "A security team is reviewing self-replicating malware that can spread without attaching to another file.",
           "keyDetails": "Worms consume bandwidth and system resources, slowing down or even crashing systems. Malicious code encompasses various types of harmful software, including worms, viruses, Trojans, and more. This option is too broad to be the best answer for this scenario. Trojans can create backdoors in a computer system to give malicious users access.",
           "example": "A security team is reviewing self-replicating malware that can spread without attaching to another file.",
-          "memoryHook": "Link \"Worm\" to: a worm is self-replicating malware that spreads across systems or networks without requiring user action after initial execution."
+          "memoryHook": "Link \"Worm\" to: a worm is a standalone malware program that replicates itself to spread to other computers, often over a network."
         },
         {
           "term": "Boot sector virus",
@@ -1159,7 +1159,7 @@
         },
         {
           "term": "Script virus",
-          "definition": "A script virus is malware written in a scripting language that executes through interpreters such as PowerShell, JavaScript, VBScript, or shell scripts.",
+          "definition": "A script virus uses the programming features available in local scripting engines for the OS and/or browser, such as JavaScript. The scenario mentions an attached file with a .",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -1246,7 +1246,7 @@
         },
         {
           "term": "Ransomware",
-          "definition": "Ransomware is malware that encrypts, locks, or threatens to disclose data to extort payment from the victim.",
+          "definition": "Ransomware is a virus that infects a computer and threatens to perform actions unless the user pays a ransom before a particular deadline. Crypto-ransomware specifically requires monetary payment before destroying the key that would allow the decryption of the user's files.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -1264,7 +1264,7 @@
           "front": "A personal computer locks after receiving a file. The screen shows a countdown clock and threatens permanent file encryption unless money is paid.",
           "keyDetails": "Crypto-ransomware specifically encrypts files or threatens loss of the decryption key unless payment is made. Also known as: Crypto-ransomware.",
           "example": "A personal computer locks after receiving a file. The screen shows a countdown clock and threatens permanent file encryption unless money is paid.",
-          "memoryHook": "Link \"Ransomware\" to: ransomware is malware that encrypts, locks, or threatens to disclose data to extort payment from the victim."
+          "memoryHook": "Link \"Ransomware\" to: ransomware is a virus that infects a computer and threatens to perform actions unless the user pays a ransom before a particular deadline."
         },
         {
           "term": "Spyware",
@@ -1332,7 +1332,7 @@
         },
         {
           "term": "Buffer overflow",
-          "definition": "A buffer overflow occurs when a program writes more data to a memory buffer than it can hold, potentially causing crashes or unintended code execution.",
+          "definition": "Buffer overflow vulnerabilities occur when an application receives more data than it can handle, resulting in the potential for unintended command execution. Privilege escalation refers to an attacker gaining unauthorized privileges on a system, usually through exploiting system misconfigurations or vulnerabilities that allow them to elevate their permissions.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -1373,7 +1373,7 @@
         },
         {
           "term": "Operating system-level vulnerability",
-          "definition": "An operating system-level vulnerability is a weakness in the OS that may expose devices to compromise, especially when patches or supported versions are missing.",
+          "definition": "Downloading applications from third-party app stores increases the risk of installing versions that someone may have tampered with or may contain malicious code, introducing application-level vulnerabilities. Using older versions of an operating system could expose the devices to vulnerabilities patched in later versions, leading to operating system-level vulnerabilities.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -1387,8 +1387,8 @@
             710
           ],
           "supplemental": false,
-          "hint": "A company has recently deployed a new mobile application for its employees. During a security audit, observations show some employees downloaded the application from third- party app stores, not the official ones.",
-          "front": "A company has recently deployed a new mobile application for its employees. During a security audit, observations show some employees downloaded the application from third- party app stores, not the official ones.",
+          "hint": "Downloading applications from third-party app stores increases the risk of installing versions that someone may have tampered with or may contain malicious code, introducing application-level vulnerabilities.",
+          "front": "Downloading applications from third-party app stores increases the risk of installing versions that someone may have tampered with or may contain malicious code, introducing application-level vulnerabilities.",
           "keyDetails": "Using older versions of an operating system could expose the devices to vulnerabilities patched in later versions, leading to operating system-level vulnerabilities. The scenario does not mention any outdated hardware. The issue is with the operating system versions and the source of the application download.",
           "example": "A company has recently deployed a new mobile application for its employees.",
           "memoryHook": "\"Operating\" + \"vulnerability\" → connect the words to the definition."
@@ -1524,7 +1524,7 @@
         },
         {
           "term": "CRL",
-          "definition": "A Certificate Revocation List (CRL) is a published list of digital certificates that a certificate authority has revoked before expiration.",
+          "definition": "A Certificate Authority (CA) or owner can revoke or suspend a certificate for many reasons. A Certificate Revocation List (CRL) is a list of no longer valid certificates.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -1543,11 +1543,11 @@
           "front": "A security team is reviewing a published list of certificates revoked by a certificate authority.",
           "keyDetails": "A Certificate Revocation List (CRL) is a list of no longer valid certificates. A Certificate Authority is a server that guarantees subject identities by issuing signed digital certificate wrappers for their public keys. A subject must complete a Certificate Signing Request (CSR) and submit it to the CA to get a certificate.",
           "example": "A security team is reviewing a published list of certificates revoked by a certificate authority.",
-          "memoryHook": "\"CRL\" → Certificate Revocation List."
+          "memoryHook": "\"CRL\" → Certificate Authority."
         },
         {
           "term": "TPM",
-          "definition": "A Trusted Platform Module (TPM) is a hardware-based root of trust used to securely store cryptographic keys and support measured boot, device identity, and disk encryption.",
+          "definition": "The Trusted Platform Module (TPM) chip holds the cryptographic secrets and hardware state to help secure an encrypted hard drive. A Certificate Authority (CA) or owner can revoke or suspend a certificate for many reasons.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -1566,7 +1566,7 @@
           "front": "A security team is reviewing a hardware component used to securely store cryptographic keys and platform measurements.",
           "keyDetails": "A Certificate Authority (CA) or owner can revoke or suspend a certificate for many reasons. A Certificate Revocation List (CRL) is a list of no longer valid certificates. A Central Processing Unit (CPU) is not directly involved with the encryption of a hard drive other than processing the action of encryption.",
           "example": "A security team is reviewing a hardware component used to securely store cryptographic keys and platform measurements.",
-          "memoryHook": "\"TPM\" → Trusted Platform Module."
+          "memoryHook": "\"TPM\" → The Trusted Platform Module."
         },
         {
           "term": "Virtualization",
@@ -1659,7 +1659,7 @@
         },
         {
           "term": "Backout plan",
-          "definition": "A backout plan defines how to reverse a failed change and restore systems to a known good state.",
+          "definition": "A backout plan is for reversing changes and returning systems and software to their original state if the implementation plan fails. A well-defined backout plan helps to minimize downtime and reduces the risk of data loss or other severe impacts.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -1681,7 +1681,7 @@
         },
         {
           "term": "Test results",
-          "definition": "Test results document whether a proposed change, control, or implementation worked as intended before production deployment.",
+          "definition": "Impact analysis identifies and assesses the potential implications of a proposed change, including how the change will impact all areas. Evaluation of changes in a test environment ensures they work as intended.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -1701,7 +1701,7 @@
         },
         {
           "term": "Tabletop exercises",
-          "definition": "Tabletop exercises are discussion-based simulations used to validate plans, roles, communication, and decision-making during a hypothetical incident or disruption.",
+          "definition": "Implementing user guidance and training is a direct approach to educating employees about the security risks associated with their actions and the proper protocols to follow, thereby reducing the likelihood of security incidents due to employee errors. Tabletop exercises allow employees to engage in simulated security scenarios, which can provide hands- on experience and education.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -1723,7 +1723,7 @@
         },
         {
           "term": "COOP",
-          "definition": "A continuity of operations plan (COOP) identifies how essential functions will continue during and after a major disruption.",
+          "definition": "The continuity of operations plan (COOP) focuses on the critical processes that must remain operational during and after a substantial disruption, like a natural disaster. A disaster recovery plan details the steps required to recover from a catastrophic event such as a natural disaster.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -1741,7 +1741,7 @@
           "front": "An earthquake occurred near the company HQ, causing severe damage in the area. The earthquake affected the building, which will not be usable for several weeks. What plan will the company follow to maintain its business? (Select the two best options.)",
           "keyDetails": "A disaster recovery plan details the steps required to recover from a catastrophic event such as a natural disaster. The goal is to restore operations as quickly and efficiently as possible. The incident response policy outlines the processes to follow after a security breach or cyberattack occurs.",
           "example": "An earthquake occurred near the company HQ, causing severe damage in the area.",
-          "memoryHook": "Link \"COOP\" to: a continuity of operations plan (coop) identifies how essential functions will continue during and after a major disruption."
+          "memoryHook": "Link \"COOP\" to: the continuity of operations plan (coop) focuses on the critical processes that must remain operational during and after a substantial disruption, like a natural disaster."
         },
         {
           "term": "Disaster recovery",
@@ -1831,7 +1831,7 @@
         },
         {
           "term": "External assessment",
-          "definition": "An external assessment is performed by independent third parties to evaluate security, compliance, maturity, or control effectiveness.",
+          "definition": "External experts or consultants conduct an external assessment to evaluate an organization's overall performance, practices, capabilities, or specific focus areas. Individuals or organizations conduct self-assessments internally to evaluate their performance, practices, and adherence to established criteria against predetermined metrics and measures without the involvement of external experts.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -1969,7 +1969,7 @@
         },
         {
           "term": "Data controller",
-          "definition": "A data controller determines why and how personal data is processed.",
+          "definition": "A high-ranking employee (i. e.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -1983,8 +1983,8 @@
             865
           ],
           "supplemental": false,
-          "hint": "Which of the following accurately reflects the responsibilities of a data processor under data protection laws such as the General Data Protection Regulation (GDPR)?",
-          "front": "Which of the following accurately reflects the responsibilities of a data processor under data protection laws such as the General Data Protection Regulation (GDPR)?",
+          "hint": "A high-ranking employee (i.e., a director or vice president) typically holds the owner role and is ultimately responsible for ensuring data is appropriately protected.",
+          "front": "A high-ranking employee (i.e., a director or vice president) typically holds the owner role and is ultimately responsible for ensuring data is appropriately protected.",
           "keyDetails": "The data processor is not allowed to make decisions alone regarding the processing of the data. The responsibility of determining the purposes and means of processing personal data lies with the data controller, not the data processor. The data processor does not have independent decision-making power over personal data.",
           "example": "Which of the following accurately reflects the responsibilities of a data processor under data protection laws such as the General Data Protection Regulation (GDPR)?",
           "memoryHook": "\"Data\" + \"controller\" → connect the words to the definition."
@@ -2230,7 +2230,7 @@
         },
         {
           "term": "Web server logs",
-          "definition": "Web server logs record HTTP requests, status codes, user agents, IP addresses, requested paths, and timestamps that can reveal attacks or anomalies.",
+          "definition": "Universal Resource Locators (URLs) can encode some action or data to submit to the server host. Analysis of these URLs can provide indicators of session hijacking/replay, forgery, and injection attacks.",
           "domains": [
             "2.0 Threats, Vulnerabilities, and Mitigations"
           ],
@@ -2244,8 +2244,8 @@
             838
           ],
           "supplemental": false,
-          "hint": "An IT intern looks for information on previous network attacks, specifically indicators of attempted and successful replay, forgery, and injection attacks. Where could the intern find this information? (Select the two best options.)",
-          "front": "An IT intern looks for information on previous network attacks, specifically indicators of attempted and successful replay, forgery, and injection attacks. Where could the intern find this information? (Select the two best options.)",
+          "hint": "Universal Resource Locators (URLs) can encode some action or data to submit to the server host. Analysis of these URLs can provide indicators of session hijacking/replay, forgery, and injection attacks.",
+          "front": "Universal Resource Locators (URLs) can encode some action or data to submit to the server host. Analysis of these URLs can provide indicators of session hijacking/replay, forgery, and injection attacks.",
           "keyDetails": "Analysis of these URLs can provide indicators of session hijacking/replay, forgery, and injection attacks. An administrator typically configures web servers to log Hypertext Transfer Protocol (HTTP) traffic that encounters an error or traffic that matches some predefined rule set.",
           "example": "An IT intern looks for information on previous network attacks, specifically indicators of attempted and successful replay, forgery, and injection attacks.",
           "memoryHook": "\"Web\" + \"logs\" → connect the words to the definition."
@@ -2683,8 +2683,8 @@
             717
           ],
           "supplemental": false,
-          "hint": "Centralized computing architecture refers to a model where all data processing and storage is performed in a single location, typically a central server. That can help minimize threat vectors.",
-          "front": "Centralized computing architecture refers to a model where all data processing and storage is performed in a single location, typically a central server. That can help minimize threat vectors.",
+          "hint": "A network architect at a global financial institution overhauls the company's on-premises network to enhance security and reduce the attack surface.",
+          "front": "A network architect at a global financial institution overhauls the company's on-premises network to enhance security and reduce the attack surface.",
           "keyDetails": "That can help minimize threat vectors. Peer-to-peer (P2P) networks are a derivative of decentralized architecture that is designed to distribute processing and data storage among participating nodes, versus relying on a central server. Content delivery networks distribute content across multiple servers to improve performance, reliability, and scalability.",
           "example": "A network architect at a global financial institution overhauls the company's on-premises network to enhance security and reduce the attack surface.",
           "memoryHook": "\"Centralized\" + \"architecture\" → connect the words to the definition."
@@ -2814,7 +2814,7 @@
         },
         {
           "term": "Cross-site scripting",
-          "definition": "Cross-site scripting (XSS) is an injection attack in which malicious scripts execute in another user's browser through a vulnerable web application.",
+          "definition": "A replay attack captures or guesses the token value and then submits it to reestablish the session illegitimately. A session ending and then immediately reestablishing would most likely indicate this type of attack.",
           "domains": [
             "3.0 Security Architecture",
             "4.0 Security Operations"
@@ -2969,8 +2969,8 @@
             591
           ],
           "supplemental": false,
-          "hint": "Perfect Forward Secrecy (PFS) mitigates this risk from a basic key exchange. PFS uses Diffie- Hellman (D-H) key agreement to create ephemeral session keys without using the server's private key.",
-          "front": "Perfect Forward Secrecy (PFS) mitigates this risk from a basic key exchange. PFS uses Diffie- Hellman (D-H) key agreement to create ephemeral session keys without using the server's private key.",
+          "hint": "Perfect Forward Secrecy (PFS) mitigates this risk from a basic key exchange. PFS uses Diffie- Hellman (D-H) key agreement to create ephemeral session keys without using the server's private key. A cryptographic hashing algorithm produces a fixed-length string of bits from an input plaintext that can be of any length.",
+          "front": "Perfect Forward Secrecy (PFS) mitigates this risk from a basic key exchange. PFS uses Diffie- Hellman (D-H) key agreement to create ephemeral session keys without using the server's private key. A cryptographic hashing algorithm produces a fixed-length string of bits from an input plaintext that can be of any length.",
           "keyDetails": "PFS uses Diffie- Hellman (D-H) key agreement to create ephemeral session keys without using the server's private key. A cryptographic hashing algorithm produces a fixed-length string of bits from an input plaintext that can be of any length. The output is known as a hash or as a message digest.",
           "example": "A security team is evaluating cryptographic protections and must choose the method or component that best fits the need.",
           "memoryHook": "Link \"Diffie-Hellman\" to: perfect forward secrecy (pfs) mitigates this risk from a basic key exchange."
@@ -3049,8 +3049,8 @@
             573
           ],
           "supplemental": false,
-          "hint": "The purpose of encryption is to allow for confidentiality. It prevents third parties from listening in and knowing what communication is occurring.",
-          "front": "The purpose of encryption is to allow for confidentiality. It prevents third parties from listening in and knowing what communication is occurring.",
+          "hint": "The purpose of encryption is to allow for confidentiality. It prevents third parties from listening in and knowing what communication is occurring. Encryption is important for things like whistleblower reporting.",
+          "front": "The purpose of encryption is to allow for confidentiality. It prevents third parties from listening in and knowing what communication is occurring. Encryption is important for things like whistleblower reporting.",
           "keyDetails": "It prevents third parties from listening in and knowing what communication is occurring. Encryption is important for things like whistleblower reporting. While putting in an effort to get information for a story may help show the anonymous sender that the reporter has an interest, it would not be the primary concern.",
           "example": "A security team is evaluating cryptographic protections and must choose the method or component that best fits the need.",
           "memoryHook": "\"Encryption\" + \"confidentiality.\" → connect the words to the definition."
@@ -3549,7 +3549,7 @@
         },
         {
           "term": "Network segmentation",
-          "definition": "Network segmentation divides a network into isolated segments to reduce the attack surface and limit lateral movement.",
+          "definition": "The least privilege principle ensures that users have only the access they need, reducing the risk of insider threats and accidental data breaches. It is vital in both cloud and on-premises environments.",
           "domains": [
             "3.0 Security Architecture",
             "4.0 Security Operations"
@@ -3566,8 +3566,8 @@
             755
           ],
           "supplemental": false,
-          "hint": "A security team is reviewing dividing a network to limit access and reduce lateral movement.",
-          "front": "A security team is reviewing dividing a network to limit access and reduce lateral movement.",
+          "hint": "The least privilege principle ensures that users have only the access they need, reducing the risk of insider threats and accidental data breaches. It is vital in both cloud and on-premises environments. Segmenting the network can isolate potential threats and prevent them from moving laterally across the enterprise.",
+          "front": "The least privilege principle ensures that users have only the access they need, reducing the risk of insider threats and accidental data breaches. It is vital in both cloud and on-premises environments. Segmenting the network can isolate potential threats and prevent them from moving laterally across the enterprise.",
           "keyDetails": "It is vital in both cloud and on-premises environments. Segmenting the network can isolate potential threats and prevent them from moving laterally across the enterprise. It is particularly essential as enterprises grow and diversify their digital assets.",
           "example": "A security team is reviewing dividing a network to limit access and reduce lateral movement.",
           "memoryHook": "\"Network\" + \"segmentation\" → connect the words to the definition."
@@ -3982,8 +3982,8 @@
             594
           ],
           "supplemental": false,
-          "hint": "When an entity revokes a certificate, they add it to a Certificate Revocation List. However, it requires a browser to check the list and for the Certificate Authority (CA) to provide the list.",
-          "front": "When an entity revokes a certificate, they add it to a Certificate Revocation List. However, it requires a browser to check the list and for the Certificate Authority (CA) to provide the list.",
+          "hint": "When an entity revokes a certificate, they add it to a Certificate Revocation List. However, it requires a browser to check the list and for the Certificate Authority (CA) to provide the list. If this does not happen, an invalid certificate may still work.",
+          "front": "When an entity revokes a certificate, they add it to a Certificate Revocation List. However, it requires a browser to check the list and for the Certificate Authority (CA) to provide the list. If this does not happen, an invalid certificate may still work.",
           "keyDetails": "However, it requires a browser to check the list and for the Certificate Authority (CA) to provide the list. If this does not happen, an invalid certificate may still work. Being a Root CA does not prevent the revocation of a certificate.",
           "example": "A security team is evaluating cryptographic protections and must choose the method or component that best fits the need.",
           "memoryHook": "\"The\" + \"updating.\" → connect the words to the definition."
@@ -4022,8 +4022,8 @@
             595
           ],
           "supplemental": false,
-          "hint": "Increasing the key length will improve the algorithm's security by decreasing the chance of cracking the ciphertext. Furthermore, adding salting and hashing will greatly reduce the chances of malicious actors gaining access to the data.",
-          "front": "Increasing the key length will improve the algorithm's security by decreasing the chance of cracking the ciphertext. Furthermore, adding salting and hashing will greatly reduce the chances of malicious actors gaining access to the data.",
+          "hint": "Increasing the key length will improve the algorithm's security by decreasing the chance of cracking the ciphertext. Furthermore, adding salting and hashing will greatly reduce the chances of malicious actors gaining access to the data. Increasing the key length of an algorithm does not improve performance.",
+          "front": "Increasing the key length will improve the algorithm's security by decreasing the chance of cracking the ciphertext. Furthermore, adding salting and hashing will greatly reduce the chances of malicious actors gaining access to the data. Increasing the key length of an algorithm does not improve performance.",
           "keyDetails": "Furthermore, adding salting and hashing will greatly reduce the chances of malicious actors gaining access to the data. Increasing the key length of an algorithm does not improve performance. However, it will help to improve security. Increasing the complexity and key length of an algorithm will slow down encryption.",
           "example": "A security team is evaluating cryptographic protections and must choose the method or component that best fits the need.",
           "memoryHook": "\"To\" + \"cracking\" → connect the words to the definition."
@@ -4147,8 +4147,8 @@
             702
           ],
           "supplemental": false,
-          "hint": "The term \"zero-day\" describes a software vulnerability that the vendor has yet to identify. Attackers exploit this vulnerability and jeopardize systems.",
-          "front": "The term \"zero-day\" describes a software vulnerability that the vendor has yet to identify. Attackers exploit this vulnerability and jeopardize systems.",
+          "hint": "The term \"zero-day\" describes a software vulnerability that the vendor has yet to identify. Attackers exploit this vulnerability and jeopardize systems. In an on-path attack, an attacker intercepts and might alter communication between two parties.",
+          "front": "The term \"zero-day\" describes a software vulnerability that the vendor has yet to identify. Attackers exploit this vulnerability and jeopardize systems. In an on-path attack, an attacker intercepts and might alter communication between two parties.",
           "keyDetails": "Attackers exploit this vulnerability and jeopardize systems. In an on-path attack, an attacker intercepts and might alter communication between two parties. However, this threat does not connect to a software vulnerability unpatched and unknown by the vendor.",
           "example": "A security team is reviewing a vulnerability exploited before a fix is available or broadly deployed.",
           "memoryHook": "\"Zero-day\" + \"vulnerability\" → connect the words to the definition."
@@ -6304,7 +6304,7 @@
         },
         {
           "term": "802.1X",
-          "definition": "802. 1X stands for IEEE 802.",
+          "definition": "The standard 802. 1X provides port-based network access control, ensuring high security by rigorously authenticating both users and devices.",
           "domains": [
             "4.0 Security Operations"
           ],
@@ -6773,8 +6773,8 @@
             631
           ],
           "supplemental": false,
-          "hint": "When receiving an alert, the first responder's immediate action is to determine whether a genuine incident has occurred. This action involves investigating the data reported and assessing the severity of the situation before taking further action.",
-          "front": "When receiving an alert, the first responder's immediate action is to determine whether a genuine incident has occurred. This action involves investigating the data reported and assessing the severity of the situation before taking further action.",
+          "hint": "When receiving an alert, the first responder's immediate action is to determine whether a genuine incident has occurred. This action involves investigating the data reported and assessing the severity of the situation before taking further action. Waiting for more alerts to confirm the incident is not advisable.",
+          "front": "When receiving an alert, the first responder's immediate action is to determine whether a genuine incident has occurred. This action involves investigating the data reported and assessing the severity of the situation before taking further action. Waiting for more alerts to confirm the incident is not advisable.",
           "keyDetails": "This action involves investigating the data reported and assessing the severity of the situation before taking further action. Waiting for more alerts to confirm the incident is not advisable. Immediate analysis is necessary to assess the severity of the situation and determine if it is a genuine incident.",
           "example": "An incident response team is working through a case and must choose the next best response or investigative action.",
           "memoryHook": "\"Analyze\" + \"occurred\" → connect the words to the definition."
@@ -7014,8 +7014,8 @@
             656
           ],
           "supplemental": false,
-          "hint": "MFA requires users to present several identification types before they gain access, enhancing the authentication process. MFA requires at least two or more of the following to verify the identity of a user: something you know, something you have, something you are, somewhere you are, and something you do.",
-          "front": "MFA requires users to present several identification types before they gain access, enhancing the authentication process. MFA requires at least two or more of the following to verify the identity of a user: something you know, something you have, something you are, somewhere you are, and something you do.",
+          "hint": "A leading financial institution is enhancing its security infrastructure by revising user access controls. The IT department, in collaboration with the security team, deliberates on the essential principles to guide their implementation efforts.",
+          "front": "A leading financial institution is enhancing its security infrastructure by revising user access controls. The IT department, in collaboration with the security team, deliberates on the essential principles to guide their implementation efforts.",
           "keyDetails": "MFA requires at least two or more of the following to verify the identity of a user: something you know, something you have, something you are, somewhere you are, and something you do. RBAC grants access to resources based on a user's role within the organization, ensuring users only access what their job function needs.",
           "example": "A leading financial institution is enhancing its security infrastructure by revising user access controls.",
           "memoryHook": "\"Assigning\" + \"(RBAC)\" → connect the words to the definition."
@@ -8443,8 +8443,8 @@
             567
           ],
           "supplemental": false,
-          "hint": "This option provides both security and ease of use. The employee can create a memorable PIN that includes a variety of characters and is specific to the device, enhancing the security.",
-          "front": "This option provides both security and ease of use. The employee can create a memorable PIN that includes a variety of characters and is specific to the device, enhancing the security.",
+          "hint": "This option provides both security and ease of use. The employee can create a memorable PIN that includes a variety of characters and is specific to the device, enhancing the security. While a short numeric PIN may be easier to remember, it is less secure due to the limited number of possible combinations.",
+          "front": "This option provides both security and ease of use. The employee can create a memorable PIN that includes a variety of characters and is specific to the device, enhancing the security. While a short numeric PIN may be easier to remember, it is less secure due to the limited number of possible combinations.",
           "keyDetails": "The employee can create a memorable PIN that includes a variety of characters and is specific to the device, enhancing the security. While a short numeric PIN may be easier to remember, it is less secure due to the limited number of possible combinations. Usernames are typically not secret and do not provide any security on their own.",
           "example": "An organization is designing access and identity controls and must choose the authentication method or relationship that best fits the requirement.",
           "memoryHook": "\"device-specific\" + \"length\" → connect the words to the definition."
@@ -8706,8 +8706,8 @@
             566
           ],
           "supplemental": false,
-          "hint": "Adding multifactor authentication (MFA) would have a greater impact on the company's security posture. The CISO needs to consider which method of MFA is the most secure.",
-          "front": "Adding multifactor authentication (MFA) would have a greater impact on the company's security posture. The CISO needs to consider which method of MFA is the most secure.",
+          "hint": "Adding multifactor authentication (MFA) would have a greater impact on the company's security posture. The CISO needs to consider which method of MFA is the most secure. Location-based policies would cut down on the chance of pray-and-spray tactics of malicious actors.",
+          "front": "Adding multifactor authentication (MFA) would have a greater impact on the company's security posture. The CISO needs to consider which method of MFA is the most secure. Location-based policies would cut down on the chance of pray-and-spray tactics of malicious actors.",
           "keyDetails": "The CISO needs to consider which method of MFA is the most secure. Location-based policies would cut down on the chance of pray-and-spray tactics of malicious actors. However, a downside could be malicious actors who use Virtual Private Network (VPN) services to bypass this.",
           "example": "An organization is designing access and identity controls and must choose the authentication method or relationship that best fits the requirement.",
           "memoryHook": "\"Enforce\" + \"authentication\" → connect the words to the definition."
@@ -9668,8 +9668,8 @@
             707
           ],
           "supplemental": false,
-          "hint": "Outdated dependencies can introduce vulnerabilities if not patched or updated. Dependency analysis tools help in identifying these outdated components.",
-          "front": "Outdated dependencies can introduce vulnerabilities if not patched or updated. Dependency analysis tools help in identifying these outdated components.",
+          "hint": "Outdated dependencies can introduce vulnerabilities if not patched or updated. Dependency analysis tools help in identifying these outdated components. Many software vulnerabilities arise from undisclosed open-source components, which may not undergo the same rigorous security testing.",
+          "front": "Outdated dependencies can introduce vulnerabilities if not patched or updated. Dependency analysis tools help in identifying these outdated components. Many software vulnerabilities arise from undisclosed open-source components, which may not undergo the same rigorous security testing.",
           "keyDetails": "Dependency analysis tools help in identifying these outdated components. Many software vulnerabilities arise from undisclosed open-source components, which may not undergo the same rigorous security testing. SBOM tools can identify such components, enabling teams to address potential risks.",
           "example": "A software development company has recently integrated new tools for dependency analysis and Software Bill of Materials (SBOM) into its development pipeline.",
           "memoryHook": "\"Identifying\" + \"components\" → connect the words to the definition."
@@ -10011,8 +10011,8 @@
             696
           ],
           "supplemental": false,
-          "hint": "APIs often act as gateways for data exchange in cloud-based applications. If not securely configured, they become vulnerable to injection attacks.",
-          "front": "APIs often act as gateways for data exchange in cloud-based applications. If not securely configured, they become vulnerable to injection attacks.",
+          "hint": "APIs often act as gateways for data exchange in cloud-based applications. If not securely configured, they become vulnerable to injection attacks. Distributed denial of service (DDoS) attacks primarily flood a system with unwanted traffic, causing it to become overwhelmed and unavailable to genuine users.",
+          "front": "APIs often act as gateways for data exchange in cloud-based applications. If not securely configured, they become vulnerable to injection attacks. Distributed denial of service (DDoS) attacks primarily flood a system with unwanted traffic, causing it to become overwhelmed and unavailable to genuine users.",
           "keyDetails": "If not securely configured, they become vulnerable to injection attacks. Distributed denial of service (DDoS) attacks primarily flood a system with unwanted traffic, causing it to become overwhelmed and unavailable to genuine users. DDoS attacks can disrupt the availability of the application by exhausting its resources or overwhelming its network.",
           "example": "A leading fintech company plans to migrate its primary financial application to a public cloud environment.",
           "memoryHook": "\"Injection\" + \"API\" → connect the words to the definition."
@@ -10139,7 +10139,7 @@
         },
         {
           "term": "IPS",
-          "definition": "IPS stands for Intrusion Prevention System. A control that detects and can automatically block suspicious activity.",
+          "definition": "An IPS actively monitors the network traffic. It can modify and automatically block malicious real-time traffic, fulfilling the administrator's requirements.",
           "domains": [
             "4.0 Security Operations"
           ],
@@ -10158,7 +10158,7 @@
           "front": "A security analyst is documenting a control that detects and can automatically block suspicious activity.",
           "keyDetails": "Also known as: Intrusion Prevention System (IPS).",
           "example": "A security analyst is documenting a control that detects and can automatically block suspicious activity.",
-          "memoryHook": "\"IPS\" → Intrusion Prevention System."
+          "memoryHook": "Link \"IPS\" to: an ips actively monitors the network traffic."
         },
         {
           "term": "Isolate the affected server from the rest of the network by disabling its network access",
@@ -11019,7 +11019,7 @@
         },
         {
           "term": "Malicious update",
-          "definition": "A software update intentionally modified to deliver harmful code.",
+          "definition": "A malicious update refers to an update that appears legitimate but contains harmful code, often used by cyber criminals to distribute malware or execute a cyber attack. Application race condition vulnerabilities refer to software flaws associated with the timing or order of events within a software program, which can cause undesirable or unpredictable outcomes through manipulation.",
           "domains": [
             "4.0 Security Operations"
           ],
@@ -11031,9 +11031,9 @@
             342
           ],
           "supplemental": false,
-          "hint": "A software update intentionally modified to deliver harmful code.",
-          "front": "A software update intentionally modified to deliver harmful code.",
-          "keyDetails": "4.0 Security Operations.",
+          "hint": "A security analyst is documenting a software update intentionally modified to deliver harmful code.",
+          "front": "A security analyst is documenting a software update intentionally modified to deliver harmful code.",
+          "keyDetails": "Application race condition vulnerabilities refer to software flaws associated with the timing or order of events within a software program, which can cause undesirable or unpredictable outcomes through manipulation.",
           "example": "A security analyst is documenting a software update intentionally modified to deliver harmful code.",
           "memoryHook": "\"Malicious\" + \"update\" → connect the words to the definition."
         },
@@ -11909,8 +11909,8 @@
             773
           ],
           "supplemental": false,
-          "hint": "The hackers desire change in the organization's practices, which is political motivation. Their actions aim to incite change in societal or governance structures, which aligns with the definition of political motivations.",
-          "front": "The hackers desire change in the organization's practices, which is political motivation. Their actions aim to incite change in societal or governance structures, which aligns with the definition of political motivations.",
+          "hint": "The hackers desire change in the organization's practices, which is political motivation. Their actions aim to incite change in societal or governance structures, which aligns with the definition of political motivations. Financial gain refers to motivations such as extortion, blackmail, fraud, or selling stolen data.",
+          "front": "The hackers desire change in the organization's practices, which is political motivation. Their actions aim to incite change in societal or governance structures, which aligns with the definition of political motivations. Financial gain refers to motivations such as extortion, blackmail, fraud, or selling stolen data.",
           "keyDetails": "Their actions aim to incite change in societal or governance structures, which aligns with the definition of political motivations. Financial gain refers to motivations such as extortion, blackmail, fraud, or selling stolen data. In the given scenario, the hackers are not trying to profit from their actions financially.",
           "example": "A security analyst is reviewing threat behavior or attack relationships and must identify the most likely actor or event.",
           "memoryHook": "\"Political\" + \"change\" → connect the words to the definition."
@@ -12270,8 +12270,8 @@
             811
           ],
           "supplemental": false,
-          "hint": "The consultant considers both qualitative and quantitative factors. Qualitative factors include the risk's impact and likelihood of occurring, while quantitative factors would be the ability to mitigate risks in the risk analysis.",
-          "front": "The consultant considers both qualitative and quantitative factors. Qualitative factors include the risk's impact and likelihood of occurring, while quantitative factors would be the ability to mitigate risks in the risk analysis.",
+          "hint": "The consultant considers both qualitative and quantitative factors. Qualitative factors include the risk's impact and likelihood of occurring, while quantitative factors would be the ability to mitigate risks in the risk analysis. The consultant considers qualitative factors, such as impact and likelihood.",
+          "front": "The consultant considers both qualitative and quantitative factors. Qualitative factors include the risk's impact and likelihood of occurring, while quantitative factors would be the ability to mitigate risks in the risk analysis. The consultant considers qualitative factors, such as impact and likelihood.",
           "keyDetails": "Qualitative factors include the risk's impact and likelihood of occurring, while quantitative factors would be the ability to mitigate risks in the risk analysis. The consultant considers qualitative factors, such as impact and likelihood.",
           "example": "A cybersecurity consultant is analyzing risks for a new e-commerce website.",
           "memoryHook": "\"Qualitative\" + \"analysis\" → connect the words to the definition."
@@ -12351,8 +12351,8 @@
             707
           ],
           "supplemental": false,
-          "hint": "Outdated dependencies can introduce vulnerabilities if not patched or updated. Dependency analysis tools help in identifying these outdated components.",
-          "front": "Outdated dependencies can introduce vulnerabilities if not patched or updated. Dependency analysis tools help in identifying these outdated components.",
+          "hint": "Outdated dependencies can introduce vulnerabilities if not patched or updated. Dependency analysis tools help in identifying these outdated components. Many software vulnerabilities arise from undisclosed open-source components, which may not undergo the same rigorous security testing.",
+          "front": "Outdated dependencies can introduce vulnerabilities if not patched or updated. Dependency analysis tools help in identifying these outdated components. Many software vulnerabilities arise from undisclosed open-source components, which may not undergo the same rigorous security testing.",
           "keyDetails": "Dependency analysis tools help in identifying these outdated components. Many software vulnerabilities arise from undisclosed open-source components, which may not undergo the same rigorous security testing. SBOM tools can identify such components, enabling teams to address potential risks.",
           "example": "A software development company has recently integrated new tools for dependency analysis and Software Bill of Materials (SBOM) into its development pipeline.",
           "memoryHook": "\"Recognizing\" + \"dependencies\" → connect the words to the definition."
@@ -12580,7 +12580,7 @@
         },
         {
           "term": "Risk Transference",
-          "definition": "Risk Transference involves transferring the risk to another entity, such as through insurance or contractual agreements, which can affect architectural considerations by altering who is responsible for managing certain risks.",
+          "definition": "The company is transferring the risk to a third party by outsourcing the maintenance and associated liabilities of the application, which is an example of risk transference. Risk avoidance involves halting the risky activity.",
           "domains": [
             "4.0 Security Operations",
             "5.0 Security Program Management and Oversight"
@@ -12665,7 +12665,7 @@
         },
         {
           "term": "RTOS",
-          "definition": "RTOS stands for Real-Time Operating System. For this scenario, the purchase of a Real-Time Operation System (RTOS) would be most appropriate as it can assist in prioritizing deterministic execution of operations to ensure consistent response are received for time-critical tasks.",
+          "definition": "For this scenario, the purchase of a Real-Time Operation System (RTOS) would be most appropriate as it can assist in prioritizing deterministic execution of operations to ensure consistent response are received for time-critical tasks. A Supervisory Control and Data Acquisition (SCADA) system is a control system that manages large-scale, multiple-site devices and equipment spread over geographically large areas from a host computer.",
           "domains": [
             "4.0 Security Operations"
           ],
@@ -12683,7 +12683,7 @@
           "front": "A security analyst is documenting an operating system designed to meet deterministic timing requirements.",
           "keyDetails": "A Supervisory Control and Data Acquisition (SCADA) system is a control system that manages large-scale, multiple-site devices and equipment spread over geographically large areas from a host computer. An Industrial Control System (ICS) provides mechanisms for workflow and process automation and is used in critical infrastructure.",
           "example": "A security analyst is documenting an operating system designed to meet deterministic timing requirements.",
-          "memoryHook": "\"RTOS\" → Real-Time Operating System."
+          "memoryHook": "\"RTOS\" → For Real-Time Operation System."
         },
         {
           "term": "s",
@@ -12947,8 +12947,8 @@
             914
           ],
           "supplemental": false,
-          "hint": "Input validation is critical to protect against Structured Query Language (SQL) and Cross-site Scripting (XSS) attacks. Input validation involves ensuring the input matches expected patterns or data types.",
-          "front": "Input validation is critical to protect against Structured Query Language (SQL) and Cross-site Scripting (XSS) attacks. Input validation involves ensuring the input matches expected patterns or data types.",
+          "hint": "large finance company's software developers are working on a new web application for their customers. The team has concerns about potential security vulnerabilities.",
+          "front": "large finance company's software developers are working on a new web application for their customers. The team has concerns about potential security vulnerabilities.",
           "keyDetails": "Input validation involves ensuring the input matches expected patterns or data types.",
           "example": "large finance company's software developers are working on a new web application for their customers.",
           "memoryHook": "\"Secure\" + \"cookies\" → connect the words to the definition."
@@ -13235,8 +13235,8 @@
             900
           ],
           "supplemental": false,
-          "hint": "Signature-based detection uses known patterns of malicious behavior (or \"signatures\") to identify potential threats. This method can quickly and accurately detect known threats but may fail to identify new, unrecorded types of attacks.",
-          "front": "Signature-based detection uses known patterns of malicious behavior (or \"signatures\") to identify potential threats. This method can quickly and accurately detect known threats but may fail to identify new, unrecorded types of attacks.",
+          "hint": "How does signature-based detection differ from anomaly-based detection in an intrusion detection system (IDS)?",
+          "front": "How does signature-based detection differ from anomaly-based detection in an intrusion detection system (IDS)?",
           "keyDetails": "This method can quickly and accurately detect known threats but may fail to identify new, unrecorded types of attacks. In contrast, anomaly-based detection works by defining what's considered \"normal\" behavior within a system and then alerting on any behavior that deviates from this norm.",
           "example": "How does signature-based detection differ from anomaly-based detection in an intrusion detection system (IDS)?",
           "memoryHook": "\"Signature-based\" + \"behavior.\" → connect the words to the definition."
@@ -13740,8 +13740,8 @@
             586
           ],
           "supplemental": false,
-          "hint": "Steganography embeds information within an unexpected source, such as a message hidden in a picture. Covertext describes the container document or file that it resides within.",
-          "front": "Steganography embeds information within an unexpected source, such as a message hidden in a picture. Covertext describes the container document or file that it resides within.",
+          "hint": "Steganography embeds information within an unexpected source, such as a message hidden in a picture. Covertext describes the container document or file that it resides within. Plaintext refers to data that is not encrypted. An attacker can easily intercept data that is in plaintext form.",
+          "front": "Steganography embeds information within an unexpected source, such as a message hidden in a picture. Covertext describes the container document or file that it resides within. Plaintext refers to data that is not encrypted. An attacker can easily intercept data that is in plaintext form.",
           "keyDetails": "Covertext describes the container document or file that it resides within. Plaintext refers to data that is not encrypted. An attacker can easily intercept data that is in plaintext form. Ciphertext refers to data that went through an encryption algorithm and is less likely for third parties to intercept and read.",
           "example": "A security team is evaluating cryptographic protections and must choose the method or component that best fits the need.",
           "memoryHook": "\"They\" + \"steganography\" → connect the words to the definition."
@@ -14065,8 +14065,8 @@
             776
           ],
           "supplemental": false,
-          "hint": "By bringing things in-house, a company can limit risk in relation to supply-chain attacks. Bringing things in-house typically increases the risk of insider threats.",
-          "front": "By bringing things in-house, a company can limit risk in relation to supply-chain attacks. Bringing things in-house typically increases the risk of insider threats.",
+          "hint": "By bringing things in-house, a company can limit risk in relation to supply-chain attacks. Bringing things in-house typically increases the risk of insider threats. It is crucial to implement security controls to ensure that insider risks are minimal.",
+          "front": "By bringing things in-house, a company can limit risk in relation to supply-chain attacks. Bringing things in-house typically increases the risk of insider threats. It is crucial to implement security controls to ensure that insider risks are minimal.",
           "keyDetails": "Bringing things in-house typically increases the risk of insider threats. It is crucial to implement security controls to ensure that insider risks are minimal. With nation-state threats, whether the company manages its infrastructure and software internally or externally is not necessarily less risky.",
           "example": "A security analyst is reviewing threat behavior or attack relationships and must identify the most likely actor or event.",
           "memoryHook": "\"To\" + \"attacks.\" → connect the words to the definition."
@@ -14485,7 +14485,7 @@
         },
         {
           "term": "Use the Center for Internet Security (CIS) Benchmarks and couple it with the use of a configuration management tool.",
-          "definition": "A configuration management tool can help automate the deployment of these configurations, ensuring consistency across diverse systems.",
+          "definition": "The CIS Benchmarks offer best practice guidelines for various domains and are always up to date with evolving threats. A configuration management tool can help automate the deployment of these configurations, ensuring consistency across diverse systems.",
           "domains": [
             "4.0 Security Operations"
           ],
@@ -14497,9 +14497,9 @@
             616
           ],
           "supplemental": false,
-          "hint": "A configuration management tool can help automate the deployment of these configurations, ensuring consistency across diverse systems.",
-          "front": "A configuration management tool can help automate the deployment of these configurations, ensuring consistency across diverse systems.",
-          "keyDetails": "A one-size-fits-all approach might not be suitable, given the diversity of the IT environment. Additionally, it does not guarantee an online source's credibility and up-to-date nature. While the officer's experience could be valuable, it is time-consuming and might not cover the range of best practices offered by established benchmarks like CIS.",
+          "hint": "A newly appointed Information Security Officer at a startup company is improving IT security. The current IT environment lacks standardized security configurations, and various operating systems, applications, and network devices are in use.",
+          "front": "A newly appointed Information Security Officer at a startup company is improving IT security. The current IT environment lacks standardized security configurations, and various operating systems, applications, and network devices are in use.",
+          "keyDetails": "A configuration management tool can help automate the deployment of these configurations, ensuring consistency across diverse systems. A one-size-fits-all approach might not be suitable, given the diversity of the IT environment. Additionally, it does not guarantee an online source's credibility and up-to-date nature.",
           "example": "A newly appointed Information Security Officer at a startup company is improving IT security.",
           "memoryHook": "\"Use\" + \"tool.\" → connect the words to the definition."
         },
@@ -15033,7 +15033,7 @@
         },
         {
           "term": "Analysis and lessons learned",
-          "definition": "The lessons learned phase analyzes the incident, identifies root causes, and improves procedures to prevent recurrence.",
+          "definition": "The team must contain the security breach, reduce the incident's reach, stop data theft, and eliminate the intruder's network access. Containment and eradication prevent further harm and ensure system safety.",
           "domains": [
             "5.0 Security Program Management and Oversight"
           ],
@@ -15046,8 +15046,8 @@
             653
           ],
           "supplemental": false,
-          "hint": "The lessons learned phase analyzes the incident, identifies root causes, and improves procedures to prevent recurrence.",
-          "front": "The lessons learned phase analyzes the incident, identifies root causes, and improves procedures to prevent recurrence.",
+          "hint": "The team must contain the security breach, reduce the incident's reach, stop data theft, and eliminate the intruder's network access. Containment and eradication prevent further harm and ensure system safety. The team must analyze the incident, identify the root cause, and assess its response.",
+          "front": "The team must contain the security breach, reduce the incident's reach, stop data theft, and eliminate the intruder's network access. Containment and eradication prevent further harm and ensure system safety. The team must analyze the incident, identify the root cause, and assess its response.",
           "keyDetails": "Containment and eradication prevent further harm and ensure system safety. The team must analyze the incident, identify the root cause, and assess its response. Knowing how the attacker infiltrated and removed data is crucial in preventing future occurrences.",
           "example": "An incident response team is working through a case and must choose the next best response or investigative action.",
           "memoryHook": "\"Analysis\" + \"learned\" → connect the words to the definition."
@@ -15716,8 +15716,8 @@
             800
           ],
           "supplemental": false,
-          "hint": "A high-ranking employee (i. e.",
-          "front": "A high-ranking employee (i. e.",
+          "hint": "Security governance relies heavily on specially designed and interdependent roles. Each role has unique responsibilities that contribute to effective security oversight and control. What are some of these roles? (Select the three best options.)",
+          "front": "Security governance relies heavily on specially designed and interdependent roles. Each role has unique responsibilities that contribute to effective security oversight and control. What are some of these roles? (Select the three best options.)",
           "keyDetails": "e. , a director or vice president) typically holds the owner role and is ultimately responsible for ensuring data is appropriately protected. The controller role closely relates to the General Data Protection Regulation (GDPR) and identifies the purposes, conditions, and means of processing personal data.",
           "example": "Security governance relies heavily on specially designed and interdependent roles.",
           "memoryHook": "Link \"Controller\" to: a high-ranking employee (i."
@@ -15888,7 +15888,7 @@
         },
         {
           "term": "Decreased granularity",
-          "definition": "Decreased granularity is NOT a benefit of Zero Trust Architecture; ZTA increases access granularity.",
+          "definition": "To the contrary of decreased granularity, a key benefit of deploying ZTA is to have increased granularity, as it grants users access to what they need when they need it. Greater security is also a key benefit, as it requires all users, devices, and applications to be authenticated and verified before network access.",
           "domains": [
             "5.0 Security Program Management and Oversight"
           ],
@@ -15980,8 +15980,8 @@
             730
           ],
           "supplemental": false,
-          "hint": "A comprehensive gap analysis includes consideration of regulatory requirements. By fleshing out regulatory requirements in a gap analysis, the organization understands where it ranks and what it needs to do to fortify its cybersecurity infrastructure comprehensively.",
-          "front": "A comprehensive gap analysis includes consideration of regulatory requirements. By fleshing out regulatory requirements in a gap analysis, the organization understands where it ranks and what it needs to do to fortify its cybersecurity infrastructure comprehensively.",
+          "hint": "An organization plans to undertake a gap analysis to evaluate its current cybersecurity infrastructure. The IT team analyzes its security practices, including findings from recent audits, regulatory requirements, and.",
+          "front": "An organization plans to undertake a gap analysis to evaluate its current cybersecurity infrastructure. The IT team analyzes its security practices, including findings from recent audits, regulatory requirements, and.",
           "keyDetails": "By fleshing out regulatory requirements in a gap analysis, the organization understands where it ranks and what it needs to do to fortify its cybersecurity infrastructure comprehensively. A comprehensive gap analysis also includes desired security objectives.",
           "example": "An organization plans to undertake a gap analysis to evaluate its current cybersecurity infrastructure.",
           "memoryHook": "\"Desired\" + \"objectives\" → connect the words to the definition."
@@ -16145,8 +16145,8 @@
             597
           ],
           "supplemental": false,
-          "hint": "Disk encryption protects against data loss when a malicious actor steals a device. The data remains safe as long as the malicious actor does not have the keys.",
-          "front": "Disk encryption protects against data loss when a malicious actor steals a device. The data remains safe as long as the malicious actor does not have the keys.",
+          "hint": "Disk encryption protects against data loss when a malicious actor steals a device. The data remains safe as long as the malicious actor does not have the keys. Disk encryption will slow performance and can have a negative impact.",
+          "front": "Disk encryption protects against data loss when a malicious actor steals a device. The data remains safe as long as the malicious actor does not have the keys. Disk encryption will slow performance and can have a negative impact.",
           "keyDetails": "The data remains safe as long as the malicious actor does not have the keys. Disk encryption will slow performance and can have a negative impact. However, most modern disk encryption suites only lock down access to the data when the device is off.",
           "example": "A security team is evaluating cryptographic protections and must choose the method or component that best fits the need.",
           "memoryHook": "\"Disk\" + \"theft.\" → connect the words to the definition."
@@ -17169,8 +17169,8 @@
             550
           ],
           "supplemental": false,
-          "hint": "Setting each permission individually may be an easier option if a file share is small. However, as file shares grow, maintaining this style of permissions can increase complexity.",
-          "front": "Setting each permission individually may be an easier option if a file share is small. However, as file shares grow, maintaining this style of permissions can increase complexity.",
+          "hint": "Setting each permission individually may be an easier option if a file share is small. However, as file shares grow, maintaining this style of permissions can increase complexity. While it may possibly allow for more control, it will also allow for more human error.",
+          "front": "Setting each permission individually may be an easier option if a file share is small. However, as file shares grow, maintaining this style of permissions can increase complexity. While it may possibly allow for more control, it will also allow for more human error.",
           "keyDetails": "However, as file shares grow, maintaining this style of permissions can increase complexity. While it may possibly allow for more control, it will also allow for more human error. If an employee leaves, has a position change, or no longer needs access, it would require much more manual labor to correct.",
           "example": "An organization is designing access and identity controls and must choose the authentication method or relationship that best fits the requirement.",
           "memoryHook": "\"It\" + \"manage.\" → connect the words to the definition."
@@ -17290,8 +17290,8 @@
             634
           ],
           "supplemental": false,
-          "hint": "Containment focuses on preventing the incident from spreading further and minimizing its impact on both data and business operations. Disabling a user account is helpful in the case of an account compromise.",
-          "front": "Containment focuses on preventing the incident from spreading further and minimizing its impact on both data and business operations. Disabling a user account is helpful in the case of an account compromise.",
+          "hint": "Containment focuses on preventing the incident from spreading further and minimizing its impact on both data and business operations. Disabling a user account is helpful in the case of an account compromise. Preventing its further use for malicious activity will protect a company from further compromise.",
+          "front": "Containment focuses on preventing the incident from spreading further and minimizing its impact on both data and business operations. Disabling a user account is helpful in the case of an account compromise. Preventing its further use for malicious activity will protect a company from further compromise.",
           "keyDetails": "Disabling a user account is helpful in the case of an account compromise. Preventing its further use for malicious activity will protect a company from further compromise. The eradication phase involves removing the cause of the incident and restoring affected systems to a secure state.",
           "example": "What is the primary purpose of the containment phase of cybersecurity incident management during an incident response lifecycle for a user account? (Select the two best options.)",
           "memoryHook": "\"Limit\" + \"stakeholders\" → connect the words to the definition."
@@ -19102,8 +19102,8 @@
             569
           ],
           "supplemental": false,
-          "hint": "A time-based restriction would prevent access to corporate resources outside a set schedule. The company should set this account policy.",
-          "front": "A time-based restriction would prevent access to corporate resources outside a set schedule. The company should set this account policy.",
+          "hint": "A time-based restriction would prevent access to corporate resources outside a set schedule. The company should set this account policy. Location-based access policies would need a temporary exemption option to allow for travel.",
+          "front": "A time-based restriction would prevent access to corporate resources outside a set schedule. The company should set this account policy. Location-based access policies would need a temporary exemption option to allow for travel.",
           "keyDetails": "The company should set this account policy. Location-based access policies would need a temporary exemption option to allow for travel. Location-based access policies prevent access to company systems outside a specified area (typically the company's state).",
           "example": "An organization is designing access and identity controls and must choose the authentication method or relationship that best fits the requirement.",
           "memoryHook": "\"Time-based\" + \"restrictions\" → connect the words to the definition."

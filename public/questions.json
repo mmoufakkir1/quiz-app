@@ -30,7 +30,7 @@
           ],
           "answer": "Fail-open",
           "scenario": "A security team is reviewing a failure mode that permits access when a control fails.",
-          "explanation": "Fail-open favors availability. If the control fails or cannot decide, access is allowed; fail-closed does the opposite and blocks access.",
+          "explanation": "In a fail-open mode, if the IPS fails, it will still allow traffic to pass through, maintaining network connectivity. In a fail-closed mode, if the IPS fails, it will block all traffic, disrupting network connectivity. Active mode is also an IPS operation mode, not a failure mode. In active mode, the IPS monitors traffic and blocks threats. A fail-open mode ensures traffic flow if the IPS fails. Passive mode is an IPS operation mode, not a failure mode. In passive mode, the IPS monitors traffic and generates alerts but doesn’t block threats.",
           "topic": "1.0 General Security Concepts",
           "lesson": "1.2 Summarize fundamental security concepts.",
           "type": "single"
@@ -9980,7 +9980,7 @@
           ],
           "answer": "Malicious update",
           "scenario": "A security analyst is documenting a software update intentionally modified to deliver harmful code.",
-          "explanation": "The prompt is describing a software update intentionally modified to deliver harmful code. In security terminology, that is Malicious update.",
+          "explanation": "A malicious update refers to an update that appears legitimate but contains harmful code, often used by cyber criminals to distribute malware or execute a cyber attack. Application race condition vulnerabilities refer to software flaws associated with the timing or order of events within a software program, which can cause undesirable or unpredictable outcomes through manipulation. Memory injection vulnerabilities refer to a type of security flaw where an attacker can introduce (inject) malicious code into a running application's process memory. To exploit a buffer overflow vulnerability, the attacker passes data that deliberately flood a space of temporary memory.",
           "topic": "4.0 Security Operations",
           "lesson": "4.6 Given a scenario, implement and maintain identity and access management.",
           "type": "single"

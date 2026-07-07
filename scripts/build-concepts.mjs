@@ -30,7 +30,6 @@ function removeQuizWording(text) {
 
 function buildEducationalExplanation(entry, topic, baseExplanation) {
   const cleanedBase = ensureSentence(removeQuizWording(dedupeSentences(baseExplanation || entry.memorize)))
-  const topicSummary = topic.summary?.trim()
 
   if (/^[A-Z]{2,6}$/.test(entry.term.trim()) && /stands for/i.test(entry.memorize || '')) {
     const expanded = (entry.memorize || '').replace(
@@ -42,12 +41,6 @@ function buildEducationalExplanation(entry, topic, baseExplanation) {
         `${entry.term} (${expanded}) is a Security+ term you should understand in context, not just as an abbreviation.`,
       )
     }
-  }
-
-  if (topicSummary && cleanedBase) {
-    return dedupeSentences(
-      `${cleanedBase} ${ensureSentence(`This matters in ${topic.path} because ${topicSummary.charAt(0).toLowerCase()}${topicSummary.slice(1)}`)}`,
-    )
   }
 
   return cleanedBase

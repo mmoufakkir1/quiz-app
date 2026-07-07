@@ -6,10 +6,8 @@ from pathlib import Path
 
 from pypdf import PdfReader
 
-DEFAULT_PRACTICES_DIR = Path(
-    r"C:\Users\mmouf\SynologyDrive\mo-personal\Projects\comptia-security++\cyberkraft\practices"
-)
 REPO_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_PRACTICES_DIR = REPO_ROOT / "docs"
 FLASHCARDS_PATH = REPO_ROOT / "public" / "flashcards.json"
 QUESTIONS_PATH = REPO_ROOT / "public" / "questions.json"
 DOMAIN_ORDER = [
@@ -254,7 +252,7 @@ def main() -> int:
         "practicesDir": str(practices_dir),
         "pdfFiles": len(list(practices_dir.glob("*.pdf"))),
         "pdfAnswerExplanations": len(pdf_explanations),
-        "flashcards": len(flashcard_data["flashcards"]),
+        "flashcards": len(flashcards),
         "pdfAdded": pdf_added,
         "pdfUpdated": pdf_updated,
         "pdfUnchanged": pdf_unchanged,
