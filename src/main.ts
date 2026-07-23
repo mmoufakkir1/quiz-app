@@ -81,6 +81,39 @@ type ConceptStudyItem = ConceptTerm & {
   domain: string
 }
 
+type StudyGuidePoint = {
+  title: string
+  detail: string
+}
+
+type StudyGuideDomain = {
+  id: string
+  domain: string
+  focus: string
+  examTips: string[]
+  mustKnow: StudyGuidePoint[]
+}
+
+type CheatSheetItem = {
+  name: string
+  value: string
+  use: string
+}
+
+type CheatSheetGroup = {
+  title: string
+  source: string
+  items: CheatSheetItem[]
+}
+
+type StudyGuideData = {
+  title: string
+  description: string
+  sources: string[]
+  domains: StudyGuideDomain[]
+  cheatSheets: CheatSheetGroup[]
+}
+
 const SECTION_GROUPS: SectionGroup[] = [
   {
     name: 'CompTIA Exam Domains',
@@ -295,6 +328,7 @@ let flashcards: Flashcard[] = []
 let allFlashcards: Flashcard[] = []
 let allConceptTopics: ConceptTopic[] = []
 let conceptStudyItems: ConceptStudyItem[] = []
+let studyGuideData: StudyGuideData | null = null
 let conceptTermCount = 0
 let conceptDescription = ''
 let loaded = false
@@ -302,9 +336,10 @@ let pendingSectionNames = new Set<string>()
 
 type AppState = {
   selectedSection: string | null
-  mode: 'practice' | 'timed-test' | 'flashcards' | 'concepts'
+  mode: 'practice' | 'timed-test' | 'flashcards' | 'concepts' | 'study-guide'
   conceptsView: 'topics' | 'study'
   activeConceptTopicId: string | null
+  activeStudyGuideTab: number
   currentIndex: number
   flashcardRevealed: boolean
   responses: {
@@ -323,6 +358,7 @@ let state: AppState = {
   mode: 'practice',
   conceptsView: 'topics',
   activeConceptTopicId: null,
+  activeStudyGuideTab: 0,
   currentIndex: 0,
   flashcardRevealed: false,
   responses: [],
@@ -340,6 +376,7 @@ const TIMED_TEST_DURATION_SECONDS = 90 * 60
 
 function render() {
   const app = document.querySelector<HTMLDivElement>('#app')!
+
   if (!loaded) {
     app.innerHTML = `<div class="quiz-container question-container"><p style="color:var(--text-muted)">Loading questions...</p></div>`
     return
@@ -356,6 +393,8 @@ function render() {
     renderConceptsFinished(app)
   } else if (state.finished) {
     renderFinished(app)
+  } else if (state.mode === 'study-guide') {
+    renderStudyGuide(app)
   } else if (state.mode === 'concepts' && state.conceptsView === 'topics') {
     renderConceptTopics(app)
   } else if (state.mode === 'concepts') {
@@ -415,6 +454,15 @@ function renderSectionSelection(app: HTMLDivElement) {
       <span class="timed-test-count">${allConceptTopics.length} topics</span>
     </button>
   `
+  const studyGuideButton = `
+    <button class="study-guide-launch-card" type="button">
+      <span>
+        <strong>Study Guide</strong>
+        <span>Exam domains, ports, Linux, and Nmap quick reference</span>
+      </span>
+      <span class="timed-test-count">${studyGuideData?.domains.length ?? 0} domains</span>
+    </button>
+  `
   const sectionGroupsHtml = sectionGroups
     .map((group) => {
       const groupQuestionCount = group.sections.reduce(
@@ -450,6 +498,7 @@ function renderSectionSelection(app: HTMLDivElement) {
         ${timedTestButton}
         ${flashcardsButton}
         ${conceptsButton}
+        ${studyGuideButton}
       </div>
       <div class="section-grid all-section-grid">
         ${allSectionsButton}
@@ -498,6 +547,10 @@ function renderSectionSelection(app: HTMLDivElement) {
 
   app.querySelector('.concepts-launch-card')?.addEventListener('click', () => {
     startConcepts()
+  })
+
+  app.querySelector('.study-guide-launch-card')?.addEventListener('click', () => {
+    startStudyGuide()
   })
 }
 
@@ -569,6 +622,7 @@ function startQuiz(sectionNames: string[]) {
     mode: 'practice',
     conceptsView: 'topics',
     activeConceptTopicId: null,
+    activeStudyGuideTab: 0,
     currentIndex: 0,
     flashcardRevealed: false,
     responses: questions.map(() => ({
@@ -593,6 +647,7 @@ function startTimedTest() {
     mode: 'timed-test',
     conceptsView: 'topics',
     activeConceptTopicId: null,
+    activeStudyGuideTab: 0,
     currentIndex: 0,
     flashcardRevealed: false,
     responses: questions.map(() => ({
@@ -618,6 +673,7 @@ function startFlashcards() {
     mode: 'flashcards',
     conceptsView: 'topics',
     activeConceptTopicId: null,
+    activeStudyGuideTab: 0,
     currentIndex: 0,
     flashcardRevealed: false,
     responses: [],
@@ -657,6 +713,7 @@ function startConcepts() {
     mode: 'concepts',
     conceptsView: 'topics',
     activeConceptTopicId: null,
+    activeStudyGuideTab: 0,
     currentIndex: 0,
     flashcardRevealed: false,
     responses: [],
@@ -666,6 +723,30 @@ function startConcepts() {
     durationSeconds: null,
     endsAt: null,
   }
+  render()
+}
+
+function startStudyGuide() {
+  stopTimer()
+  questions = []
+  flashcards = []
+  conceptStudyItems = []
+  state = {
+    selectedSection: 'Study Guide',
+    mode: 'study-guide',
+    conceptsView: 'topics',
+    activeConceptTopicId: null,
+    activeStudyGuideTab: 0,
+    currentIndex: 0,
+    flashcardRevealed: false,
+    responses: [],
+    score: 0,
+    finished: false,
+    timedOut: false,
+    durationSeconds: null,
+    endsAt: null,
+  }
+  window.scrollTo(0, 0)
   render()
 }
 
@@ -901,6 +982,160 @@ function renderConceptsFinished(app: HTMLDivElement) {
     conceptStudyItems = []
     render()
   })
+}
+
+function renderStudyGuide(app: HTMLDivElement) {
+  if (!studyGuideData) {
+    app.innerHTML = `
+      <div class="quiz-container question-container">
+        <p class="section-label">Study Guide</p>
+        <h1>Study guide unavailable</h1>
+        <p class="concept-study-text">The generated study guide data could not be loaded.</p>
+        <div class="actions">
+          <button class="btn secondary-btn header-section-btn" type="button">Back to Home</button>
+        </div>
+      </div>
+    `
+    app.querySelector('.header-section-btn')!.addEventListener('click', () => {
+      state.selectedSection = null
+      render()
+    })
+    return
+  }
+
+  const activeTab = Math.min(
+    Math.max(state.activeStudyGuideTab, 0),
+    studyGuideData.cheatSheets.length,
+  )
+  const tabs = [
+    {
+      label: 'Exam Domains',
+      itemCount: studyGuideData.domains.length,
+    },
+    ...studyGuideData.cheatSheets.map((group) => ({
+      label: group.title,
+      itemCount: group.items.length,
+    })),
+  ]
+  const tabsHtml = tabs
+    .map(
+      (tab, index) => `
+        <button
+          class="study-tab ${index === activeTab ? 'active' : ''}"
+          type="button"
+          data-tab-index="${index}"
+          aria-selected="${index === activeTab}"
+        >
+          <span>${escapeHtml(tab.label)}</span>
+          <small>${tab.itemCount}</small>
+        </button>
+      `,
+    )
+    .join('')
+  const domainsHtml = studyGuideData.domains
+    .map((domain) => {
+      const mustKnowHtml = domain.mustKnow
+        .map(
+          (point) => `
+            <li>
+              <strong>${escapeHtml(point.title)}</strong>
+              <span>${escapeHtml(point.detail)}</span>
+            </li>
+          `,
+        )
+        .join('')
+      const tipsHtml = domain.examTips.map((tip) => `<li>${escapeHtml(tip)}</li>`).join('')
+
+      return `
+        <section class="study-domain" id="${escapeHtml(domain.id)}">
+          <div class="study-domain-header">
+            <p class="section-label">${escapeHtml(domain.domain)}</p>
+            <h2>${escapeHtml(domain.focus)}</h2>
+          </div>
+          <div class="study-domain-columns">
+            <div>
+              <h3>Must Know</h3>
+              <ul class="study-list">${mustKnowHtml}</ul>
+            </div>
+            <div>
+              <h3>Exam Traps</h3>
+              <ul class="study-tip-list">${tipsHtml}</ul>
+            </div>
+          </div>
+        </section>
+      `
+    })
+    .join('')
+  const activeCheatSheet = activeTab > 0 ? studyGuideData.cheatSheets[activeTab - 1] : null
+  const activePanelHtml = activeCheatSheet
+    ? renderStudyGuideTable(activeCheatSheet)
+    : `<div class="study-guide-grid">${domainsHtml}</div>`
+
+  app.innerHTML = `
+    <div class="quiz-container selection-container study-guide-container">
+      <div class="quiz-header">
+        <div>
+          <p class="section-label">CompTIA Security+ SY0-701</p>
+          <h1>${escapeHtml(studyGuideData.title)}</h1>
+        </div>
+        <button class="header-section-btn" type="button">Back to Home</button>
+      </div>
+      <p class="study-guide-description">${escapeHtml(studyGuideData.description)}</p>
+      <div class="study-tabs" role="tablist" aria-label="Study guide sections">
+        ${tabsHtml}
+      </div>
+      <div class="study-tab-panel">
+        ${activePanelHtml}
+      </div>
+    </div>
+  `
+
+  app.querySelector('.header-section-btn')!.addEventListener('click', () => {
+    state.selectedSection = null
+    render()
+  })
+
+  app.querySelectorAll<HTMLButtonElement>('.study-tab').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.activeStudyGuideTab = Number(button.dataset.tabIndex)
+      render()
+    })
+  })
+}
+
+function renderStudyGuideTable(group: CheatSheetGroup): string {
+  const rowsHtml = group.items
+    .map(
+      (item) => `
+        <tr>
+          <th scope="row">${escapeHtml(item.name)}</th>
+          <td>${escapeHtml(item.value)}</td>
+          <td>${escapeHtml(item.use)}</td>
+        </tr>
+      `,
+    )
+    .join('')
+
+  return `
+    <section class="study-cheat-sheet">
+      <div class="section-group-header">
+        <h2>${escapeHtml(group.title)}</h2>
+        <span>${group.items.length} items</span>
+      </div>
+      <div class="study-table-wrap">
+        <table class="study-table">
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">Value</th>
+              <th scope="col">Use</th>
+            </tr>
+          </thead>
+          <tbody>${rowsHtml}</tbody>
+        </table>
+      </div>
+    </section>
+  `
 }
 
 function buildTimedTestQuestions(): Question[] {
@@ -1370,14 +1605,16 @@ function indexesMatch(selectedIndexes: number[], correctIndexes: number[]): bool
 }
 
 async function init() {
-  const [questionRes, flashcardRes, conceptRes] = await Promise.all([
+  const [questionRes, flashcardRes, conceptRes, studyGuideRes] = await Promise.all([
     fetch(`${import.meta.env.BASE_URL}questions.json`),
     fetch(`${import.meta.env.BASE_URL}flashcards.json`),
     fetch(`${import.meta.env.BASE_URL}concepts.json`),
+    fetch(`${import.meta.env.BASE_URL}study-guide.json`),
   ])
   const quizData = await questionRes.json() as QuizData
   const flashcardData = await flashcardRes.json() as FlashcardData
   const conceptData = await conceptRes.json() as ConceptData
+  studyGuideData = await studyGuideRes.json() as StudyGuideData
   sections = quizData.sections
   allFlashcards = getFlashcards(flashcardData)
   allConceptTopics = conceptData.topics

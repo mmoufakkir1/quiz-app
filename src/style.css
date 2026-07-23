@@ -151,7 +151,8 @@ select {
 
 .timed-test-card,
 .flashcard-launch-card,
-.concepts-launch-card {
+.concepts-launch-card,
+.study-guide-launch-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -170,7 +171,8 @@ select {
 
 .timed-test-card:hover,
 .flashcard-launch-card:hover,
-.concepts-launch-card:hover {
+.concepts-launch-card:hover,
+.study-guide-launch-card:hover {
   background: #1f2937;
   border-color: #1f2937;
   transform: translateY(-1px);
@@ -179,13 +181,15 @@ select {
 
 .timed-test-card:active,
 .flashcard-launch-card:active,
-.concepts-launch-card:active {
+.concepts-launch-card:active,
+.study-guide-launch-card:active {
   transform: translateY(0) scale(0.995);
 }
 
 .timed-test-card span,
 .flashcard-launch-card span,
-.concepts-launch-card span {
+.concepts-launch-card span,
+.study-guide-launch-card span {
   min-width: 0;
 }
 
@@ -194,20 +198,24 @@ select {
 .flashcard-launch-card strong,
 .flashcard-launch-card span span,
 .concepts-launch-card strong,
-.concepts-launch-card span span {
+.concepts-launch-card span span,
+.study-guide-launch-card strong,
+.study-guide-launch-card span span {
   display: block;
 }
 
 .timed-test-card strong,
 .flashcard-launch-card strong,
-.concepts-launch-card strong {
+.concepts-launch-card strong,
+.study-guide-launch-card strong {
   margin-bottom: 4px;
   font-size: 16px;
 }
 
 .timed-test-card span span,
 .flashcard-launch-card span span,
-.concepts-launch-card span span {
+.concepts-launch-card span span,
+.study-guide-launch-card span span {
   color: #d1d5db;
   font-size: 13px;
   font-weight: 600;
@@ -231,6 +239,16 @@ select {
 .concepts-launch-card:hover {
   background: #6d28d9;
   border-color: #6d28d9;
+}
+
+.study-guide-launch-card {
+  border-color: #1d4ed8;
+  background: #1d4ed8;
+}
+
+.study-guide-launch-card:hover {
+  background: #1e40af;
+  border-color: #1e40af;
 }
 
 .concepts-container .concept-actions {
@@ -791,6 +809,232 @@ select {
   overflow-wrap: anywhere;
 }
 
+.study-guide-container .quiz-header {
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.study-guide-container .quiz-header h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.15;
+}
+
+.study-guide-description {
+  max-width: 760px;
+  margin: 0 0 16px;
+  color: #334155;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.study-source-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.study-source-row span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 9px;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.study-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 22px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.study-tab {
+  display: inline-flex;
+  flex: 1 1 180px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 42px;
+  padding: 9px 11px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.study-tab:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  transform: translateY(-1px);
+}
+
+.study-tab.active {
+  border-color: #1d4ed8;
+  background: #1d4ed8;
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(29, 78, 216, 0.18);
+}
+
+.study-tab span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.study-tab small {
+  flex: 0 0 auto;
+  color: inherit;
+  font-size: 11px;
+  font-weight: 900;
+  opacity: 0.78;
+}
+
+.study-tab-panel {
+  animation: item-enter 180ms ease-out both;
+}
+
+.study-guide-grid,
+.study-cheat-sheet-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.study-cheat-sheet-grid {
+  margin-top: 22px;
+}
+
+.study-domain,
+.study-cheat-sheet {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  animation: item-enter 220ms ease-out both;
+}
+
+.study-domain-header {
+  margin-bottom: 16px;
+}
+
+.study-domain-header h2 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.study-domain-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+  gap: 18px;
+}
+
+.study-domain-columns h3 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.study-list,
+.study-tip-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.study-list li,
+.study-tip-list li {
+  padding: 12px;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.study-list strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #111827;
+  font-size: 14px;
+}
+
+.study-list span {
+  display: block;
+}
+
+.study-tip-list li {
+  border-left: 4px solid #f59e0b;
+  background: #fffbeb;
+}
+
+.study-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.study-table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.study-table th,
+.study-table td {
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.study-table thead th {
+  background: #f8fafc;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.study-table tbody th {
+  width: 22%;
+  color: #1d4ed8;
+  font-weight: 800;
+}
+
+.study-table tbody td:first-of-type {
+  width: 24%;
+  color: #111827;
+  font-weight: 700;
+}
+
+.study-table tr:last-child th,
+.study-table tr:last-child td {
+  border-bottom: 0;
+}
+
 .options {
   display: flex;
   flex-direction: column;
@@ -1161,9 +1405,41 @@ select {
   }
 
   .timed-test-card,
-  .flashcard-launch-card {
+  .flashcard-launch-card,
+  .concepts-launch-card,
+  .study-guide-launch-card {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .study-guide-container .quiz-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .study-guide-container .quiz-header h1 {
+    font-size: 24px;
+  }
+
+  .study-domain {
+    padding: 16px;
+  }
+
+  .study-domain-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .study-cheat-sheet {
+    padding: 16px;
+  }
+
+  .study-table {
+    min-width: 560px;
+    font-size: 13px;
+  }
+
+  .study-tab {
+    flex-basis: 100%;
   }
 
   .section-card-details {

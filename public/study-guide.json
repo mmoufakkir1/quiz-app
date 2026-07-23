@@ -1,0 +1,495 @@
+{
+  "title": "Security+ Study Guide",
+  "description": "High-yield domain notes, exam traps, command references, Nmap flags, and port numbers for Security+ review.",
+  "sources": [
+    "CompTIA Security+ Study Guide SY0-701",
+    "The Orange Study Guide (SecPlus) v0.4",
+    "Cyberkraft Linux Commands Cheat Sheet",
+    "Cyberkraft Nmap Commands Cheat Sheet",
+    "Cyberkraft Security+ Ports and Protocols Reference Sheet SY0-701"
+  ],
+  "domains": [
+    {
+      "id": "domain-1-general-security-concepts",
+      "domain": "1.0 General Security Concepts",
+      "focus": "Controls, core models, physical security, and cryptography",
+      "examTips": [
+        "Categories describe where a control lives: technical, managerial, operational, or physical.",
+        "Types describe what the control does: preventive, detective, corrective, deterrent, compensating, or directive.",
+        "CIA, AAA, and Zero Trust show up heavily in scenario wording.",
+        "Honeypots and honeynets are deception and detection controls, not preventive controls."
+      ],
+      "mustKnow": [
+        {
+          "title": "CIA Triad",
+          "detail": "Confidentiality limits access, integrity prevents unauthorized changes, and availability keeps resources reachable."
+        },
+        {
+          "title": "AAA",
+          "detail": "Authentication proves identity, authorization defines allowed actions, and accounting records activity."
+        },
+        {
+          "title": "Zero Trust",
+          "detail": "Eliminates implicit trust, continuously verifies identity and context, and enforces least privilege through policy."
+        },
+        {
+          "title": "Physical Controls",
+          "detail": "Bollards, lighting, badges, sensors, guards, access control vestibules, fencing, and CCTV reduce physical intrusion risk."
+        },
+        {
+          "title": "Cryptography",
+          "detail": "Symmetric encryption is fast with one shared key; asymmetric encryption uses public and private keys; hashing verifies integrity and supports signatures."
+        },
+        {
+          "title": "Hashing and Tokens",
+          "detail": "Know the difference between hashing, salting, key stretching, tokenization, and authentication tokens; these are common Security+ scenario terms."
+        }
+      ]
+    },
+    {
+      "id": "domain-2-threats-vulnerabilities-and-mitigations",
+      "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+      "focus": "Threat actors, attack surfaces, social engineering, malware, and vulnerability management",
+      "examTips": [
+        "Match the attacker motivation to the actor: nation-state, organized crime, insider threat, hacktivist, or script kiddie.",
+        "Do not confuse vulnerability scanning with penetration testing; scanning finds issues, testing validates exploitability.",
+        "Phishing terms are scenario-heavy: spear phishing is targeted, whaling targets executives, and vishing uses voice.",
+        "Patching, segmentation, secure configuration, and least privilege are frequent mitigation answers."
+      ],
+      "mustKnow": [
+        {
+          "title": "Threat Intelligence",
+          "detail": "Indicators of compromise, tactics, techniques, procedures, reputation data, and threat feeds support detection and response."
+        },
+        {
+          "title": "Malware",
+          "detail": "Viruses attach to files, worms self-propagate, trojans hide malicious behavior, ransomware encrypts data, and spyware collects information."
+        },
+        {
+          "title": "Social Engineering",
+          "detail": "Pretexting, baiting, shoulder surfing, tailgating, phishing, smishing, and vishing exploit human trust."
+        },
+        {
+          "title": "Vulnerability Management",
+          "detail": "Identify, analyze, prioritize, remediate, and validate vulnerabilities with risk-based urgency."
+        },
+        {
+          "title": "Application Weaknesses",
+          "detail": "Injection, XSS, insecure design, insecure components, weak authentication, and poor input validation create exploitable paths."
+        }
+      ]
+    },
+    {
+      "id": "domain-3-security-architecture",
+      "domain": "3.0 Security Architecture",
+      "focus": "Secure enterprise design, cloud models, resilience, and application security",
+      "examTips": [
+        "Know the cloud responsibility split: the provider secures the cloud, the customer secures what they put in it.",
+        "Segmentation, DMZs, network access control, firewalls, IDS/IPS, and proxies are common architecture answers.",
+        "Hot, warm, and cold sites trade cost against recovery speed.",
+        "RTO is how long recovery can take; RPO is how much data loss is acceptable."
+      ],
+      "mustKnow": [
+        {
+          "title": "Network Zones",
+          "detail": "DMZs expose public services while limiting access to internal networks; segmentation limits lateral movement."
+        },
+        {
+          "title": "Cloud Models",
+          "detail": "IaaS gives the customer more control, SaaS gives the provider more responsibility, and PaaS sits between them."
+        },
+        {
+          "title": "Resiliency",
+          "detail": "Load balancing, clustering, redundancy, backups, snapshots, replication, and failover improve availability."
+        },
+        {
+          "title": "Secure Design",
+          "detail": "Least privilege, secure defaults, defense in depth, input validation, and secure SDLC reduce attack paths."
+        },
+        {
+          "title": "Data Protection",
+          "detail": "Classify data, encrypt sensitive data, mask or tokenize where appropriate, and control storage and retention."
+        }
+      ]
+    },
+    {
+      "id": "domain-4-security-operations",
+      "domain": "4.0 Security Operations",
+      "focus": "Identity, hardening, monitoring, incident response, and operational tooling",
+      "examTips": [
+        "Least privilege and role-based access are default answers when access is too broad.",
+        "SIEM collects and correlates logs; SOAR automates response workflows.",
+        "EDR runs on endpoints; NDR watches network behavior; XDR correlates across multiple control planes.",
+        "Incident response order is preparation, detection, analysis, containment, eradication, recovery, and lessons learned."
+      ],
+      "mustKnow": [
+        {
+          "title": "Identity Controls",
+          "detail": "MFA, SSO, federation, privileged access management, conditional access, and account reviews reduce identity risk."
+        },
+        {
+          "title": "Hardening",
+          "detail": "Disable unnecessary services, remove default accounts, patch systems, apply secure baselines, and use allow lists."
+        },
+        {
+          "title": "Monitoring",
+          "detail": "Logs, alerts, dashboards, file integrity monitoring, and behavioral analytics provide operational visibility."
+        },
+        {
+          "title": "Incident Response",
+          "detail": "Containment limits impact, eradication removes the cause, recovery restores operations, and lessons learned improves future response."
+        },
+        {
+          "title": "Forensics",
+          "detail": "Preserve evidence, maintain chain of custody, collect volatile data first when needed, and avoid changing evidence."
+        }
+      ]
+    },
+    {
+      "id": "domain-5-security-program-management-and-oversight",
+      "domain": "5.0 Security Program Management and Oversight",
+      "focus": "Governance, risk, compliance, third parties, audits, and awareness",
+      "examTips": [
+        "Policies state management intent; standards define requirements; procedures provide step-by-step execution.",
+        "Qualitative risk uses descriptive ratings; quantitative risk assigns money values such as SLE and ALE.",
+        "Risk acceptance means leadership knowingly allows the risk; risk transference shifts financial impact.",
+        "Third-party risk requires due diligence, contracts, monitoring, and offboarding."
+      ],
+      "mustKnow": [
+        {
+          "title": "Risk Management",
+          "detail": "Identify assets and threats, assess likelihood and impact, choose a response, and monitor residual risk."
+        },
+        {
+          "title": "Governance Documents",
+          "detail": "Policies, standards, procedures, baselines, playbooks, and acceptable use rules direct consistent security behavior."
+        },
+        {
+          "title": "Compliance",
+          "detail": "Frameworks and regulations drive control requirements, audit evidence, data handling, reporting, and retention."
+        },
+        {
+          "title": "Change Management",
+          "detail": "Approvals, impact analysis, test results, maintenance windows, and backout plans reduce deployment risk."
+        },
+        {
+          "title": "Training",
+          "detail": "Awareness programs target phishing, password hygiene, reporting, physical security, data handling, and role-specific risks."
+        }
+      ]
+    }
+  ],
+  "cheatSheets": [
+    {
+      "title": "Ports and Protocols",
+      "source": "Cyberkraft ports reference",
+      "items": [
+        { "name": "FTP", "value": "20/21", "use": "File transfer; port 21 controls the session and port 20 transfers data." },
+        { "name": "SSH / SFTP", "value": "22", "use": "Encrypted remote shell and SSH-based file transfer." },
+        { "name": "TACACS+", "value": "49", "use": "Cisco AAA protocol." },
+        { "name": "DNS", "value": "53", "use": "Maps domain names to IP addresses." },
+        { "name": "DHCP", "value": "67/68", "use": "Assigns IP configuration to clients." },
+        { "name": "HTTP / HTTPS", "value": "80 / 443", "use": "Web traffic; HTTPS uses TLS." },
+        { "name": "Kerberos", "value": "88", "use": "Ticket-based network authentication." },
+        { "name": "POP3 / POP3S", "value": "110 / 995", "use": "Email retrieval; POP3S is TLS-protected." },
+        { "name": "IMAP / IMAPS", "value": "143 / 993", "use": "Two-way email mailbox access; IMAPS is TLS-protected." },
+        { "name": "SNMP", "value": "161/162", "use": "Network monitoring and management." },
+        { "name": "LDAP / LDAPS", "value": "389 / 636", "use": "Directory access; LDAPS is TLS-protected." },
+        { "name": "RADIUS", "value": "1812/1813", "use": "AAA for network access." },
+        { "name": "RDP", "value": "3389", "use": "Remote Windows desktop access." },
+        { "name": "Diameter", "value": "3868", "use": "Upgrade path from RADIUS." },
+        { "name": "SRTP", "value": "5004", "use": "Secure real-time audio/video transport." },
+        { "name": "L2TP", "value": "1701", "use": "Layer 2 tunneling, often paired with IPSec." },
+        { "name": "PPTP", "value": "1723", "use": "Deprecated VPN tunneling protocol." }
+      ]
+    },
+    {
+      "title": "Linux Commands",
+      "source": "Cyberkraft Linux cheat sheet",
+      "items": [
+        { "name": "ls / ls -al", "value": "List files", "use": "View directory contents; -al includes hidden files and detailed metadata." },
+        { "name": "cd", "value": "Change directory", "use": "Move through the filesystem; cd .. moves up and cd / moves to root." },
+        { "name": "touch", "value": "Create file", "use": "Create an empty file or update timestamps." },
+        { "name": "cat", "value": "Display or combine", "use": "Print file contents or concatenate files with redirection." },
+        { "name": "mv", "value": "Move or rename", "use": "Move files to another path or rename them." },
+        { "name": "rm", "value": "Delete file", "use": "Remove a file from the filesystem." },
+        { "name": "mkdir / rmdir", "value": "Directory management", "use": "Create directories or remove empty directories." },
+        { "name": "grep", "value": "Search text", "use": "Find matching text in files; -r is recursive and -i ignores case." },
+        { "name": "find", "value": "Search filesystem", "use": "Locate files by name or other file attributes." },
+        { "name": "chown", "value": "Change ownership", "use": "Modify file owner or owner and group." },
+        { "name": "ssh", "value": "Remote shell", "use": "Open an encrypted shell to another host." },
+        { "name": "ping", "value": "Reachability test", "use": "Send ICMP echo requests to test connectivity." },
+        { "name": "ip a / ifconfig", "value": "Interface info", "use": "Show IP addresses and network interface details." },
+        { "name": "top / ps", "value": "Process view", "use": "Inspect running processes and resource usage." },
+        { "name": "kill", "value": "Terminate process", "use": "Stop a process by process ID." },
+        { "name": "df / free", "value": "Capacity checks", "use": "Review disk space and memory usage." }
+      ]
+    },
+    {
+      "title": "Nmap Commands",
+      "source": "Cyberkraft Nmap cheat sheet",
+      "items": [
+        { "name": "-sS", "value": "TCP SYN scan", "use": "Common stealthier TCP scan." },
+        { "name": "-sT", "value": "TCP connect scan", "use": "Completes the TCP connection." },
+        { "name": "-sU", "value": "UDP scan", "use": "Checks UDP services." },
+        { "name": "-sn / -sP", "value": "Host discovery", "use": "Find live hosts without a full port scan." },
+        { "name": "-p", "value": "Port selection", "use": "Specify ports to scan." },
+        { "name": "-F", "value": "Fast scan", "use": "Scan fewer common ports." },
+        { "name": "-sV", "value": "Version detection", "use": "Identify service versions on open ports." },
+        { "name": "-O", "value": "OS detection", "use": "Attempt to identify operating systems." },
+        { "name": "-A", "value": "Aggressive scan", "use": "Enable OS detection, version detection, scripts, and traceroute." },
+        { "name": "-T<0-5>", "value": "Timing template", "use": "Adjust scan speed and aggressiveness." },
+        { "name": "--min-rate / --max-rate", "value": "Packet rate", "use": "Control minimum and maximum packet send rate." },
+        { "name": "-f", "value": "Fragment packets", "use": "Split packets for firewall or IDS evasion testing." },
+        { "name": "-D", "value": "Decoys", "use": "Make scan traffic appear to come from multiple sources." },
+        { "name": "-S", "value": "Spoof source IP", "use": "Set a source address for scan packets." },
+        { "name": "--script", "value": "NSE script", "use": "Run a specific Nmap Scripting Engine script." },
+        { "name": "--open", "value": "Open only", "use": "Show only open ports." },
+        { "name": "-oA", "value": "All output formats", "use": "Save normal, XML, and grepable output with one basename." },
+        { "name": "--packet-trace", "value": "Packet trace", "use": "Show packets sent and received." }
+      ]
+    },
+    {
+      "title": "Hashing, Salting, and Tokens",
+      "source": "Security+ crypto objectives",
+      "items": [
+        { "name": "Hashing", "value": "One-way digest", "use": "Transforms data into a fixed-length value used for integrity checks, password verification, and digital signatures." },
+        { "name": "Message digest", "value": "Hash output", "use": "A compact summary of data; if the data changes, the digest should change." },
+        { "name": "Collision", "value": "Same hash, different input", "use": "A weakness where two different inputs produce the same hash; collisions can lead to algorithm deprecation." },
+        { "name": "SHA-256", "value": "SHA-2, 256-bit digest", "use": "Modern secure hashing choice for integrity checks and many Security+ examples." },
+        { "name": "SHA-3", "value": "Modern SHA family", "use": "Secure hash family with variants similar in output length to SHA-2." },
+        { "name": "SHA-1", "value": "Deprecated for security", "use": "Older hash algorithm; know it is weak for collision resistance and should not be chosen for new security designs." },
+        { "name": "MD5", "value": "Deprecated for security", "use": "Older fast hash; still appears in legacy checks and forensics examples, but is not secure for modern cryptographic trust." },
+        { "name": "Salt", "value": "Random per-password value", "use": "Added before hashing so identical passwords produce different hashes and rainbow tables are much harder to use." },
+        { "name": "Pepper", "value": "Secret extra value", "use": "Additional secret data added before hashing; unlike a salt, it should be protected separately from the password database." },
+        { "name": "Key stretching", "value": "Repeated hashing", "use": "Runs passwords through many hashing iterations to slow offline cracking attempts." },
+        { "name": "PBKDF2", "value": "Password-based key derivation", "use": "Key stretching algorithm that uses many iterations of salting and hashing to derive stronger keys from passwords." },
+        { "name": "bcrypt", "value": "Password hashing", "use": "Adaptive password-hashing algorithm designed to slow brute-force cracking." },
+        { "name": "Argon2", "value": "Password hashing", "use": "Modern password-hashing algorithm built to resist GPU and memory-based cracking advantages." },
+        { "name": "HMAC", "value": "Hash-based message authentication code", "use": "Combines a hash function with a shared secret key to verify message integrity and authenticity." },
+        { "name": "Tokenization", "value": "Sensitive data replacement", "use": "Replaces sensitive values with non-sensitive tokens that map back through a lookup system; unlike hashing, it is designed to be reversible by authorized systems." },
+        { "name": "Data masking", "value": "Partial hiding", "use": "Obscures part of a sensitive value, such as showing only the last four digits." },
+        { "name": "Hard token", "value": "Physical authenticator", "use": "A hardware device, smartcard, USB key, or fob used as a possession factor." },
+        { "name": "Soft token", "value": "Software authenticator", "use": "An app-based token generator, commonly used for one-time passwords." },
+        { "name": "HOTP", "value": "Event-based OTP", "use": "One-time password generated from a shared seed and a counter or event." },
+        { "name": "TOTP", "value": "Time-based OTP", "use": "One-time password generated from a shared seed and the current time window." },
+        { "name": "Honeytoken", "value": "Decoy data", "use": "Fake credential or data item planted to detect misuse when accessed or exfiltrated." },
+        { "name": "Pass-the-hash", "value": "Replay of captured hash", "use": "Attack where a captured password hash, often NTLM, is reused to authenticate without knowing the plaintext password." }
+      ]
+    },
+    {
+      "title": "Change Management and PKI",
+      "source": "Security+ objective coverage",
+      "items": [
+        { "name": "Approval process", "value": "Formal authorization", "use": "Requires review and sign-off before a change is implemented." },
+        { "name": "Impact analysis", "value": "Change risk review", "use": "Identifies affected systems, users, security controls, and business processes before implementation." },
+        { "name": "Backout plan", "value": "Rollback path", "use": "Defines how to restore the prior state if a change fails or creates instability." },
+        { "name": "Maintenance window", "value": "Approved change time", "use": "Planned period for updates, outages, restarts, and validation." },
+        { "name": "Dependencies", "value": "Connected services", "use": "Systems, applications, or libraries that may break when a related component changes." },
+        { "name": "Version control", "value": "Tracked revisions", "use": "Records configuration, code, and document changes for accountability and rollback." },
+        { "name": "TPM", "value": "Trusted Platform Module", "use": "Hardware chip that stores cryptographic material and supports platform integrity." },
+        { "name": "HSM", "value": "Hardware Security Module", "use": "Dedicated device for secure key storage and high-volume cryptographic operations." },
+        { "name": "KMS", "value": "Key Management System", "use": "Central service for creating, storing, rotating, and controlling encryption keys." },
+        { "name": "Secure enclave", "value": "Isolated secure processor area", "use": "Protects sensitive operations and secrets away from the main operating system." },
+        { "name": "CRL", "value": "Certificate Revocation List", "use": "Published list of revoked certificates." },
+        { "name": "OCSP", "value": "Online Certificate Status Protocol", "use": "Checks certificate revocation status in near real time." },
+        { "name": "Root of trust", "value": "Trusted anchor", "use": "Highest trusted authority or component used to validate a chain of trust." },
+        { "name": "CSR", "value": "Certificate Signing Request", "use": "Request sent to a CA containing public key and identity information for certificate issuance." },
+        { "name": "Wildcard certificate", "value": "*.example.com", "use": "Certificate that secures multiple subdomains under the same domain." }
+      ]
+    },
+    {
+      "title": "Threat Vectors, Vulnerabilities, and Attacks",
+      "source": "Security+ objective coverage",
+      "items": [
+        { "name": "Attack surface", "value": "Exposure points", "use": "All places an attacker can try to enter or affect a system." },
+        { "name": "Default credentials", "value": "Factory passwords", "use": "Common weakness when default usernames or passwords are not changed." },
+        { "name": "Unsupported system", "value": "No vendor support", "use": "System or application that no longer receives security updates." },
+        { "name": "Supply chain", "value": "Provider path", "use": "Risk introduced through vendors, suppliers, MSPs, software providers, or hardware providers." },
+        { "name": "Typosquatting", "value": "Look-alike domain", "use": "Uses misspelled or similar domains to capture users or deliver attacks." },
+        { "name": "Watering hole", "value": "Compromised trusted site", "use": "Targets victims by infecting a site they are likely to visit." },
+        { "name": "Brand impersonation", "value": "Fake trusted brand", "use": "Uses a known company identity to make phishing or fraud more believable." },
+        { "name": "Buffer overflow", "value": "Memory overwrite", "use": "Application flaw where input exceeds memory boundaries and may allow code execution." },
+        { "name": "Race condition", "value": "Timing flaw", "use": "Security issue caused by unexpected ordering between check and use operations." },
+        { "name": "VM escape", "value": "Break virtualization boundary", "use": "Attack where code escapes a guest VM to affect the host or other guests." },
+        { "name": "Jailbreaking", "value": "Mobile restriction bypass", "use": "Removes OS protections on a mobile device and increases security risk." },
+        { "name": "Side loading", "value": "Unofficial app install", "use": "Installing apps from outside the official app store or approved channel." },
+        { "name": "Downgrade attack", "value": "Force weaker crypto", "use": "Attempts to make systems use a less secure protocol or cryptographic mode." },
+        { "name": "Birthday attack", "value": "Collision probability attack", "use": "Uses collision probability to attack hash functions faster than brute force." },
+        { "name": "Directory traversal", "value": "../ path attack", "use": "Attempts to access files outside the intended directory." },
+        { "name": "Replay attack", "value": "Reuse captured data", "use": "Resends captured authentication or transaction data to gain unauthorized access." },
+        { "name": "RFID cloning", "value": "Copied badge/token", "use": "Copies RFID credential data to impersonate an access token." },
+        { "name": "DDoS amplification", "value": "Small request, large response", "use": "Uses third-party services to multiply attack traffic against a target." }
+      ]
+    },
+    {
+      "title": "Security Architecture Models",
+      "source": "Security+ objective coverage",
+      "items": [
+        { "name": "IaC", "value": "Infrastructure as Code", "use": "Defines and deploys infrastructure through versioned code or templates." },
+        { "name": "Serverless", "value": "Managed execution platform", "use": "Runs code without managing servers; security focus shifts to permissions, code, events, and configuration." },
+        { "name": "Microservices", "value": "Small independent services", "use": "Improves scalability but increases API, identity, and network security requirements." },
+        { "name": "Containerization", "value": "Isolated app packages", "use": "Packages applications and dependencies; requires image scanning and runtime isolation." },
+        { "name": "Virtualization", "value": "Virtual machines", "use": "Runs multiple guest systems on shared hardware; isolation and hypervisor security matter." },
+        { "name": "IoT", "value": "Internet of Things", "use": "Embedded network devices that often need segmentation, secure defaults, and patch planning." },
+        { "name": "ICS/SCADA", "value": "Industrial control", "use": "Operational technology environments where availability and safety are major concerns." },
+        { "name": "RTOS", "value": "Real-time OS", "use": "Operating system for time-sensitive embedded or industrial systems." },
+        { "name": "Air gap", "value": "Physical isolation", "use": "Separates a system or network from other networks for high-security isolation." },
+        { "name": "SDN", "value": "Software-defined networking", "use": "Separates network control from forwarding for programmable network management." },
+        { "name": "SD-WAN", "value": "Software-defined WAN", "use": "Centralizes WAN connectivity policy, routing, and security across sites." },
+        { "name": "SASE", "value": "Secure Access Service Edge", "use": "Combines network access and cloud-delivered security services." },
+        { "name": "WAF", "value": "Web Application Firewall", "use": "Filters HTTP traffic to protect web applications from attacks like injection and XSS." },
+        { "name": "UTM", "value": "Unified Threat Management", "use": "Appliance or service combining multiple security functions." },
+        { "name": "NGFW", "value": "Next-generation firewall", "use": "Firewall with application awareness, identity awareness, and advanced inspection features." },
+        { "name": "Jump server", "value": "Controlled admin host", "use": "Intermediate system used to administer secure network segments." },
+        { "name": "Fail-open", "value": "Allow on failure", "use": "Maintains availability during control failure but may reduce security." },
+        { "name": "Fail-closed", "value": "Deny on failure", "use": "Maintains security during control failure but may reduce availability." }
+      ]
+    },
+    {
+      "title": "Data Classification and Protection",
+      "source": "Security+ objective coverage",
+      "items": [
+        { "name": "Regulated data", "value": "Legally controlled", "use": "Data subject to laws or regulations, such as health, payment, or privacy records." },
+        { "name": "Trade secret", "value": "Business confidential", "use": "Information with business value that must be protected from disclosure." },
+        { "name": "Intellectual property", "value": "Owned creations", "use": "Patents, source code, designs, formulas, and proprietary content." },
+        { "name": "Sensitive", "value": "Requires protection", "use": "Data that could harm people or the organization if disclosed." },
+        { "name": "Confidential", "value": "Restricted audience", "use": "Information limited to approved users or groups." },
+        { "name": "Private", "value": "Personal/internal", "use": "Data not intended for public disclosure." },
+        { "name": "Critical", "value": "Essential data", "use": "Data required for core operations or mission functions." },
+        { "name": "Data at rest", "value": "Stored data", "use": "Protect with storage controls such as encryption, permissions, and backups." },
+        { "name": "Data in transit", "value": "Moving data", "use": "Protect with TLS, VPNs, IPsec, secure protocols, and certificate validation." },
+        { "name": "Data in use", "value": "Actively processed", "use": "Protect with access controls, secure enclaves, isolation, and application controls." },
+        { "name": "Data sovereignty", "value": "Jurisdiction control", "use": "Data must follow laws of the country or region where it is stored or processed." },
+        { "name": "Geographic restrictions", "value": "Location limits", "use": "Restricts where data or services may be stored, accessed, or processed." },
+        { "name": "Segmentation", "value": "Data isolation", "use": "Separates sensitive data and systems to limit access and blast radius." },
+        { "name": "Permission restrictions", "value": "Access limits", "use": "Uses authorization controls to restrict who can read, write, or manage data." }
+      ]
+    },
+    {
+      "title": "Security Operations and IAM",
+      "source": "Security+ objective coverage",
+      "items": [
+        { "name": "Secure baseline", "value": "Approved configuration", "use": "Standard hardened configuration that is established, deployed, and maintained." },
+        { "name": "Site survey", "value": "Wireless assessment", "use": "Evaluates wireless placement, coverage, interference, and security requirements." },
+        { "name": "Heat map", "value": "Signal map", "use": "Visualizes wireless coverage and dead zones." },
+        { "name": "WPA3", "value": "Modern Wi-Fi security", "use": "Current wireless security standard with stronger authentication and encryption protections." },
+        { "name": "MDM", "value": "Mobile Device Management", "use": "Manages mobile configuration, compliance, inventory, and remote actions." },
+        { "name": "BYOD", "value": "Bring your own device", "use": "Personal device used for work; increases policy, privacy, and control complexity." },
+        { "name": "COPE", "value": "Corporate-owned, personally enabled", "use": "Company-owned device that allows personal use under organizational control." },
+        { "name": "CYOD", "value": "Choose your own device", "use": "User selects from approved company-supported devices." },
+        { "name": "Asset inventory", "value": "Tracked assets", "use": "Records hardware, software, ownership, classification, and lifecycle state." },
+        { "name": "Enumeration", "value": "Asset discovery", "use": "Identifies systems, services, users, shares, and other resources." },
+        { "name": "Sanitization", "value": "Data removal", "use": "Removes data from media before reuse or disposal." },
+        { "name": "Destruction", "value": "Physical disposal", "use": "Destroys media so data cannot be recovered." },
+        { "name": "Data retention", "value": "Keep/delete schedule", "use": "Defines how long data is stored and when it must be disposed." },
+        { "name": "Provisioning", "value": "Create access", "use": "Creates accounts and grants needed access for users or services." },
+        { "name": "Deprovisioning", "value": "Remove access", "use": "Disables accounts and removes access when no longer needed." },
+        { "name": "Identity proofing", "value": "Verify identity", "use": "Confirms a person is who they claim to be before issuing credentials." },
+        { "name": "SAML", "value": "Federation protocol", "use": "XML-based protocol commonly used for enterprise SSO." },
+        { "name": "LDAP", "value": "Directory protocol", "use": "Accesses and manages directory information." },
+        { "name": "OAuth", "value": "Delegated authorization", "use": "Allows third-party access without sharing the user's password." },
+        { "name": "Attestation", "value": "Trust evidence", "use": "Provides proof about identity, device state, or compliance." },
+        { "name": "PAM", "value": "Privileged Access Management", "use": "Controls administrative access with vaulting, approvals, monitoring, and session limits." },
+        { "name": "JIT permissions", "value": "Just-in-time access", "use": "Grants elevated access only when needed and only for a limited time." },
+        { "name": "Ephemeral credentials", "value": "Short-lived secrets", "use": "Temporary credentials that reduce risk from credential theft." }
+      ]
+    },
+    {
+      "title": "Vulnerability Management and Monitoring",
+      "source": "Security+ objective coverage",
+      "items": [
+        { "name": "Static analysis", "value": "Code review without running", "use": "Finds flaws by analyzing source code or binaries." },
+        { "name": "Dynamic analysis", "value": "Runtime testing", "use": "Finds flaws by testing a running application." },
+        { "name": "Package monitoring", "value": "Dependency tracking", "use": "Watches libraries and packages for vulnerable versions." },
+        { "name": "OSINT", "value": "Open-source intelligence", "use": "Collects public information to support security decisions." },
+        { "name": "Threat feed", "value": "Indicator stream", "use": "Provides external information about malicious IPs, domains, hashes, tactics, or vulnerabilities." },
+        { "name": "Dark web", "value": "Hidden web sources", "use": "May reveal leaked credentials, exploit sales, or threat actor activity." },
+        { "name": "Responsible disclosure", "value": "Coordinated reporting", "use": "Allows vulnerabilities to be reported and fixed before public disclosure." },
+        { "name": "Bug bounty", "value": "Rewarded findings", "use": "Incentivizes external researchers to report valid vulnerabilities." },
+        { "name": "CVSS", "value": "Severity score", "use": "Common Vulnerability Scoring System used to prioritize vulnerabilities." },
+        { "name": "CVE", "value": "Vulnerability identifier", "use": "Common Vulnerabilities and Exposures identifier for a known flaw." },
+        { "name": "False positive", "value": "Incorrect alert", "use": "Tool reports a problem that is not actually present." },
+        { "name": "False negative", "value": "Missed issue", "use": "Tool fails to report a real problem." },
+        { "name": "Exposure factor", "value": "Percent loss", "use": "Estimated percentage of asset value lost in a specific event." },
+        { "name": "Compensating control", "value": "Alternate safeguard", "use": "Reduces risk when the preferred control cannot be implemented." },
+        { "name": "Exception", "value": "Approved deviation", "use": "Formal approval to operate outside a requirement for a defined reason or time." },
+        { "name": "SCAP", "value": "Security automation content", "use": "Standardizes vulnerability and configuration data for automated assessment." },
+        { "name": "Benchmark", "value": "Configuration standard", "use": "Defines a target secure configuration to compare systems against." },
+        { "name": "DLP", "value": "Data Loss Prevention", "use": "Detects and blocks unauthorized sensitive data movement." },
+        { "name": "SNMP trap", "value": "Device alert", "use": "Network device notification sent to a monitoring system." },
+        { "name": "NetFlow", "value": "Traffic metadata", "use": "Summarizes network flow information for monitoring and investigation." },
+        { "name": "DMARC/DKIM/SPF", "value": "Email authentication", "use": "Controls that reduce email spoofing and improve domain sender validation." },
+        { "name": "FIM", "value": "File integrity monitoring", "use": "Detects unauthorized changes to important files." },
+        { "name": "NAC", "value": "Network Access Control", "use": "Checks device or user compliance before allowing network access." },
+        { "name": "UBA", "value": "User behavior analytics", "use": "Finds anomalous behavior that may indicate compromise or insider risk." }
+      ]
+    },
+    {
+      "title": "Automation, Incident Response, and Investigations",
+      "source": "Security+ objective coverage",
+      "items": [
+        { "name": "Guard rails", "value": "Automated limits", "use": "Prevent unsafe actions or enforce policy during provisioning and operations." },
+        { "name": "Ticket creation", "value": "Workflow trigger", "use": "Automatically opens work items for security events or operational tasks." },
+        { "name": "Escalation", "value": "Raise priority", "use": "Moves incidents or alerts to higher support or authority when thresholds are met." },
+        { "name": "CI testing", "value": "Automated pipeline checks", "use": "Runs security and quality checks during continuous integration." },
+        { "name": "API integration", "value": "Tool connection", "use": "Allows security tools and workflows to exchange data and actions." },
+        { "name": "Single point of failure", "value": "One component can break service", "use": "Risk introduced when automation or infrastructure depends on one critical part." },
+        { "name": "Technical debt", "value": "Deferred engineering cost", "use": "Complexity or shortcuts that increase future maintenance and security risk." },
+        { "name": "Root cause analysis", "value": "Find underlying cause", "use": "Determines why an incident or failure happened so it can be prevented." },
+        { "name": "Threat hunting", "value": "Proactive search", "use": "Looks for hidden threats before alerts clearly identify them." },
+        { "name": "Legal hold", "value": "Preserve evidence", "use": "Stops deletion or alteration of data relevant to legal matters." },
+        { "name": "E-discovery", "value": "Legal data collection", "use": "Identifies and produces electronic records for legal processes." },
+        { "name": "Chain of custody", "value": "Evidence tracking", "use": "Documents who handled evidence, when, and why." },
+        { "name": "Acquisition", "value": "Evidence capture", "use": "Collects forensic copies, logs, packet captures, metadata, or endpoint data." },
+        { "name": "Packet capture", "value": "Network evidence", "use": "Records network packets for investigation and troubleshooting." },
+        { "name": "Metadata", "value": "Data about data", "use": "Supports investigations with timestamps, owners, paths, headers, and other context." }
+      ]
+    },
+    {
+      "title": "Governance, Risk, Compliance, and Third Parties",
+      "source": "Security+ objective coverage",
+      "items": [
+        { "name": "AUP", "value": "Acceptable Use Policy", "use": "Defines allowed and prohibited use of organizational systems." },
+        { "name": "Playbook", "value": "Action guide", "use": "Step-by-step operational response for a known scenario." },
+        { "name": "Governance structure", "value": "Oversight model", "use": "Boards, committees, government entities, or centralized/decentralized models that direct security." },
+        { "name": "Data owner", "value": "Accountable party", "use": "Defines requirements and accountability for data protection." },
+        { "name": "Controller", "value": "Determines processing purpose", "use": "Privacy role that decides why and how personal data is processed." },
+        { "name": "Processor", "value": "Processes for controller", "use": "Privacy role that handles data on behalf of a controller." },
+        { "name": "Custodian/steward", "value": "Operational caretaker", "use": "Implements and maintains controls for systems or data." },
+        { "name": "Risk register", "value": "Risk tracking record", "use": "Documents risks, owners, ratings, responses, and status." },
+        { "name": "KRI", "value": "Key Risk Indicator", "use": "Metric that signals changing risk levels." },
+        { "name": "Risk appetite", "value": "Desired risk level", "use": "Amount and type of risk leadership is willing to pursue." },
+        { "name": "Risk threshold", "value": "Action boundary", "use": "Point where risk exceeds tolerance and must be escalated or treated." },
+        { "name": "BIA", "value": "Business Impact Analysis", "use": "Identifies critical processes, impact, RTO, RPO, MTTR, and MTBF needs." },
+        { "name": "SLE/ALE/ARO", "value": "Quantitative risk", "use": "SLE is single loss, ARO is yearly frequency, and ALE is expected yearly loss." },
+        { "name": "Due diligence", "value": "Reasonable investigation", "use": "Research and validation before selecting or trusting a third party." },
+        { "name": "Right-to-audit", "value": "Contract audit clause", "use": "Allows the customer to inspect or verify vendor controls." },
+        { "name": "SLA", "value": "Service-level agreement", "use": "Defines measurable service expectations such as uptime or response time." },
+        { "name": "MOU/MOA", "value": "Mutual agreement", "use": "Documents shared understanding or responsibilities between organizations." },
+        { "name": "MSA/SOW", "value": "Master agreement/work details", "use": "Defines broad contract terms and the specific work to be performed." },
+        { "name": "NDA", "value": "Non-disclosure agreement", "use": "Protects confidential information shared with another party." },
+        { "name": "Rules of engagement", "value": "Assessment boundaries", "use": "Defines scope, timing, allowed methods, and limits for tests or assessments." },
+        { "name": "Known environment test", "value": "Full knowledge", "use": "Assessment where testers have detailed target information." },
+        { "name": "Partially known test", "value": "Some knowledge", "use": "Assessment where testers have limited target information." },
+        { "name": "Unknown environment test", "value": "No prior knowledge", "use": "Assessment where testers start with little or no target information." }
+      ]
+    },
+    {
+      "title": "Security Awareness",
+      "source": "Security+ objective coverage",
+      "items": [
+        { "name": "Phishing campaign", "value": "Awareness exercise", "use": "Tests and trains users on recognizing and reporting phishing attempts." },
+        { "name": "Suspicious message reporting", "value": "User response", "use": "Encourages users to report suspicious emails, texts, chats, or calls quickly." },
+        { "name": "Anomalous behavior", "value": "Unusual activity", "use": "Unexpected, risky, or unintentional actions that may indicate compromise or training needs." },
+        { "name": "Risky environment", "value": "Higher-risk setting", "use": "Public, remote, travel, or shared environments that need extra caution." },
+        { "name": "Removable media and cables", "value": "Physical attack path", "use": "USB drives and cables can introduce malware, data loss, or rogue device risk." },
+        { "name": "Hybrid/remote work", "value": "Distributed work risk", "use": "Requires training around home networks, secure access, device handling, and data protection." },
+        { "name": "Policy handbook", "value": "User guidance", "use": "Documents expected behavior and security responsibilities." },
+        { "name": "Initial training", "value": "Onboarding awareness", "use": "Security instruction given when users join or take on a new role." },
+        { "name": "Recurring training", "value": "Ongoing awareness", "use": "Periodic reinforcement to keep users current on threats and policies." },
+        { "name": "Operational security", "value": "Daily protection habits", "use": "Avoids exposing sensitive details through conversation, screens, documents, or workflows." }
+      ]
+    }
+  ]
+}
