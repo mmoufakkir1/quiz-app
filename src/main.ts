@@ -98,10 +98,13 @@ type CheatSheetItem = {
   name: string
   value: string
   use: string
+  clues?: string[]
+  highYield?: boolean
 }
 
 type CheatSheetGroup = {
   title: string
+  overview?: string
   source: string
   items: CheatSheetItem[]
 }
@@ -1081,6 +1084,7 @@ function renderStudyGuide(app: HTMLDivElement) {
         <button class="header-section-btn" type="button">Back to Home</button>
       </div>
       <p class="study-guide-description">${escapeHtml(studyGuideData.description)}</p>
+      <p class="study-guide-key"><span class="study-star" aria-hidden="true">★</span> High-yield terms show up often in scenarios, objectives, or common exam traps.</p>
       <div class="study-tabs" role="tablist" aria-label="Study guide sections">
         ${tabsHtml}
       </div>
@@ -1108,9 +1112,19 @@ function renderStudyGuideTable(group: CheatSheetGroup): string {
     .map(
       (item) => `
         <tr>
-          <th scope="row">${escapeHtml(item.name)}</th>
+          <th scope="row">
+            ${item.highYield ? '<span class="study-star" aria-label="High-yield">★</span>' : ''}
+            ${escapeHtml(item.name)}
+          </th>
           <td>${escapeHtml(item.value)}</td>
-          <td>${escapeHtml(item.use)}</td>
+          <td>
+            ${escapeHtml(item.use)}
+            ${
+              item.clues?.length
+                ? `<span class="study-clues">Clues: ${escapeHtml(item.clues.join(', '))}</span>`
+                : ''
+            }
+          </td>
         </tr>
       `,
     )
@@ -1122,6 +1136,7 @@ function renderStudyGuideTable(group: CheatSheetGroup): string {
         <h2>${escapeHtml(group.title)}</h2>
         <span>${group.items.length} items</span>
       </div>
+      ${group.overview ? `<p class="study-section-overview">${escapeHtml(group.overview)}</p>` : ''}
       <div class="study-table-wrap">
         <table class="study-table">
           <thead>
