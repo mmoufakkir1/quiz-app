@@ -256,6 +256,54 @@
           "lesson": "Imported multiple-choice questions from A.2 Security+ Final Assessment (source question 88)",
           "id": 927,
           "type": "single"
+        },
+        {
+          "id": 956,
+          "question": "Which technology should the security manager implement?",
+          "options": [
+            "Microwave sensors",
+            "Ultrasonic sensors",
+            "Pressure sensors",
+            "Infrared sensors"
+          ],
+          "answer": "Ultrasonic sensors",
+          "scenario": "The security manager of a highly sensitive facility is evaluating options for intrusion detection systems to detect physical movement in its secured zones. The ideal technology the facility needs should be less prone to environmental interferences and preferably not depend on physical contact.",
+          "explanation": "Ultrasonic sensors emit sound waves at a frequency that is not audible to humans. If an object or person moves within the sensor's range, it disrupts the sound waves, and the sensor detects this change, triggering an alarm. Microwave sensors are typically used in automatic door openers and are not as effective for detecting movement within an enclosed area like a secured zone. Infrared sensors can detect the presence of humans based on body heat. However, they are sensitive to environmental changes, such as temperature fluctuations, which can affect their reliability in secured zones. Pressure sensors work by detecting changes in pressure on a surface. However, they would not detect movement effectively unless the intruder stepped directly onto a sensor.",
+          "topic": "1.0 General Security Concepts",
+          "lesson": "A.2 Security+ Final Assessment2 Q12",
+          "type": "single"
+        },
+        {
+          "id": 960,
+          "question": "What is the primary advantage of using a CSR and a third-party CA for obtaining digital certificates compared to other methods?",
+          "options": [
+            "Digital certificates obtained through a Certificate Signing Request and a third-party Certificate Authority have a higher level of trust and recognition within the industry.",
+            "Digital certificates obtained through a Certificate Signing Request and a third-party Certificate Authority provide stronger encryption algorithms and key lengths.",
+            "Using a Certificate Signing Request and a third-party Certificate Authority eliminates the need for regular certificate renewals and maintenance.",
+            "Using a Certificate Signing Request and a third-party Certificate Authority allows for faster deployment of digital certificates within the network."
+          ],
+          "answer": "Digital certificates obtained through a Certificate Signing Request and a third-party Certificate Authority have a higher level of trust and recognition within the industry.",
+          "scenario": "A company's IT department considers different approaches to obtaining digital certificates for its internal network infrastructure. The IT department evaluated the use of a Certificate Signing Request (CSR) and third-party Certificate Authorities (CAs) to meet their security requirements.",
+          "explanation": "Obtaining digital certificates through a Certificate Signing Request and a third-party Certificate Authority offers robust validation, wider recognition, and adherence to industry standards and best practices, leading to a higher level of trust within the industry and among users. A CSR and third-party CA may allow for faster deployment of digital certificates within the network, but do not address the level of trust and recognition. Digital certificates obtained through a CSR and a third-party CA provide stronger encryption algorithms, including key lengths, but it does not specifically relate to the trust and recognition aspect. Digital certificates obtained through a CSR and a third-party CA still require regular renewals and maintenance, regardless of the method to obtain them.",
+          "topic": "1.0 General Security Concepts",
+          "lesson": "A.2 Security+ Final Assessment2 Q23",
+          "type": "single"
+        },
+        {
+          "id": 979,
+          "question": "Which failure mode should the IT manager configure the IPS?",
+          "options": [
+            "Fail-open",
+            "Active",
+            "Passive",
+            "Fail-closed"
+          ],
+          "answer": "Fail-open",
+          "scenario": "An organization implements a new network infrastructure and plans to use an intrusion prevention system (IPS) for security. The IT manager wants to ensure that the IPS will continue to let traffic flow if it fails.",
+          "explanation": "In a fail-open mode, if the IPS fails, it will still allow traffic to pass through, maintaining network connectivity. In a fail-closed mode, if the IPS fails, it will block all traffic, disrupting network connectivity. Active mode is also an IPS operation mode, not a failure mode. In active mode, the IPS monitors traffic and blocks threats. A fail-open mode ensures traffic flow if the IPS fails. Passive mode is an IPS operation mode, not a failure mode. In passive mode, the IPS monitors traffic and generates alerts but doesn’t block threats.",
+          "topic": "1.0 General Security Concepts",
+          "lesson": "A.2 Security+ Final Assessment2 Q53",
+          "type": "single"
         }
       ]
     },
@@ -1458,6 +1506,333 @@
           "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
           "lesson": "Imported multiple-choice questions from A.2 Security+ Final Assessment (source question 82)",
           "id": 922,
+          "type": "multiple"
+        },
+        {
+          "id": 934,
+          "question": "What kind of attack does this describe?",
+          "options": [
+            "Domain name system-based on-path attack",
+            "Domain name system poisoning",
+            "Domain name system attack indicators",
+            "Domain name system client cache poisoning"
+          ],
+          "answer": "Domain name system client cache poisoning",
+          "scenario": "A company CEO is upset after running into an issue where going to a specific website brings them to a malicious website instead. The security team ran checks and found the HOSTS file was manipulated redirecting the unsuspecting CEO to the malicious website.",
+          "explanation": "DNS client cache poisoning occurs when an attacker accesses the local client's HOST file, placing a false name-to-IP address mapping in the file, effectively poisoning the DNS cache to redirect traffic. Domain name system (DNS) poisoning is an attack in which network traffic appears to be coming from another location to confuse the company looking for an infection that does not exist. Within a DNS-based on-path attack, if the threat actor has access to the same local network, the attacker can use Address Resolution Protocol (ARP) poisoning to respond to DNS queries from the victim with spoofed replies. DNS attack indicators are bits of information from a DNS server to assist with security intelligence and attack indicators.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "135 Q3",
+          "type": "single"
+        },
+        {
+          "id": 936,
+          "question": "What kind of attack could potentially change transmitted information? (Select the two best options.)",
+          "options": [
+            "Denial of service",
+            "Address resolution protocol poisoning",
+            "On-path attack",
+            "Reconnaissance"
+          ],
+          "answer": [
+            "Address resolution protocol poisoning",
+            "On-path attack"
+          ],
+          "scenario": "A salesman reached out to a customer to find out why the firm backed out of the contract. The customer replied that the contract numbers were far more than verbally discussed.",
+          "explanation": "An on-path attack can occur with data possibly changing after transmission but without knowledge by the receiver or sender. In this scenario, the customer is experiencing an on- path attack. Address Resolution Protocol (ARP) poisoning would redirect network traffic based on the local ARP table. ARP poisoning would create an on-path attack. A denial of service (DoS) attack would result in the customer being unable to reach the company for a period of time. However, it would not change transmitted information. Reconnaissance involves gathering information via scans, which can be difficult to differentiate between regular scans. This type of attack would not change transmitted information.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "135 Q5",
+          "type": "multiple"
+        },
+        {
+          "id": 937,
+          "question": "What could this be a sign of? (Select the two best options.)",
+          "options": [
+            "Wireless denial of service",
+            "Rogue access point",
+            "Wireless replay",
+            "Downgrade attack"
+          ],
+          "answer": [
+            "Wireless denial of service",
+            "Rogue access point"
+          ],
+          "scenario": "A user contacts a company help desk complaining about intermittent access to files/shares while working from different locations in the building. The user also noticed connection problems occur when the network signal strength is at its highest.",
+          "explanation": "A rogue Access Point (AP) allows a person with malicious intent to place a rogue AP with a higher power to capture usernames and passwords without getting caught immediately. A wireless denial of service attack causes network problems by not allowing users access to legitimate APs due to the rogue AP's higher signal strength. A wireless replay attack aims to capture the hashes used when a wireless station associates with an access point. Then, the hash gets subjected to attacks to crack the encryption. It does not impact wireless access. A downgrade attack attempts to make a server or client use a lower specification protocol with weaker ciphers and key lengths. It does not impact wireless access.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "135 Q6",
+          "type": "multiple"
+        },
+        {
+          "id": 938,
+          "question": "What could this indicate? (Select the two best options.)",
+          "options": [
+            "Teleworker",
+            "Denial of service",
+            "Reconnaissance",
+            "Unauthorized data exfiltration"
+          ],
+          "answer": [
+            "Reconnaissance",
+            "Unauthorized data exfiltration"
+          ],
+          "scenario": "A new IT intern has been reviewing logs to gain familiarity and understanding of the systems they will support. During these reviews, the intern noticed that for the last few weeks, at the same time every day, several MBs of data are being sent out.",
+          "explanation": "Reconnaissance involves gathering information via scans, which can be difficult to differentiate between regular scans. The scanned information could then be sent off-network at regular intervals for malicious usage. The movement of data at the same time for several weeks could be indicative of unauthorized data exfiltration. A transfer of smaller files would most likely go unnoticed. A denial of service would require massive amounts of data being sent at a company's network, not information being withdrawn from it. The information in the logs represents malicious activity. Teleworkers typically leave all the work they need on the company servers and would regularly send information back and forth. The routine sending of small amounts of data indicates malicious activity.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "135 Q7",
+          "type": "multiple"
+        },
+        {
+          "id": 939,
+          "question": "What type of virus was the user's computer MOST likely infected with? (Select the two best options.)",
+          "options": [
+            "Ransomware",
+            "Logic bomb",
+            "Cryptojacking malware",
+            "Crypto-ransomware"
+          ],
+          "answer": [
+            "Ransomware",
+            "Crypto-ransomware"
+          ],
+          "scenario": "A company employee brought a personal computer to the IT department when it locked after receiving a file from a co-worker. The screen shows a countdown clock with a threat of encrypting files permanently unless the user pays money.",
+          "explanation": "Ransomware is a virus that infects a computer and threatens to perform actions unless the user pays a ransom before a particular deadline. Crypto-ransomware specifically requires monetary payment before destroying the key that would allow the decryption of the user's files. A logic bomb is a specific type of virus that will only launch once reaching a specific date or a pre-scripted event happens, such as the removal of a disgruntled ex-employee's admin account. An attacker typically uses cryptojacking malware as part of a botnet to utilize hundreds or thousands of computers to complete computations, such as mining the next bitcoin or digital currency.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "135 Q12",
+          "type": "multiple"
+        },
+        {
+          "id": 944,
+          "question": "Resource consumption and resource inaccessibility are typically indicators of what type of attack?",
+          "options": [
+            "Denial of Service",
+            "Account compromise",
+            "Ransomware",
+            "Trojan"
+          ],
+          "answer": "Denial of Service",
+          "scenario": "A help desk receives multiple calls from customers stating that they are experiencing incredibly slow connections to needed files, and an increasing number of users are having problems logging into their user accounts.",
+          "explanation": "A denial of service (DoS) attack uses multiple compromised machines to flood servers with repeated requests so valid requests cannot come through. These attacks consume enormous amounts of resources and can lead to inaccessibility. A trojan virus can become a rootkit if it can gain the correct permission, but the scenario does not discuss permissions in this case. A compromised account would cause problems for a single user but would not result in resource consumption or resource inaccessibility for a large number of users. Ransomware is a virus that infects a computer and threatens to perform actions unless the user pays a ransom before a particular deadline.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "135 Q23",
+          "type": "single"
+        },
+        {
+          "id": 963,
+          "question": "In this case, what is the primary motivation of the perpetrators?",
+          "options": [
+            "War",
+            "Financial gain",
+            "Levels of sophistication/capability",
+            "Ethical concerns"
+          ],
+          "answer": "War",
+          "scenario": "A recent cyberattack led to massive disruptions in a country's power grid, causing widespread blackouts and significant economic and social damage. The country's cyber team traced the attack to a hostile nation-state's cyber warfare division.",
+          "explanation": "In this case, the hostile nation-state attacked to cause widespread disruption and damage, a common objective in warfare. Such acts are a part of the broader strategy of using cyber means to achieve military and political objectives. Financial gain typically involves stealing data for selling on the dark web, extortion, or fraud. Ethical concerns generally drive insiders or whistleblowers to act against an organization's unethical behavior. Ethical concerns do not apply to the hostile nation-state's actions, driven by strategic considerations rather than ethical issues. While the attack demonstrates high sophistication and capability, it is not the primary motivation. Instead, it indicates the actor's resources and skills.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "A.2 Security+ Final Assessment2 Q28",
+          "type": "single"
+        },
+        {
+          "id": 969,
+          "question": "What social engineering attack did the ISP and end-user fall victim to?",
+          "options": [
+            "Tailgating",
+            "Pharming",
+            "Impersonation",
+            "Hoax"
+          ],
+          "answer": "Impersonation",
+          "scenario": "A social engineer intercepted an end-user's phone call to an internet service provider (ISP) about a home internet outage. Pretending to be the caller reporting the outage, the attacker immediately contacted the ISP to cancel the service call, dressed up as an internet tech, and then proceeded to enter the end-user's home with permission.",
+          "explanation": "Impersonation is a social engineering attack in which the attacker pretends to be someone else. In a hoax attack, an email alert or web pop-up will claim to have identified a security problem, such as a virus infection, and offer a tool to fix the problem. The tool, of course, will be some sort of Trojan application. Pharming relies on corrupting how the victim's computer performs Internet name resolution to redirect them from the genuine site to the malicious one. Tailgating is entering a secure area without authorization by following close behind the person with permission to open the door or checkpoint.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "A.2 Security+ Final Assessment2 Q37",
+          "type": "single"
+        },
+        {
+          "id": 971,
+          "question": "Which of the following actions should the IT team take as a first step to address the threat posed by the potential malicious update?",
+          "options": [
+            "Implement two-factor authentication for all user accounts.",
+            "Isolate the affected systems and perform a rollback to the previous update.",
+            "Update firewall rules to block all incoming traffic.",
+            "Migrate all data to a different cloud service provider immediately."
+          ],
+          "answer": "Isolate the affected systems and perform a rollback to the previous update.",
+          "scenario": "A company's IT team has detected an anomaly in a cloud-based environment after a recent software update. There are suspicions that the update could contain malicious code, potentially leading to unauthorized access to sensitive data.",
+          "explanation": "Isolating affected systems and performing a rollback to the previous update is the correct initial step. This action could prevent further compromise and enable the IT team to investigate the anomaly more thoroughly. Updating firewall rules to block all incoming traffic does not address the issue of a potentially malicious update already deployed on the system. It would also prevent legitimate traffic, affecting business operations. Implementing two-factor authentication for all user accounts is a good general security practice but would not address the immediate issue of a potentially malicious update. Migrating all data to a different cloud service provider is an extreme and time-consuming measure that does not address the immediate threat and could introduce new complications and potential vulnerabilities.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "A.2 Security+ Final Assessment2 Q42",
+          "type": "single"
+        },
+        {
+          "id": 974,
+          "question": "What does the IT department confirm is the cybersecurity threat occurring in its business operations?",
+          "options": [
+            "Distributed denial-of-service (DDoS) attack",
+            "Buffer overflow attack",
+            "On-path attack",
+            "Social engineering attack"
+          ],
+          "answer": "Buffer overflow attack",
+          "scenario": "An organization experienced disruptions in its business operations due to repeated crashes of a critical application. The IT department suspects a security issue and initiates a thorough investigation. The findings suggest the application failed due to excessive data processing beyond its expected limits.",
+          "explanation": "Buffer overflow attacks occur when an application receives more data than it can process, which can cause the application to crash or allow an attacker to execute arbitrary code. This is consistent with the symptoms described in the scenario. A DDoS attack overwhelms a system's resources with traffic but does not involve overflowing an application's buffer with excessive data. An on-path attack involves an attacker intercepting and possibly altering the communication between two parties and does not align with the application crashes described. Social engineering attacks manipulate people into divulging confidential information. They do not involve direct attacks on an application's memory or cause application crashes.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "A.2 Security+ Final Assessment2 Q45",
+          "type": "single"
+        },
+        {
+          "id": 977,
+          "question": "What type of spyware is the architect witnessing?",
+          "options": [
+            "Logic bomb",
+            "Virus",
+            "Keylogger",
+            "Rootkit"
+          ],
+          "answer": "Keylogger",
+          "scenario": "A cyber architect identifies spyware on a corporate device that is actively attempting to steal confidential information by recording character strokes.",
+          "explanation": "Keylogger is spyware that actively attempts to steal confidential information by recording keystrokes. The attacker usually hopes to discover passwords or credit card data. Some types of malware do not trigger automatically. Having infected a system, they wait for a preconfigured time or date (time bomb) or a system or user event (logic bomb). Rootkit is the level at which malware delivers as the payload for an exploit of a severe vulnerability. A rootkit can execute without requiring any authorization using the computer's system privileges. A computer virus is malware that replicates and spreads from computer to computer, usually by infecting executable applications or program code.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "A.2 Security+ Final Assessment2 Q50",
+          "type": "single"
+        },
+        {
+          "id": 984,
+          "question": "What is the term for a phishing attack conducted through a voice channel, such as a phone call?",
+          "options": [
+            "Pharming",
+            "Phishing",
+            "SMiShing",
+            "Vishing"
+          ],
+          "answer": "Vishing",
+          "scenario": "",
+          "explanation": "Vishing refers to a phishing attack conducted through a voice channel, typically over the phone or VoIP, where the threat actor persuades the target to reveal sensitive information. Phishing is a social engineering technique that tricks the target into interacting with a malicious resource disguised as a trusted one, often using email as the vector. SMiShing stands for \"SMS Phishing,\" which involves sending deceptive text messages (SMS) to trick the recipient into interacting with a malicious resource or providing sensitive information. Pharming is a technique that redirects users from a legitimate website to a malicious one; unrelated to voice channels.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "A.2 Security+ Final Assessment2 Q64",
+          "type": "single"
+        },
+        {
+          "id": 987,
+          "question": "What social engineering technique is the threat actor using in this scenario?",
+          "options": [
+            "Pharming",
+            "Tailgating",
+            "Vishing",
+            "Phishing"
+          ],
+          "answer": "Phishing",
+          "scenario": "An employee receives an email from an unknown sender claiming to be from the IT department. The email states that there is a login issue on the network and that the user needs to run the file to resolve the problem. The executable file prompts the user to input a network password, which the threat actor records.",
+          "explanation": "Phishing aims to elicit information or get a target to perform specific actions. The threat actor attempts to deceive the user by sending a fake executable file via email and persuading them to input their network password. Vishing is a type of social engineering attack conducted via voice channels. There is no indication of voice communication in the scenario. Tailgating is a physical security attack where an unauthorized person accesses a restricted area by following an authorized person through a secure access point. Pharming involves redirecting users to a fake website and hijacking the Domain Name System (DNS). There is no indication of pharming since the employee received an email with an executable file to obtain a password.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "A.2 Security+ Final Assessment2 Q69",
+          "type": "single"
+        },
+        {
+          "id": 940,
+          "question": "What could this indicate? (Select the two best options.)",
+          "options": [
+            "Cross-site Scripting",
+            "Replay attack",
+            "Injection attack",
+            "Forgery attack"
+          ],
+          "answer": [
+            "Cross-site Scripting",
+            "Replay attack"
+          ],
+          "scenario": "A company has noticed an apparent uptick in users disconnecting their sessions, then immediately reestablishing them. Their behavior after reestablishing the session is also noticeably different.",
+          "explanation": "A replay attack captures or guesses the token value and then submits it to reestablish the session illegitimately. A session ending and then immediately reestablishing would most likely indicate this type of attack. Cross-site Scripting (XSS) can compromise session cookies, which could then lead to the prediction of future session cookies, compromising all future sessions. A forgery attack attempts to hijack an ongoing authenticated session to perform some action without the user's consent. This attack would not show disconnects and reestablishments within logs. An injection attack exploits in some unsecure way the application processes requests and queries. This attack would not show disconnects and reestablishments within logs.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "135 Q13",
+          "type": "multiple"
+        },
+        {
+          "id": 933,
+          "question": "What could happen with a compromised web server? (Select the three best options.)",
+          "options": [
+            "Gain control of the host",
+            "Steal data from the host",
+            "Gain further access to the network",
+            "Escalate privileges on the network"
+          ],
+          "answer": [
+            "Gain control of the host",
+            "Steal data from the host",
+            "Gain further access to the network"
+          ],
+          "scenario": "A system has sent an alert due to a large increase in attempted logins to a company's web server, including failed intrusion attempts. The webserver is actively under attack by a malicious actor.",
+          "explanation": "A compromised web server could allow the malicious actor complete control over the host, giving them a foothold within the network that could be difficult to overcome. The compromised web server would allow the malicious actor to steal data directly or send information to an off-site server. A compromised server provides a malicious actor with a foothold into a company's network from which they can launch further attacks or gain information about the network's security. A compromised web server would not allow malicious actors to escalate the privileges they maintain across the entire network.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "135 Q2",
+          "type": "multiple"
+        },
+        {
+          "id": 935,
+          "question": "What is the BEST explanation for how another user accessed the accounts?",
+          "options": [
+            "Installation of a key logger",
+            "Users sharing passwords",
+            "A botnet",
+            "A backdoor virus"
+          ],
+          "answer": "Installation of a key logger",
+          "scenario": "A hacker infiltrated a company's network and made a big show of removing files and causing network connection issues. After stopping the hacker and completing the cleanup, the IT department began noticing logs of users with multiple logins at varying times.",
+          "explanation": "An installed key logger, while everyone focused on the attacker's more significant malicious actions, is the most probable cause for compromised user accounts. Users sharing passwords is a threat to the entire network and would have been readily apparent before the hacker's attack. A backdoor virus is typically not one that captures login credentials. A hacker utilizes this type of virus to regain access to a network once the company thinks its foothold is gone. A botnet is a collection of compromised computers used or sold to another hacker. Hackers typically use botnets in distributed denial of service (DDoS) attacks, not for stealing user information.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "135 Q4",
+          "type": "single"
+        },
+        {
+          "id": 941,
+          "question": "What type of virus is the network administrator dealing with?",
+          "options": [
+            "Malware",
+            "Trojan",
+            "Ransomware",
+            "Rootkit"
+          ],
+          "answer": "Rootkit",
+          "scenario": "A network administrator runs down a complex virus infection on the company's network. The file the administrator is chasing gained SYSTEM-level access. It is also cleaning logs and uses variations on known file names to remain unfound.",
+          "explanation": "A rootkit is a virus that has gained SYSTEM-level access and uses these permissions to spread itself throughout the system and network while concealing its presence within the system. A trojan virus can become a rootkit if it can gain the correct permission, but the scenario does not discuss permissions. Malware is any malicious software, such as a virus, ransomware, trojan, or rootkit. It is a broad term and does not specifically describe the type of virus infection in this scenario. Ransomware is a virus that infects a computer and threatens to perform actions unless the user pays a ransom before a particular deadline.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "135 Q16",
+          "type": "single"
+        },
+        {
+          "id": 943,
+          "question": "What type of attack has the hacker achieved?",
+          "options": [
+            "Brute force",
+            "Password spraying",
+            "Dictionary",
+            "Offline"
+          ],
+          "answer": "Offline",
+          "scenario": "A hacker successfully exfiltrates a database of user passwords and attempts to gain access to it as the hacker can now go around the authentication system.",
+          "explanation": "An offline attack means the hacker has obtained a database of password hashes. The hacker can then perform attacks against this offline database in an attempt to compromise the encryption. Password spraying is a horizontal brute force online attack. In password spraying, the hacker chooses one or more common passwords and tries them in conjunction with multiple usernames. A brute force attack attempts every possible combination in the output space to match a captured hash and derive the plaintext that generated it. A dictionary attack occurs when there is a good chance of guessing the likely value of the plaintext, such as an uncomplicated password.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "135 Q22",
+          "type": "single"
+        },
+        {
+          "id": 942,
+          "question": "Analyzing their activities on the network provides what information? (Select the three best options.)",
+          "options": [
+            "Technique",
+            "Procedure",
+            "Tactic",
+            "Performance"
+          ],
+          "answer": [
+            "Technique",
+            "Procedure",
+            "Tactic"
+          ],
+          "scenario": "A system administrator has monitored several areas of the network and local systems that are out of their normal ranges. The administrator begins to believe they have caught a hacker on the network.",
+          "explanation": "A tactic is a high-level description of a threat behavior. Behaviors such as reconnaissance, persistence, and privilege escalation are examples of tactics. Analyzing tactics helps to figure out what to expect within an attack. A technique is an intermediate-level description of how a threat actor progresses through a tactic. For example, reconnaissance, such as active network scanning and email harvesting, are techniques an attacker may use. A procedure is a detailed description of how an attacker uses a technique. For example, a threat actor uses a particular tool to perform vulnerability scanning. Performance does not indicate what the malicious hacker will do or potentially can do on a network.",
+          "topic": "2.0 Threats, Vulnerabilities, and Mitigations",
+          "lesson": "135 Q21",
           "type": "multiple"
         }
       ]
@@ -2829,6 +3204,118 @@
           "topic": "3.0 Security Architecture",
           "lesson": "Imported multiple-choice questions from A.2 Security+ Final Assessment (source question 87)",
           "id": 926,
+          "type": "single"
+        },
+        {
+          "id": 954,
+          "question": "Which approach MOST effectively maintains the availability of their online services during such events?",
+          "options": [
+            "Developing a company-owned, local data center",
+            "Implementing Uninterruptible Power Supply (UPS) systems for local servers",
+            "Reinforcing physical server locations to withstand natural disasters",
+            "Transitioning to multicloud systems"
+          ],
+          "answer": "Transitioning to multicloud systems",
+          "scenario": "An online retailer seeks ways to bolster its disaster recovery strategy for its online sales platforms, aiming to minimize the risk of any interruptions during unexpected catastrophic events.",
+          "explanation": "Transitioning to multicloud systems is an effective approach to ensure maximum service availability during unforeseen catastrophic events. Implementing UPS systems for local servers can prevent downtime during short-term power disruptions. However, it may not be sufficient for longer-term outages or more severe disasters. Reinforcing physical server locations to withstand natural disasters could provide a level of protection, but it does not eliminate the risk of service interruption. Developing a company-owned, local data center could provide some benefits but is also costly and complex. Service availability is still vulnerable if the data center becomes subject to a local disaster.",
+          "topic": "3.0 Security Architecture",
+          "lesson": "A.2 Security+ Final Assessment2 Q9",
+          "type": "single"
+        },
+        {
+          "id": 957,
+          "question": "What is the first step the IT team should take to begin the recovery process?",
+          "options": [
+            "Attempt to negotiate with the attackers.",
+            "Start randomly selecting and restoring files from the backup.",
+            "Perform a full recovery test before beginning the actual recovery process.",
+            "Instantly initiate the restore process from the latest snapshot."
+          ],
+          "answer": "Perform a full recovery test before beginning the actual recovery process.",
+          "scenario": "After a massive ransomware attack on a multinational corporation, an IT team must restore operations from off-site backups, including data deduplication, snapshots, and encrypted data.",
+          "explanation": "Performing a full recovery test is a crucial first step. This step will help the IT team verify the backup data's integrity, assess how long the recovery might take, and identify any potential issues that might disrupt the recovery process. Negotiating with attackers is not recommended. Negotiating encourages criminal behavior and does not guarantee data recovery. Initiating a restore process from the latest snapshot may seem logical, but it should not be the first step. There could be hidden errors or incompatibilities that might lead to further issues if not discovered beforehand. Randomly selecting and restoring files is not an efficient or effective strategy for disaster recovery. The recovery should be systematic and prioritized based on the business needs.",
+          "topic": "3.0 Security Architecture",
+          "lesson": "A.2 Security+ Final Assessment2 Q16",
+          "type": "single"
+        },
+        {
+          "id": 967,
+          "question": "Analyze and select the statements that accurately distinguish the differences between Mean Time to Repair (MTTR) and Mean Time Between Failures (MTBF).",
+          "options": [
+            "MTTR is the amount of data loss that a system can sustain, measured in time. While MTBF is the longest period of time that a business function outage may occur without causing irrecoverable business failure.",
+            "MTTR refers to how long equipment will last until it is no longer operational. While the MTBF describes how long it would take to bring equipment back into operation.",
+            "MTTR describes how long it would take to bring equipment back into operation. While the MTBF refers to how long equipment will last until it is no longer operational.",
+            "MTBF is the amount of data loss that a system can sustain, measured in time. While MTTR is the longest period of time that a business function outage may occur for without causing irrecoverable business failure."
+          ],
+          "answer": "MTTR describes how long it would take to bring equipment back into operation. While the MTBF refers to how long equipment will last until it is no longer operational.",
+          "scenario": "",
+          "explanation": "Mean time to repair (MTTR) is a measure of the time taken to correct a fault so that the company can bring a system back to full operation. We can also describe this as the mean time to replace or recover. Mean time between failures (MTBF) represents the expected lifetime of a product. The recovery point objective (RPO) is the amount of data loss that a system can sustain, measured in time. Maximum tolerable downtime (MTD) is the longest period of time that a business function outage may occur without causing irrecoverable business failure.",
+          "topic": "3.0 Security Architecture",
+          "lesson": "A.2 Security+ Final Assessment2 Q35",
+          "type": "single"
+        },
+        {
+          "id": 985,
+          "question": "Which organizational policy does a cybersecurity analyst need to outline the procedures in case of a security breach or cyberattack? This policy includes steps for identifying, investigating, controlling, and mitigating the impact of incidents.",
+          "options": [
+            "Acceptable use policy (AUP)",
+            "Software Development Life Cycle (SDLC)",
+            "Disaster recovery policy",
+            "Information security policy"
+          ],
+          "answer": "Disaster recovery policy",
+          "scenario": "",
+          "explanation": "A disaster recovery policy is crucial for cybersecurity analysts. It provides a plan to quickly recover after a cyberattack or breach and minimize damage while restoring critical operations. This policy helps manage security incidents and protect the organization's information and resources. The acceptable use policy outlines the proper use of technology but doesn't provide guidance for handling security breaches. An information security policy ensures that all information technology users comply with security rules and guidelines. However, they do not explicitly outline the incident response procedures following a security breach or cyberattack. The Software Development Life Cycle (SDLC) policy governs software development and sets standards for efficiency, reliability, and security. It doesn't cover incident response or recovery from cyberattacks.",
+          "topic": "3.0 Security Architecture",
+          "lesson": "A.2 Security+ Final Assessment2 Q65",
+          "type": "single"
+        },
+        {
+          "id": 986,
+          "question": "What is the IT department actively creating to define the acceptable use of company resources, outline employee responsibilities, and maintain a secure environment?",
+          "options": [
+            "Information security policies",
+            "Incident response procedures",
+            "Project management plans",
+            "Network topology diagrams"
+          ],
+          "answer": "Information security policies",
+          "scenario": "The management of a medium-sized company actively protects sensitive data and prevents unauthorized access. To ensure compliance with industry regulations and safeguard critical assets, they are implementing a robust security framework. As part of this initiative, the IT department is actively drafting a comprehensive set of guidelines and rules to outline the acceptable use of company resources, including networks, computers, and data. The main objective is to create a secure environment by defining the responsibilities and expected behaviors of all employees regarding information security.",
+          "explanation": "The IT department is actively creating information security policies. These policies define the acceptable use of company resources, outline employee responsibilities, and maintain a secure environment. Employees must follow these guidelines to ensure the confidentiality, integrity, and availability of sensitive information. Project management plans focus specifically on managing projects and do not directly address defining acceptable resource use or outlining employee responsibilities for information security. Incident response procedures concentrate on handling and mitigating security incidents and do not directly relate to defining acceptable resource use or outlining employee responsibilities. Network topology diagrams visually represent network structures, but they do not have the role of defining acceptable resource use or outlining employee responsibilities for information security.",
+          "topic": "3.0 Security Architecture",
+          "lesson": "A.2 Security+ Final Assessment2 Q66",
+          "type": "single"
+        },
+        {
+          "id": 991,
+          "question": "What is the organization attempting to determine?",
+          "options": [
+            "Recovery Time Objective (RTO)",
+            "Mean Time Between Failures (MTBF)",
+            "Annualized Rate of Occurrence (ARO)",
+            "Mean Time To Repair (MTTR)"
+          ],
+          "answer": "Recovery Time Objective (RTO)",
+          "scenario": "An organization performs a business impact analysis to identify potential effects of business interruptions. It is trying to identify the maximum acceptable time its key business process can be down before it severely impacts operations.",
+          "explanation": "RTO defines the maximum time an organization can tolerate downtime of a particular business process or system before the impact becomes unacceptable. MTTR refers to the average time a device will take to recover from failure, not a concept directly resulting from a business impact analysis. MTBF is the expected amount of time a device or product will last in operation between failures and does not factor into the determination of acceptable downtime in a business impact analysis. ARO is a risk management term referring to the expected frequency of a risk occurring in a year.",
+          "topic": "3.0 Security Architecture",
+          "lesson": "A.2 Security+ Final Assessment2 Q78",
+          "type": "single"
+        },
+        {
+          "id": 994,
+          "question": "Which of the following criteria is MOST directly linked to the system's setup process and maintenance scheduling?",
+          "options": [
+            "Ease of deployment",
+            "Amount of training required for users",
+            "Aesthetics of the software's user interface",
+            "Patch availability"
+          ],
+          "answer": "Ease of deployment",
+          "scenario": "A security specialist is evaluating several new systems for potential integration into the company's network.",
+          "explanation": "Ease of deployment refers to how simple it is to install and set up a new system within an existing network. It directly impacts the system's setup process, as a system that is easier to deploy will typically require less time and resources to integrate. Patch availability is a crucial aspect of maintaining the security and functionality of a system. However, it does not directly impact the system's setup process. The amount of training required for users, while important, is not a direct tie to the system's setup process or maintenance scheduling. The aesthetics of the software's user interface do not directly impact the system's setup process or maintenance scheduling.",
+          "topic": "3.0 Security Architecture",
+          "lesson": "A.2 Security+ Final Assessment2 Q84",
           "type": "single"
         }
       ]
@@ -11381,6 +11868,374 @@
           "lesson": "Imported multiple-choice questions from A.2 Security+ Final Assessment (source question 84)",
           "id": 924,
           "type": "single"
+        },
+        {
+          "id": 928,
+          "question": "What is the primary objective of the containment phase in this cycle?",
+          "options": [
+            "To analyze the threat intelligence gathered during the incident",
+            "To isolate the attack to prevent further exploitation",
+            "To identify the type of incident and impacted resources",
+            "To fully restore affected systems from secure backups"
+          ],
+          "answer": "To isolate the attack to prevent further exploitation",
+          "scenario": "A global company has an incident response team for cybersecurity incidents threatening sensitive data and operations. An automated alert notifies the team of potential unauthorized access to a server that stores customer data. The team confirms the alert and begins the incident response process.",
+          "explanation": "During the containment phase, the main goal is to minimize the extent and effects of the incident. This phase includes separating the compromised systems, preventing any further unauthorized access, and halting the intruder from causing further damage. While identifying the type of incident and impacted resources is essential in incident response, it falls under the analysis phase, not containment. Fully restoring affected systems from secure backups is a part of the recovery phase, not the containment phase. Containment focuses on stopping the immediate impact of the incident and preventing its further spread. Analyzing threat intelligence gathered during the incident is part of the analysis phase, where the team assesses the nature of the incident and its severity.",
+          "topic": "4.0 Security Operations",
+          "lesson": "126 Q11",
+          "type": "single"
+        },
+        {
+          "id": 929,
+          "question": "Which tool would be MOST beneficial in collecting the metadata and statistics from the network traffic?",
+          "options": [
+            "Heartbeat message",
+            "Network monitor",
+            "Flow collector",
+            "SNMP trap"
+          ],
+          "answer": "Flow collector",
+          "scenario": "A company’s IT department has noticed irregularities in network usage and resource allocation.",
+          "explanation": "Flow collectors record metadata and statistics about network traffic, thereby identifying trends and patterns, detecting anomalies, and providing visualization tools that simplify the interpretation of traffic data. While network monitors can provide valuable information on the state of network appliances, they primarily focus on aspects like CPU/memory load status, disk capacity, network link utilization, and similar data. Simple Network Management Protocol (SNMP) traps inform a management system of notable events, such as port failures or excessive CPU utilization, primarily dealing with hardware issues rather than traffic pattern analysis. A heartbeat message indicates availability and does not directly analyze or interpret network traffic.",
+          "topic": "4.0 Security Operations",
+          "lesson": "126 Q13",
+          "type": "single"
+        },
+        {
+          "id": 930,
+          "question": "What should be the team's immediate action based on the incident response lifecycle?",
+          "options": [
+            "Analyze the alert and its context to determine if a genuine incident has occurred",
+            "Immediately disconnect the affected server from the network to isolate it",
+            "Wait for more alerts to confirm the incident before taking any action",
+            "Notify the executive decision-maker to authorize actions before proceeding"
+          ],
+          "answer": "Analyze the alert and its context to determine if a genuine incident has occurred",
+          "scenario": "A large organization's cybersecurity incident response team receives an alert indicating potential threat actor activity on one of its network servers.",
+          "explanation": "When receiving an alert, the first responder's immediate action is to determine whether a genuine incident has occurred. This action involves investigating the data reported and assessing the severity of the situation before taking further action. Waiting for more alerts to confirm the incident is not advisable. Immediate analysis is necessary to assess the severity of the situation and determine if it is a genuine incident. Immediately disconnecting the affected server from the network might disrupt business operations and hinder the investigation. The organization should analyze the incident before taking such drastic action. While important to involve the executive decision-maker in severe incidents, the first responder's role is to analyze the alert before escalating it to higher management.",
+          "topic": "4.0 Security Operations",
+          "lesson": "126 Q15",
+          "type": "single"
+        },
+        {
+          "id": 931,
+          "question": "What should the initial responder do first?",
+          "options": [
+            "Restore affected systems from secure backups to recover and eliminate the threat",
+            "Disconnect affected server from the network, isolating it from the production environment",
+            "Notify law enforcement authorities about the incident to initiate immediate action",
+            "Initiate threat hunting to find evidence of tactics, techniques, and procedures proactively"
+          ],
+          "answer": "Disconnect affected server from the network, isolating it from the production environment",
+          "scenario": "A cyber security analyst at a multinational corporation detects abnormal network activities that indicate a possible security breach. The analyst investigates and confirms that an unauthorized person has accessed sensitive customer information. The incident response team must act fast to contain the breach and stop further data loss.",
+          "explanation": "The first responder's primary goal is to contain the incident. Isolating the affected server from the network prevents further communication with the attacker and protects other systems from potential compromise. Notifying law enforcement might be necessary in certain situations, but the immediate focus should be on containment and minimizing the impact of the incident. While restoring affected systems from backups is an important step in the recovery phase, it should occur after containment to ensure the team has neutralized the threat. Threat hunting is a proactive approach to identifying potential threats before they become incidents. In this case, the team has already detected the incident, so immediate containment is the priority.",
+          "topic": "4.0 Security Operations",
+          "lesson": "126 Q19",
+          "type": "single"
+        },
+        {
+          "id": 932,
+          "question": "What is the significance of ensuring the evidence is a true copy of the system state at the time of the breach?",
+          "options": [
+            "It accelerates recovery by restoring the system to the state before the breach",
+            "It establishes the credibility and integrity of the evidence",
+            "It eliminates the need for documentation in the investigation",
+            "It prevents unauthorized user access to the investigation"
+          ],
+          "answer": "It establishes the credibility and integrity of the evidence",
+          "scenario": "A company's cybersecurity team investigates a potential data breach on its network by examining various data sources to gather evidence.",
+          "explanation": "It is essential to ensure that the evidence accurately represents the system state during the breach to maintain its credibility and integrity. It helps validate the authenticity of the evidence and aids in a successful investigation. Although ensuring a true copy of the system state does not primarily prevent unauthorized access to the investigation, it is crucial for maintaining the accuracy and reliability of the evidence. While restoring the system might be important for recovery, it does not address the importance of accurate evidence for legal proceedings. Documenting the investigation processes and tools is crucial for ensuring accuracy and accountability. It is not enough to rely solely on a replica of the system's state.",
+          "topic": "4.0 Security Operations",
+          "lesson": "126 Q25",
+          "type": "single"
+        },
+        {
+          "id": 955,
+          "question": "Which of the following options leverages encryption features to enable email verification by allowing the sender to sign emails using a digital signature?",
+          "options": [
+            "DomainKeys identified mail (DKIM)",
+            "Sender policy framework (SPF)",
+            "Domain-based message authentication, reporting and conformance (DMARC )",
+            "Endpoint detection and response (EDR)"
+          ],
+          "answer": "DomainKeys identified mail (DKIM)",
+          "scenario": "A cyber technician is enhancing application security capabilities for corporate email accounts following a breach.",
+          "explanation": "DomainKeys identified mail (DKIM) leverages encryption features to enable email verification by allowing the sender to sign emails using a digital signature. Domain-based message authentication, reporting and conformance (DMARC) checks to define rules for handling messages, such as moving messages to quarantine or spam, rejecting them outright, or tagging the message. Sender policy framework (SPF) is an email authentication method that helps detect and prevent sender address forgery, commonly used in phishing and spam emails. An endpoint detection and response (EDR) product's aim is not to prevent initial execution, but to provide real-time and historical visibility into the compromise, contain the malware within a single host, and facilitate remediation of the host to its original state.",
+          "topic": "4.0 Security Operations",
+          "lesson": "A.2 Security+ Final Assessment2 Q11",
+          "type": "single"
+        },
+        {
+          "id": 958,
+          "question": "Which team performs the offensive role in a penetration exercise?",
+          "options": [
+            "Purple team",
+            "Blue team",
+            "Red team",
+            "White team"
+          ],
+          "answer": "Red team",
+          "scenario": "",
+          "explanation": "The red team performs the offensive role to try to infiltrate the target. This team is one of two competing teams in a penetration testing exercise. The blue team performs a defensive role by operating, monitoring, and alerting controls. This team is one of two competing teams in a penetration testing exercise. The white team is responsible for setting the engagement rules and monitoring the penetration testing exercise. The purple team members act as facilitators during a purple team exercise. This type of exercise involves collaboration between red and blue teams during breaks throughout the training.",
+          "topic": "4.0 Security Operations",
+          "lesson": "A.2 Security+ Final Assessment2 Q19",
+          "type": "single"
+        },
+        {
+          "id": 962,
+          "question": "Which type of application vulnerability refers to an update that appears legitimate but contains harmful code, often used by cybercriminals to distribute malware or execute a cyberattack?",
+          "options": [
+            "Malicious update",
+            "Race conditions",
+            "Buffer overflow",
+            "Memory injection"
+          ],
+          "answer": "Malicious update",
+          "scenario": "",
+          "explanation": "A malicious update refers to an update that appears legitimate but contains harmful code, often used by cyber criminals to distribute malware or execute a cyber attack. Application race condition vulnerabilities refer to software flaws associated with the timing or order of events within a software program, which can cause undesirable or unpredictable outcomes through manipulation. Memory injection vulnerabilities refer to a type of security flaw where an attacker can introduce (inject) malicious code into a running application's process memory. To exploit a buffer overflow vulnerability, the attacker passes data that deliberately flood a space of temporary memory.",
+          "topic": "4.0 Security Operations",
+          "lesson": "A.2 Security+ Final Assessment2 Q26",
+          "type": "single"
+        },
+        {
+          "id": 965,
+          "question": "For the IT department, which of the following strategies MOST effectively mitigates the risks related to hardware and firmware security vulnerabilities?",
+          "options": [
+            "Allow unrestricted hardware modifications for all employees.",
+            "Restrict all software updates to once a year to minimize disruptions.",
+            "Rely solely on perimeter defenses such as firewalls and intrusion detection systems.",
+            "Regularly update firmware to the latest, most secure versions."
+          ],
+          "answer": "Regularly update firmware to the latest, most secure versions.",
+          "scenario": "A large corporation is assessing its cybersecurity practices by focusing on potential security risks linked to hardware and firmware within the company's extensive network of computer systems.",
+          "explanation": "Update firmware regularly to the latest, secure versions to mitigate potential security vulnerabilities. It ensures devices have the most recent security patches and bug fixes. Unrestricted hardware modifications can lead to security issues, such as unauthorized or malicious alterations. Although frequent software updates can be disruptive, restricting them to once a year would leave systems vulnerable to known exploitable flaws in the interim. Perimeter defenses such as firewalls and intrusion detection systems are crucial and used in combination with other security practices, such as regular updates and restricted hardware access, not as a standalone solution.",
+          "topic": "4.0 Security Operations",
+          "lesson": "A.2 Security+ Final Assessment2 Q32",
+          "type": "single"
+        },
+        {
+          "id": 970,
+          "question": "How do data inventories assist organizations in maintaining records of collected data?",
+          "options": [
+            "It is an established timeline that requires organizations to keep documentation.",
+            "It provides a comprehensive overview of the types of handled data.",
+            "It is the comprehensive assessment and evaluation of an organization's data protection practices.",
+            "It requires individuals or entities to announce their understanding of compliance obligations formally."
+          ],
+          "answer": "It provides a comprehensive overview of the types of handled data.",
+          "scenario": "",
+          "explanation": "Data inventories provide a comprehensive overview of the types of handled data, the purposes for processing, the legal basis, and the recipients of the data to ensure transparency and accountability. Data retention is another area impacted by privacy laws. Organizations must retain personal data only for as long as necessary to fulfill the intended purpose or as required by law. Attestation and acknowledgment require individuals or entities to formally acknowledge their understanding of compliance obligations and commitment to adhere to them through signed agreements, policy acknowledgments, and training activities. Due diligence in data protection describes the comprehensive assessment and evaluation of an organization's data protection practices and measures.",
+          "topic": "4.0 Security Operations",
+          "lesson": "A.2 Security+ Final Assessment2 Q38",
+          "type": "single"
+        },
+        {
+          "id": 972,
+          "question": "What primary strategy should the company use to ensure its systems can handle the upcoming event?",
+          "options": [
+            "Rigorous capacity planning process",
+            "Implementing a failover system",
+            "Installing a uninterruptible power supply (UPS)",
+            "Expansion of the infrastructure at the primary data center"
+          ],
+          "answer": "Rigorous capacity planning process",
+          "scenario": "A prominent e-commerce company experiencing significant business growth anticipates a sharp increase in website traffic during an upcoming annual sales event. The company is wary of potential system bottlenecks or downtimes that could disrupt sales and affect reputation.",
+          "explanation": "The goal of capacity planning is to ensure that the system can cope with growth in demand without exceeding its capacity. Uninterruptible Power Supplies (UPS) do not directly impact system performance or capacity to handle increased loads. Failover systems ensure that services remain available during a system failure but do not contribute to the system's overall processing power or bandwidth. Expanding the primary data center infrastructure might be part of the solution, but it is not a strategic approach to managing increased system loads, especially if the company only requires expansion at certain operation times. This would otherwise be costly.",
+          "topic": "4.0 Security Operations",
+          "lesson": "A.2 Security+ Final Assessment2 Q43",
+          "type": "single"
+        },
+        {
+          "id": 980,
+          "question": "Which centralized web-filtering technique groups websites into categories such as social networking, gambling, and webmail?",
+          "options": [
+            "Reputation-based filtering",
+            "Block rules",
+            "Content categorization",
+            "Uniform resource locators (URL) scanning"
+          ],
+          "answer": "Content categorization",
+          "scenario": "A cyber group is reviewing its web filtering capabilities after a recent breach.",
+          "explanation": "Content categorization classifies websites into categories such as social networking, gambling, adult content, webmail, and many others. Block rules stem from various factors such as the website's Uniform Resource Locators (URL), domain, Internet Protocol (IP) address, content category, or even specific keywords within the web content. Reputation-based filtering leverages continually updated databases that score websites based on their observed behavior and history. URL scanning is a method that protects web traffic as the proxy server examines the URLs requested by users and can block access to specific URLs known to host malicious content, are inappropriate, or violate the company's Internet usage policy.",
+          "topic": "4.0 Security Operations",
+          "lesson": "A.2 Security+ Final Assessment2 Q56",
+          "type": "single"
+        },
+        {
+          "id": 981,
+          "question": "What can the tech department present to the CEO as a viable option?",
+          "options": [
+            "Log data",
+            "Dashboards",
+            "Metadata",
+            "Network logs"
+          ],
+          "answer": "Dashboards",
+          "scenario": "A CEO asks the tech department to create a console that shows day-to-day incident response and summaries of information drawn from underlying data sources.",
+          "explanation": "An event dashboard provides a console to work from for day-to-day incident response and a summary of information drawn from the underlying data sources to support some work tasks. Generated by appliances such as routers, firewalls, switches, and access points, network logs will record the operation and status of the appliance itself, the system logs for the appliance, plus traffic and access logs recording network behavior. Metadata is the properties of data created by an application, stored on media, or transmitted over a network. Log data is a critical resource for investigating security incidents. Although kept and analyzed on each host individually, most organizations require better visibility into data sources and host monitoring.",
+          "topic": "4.0 Security Operations",
+          "lesson": "A.2 Security+ Final Assessment2 Q57",
+          "type": "single"
+        },
+        {
+          "id": 982,
+          "question": "What type of scanner are they looking to institute?",
+          "options": [
+            "Package monitoring",
+            "Network vulnerability scanner",
+            "Dynamic analysis",
+            "Credentialed scan"
+          ],
+          "answer": "Network vulnerability scanner",
+          "scenario": "The chief information officer (CIO) wants to expand the company's ability to accurately identify vulnerabilities across the company. The CIO wants to be able to scan client PCs, mobile devices, servers, routers, and switches.",
+          "explanation": "A network vulnerability scanner will allow the CIO to identify vulnerabilities for all the hosts connected to the company network, providing the most accurate picture. Package monitoring tracks and assesses the security of third-party software packages, libraries, and dependencies used within an organization to ensure that they are up-to-date and free from known vulnerabilities that malicious actors could exploit. A credentialed scan uses credentials, such as usernames and passwords, to take a deep dive during the vulnerability scan, producing more information while auditing the network. This process is not an application scan. Dynamic analysis is testing that examines code behavior during runtime. It helps identify potential security issues, potential performance issues, and other problems.",
+          "topic": "4.0 Security Operations",
+          "lesson": "A.2 Security+ Final Assessment2 Q58",
+          "type": "single"
+        },
+        {
+          "id": 983,
+          "question": "What is a challenge associated with requirements for ongoing support?",
+          "options": [
+            "It can result in poorly documented code, leading to instability and increased costs.",
+            "Poorly planned strategies can make systems difficult to maintain.",
+            "It can impact multiple areas of the organization, causing widespread problems.",
+            "It can quickly erode if the organization does not continue needed patches and updates."
+          ],
+          "answer": "It can quickly erode if the organization does not continue needed patches and updates.",
+          "scenario": "A tech subject matter expert (SME) is evaluating automation-related costs.",
+          "explanation": "Automation and orchestration require ongoing support to stay effective and secure. Automation and orchestration will quickly erode without support. While automation and orchestration provide numerous benefits, they can also present numerous challenges. A poorly planned or executed automation strategy can add complexity, making systems difficult to maintain. Single points of failure can impact multiple areas of the organization, causing widespread problems since no redundancy of operations exists. When organizations make haste decisions in technology, technical debt can result in poorly documented code or maintenance. Over time, technical debt can lead to system instability and increased costs.",
+          "topic": "4.0 Security Operations",
+          "lesson": "A.2 Security+ Final Assessment2 Q59",
+          "type": "single"
+        },
+        {
+          "id": 988,
+          "question": "What is one of the critical responsibilities of the IT department related to information security in this agency?",
+          "options": [
+            "Handling financial audits for the company",
+            "Organizing team-building activities",
+            "Managing employee onboarding and offboarding procedures",
+            "Conducting performance evaluations for employees"
+          ],
+          "answer": "Managing employee onboarding and offboarding procedures",
+          "scenario": "The IT department at a governmental agency ensures the organization's information security. When a new employee joins or leaves the organization, the department sets up and terminates the user accounts, grants and revokes appropriate access permissions, and provides and collects necessary resources. These procedures are critical for maintaining the security and integrity of the organization's data and systems.",
+          "explanation": "Onboarding is promptly setting up new employees' user accounts, granting appropriate access permissions, and providing necessary resources. Offboarding is disabling their accounts, revoking access, and ensuring the return of company assets after employees leave. While important for managing workforce performance, conducting performance evaluations for employees is not a primary responsibility of the IT department in terms of security measures. Handling financial audits for the company is not within the IT department's primary scope. While team-building activities may promote a positive work environment, they are not directly related to securing sensitive information and resources.",
+          "topic": "4.0 Security Operations",
+          "lesson": "A.2 Security+ Final Assessment2 Q70",
+          "type": "single"
+        },
+        {
+          "id": 995,
+          "question": "Which type of application vulnerability can refer to software flaws associated with the timing or order of events within a software program, which can cause undesirable or unpredictable outcomes through manipulation?",
+          "options": [
+            "Race conditions",
+            "Buffer overflow",
+            "Memory injection",
+            "Malicious update"
+          ],
+          "answer": "Race conditions",
+          "scenario": "",
+          "explanation": "Application race condition vulnerabilities refer to software flaws associated with the timing or order of events within a software program, which can cause undesirable or unpredictable outcomes through manipulation. Memory injection vulnerabilities refer to a type of security flaw where an attacker can introduce (inject) malicious code into a running application's process memory. To exploit a buffer overflow vulnerability, the attacker passes data that deliberately flood a space of temporary memory. A malicious update refers to an update that appears legitimate but contains harmful code, often used by cybercriminals to distribute malware or execute a cyberattack.",
+          "topic": "4.0 Security Operations",
+          "lesson": "A.2 Security+ Final Assessment2 Q86",
+          "type": "single"
+        },
+        {
+          "id": 996,
+          "question": "What kind of system would likely be the BEST fit for these conditions?",
+          "options": [
+            "Real-time operating system",
+            "Embedded systems",
+            "Linux operating system",
+            "Windows operating system"
+          ],
+          "answer": "Real-time operating system",
+          "scenario": "A business is engineering a mechanism that must respond to specific triggers without delay. This mechanism will integrate into a more substantial apparatus and operate with limited resources.",
+          "explanation": "A Real-time operating system (RTOS) is for real-time applications, typically without buffering delays. It is effective for high-priority tasks in systems with critical response times. The Windows operating system, while versatile, does not have a design built for real-time operations and cannot guarantee instant high-priority task processing. Although the Linux operating system has configurations for real-time operations, it is not inherently a real-time operating system and might not provide the predictable handling of tasks required. Embedded systems refers to a computer system with a dedicated function within a larger mechanical or electrical system. While an RTOS could be part of an embedded system, the term \"embedded systems\" does not inherently imply real-time operations.",
+          "topic": "4.0 Security Operations",
+          "lesson": "A.2 Security+ Final Assessment2 Q88",
+          "type": "single"
+        },
+        {
+          "id": 997,
+          "question": "What is the attacker doing to the organization?",
+          "options": [
+            "Sending unsolicited text messages or vCards to a discoverable device",
+            "Launching highly effective attacks using a peripheral device with malicious firmware",
+            "Compromising any active and unpatched system, regardless of whether discovery is enabled",
+            "Stealing information from someone else's phone by using an exploit in Bluetooth"
+          ],
+          "answer": "Stealing information from someone else's phone by using an exploit in Bluetooth",
+          "scenario": "A large hospital uses Bluetooth technology for short-range personal area networking. The organization has a security concern with bluesnarfing.",
+          "explanation": "Using an exploit in Bluetooth, bluesnarfing allows attackers to steal information from someone else's phone, circumventing the authentication mechanism and accessing sensitive information without the user's knowledge or consent. Sending unsolicited text messages or vCards to a discoverable device is bluejacking, where an attacker sends an unsolicited message or contact details. Connecting to malicious peripherals presents a risk of launching highly effective attacks using a peripheral device with malicious firmware. However, it is not specifically related to bluesnarfing. The BlueBorne exploit compromises any active and unpatched system, regardless of whether the system enables discovery, compromising Bluetooth-enabled systems.",
+          "topic": "4.0 Security Operations",
+          "lesson": "Enhance Application Security Capabilities Q3",
+          "type": "single"
+        },
+        {
+          "id": 998,
+          "question": "What security function would accomplish this need?",
+          "options": [
+            "Simple Network Management Protocol",
+            "File Transfer Protocol",
+            "Data loss prevention",
+            "Secure File Transfer Protocol"
+          ],
+          "answer": "Data loss prevention",
+          "scenario": "A large hospital uses email for communication. However, to ensure security, they want to ensure that sensitive information is not transmitted out.",
+          "explanation": "Data loss prevention is a software solution that detects and prevents sensitive information from being stored on unauthorized systems or transmitted over unauthorized networks. Simple Network Management Protocol is an application protocol used for monitoring and managing network devices. SNMP works over UDP ports 161 and 162 by default. File Transfer Protocol is an application protocol used to transfer files between network hosts. It is an insecure transfer protocol and should not be used in the transfer of sensitive data. Secure File Transfer Protocol is a secure version of File Transfer Protocol that uses a Secure Shell tunnel as an encryption method to transfer data. It would not protect against the transfer of that data in the first place, but rather, it would protect the data as it is transferred.",
+          "topic": "4.0 Security Operations",
+          "lesson": "Enhance Application Security Capabilities Q4",
+          "type": "single"
+        },
+        {
+          "id": 999,
+          "question": "Which security technique would be MOST suitable for securing computing resources?",
+          "options": [
+            "Indoor Positioning System to determine the physical position of employees' devices",
+            "Add geofencing to create a virtual boundary around the company's office premises",
+            "GPS tagging to add geographical identification metadata to a company’s sensitive files",
+            "Applying context-aware authentication to restrict resource access based on user location"
+          ],
+          "answer": "Applying context-aware authentication to restrict resource access based on user location",
+          "scenario": "A large multinational company wants to enhance the security of its computing resources. It considers applying common security techniques to protect sensitive data and prevent unauthorized access.",
+          "explanation": "Context-aware authentication uses factors such as the user's location and device attributes to determine whether to grant access to certain resources. Context-aware authentication ensures that authorized users can only access sensitive data and resources when they are in a trusted location. GPS tagging adds geographical identification metadata to media files, but it does not serve as a security technique for securing computing resources. Geofencing is a useful security technique that limits the functionality of devices when they exceed a specific boundary, primarily used for physical access control. Indoor Positioning System determines the physical position of devices within indoor environments. However, it is not a primary security technique for securing computing resources.",
+          "topic": "4.0 Security Operations",
+          "lesson": "Enhance Application Security Capabilities Q9",
+          "type": "single"
+        },
+        {
+          "id": 1000,
+          "question": "Which technique should the analyst consider applying to mitigate potential risks associated with NFC technology?",
+          "options": [
+            "Apply encryption to NFC data to prevent eavesdropping and on-path attacks.",
+            "Enable NFC chip reading for all devices to enhance connectivity options.",
+            "Use NFC for direct payment transactions without the need for mobile wallet apps.",
+            "Increase the NFC signal range to improve communication."
+          ],
+          "answer": "Apply encryption to NFC data to prevent eavesdropping and on-path attacks.",
+          "scenario": "A cybersecurity analyst is implementing security measures for Near Field Communication (NFC) usage in the organization's mobile devices.",
+          "explanation": "Applying encryption to NFC data is crucial to prevent eavesdropping and on-path attacks, ensuring that sensitive information remains secure during communication. Enabling an NFC chip to read all devices may increase connectivity options, but it can also expose them to potential risks and unauthorized access. Using NFC for direct payment transactions without mobile wallet apps is not recommended, as mobile wallets provide an additional layer of security by transmitting one-time tokens instead of actual credit card information. Increasing the NFC range to improve communication capabilities in crowded areas may lead to unintended exposure of NFC signals, making the devices more susceptible to attacks from a distance. It is best to keep the NFC range limited to ensure security. Copyright © CompTIA, Inc. All rights reserved.",
+          "topic": "4.0 Security Operations",
+          "lesson": "Enhance Application Security Capabilities Q13",
+          "type": "single"
+        },
+        {
+          "id": 1001,
+          "question": "Which action would be MOST effective in dealing with this issue?",
+          "options": [
+            "Adjust the parameters of the rule or lower the alert level",
+            "Increase the sensitivity of the alerting system to counter the increased alert volume",
+            "Ignore all alerts generated by this particular rule until the team finds the time to resolve the problem",
+            "Remove the problematic rule entirely from the SIEM system"
+          ],
+          "answer": "Adjust the parameters of the rule or lower the alert level",
+          "scenario": "A cybersecurity analyst notices that a certain rule in the Security Information and Event Management (SIEM) system is generating a high volume of dashboard notifications, making it difficult for the team to manage.",
+          "explanation": "Modifying the rule's parameters or lowering its alert level can effectively handle a rule generating too many alerts. The company can decrease the rule's sensitivity by refining the parameters to trigger only under more specific conditions. Ignoring alerts could potentially lead to the company missing significant security incidents. The alerts should be fine-tuned rather than ignored. Removing a rule completely could lead to overlooking crucial security events. Instead of deleting a rule, the company should alter the rule or its alert level. Enhancing sensitivity would likely lead to even more alerts, exacerbating the situation. The goal should be to reduce the number of irrelevant alerts, not to increase them.",
+          "topic": "4.0 Security Operations",
+          "lesson": "Explain Incident Response and Monitoring Concepts Q6",
+          "type": "single"
         }
       ]
     },
@@ -14914,6 +15769,458 @@
           "lesson": "Imported multiple-choice questions from A.2 Security+ Final Assessment (source question 75)",
           "id": 916,
           "type": "single"
+        },
+        {
+          "id": 945,
+          "question": "What documents should the employee review? (Select the two best options.)",
+          "options": [
+            "Change management",
+            "SDLC",
+            "AUP",
+            "Information security policy"
+          ],
+          "answer": [
+            "AUP",
+            "Information security policy"
+          ],
+          "scenario": "A new employee reviews key guidance given by the department manager. The manager reminds the new employee to pay close attention to the directive that concerns all electronic usage.",
+          "explanation": "An acceptable use policy (AUP) outlines how individuals may use network and computer systems by defining what constitutes acceptable behavior by users. AUPs typically address browsing behavior, appropriate content, software downloads, and handling sensitive information. Information security policies are policies an organization creates to ensure that all information technology users comply with rules and guidelines related to the security of the information stored within the environment or the organization's sphere of authority. Change management policies govern the requests, reviews, approvals, and implementation of IT systems and software changes. Software Development Life Cycle (SDLC) policies govern software development within an organization. They do not govern what employees can do with electronics.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "145 Q12",
+          "type": "multiple"
+        },
+        {
+          "id": 946,
+          "question": "When is the BEST time to implement changes for an international organization? (Select the two best options.)",
+          "options": [
+            "Off-peak times",
+            "Maintenance windows",
+            "Peak times",
+            "After the workday"
+          ],
+          "answer": [
+            "Off-peak times",
+            "Maintenance windows"
+          ],
+          "scenario": "A properly implemented change plan helps keep business operations moving forward. Restarts, dependencies, and downtime go hand-in-hand with change management.",
+          "explanation": "If an organization needs to perform a change during the day, it should take place during off- peak times, broadcasting the intention to all the users. Maintenance windows consist of scheduled times when services can safely restart to allow for all changes made per the change management policy. While after the workday is possibly \"off-peak time,\" many users work past a normal quitting time to focus on critical tasks. Any changes should avoid peak times when users are at their most active work schedule, and implementing a change would cause the most disruption.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "145 Q14",
+          "type": "multiple"
+        },
+        {
+          "id": 947,
+          "question": "To ensure guidelines remain relevant, what must the company do to them? (Select the two best options.)",
+          "options": [
+            "Periodic assessments",
+            "Regular review",
+            "Continually update them",
+            "Mandatory employee review"
+          ],
+          "answer": [
+            "Periodic assessments",
+            "Regular review"
+          ],
+          "scenario": "A company helps employees get up to speed quickly with correct documentation. Guidelines can be beneficial in accomplishing this goal.",
+          "explanation": "Regular review of guidelines is essential to ensure that the documentation remains practical and relevant. Periodic assessments and updates to guidelines allow organizations to adapt them to changing technologies, business operations, emerging threats, and evolving industry standards. Mandating employees to review the guidelines will not help keep the guidelines current and relevant. Guidelines are there to offer recommendations. Guidelines should follow a periodic review and updates, but not continually update them. Attempting to update the guidelines continuously will result in far too many changes for employees to keep up with.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "145 Q25",
+          "type": "multiple"
+        },
+        {
+          "id": 948,
+          "question": "Which of the following standards would be MOST suitable for the company's needs?",
+          "options": [
+            "NIST Special Publication 800-63",
+            "PCI DSS",
+            "ISO/IEC 27018",
+            "ISO/IEC 27001"
+          ],
+          "answer": "ISO/IEC 27001",
+          "scenario": "A large multinational company adopts a new standard to enhance its information security management system. The company operates across different regions, so the chosen standard must be internationally recognized. The company wants the standard to provide a comprehensive framework to ensure adequate and proportionate security controls.",
+          "explanation": "ISO/IEC 27001 provides a comprehensive framework for an information security management system (ISMS), ensuring adequate and proportionate security controls. It is suitable for international use and ideal for a multinational company. The ISO/IEC 27018 standard also pertains to information security, protecting personally identifiable information (PII) in public clouds. Although it may also be useful, it is less comprehensive than ISO/IEC 27001 for general information security management. The NIST Special Publication 800-63 standard is a U.S. government standard for digital identity guidelines. While it may offer useful guidelines for parts of the company's security needs, it is less comprehensive than ISO/IEC 27001. Payment Card Industry Data Security Standard (PCI DSS) is more specific for organizations that handle credit card transactions from major card providers.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "145 Q27",
+          "type": "single"
+        },
+        {
+          "id": 949,
+          "question": "Which risk management strategy is the company primarily implementing?",
+          "options": [
+            "Risk transference",
+            "Risk acceptance",
+            "Risk mitigation",
+            "Risk avoidance"
+          ],
+          "answer": "Risk transference",
+          "scenario": "A technology company experiences several security vulnerabilities with its online application, leading to customer complaints and legal threats. In response, the board of directors decides to outsource the maintenance and associated liabilities of the application to a third party.",
+          "explanation": "The company is transferring the risk to a third party by outsourcing the maintenance and associated liabilities of the application, which is an example of risk transference. Risk avoidance involves halting the risky activity. In this scenario, the company is not stopping its operations but shifting the maintenance to a third party. Risk acceptance means the company has not deployed countermeasures because it has deemed the risk level acceptable. This is different from the company actively seeking a solution, indicating it is not accepting the risk. Mitigation involves implementing controls to lessen the likelihood or impact of risk. Here, the company is not implementing controls but transferring the task to a third party.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "155 Q24",
+          "type": "single"
+        },
+        {
+          "id": 950,
+          "question": "In the upcoming training, what role would the human resource team portray along with the IT team to simulate the recent attack and its experiences?",
+          "options": [
+            "Blue team",
+            "Purple team",
+            "White team",
+            "Red team"
+          ],
+          "answer": "Blue team",
+          "scenario": "A recent attack on the company involving a threat actor from another country prompted the security team to host regular penetration testing exercises. The attack involved the IT team and human resources because the breach occurred on an employee desktop.",
+          "explanation": "The blue team is one of two competing teams in a penetration testing exercise. The blue team performs a defensive role by operating, monitoring, and alerting controls. The purple team members act as facilitators during a purple team exercise. This type of exercise involves collaboration between red and blue teams during breaks throughout the training. The white team is responsible for setting the engagement rules and monitoring the penetration testing exercise. The red team is one of two competing teams in a penetration testing exercise. The red team performs the offensive role to try to infiltrate the target.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q4",
+          "type": "single"
+        },
+        {
+          "id": 951,
+          "question": "How should the organization MOST accurately classify this data?",
+          "options": [
+            "Confidential",
+            "Internal",
+            "Public",
+            "Restricted"
+          ],
+          "answer": "Confidential",
+          "scenario": "An organization is trying to determine the appropriate level of access controls to put in place for a certain type of data. This data includes company financial reports that should only be accessible to the senior management team.",
+          "explanation": "Confidential data is a classification that typically includes sensitive information to which only a select group of individuals should have access. An organization can freely share public data with the public without causing harm to the organization. It would not be appropriate to classify company financial reports as public data. Restricted data could potentially apply in this scenario. However, \"restricted\" is typically a broader term, not necessarily data intended for a small group of individuals as described here. Internal data refers to information accessible and available only within an organization, not to the external public. However, based on the scenario, the organization should limit access to the financial reports only to the senior management team.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q5",
+          "type": "single"
+        },
+        {
+          "id": 952,
+          "question": "Which type of application vulnerability refers to a security flaw where an attacker can introduce malicious code into a running application's process RAM?",
+          "options": [
+            "Race conditions",
+            "Malicious update",
+            "Memory injection",
+            "Buffer overflow"
+          ],
+          "answer": "Memory injection",
+          "scenario": "A software engineer presents a series of training events on vulnerabilities associated with applications.",
+          "explanation": "Memory injection vulnerabilities refer to a security flaw where an attacker can introduce or inject malicious code into a running application's process memory. To exploit a buffer overflow vulnerability, the attacker passes data that deliberately flood a temporary memory space. Application race condition vulnerabilities refer to software flaws associated with the timing or order of events within a software program, which can cause undesirable or unpredictable outcomes through manipulation. A malicious update refers to an update that appears legitimate but contains harmful code, often used by cyber criminals to distribute malware or execute a cyber attack.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q6",
+          "type": "single"
+        },
+        {
+          "id": 953,
+          "question": "What level of influence does the GDPR have regarding legal implications?",
+          "options": [
+            "National",
+            "Global",
+            "Regional",
+            "Local"
+          ],
+          "answer": "Global",
+          "scenario": "An organization evaluates the legal implications of failing to protect privacy data after experiencing a breach.",
+          "explanation": "The General Data Protection Regulation (GDPR) in the European Union has had a substantial impact globally by setting high privacy and data protection standards. At the regional level, privacy data protections consist of local environments offering regional guidance on data privacy concerns. At the national level, data protection authorities enforce privacy laws, oversee compliance, and have the authority to investigate data breaches, taking legal action against organizations that fail to protect privacy data or violate individuals' privacy rights. At the local level, data privacy protection gets limited to smaller areas, enforced only within a confined jurisdiction, and not at regional, national, or global levels.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q8",
+          "type": "single"
+        },
+        {
+          "id": 959,
+          "question": "Which steps should the organization primarily focus on during the procurement process?",
+          "options": [
+            "Purchasing the most cost-effective assets regardless of their security features",
+            "Choosing solutions based solely on the most popular market trends",
+            "Prioritizing assets with strong security features and ongoing vendor support",
+            "Selecting assets based only on the recommendations of their existing staff"
+          ],
+          "answer": "Prioritizing assets with strong security features and ongoing vendor support",
+          "scenario": "A healthcare organization is gearing up to procure significant new technology and software to enhance its service delivery. The firm must ensure its acquisition strategy aligns with its current cybersecurity structure.",
+          "explanation": "The correct approach is to prioritize assets with strong security features and ongoing vendor support. This approach ensures that the organization maintains a robust cybersecurity posture and can effectively respond to potential product vulnerabilities. Purchasing the most cost-effective assets, regardless of their security features, could expose the organization to cybersecurity threats. Choosing solutions based solely on the most popular market trends may not be effective if these solutions do not align with the organization's specific needs and existing cybersecurity infrastructure. Staff recommendations can provide valuable insights, but the organization should not rely solely on them during procurement. It is important to consider other factors, such as security features, vendor support, and compatibility with existing infrastructure.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q22",
+          "type": "single"
+        },
+        {
+          "id": 961,
+          "question": "Which of the following actions should the system administrator prioritize to ensure the cryptographic systems are well-configured and avoid possible security gaps? (Select the two best options.)",
+          "options": [
+            "Implement network segmentation.",
+            "Conduct periodic penetration testing.",
+            "Adopt biometric authentication.",
+            "Regularly update and patch cryptographic software."
+          ],
+          "answer": [
+            "Conduct periodic penetration testing.",
+            "Regularly update and patch cryptographic software."
+          ],
+          "scenario": "A system administrator at a software company is reviewing the company's security procedures. The company uses various cryptographic techniques for data security and is currently concerned about potential misconfigurations that could compromise data integrity and confidentiality. The system administrator aims to mitigate the risk of misconfigurations in the company's cryptographic settings that could lead to potential security vulnerabilities.",
+          "explanation": "Regular updates and patching of cryptographic software ensure potential vulnerabilities get addressed promptly. Periodic penetration testing helps identify potential weaknesses in cryptographic configurations and other security mechanisms. Network segmentation is a network security practice that separates a network into multiple segments, each of which can be separately controlled and secured. While useful for overall security, it does not directly impact the configuration of cryptographic systems. Biometric authentication is a security process that relies on the unique biological characteristics of individuals to verify their identity. It is a user authentication but does not directly affect the configuration of cryptographic systems.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q25",
+          "type": "multiple"
+        },
+        {
+          "id": 964,
+          "question": "What are the benefits associated with automation and orchestration implementation? (Select the three best options.)",
+          "options": [
+            "It assists in funding needed orchestration and automation at a higher price point.",
+            "It assists staff members from experiencing fatigue and enhances opportunities for retention.",
+            "It enhances efficiency by enabling repetitive tasks to perform with mitigation of risk to human error consistently.",
+            "It coordinates automated tasks across different systems and software tools for quicker response."
+          ],
+          "answer": [
+            "It assists staff members from experiencing fatigue and enhances opportunities for retention.",
+            "It enhances efficiency by enabling repetitive tasks to perform with mitigation of risk to human error consistently.",
+            "It coordinates automated tasks across different systems and software tools for quicker response."
+          ],
+          "scenario": "A technical consultant reviews available automation and orchestration options for security operations after realizing employees' actions place the network architecture at risk.",
+          "explanation": "Automation and orchestration offer many benefits to security operations. They enhance efficiency by enabling users to quickly and consistently perform repetitive tasks, reducing the burden on security teams and minimizing the likelihood of human error. Orchestration enhances the impact of automation by coordinating automated tasks across different systems and software tools, reducing detection and reaction times. Automation supports staff retention initiatives by reducing fatigue from repetitive tasks. Automation practices can free staff to perform more rewarding work and increase job satisfaction. Cost is not a benefit but more of a challenge as the initial cost of implementing automation and orchestration can be high, including costs associated with acquiring and developing appropriate tools and training staff to use them effectively.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q30",
+          "type": "multiple"
+        },
+        {
+          "id": 966,
+          "question": "Which policy outlines the processes to follow after a security breach or cyberattack occurs and includes procedures for identifying, investigating, controlling, and mitigating the impact of incidents?",
+          "options": [
+            "Disaster recovery policy",
+            "Incident response policy",
+            "Change management policy",
+            "Acceptable use policy (AUP)"
+          ],
+          "answer": "Incident response policy",
+          "scenario": "",
+          "explanation": "The incident response policy is vital in managing cybersecurity incidents effectively. It outlines the steps to follow after a security breach or cyberattack, providing guidelines for identifying, investigating, controlling, and mitigating the impact of such incidents. The acceptable use policy (AUP) outlines acceptable uses for network and computer systems, defining appropriate user behavior and addressing consequences for noncompliance. The disaster recovery policy details steps required to recover from catastrophic events like natural disasters or significant security breaches, aiming to restore operations quickly and efficiently. A change management policy governs the request, review, approval, and implementation of IT systems and software changes, including documentation requirements.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q33",
+          "type": "single"
+        },
+        {
+          "id": 968,
+          "question": "What benefit does the certification concept offer when evaluating appropriate disposal/decommissioning?",
+          "options": [
+            "It refers to policies and practices governing the storage and preservation of information within the organization for a set period of time.",
+            "It is often based on legal, regulatory, or operational requirements.",
+            "It ensures that organizations maintain compliance with relevant regulations and minimize breach risks.",
+            "It refers to the documentation and verification of the data sanitization or destruction process."
+          ],
+          "answer": "It refers to the documentation and verification of the data sanitization or destruction process.",
+          "scenario": "A security specialist is drafting a memorandum on secure data destruction for the organization after a recent breach.",
+          "explanation": "Certification refers to documenting and verifying the data sanitization or destruction process. Data retention, not certification, refers to the policies and practices governing the storage and preservation of information within an organization for a specified period. Data retention policies are often based on legal, regulatory, or operational requirements and dictate when and how organizations should securely delete or destroy data. Proper data retention practices ensure that organizations maintain compliance with relevant regulations, optimize storage resources, and minimize the risk of data breaches or unauthorized access to sensitive information during the disposal and decommissioning process.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q36",
+          "type": "single"
+        },
+        {
+          "id": 973,
+          "question": "Considering the need for responsiveness, which technology should the company consider using?",
+          "options": [
+            "Virtual private cloud (VPC)",
+            "Serverless platforms and software-defined networking (SDN)",
+            "Infrastructure as code (IaC)",
+            "Microservices"
+          ],
+          "answer": "Serverless platforms and software-defined networking (SDN)",
+          "scenario": "A company is deploying a software service to monitor traffic and enforce security policies in its cloud environment.",
+          "explanation": "Serverless platforms allow the company to focus on application development by managing the underlying infrastructure, while SDN helps in efficient traffic monitoring and security policy enforcement. While IaC is ideal for automated and consistent deployment and management of infrastructure, it does not inherently provide traffic monitoring or security policy enforcement. Furthermore, IaC may not ensure system responsiveness. Although microservices support modular and independent application development, they do not directly address traffic monitoring, security policy enforcement, or system responsiveness requirements. Traditional VPC offerings provide some level of security in a cloud environment but may lack the flexibility, scalability, and efficiency offered by serverless platforms. Additionally, they do not inherently offer effective traffic monitoring or system responsiveness.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q44",
+          "type": "single"
+        },
+        {
+          "id": 975,
+          "question": "According to the IT manager's new plan, which of the following would be the primary responsibility of a system owner in the context of cybersecurity?",
+          "options": [
+            "Implementing a disaster recovery plan",
+            "Prosecuting individuals who perpetrate cyberattacks",
+            "Conducting network penetration tests",
+            "Establishing the security controls for systems"
+          ],
+          "answer": "Establishing the security controls for systems",
+          "scenario": "The newly appointed IT manager of a growing e-commerce company has initiated a security review to ensure compliance with industry standards. This process includes defining clear roles and responsibilities for data and system owners to optimize the organization's security posture.",
+          "explanation": "System owners are primarily responsible for defining, implementing, and maintaining appropriate security controls for the systems under their authority. Specialized cybersecurity professionals perform penetration tests rather than system owners. These tests involve simulating cyber attacks to identify and address security vulnerabilities. Although system owners play a role in disaster recovery, this task is generally the responsibility of a disaster recovery team or a business continuity team. These teams design and implement strategies to ensure business operations can continue after a disaster. Law enforcement agencies and legal professionals manage legal actions against cybercriminals, not system owners. System owners should focus on improving system security and mitigating potential threats.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q46",
+          "type": "single"
+        },
+        {
+          "id": 976,
+          "question": "What kind of reporting is taking place?",
+          "options": [
+            "Internal compliance reporting",
+            "External compliance reporting",
+            "Data retention policy enforcement",
+            "Privacy impact assessment"
+          ],
+          "answer": "External compliance reporting",
+          "scenario": "A healthcare provider is modernizing its data storage solutions to comply with health information privacy laws. The chief information security officer (CISO) must ensure that sending data access logs to healthcare regulatory authorities is in a specific format.",
+          "explanation": "External compliance reporting involves preparing and sending compliance-related information, such as data access logs, to external regulatory authorities. Internal compliance reporting is for internal review and refinement of processes. It is not concerned with preparing logs for regulatory authorities. Data retention policy enforcement refers to the rules guiding how long an organization holds onto different data types. While essential, this does not directly relate to preparing logs for submission to regulatory authorities. Privacy impact assessment evaluates how personal data processes ensure the protection of privacy. It does not relate to preparing data access logs for submission to regulatory authorities.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q48",
+          "type": "single"
+        },
+        {
+          "id": 978,
+          "question": "According to the data classifications, how should the organization categorize this data?",
+          "options": [
+            "Public data",
+            "Proprietary data",
+            "Confidential data",
+            "Restricted data"
+          ],
+          "answer": "Public data",
+          "scenario": "A governmental organization is preparing to release census data that includes the total population, age distribution, and employment rates.",
+          "explanation": "Public data refers to information that has no restrictions on viewing. The governmental organization's census data, which presents no risk to the organization if disclosed, fits this definition. Confidential data is highly sensitive and meant for viewing only by approved persons within the organization and possibly by trusted third parties under a non-disclosure agreement (NDA). Proprietary information or intellectual property is information the company creates and owns, typically about the products or services that it makes or performs. Restricted data refers to sensitive information that requires stringent controls and limited access due to its highly confidential nature. Restricted data does not fit the description of the census data intended to be publicly released.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q51",
+          "type": "single"
+        },
+        {
+          "id": 989,
+          "question": "What type of penetration testing will the outside source use on this new software?",
+          "options": [
+            "Environmental variables",
+            "Partially known environment",
+            "Unknown environment",
+            "Known environment"
+          ],
+          "answer": "Unknown environment",
+          "scenario": "A software company has completed in-house testing and auditing and is bringing in an outside source to attempt to compromise the new software. The project head wants to ensure that the MOST realistic testing goes against the software.",
+          "explanation": "In an unknown environment, the contractor has no information about the software and performs extensive reconnaissance to attempt an attack on the software as an external threat would. Known environment, the contractor has all the information about the software and uses this to compromise the application. This process is an example of an insider threat to the software. In a partially known environment test, the contractor has some information about the software but will still need to perform reconnaissance. Environmental variables related to vulnerability analysis refer to the systems and software a company has currently in use. Age and diversity, as well as complexity, are all variables. This process is not a software test.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q72",
+          "type": "single"
+        },
+        {
+          "id": 990,
+          "question": "What is the purpose of establishing ROE in a penetration testing engagement?",
+          "options": [
+            "To allow penetration testers unrestricted access to all systems and data within the organization",
+            "To ensure the penetration test results are shared with external parties to strengthen collaboration",
+            "To define the scope of the assessment, testing methods, and timeframe for conducting the test",
+            "To eliminate all security vulnerabilities identified during the testing process"
+          ],
+          "answer": "To define the scope of the assessment, testing methods, and timeframe for conducting the test",
+          "scenario": "In a cybersecurity firm, the IT department is preparing for a penetration testing engagement to assess the organization's security posture. The team has decided to conduct an external penetration test on the company's public-facing web applications and networks. The primary goal is to identify vulnerabilities and potential entry points for attackers. To ensure a smooth testing process and avoid misunderstandings, the IT team has collaborated with the company's management and relevant stakeholders to establish the assessment's rules of engagement (ROE).",
+          "explanation": "Establishing rules of engagement (ROE) in a penetration testing engagement is essential to define the assessment's scope, testing methods, and timeframe. The IT team uses ROE to prevent unintended disruptions to critical services and ensure a smooth testing process. Although collaboration is important, the primary purpose of ROE is to establish the parameters and scope of the testing. During the penetration test, ROE imposes limitations on accessing certain resources to prevent unauthorized access to sensitive information or systems. The main goal of penetration testing is to identify vulnerabilities, not eliminate them. The focus is on discovering weaknesses for remediation rather than fixing them during the assessment.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q73",
+          "type": "single"
+        },
+        {
+          "id": 992,
+          "question": "What MFA philosophy uses knowledge factors and includes passphrases to gain access to systems?",
+          "options": [
+            "Something you have",
+            "Something you know",
+            "Somewhere you are",
+            "Something you are"
+          ],
+          "answer": "Something you know",
+          "scenario": "A cyber engineer conducts a multi-factor authentication (MFA) assessment of an organization's authentication security.",
+          "explanation": "\"Something you know\" means the information used for authentication is from something one can recall, such as a passphrase or username/password combination. \"Something you have\" means the account holder possesses something that no one else does, such as a smart card, key fob, or smartphone that can generate or receive a cryptographic token. \"Something you are\" refers to a biometric or inherence factor. A biometric factor uses physiological identifiers, such as a fingerprint or facial scan, or behavioral identifiers, such as how someone moves (gait). \"Somewhere you are\" means the system applies a location-based factor to an authentication decision. Location-based authentication measures some statistics about where you are.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q79",
+          "type": "single"
+        },
+        {
+          "id": 993,
+          "question": "Which of the following explanations MOST accurately demonstrates the primary purpose of including an NDA in the contract with the cloud service provider?",
+          "options": [
+            "To specify the expected service quality and support responsiveness",
+            "To protect the confidentiality of the company's data and proprietary information",
+            "To ensure compliance with industry regulations and standards",
+            "To outline the vendor's responsibilities for incident response and recovery"
+          ],
+          "answer": "To protect the confidentiality of the company's data and proprietary information",
+          "scenario": "The IT department in a technology company is finalizing an agreement with a cloud service provider to host sensitive customer data. The company's legal team is drafting the contract, which includes a service level agreement (SLA) and a non-disclosure agreement (NDA).",
+          "explanation": "Integrating an NDA into the contract protects the company's sensitive data and unique proprietary knowledge. This agreement forms a legal foundation that keeps this information secure and prevents unauthorized entities from inadvertently or maliciously disclosing it. In contrast to the NDA, the SLA sets out the expected level of service that we expect the vendor to deliver, including standards for uptime and the speed of support responses. This ensures that the vendor meets our high service standards. The NDA maintains the data's confidentiality and protects it from potential breaches. The NDA strengthens our focus on confidentiality and establishes strong data protection measures.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q82",
+          "type": "single"
+        },
+        {
+          "id": 1002,
+          "question": "What type of penetration test is the team about to conduct?",
+          "options": [
+            "Physical penetration testing",
+            "Offensive penetration testing",
+            "Integrated penetration testing",
+            "Defensive penetration testing"
+          ],
+          "answer": "Offensive penetration testing",
+          "scenario": "A cybersecurity team at an organization prepares to carry out an assessment that aims to mimic potential attackers' tactics, techniques, and procedures (TTPs) to identify vulnerabilities and weaknesses in the organization's digital systems.",
+          "explanation": "Offensive penetration testing is a proactive and controlled approach to simulate real-world cyberattacks on an organization's systems, networks, and applications to identify vulnerabilities, weaknesses, and potential attack vectors that malicious actors could exploit. Defensive penetration testing evaluates an organization's overall resilience against cyber threats, not actively trying to find vulnerabilities as an attacker might. Physical penetration testing involves assessing an organization's physical security practices and controls, such as access controls, surveillance, and perimeter defenses. While integrated penetration testing can include offensive penetration testing, the scenario specifically describes an offensive penetration test.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "Explain Risk Management Processes Q13",
+          "type": "single"
+        },
+        {
+          "id": 1004,
+          "question": "What factors should the company primarily consider while defining such training programs?",
+          "options": [
+            "The roles performed by the employees",
+            "The personal interests of the employees",
+            "The length of service of the employees",
+            "The job titles of the employees"
+          ],
+          "answer": "The roles performed by the employees",
+          "scenario": "A software development company recognizes that some of its employees are vulnerable to phishing attacks. To address this, the company plans to set up a training program.",
+          "explanation": "Employees may perform different roles and have different security training, education, or awareness requirements in each role. Therefore, focusing on job roles rather than job titles is essential in setting up effective security training programs. Job titles might not accurately reflect an employee's roles, responsibilities, and security training needs. While it may be useful to consider personal interests to enhance engagement, this should not be the primary factor in defining security training programs. While the length of service might influence an employee's experience or familiarity with security issues, it is not a primary factor in determining the training needs for specific roles.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "Summarize Data Protection and Compliance Concepts Q18",
+          "type": "single"
+        },
+        {
+          "id": 1005,
+          "question": "Which action would MOST effectively reduce the risks associated with the unauthorized use of such devices?",
+          "options": [
+            "Replacing all Ethernet cables with shielded versions",
+            "Implementing a strict removable media policy",
+            "Increasing the frequency of employee cybersecurity training",
+            "Regularly updating the company's firewall settings"
+          ],
+          "answer": "Implementing a strict removable media policy",
+          "scenario": "A company evaluates its security policies to prevent potential data leakage and malware infection through portable storage devices.",
+          "explanation": "Implementing a strict policy for portable storage device usage involves defining and enforcing specific rules regarding devices like Universal Serial Bus (USB) drives, external hard drives, and other portable storage devices. Regularly updating firewall settings, while important, does not fully protect against the risks associated with the unauthorized use of portable storage devices. Increasing the frequency of employee cybersecurity training is a broader approach and does not enforce any restrictions or controls over the use of such devices. Replacing all Ethernet cables with shielded versions helps to reduce electromagnetic interference and may improve the security of data in transit within the company’s local network. However, this does not protect against removable media incidents. Copyright © CompTIA, Inc. All rights reserved.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "Summarize Data Protection and Compliance Concepts Q22",
+          "type": "single"
+        },
+        {
+          "id": 1003,
+          "question": "Which two methods are MOST effective for securing this company's data?",
+          "options": [
+            "Encryption and hashing",
+            "Tokenization and masking",
+            "Obfuscation and segmentation",
+            "Permission restrictions and geographic restrictions"
+          ],
+          "answer": "Encryption and hashing",
+          "scenario": "A company is prioritizing the security of its sensitive financial information. With a diverse team of remote and in-office staff, the IT security team must ensure that this data is secure, whether on a server in the data center, sent via email to international partners, or actively used by an authorized user on the corporate network.",
+          "explanation": "Encryption transforms data into ciphertext to prevent unauthorized access. Hashing produces a fixed- length string of bits from data which is used to prove integrity. Tokenization replaces sensitive data with non-sensitive placeholders, making it less ideal for data in transit. Masking involves hiding specific data within a field but leaves exposed data at risk. Obfuscation makes data unclear to the reader but does not necessarily secure it. Segmentation helps protect data at rest by limiting exposure but does not secure the data itself. Permission restrictions do not inherently secure the data when transmitted. Geographic restrictions limit where data is accessible, but it does not secure it in its stored state.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "Summarize Data Protection and Compliance Concepts Q15",
+          "type": "single"
+        },
+        {
+          "id": 1006,
+          "question": "How does classification assist in ensuring the organization is effectively managing and protecting its resources while maintaining accountability? (Select the best three options.)",
+          "options": [
+            "It establishes a clear chain of accountability.",
+            "It enables consistent and repeatable activity.",
+            "It involves organizing assets based on their value and sensitivity.",
+            "It enables effective prioritization for maintenance."
+          ],
+          "answer": [
+            "It enables consistent and repeatable activity.",
+            "It involves organizing assets based on their value and sensitivity.",
+            "It enables effective prioritization for maintenance."
+          ],
+          "scenario": "A tech department must develop asset protection standards for the organization after several laptop computers went missing from a storage bank.",
+          "explanation": "Asset classification is essential to a well-structured asset management process, ensuring that organizations effectively manage and protect their resources while maintaining accountability. Asset classification involves organizing assets based on their value, sensitivity, or criticality to the organization. Asset classification enables the consistent and repeatable application of required security controls. Asset classification enables effective prioritization for maintenance and updates and appropriate budget allocation. Not considered asset classification, asset ownership involves designating specific individuals or teams within the organization as responsible for particular assets to establish a clear chain of accountability for asset security, maintenance, and ongoing management.",
+          "topic": "5.0 Security Program Management and Oversight",
+          "lesson": "A.2 Security+ Final Assessment2 Q67",
+          "type": "multiple"
         }
       ]
     }
