@@ -352,6 +352,7 @@ type AppState = {
   score: number
   finished: boolean
   timedOut: boolean
+  finishReason: 'completed' | 'stopped' | 'timed-out' | null
   durationSeconds: number | null
   endsAt: number | null
 }
@@ -368,6 +369,7 @@ let state: AppState = {
   score: 0,
   finished: false,
   timedOut: false,
+  finishReason: null,
   durationSeconds: null,
   endsAt: null,
 }
@@ -635,6 +637,7 @@ function startQuiz(sectionNames: string[]) {
     score: 0,
     finished: false,
     timedOut: false,
+    finishReason: null,
     durationSeconds: null,
     endsAt: null,
   }
@@ -660,6 +663,7 @@ function startTimedTest() {
     score: 0,
     finished: false,
     timedOut: false,
+    finishReason: null,
     durationSeconds: TIMED_TEST_DURATION_SECONDS,
     endsAt: now + TIMED_TEST_DURATION_SECONDS * 1000,
   }
@@ -683,6 +687,7 @@ function startFlashcards() {
     score: 0,
     finished: false,
     timedOut: false,
+    finishReason: null,
     durationSeconds: null,
     endsAt: null,
   }
@@ -723,6 +728,7 @@ function startConcepts() {
     score: 0,
     finished: false,
     timedOut: false,
+    finishReason: null,
     durationSeconds: null,
     endsAt: null,
   }
@@ -746,6 +752,7 @@ function startStudyGuide() {
     score: 0,
     finished: false,
     timedOut: false,
+    finishReason: null,
     durationSeconds: null,
     endsAt: null,
   }
@@ -1206,7 +1213,7 @@ function startTimer() {
 
     if (getRemainingSeconds() <= 0) {
       state.timedOut = true
-      finishQuiz()
+      finishQuiz('timed-out')
     } else {
       updateTimerDisplay()
     }
@@ -1251,16 +1258,82 @@ function compareQuestionsForStudy(a: Question, b: Question): number {
   )
 }
 
+function getSelectedAnswers(question: Question, selectedIndexes: number[]): string[] {
+  return selectedIndexes
+    .map((index) => question.options[index])
+    .filter((answer): answer is string => Boolean(answer))
+}
+
+function getResultTitle(): string {
+  if (state.finishReason === 'timed-out' || state.timedOut) return 'Time is up'
+  if (state.finishReason === 'stopped') return 'Test Stopped'
+  return 'Quiz Complete!'
+}
+
+function getResultSummary(answeredCount: number, skippedCount: number): string {
+  if (state.finishReason === 'stopped') {
+    return `Stopped early after ${answeredCount} answered and ${skippedCount} skipped.`
+  }
+
+  if (state.finishReason === 'timed-out' || state.timedOut) {
+    return `Time expired with ${answeredCount} answered and ${skippedCount} skipped.`
+  }
+
+  return `${answeredCount} answered and ${skippedCount} skipped.`
+}
+
+function renderQuestionResult(question: Question, index: number): string {
+  const response = state.responses[index]
+  const selectedAnswers = response ? getSelectedAnswers(question, response.selectedIndexes) : []
+  const correctAnswers = getCorrectAnswers(question)
+  const correctIndexes = correctAnswers.map((answer) => question.options.indexOf(answer))
+  const isSkipped = !response?.answered
+  const isCorrect = !isSkipped && indexesMatch(response.selectedIndexes, correctIndexes)
+  const selectedText = selectedAnswers.length > 0 ? selectedAnswers.join(', ') : 'No answer selected'
+  const correctText = correctAnswers.join(', ')
+  const resultClass = isSkipped ? 'skipped' : isCorrect ? 'correct' : 'wrong'
+  const resultLabel = isSkipped ? 'Skipped' : isCorrect ? 'Correct' : 'Incorrect'
+  const supportingLabel = question.lesson && question.lesson !== question.topic ? question.lesson : ''
+
+  return `
+    <article class="result-item ${resultClass}">
+      <div class="result-item-header">
+        <span class="result-number">Question ${index + 1}</span>
+        <span class="result-pill ${resultClass}">${resultLabel}</span>
+      </div>
+      <p class="result-topic">${escapeHtml(question.topic)}</p>
+      ${supportingLabel ? `<p class="result-lesson">${escapeHtml(supportingLabel)}</p>` : ''}
+      ${question.scenario ? `<p class="result-scenario">${escapeHtml(question.scenario)}</p>` : ''}
+      <h2 class="result-question">${escapeHtml(question.question)}</h2>
+      <dl class="result-answer-grid">
+        <div>
+          <dt>Your answer</dt>
+          <dd>${escapeHtml(selectedText)}</dd>
+        </div>
+        <div>
+          <dt>Correct answer</dt>
+          <dd>${escapeHtml(correctText)}</dd>
+        </div>
+      </dl>
+      ${question.explanation ? `<p class="result-explanation">${escapeHtml(question.explanation)}</p>` : ''}
+    </article>
+  `
+}
+
 function renderFinished(app: HTMLDivElement) {
   stopTimer()
   const total = questions.length
   const pct = Math.round((state.score / total) * 100)
+  const answeredCount = state.responses.filter((response) => response.answered).length
+  const skippedCount = total - answeredCount
+  const reviewHtml = questions.map((question, index) => renderQuestionResult(question, index)).join('')
   app.innerHTML = `
     <div class="quiz-container question-container finished">
-      <h1>${state.timedOut ? 'Time is up' : 'Quiz Complete!'}</h1>
+      <h1>${getResultTitle()}</h1>
       <p class="completed-section">${state.selectedSection}</p>
       <div class="score-circle ${pct >= 70 ? 'pass' : 'fail'}">${state.score}/${total}</div>
       <p class="score-label">${pct}% correct</p>
+      <p class="result-summary">${escapeHtml(getResultSummary(answeredCount, skippedCount))}</p>
       <div class="feedback">
         ${pct === 100 ? 'Perfect score!' : pct >= 70 ? 'Good job!' : 'Keep practicing!'}
       </div>
@@ -1268,6 +1341,13 @@ function renderFinished(app: HTMLDivElement) {
         <button class="btn secondary-btn choose-section-btn">Choose Section</button>
         <button class="btn restart-btn">Retry Quiz</button>
       </div>
+      <section class="result-review" aria-labelledby="result-review-heading">
+        <div class="result-review-header">
+          <h2 id="result-review-heading">Question Review</h2>
+          <span>${answeredCount} answered · ${skippedCount} skipped</span>
+        </div>
+        ${reviewHtml}
+      </section>
     </div>
   `
   app.querySelector('.restart-btn')!.addEventListener('click', () => {
@@ -1283,6 +1363,7 @@ function renderFinished(app: HTMLDivElement) {
       score: 0,
       finished: false,
       timedOut: false,
+      finishReason: null,
       endsAt:
         state.mode === 'timed-test' && state.durationSeconds !== null
           ? now + state.durationSeconds * 1000
@@ -1333,10 +1414,11 @@ function renderFlashcardsFinished(app: HTMLDivElement) {
   })
 }
 
-function finishQuiz() {
+function finishQuiz(reason: 'completed' | 'stopped' | 'timed-out' = 'completed') {
   stopTimer()
   if (state.mode === 'flashcards' || state.mode === 'concepts') {
     state.finished = true
+    state.finishReason = reason
     render()
     return
   }
@@ -1346,6 +1428,8 @@ function finishQuiz() {
     const correctIndexes = getCorrectAnswers(question).map((answer) => question.options.indexOf(answer))
     return indexesMatch(response.selectedIndexes, correctIndexes) ? score + 1 : score
   }, 0)
+  state.finishReason = reason
+  state.timedOut = reason === 'timed-out'
   state.finished = true
   render()
 }
@@ -1536,7 +1620,10 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
           <span class="score">${isTimedTest ? `Answered: ${answeredCount}` : `Score: ${state.score}`}</span>
           ${remainingSeconds !== null ? `<span class="timer">Time: ${formatTime(remainingSeconds)}</span>` : ''}
         </div>
-        <button class="header-section-btn" type="button">Choose Section</button>
+        <div class="quiz-header-actions">
+          <button class="header-section-btn done-test-btn" type="button">Done</button>
+          <button class="header-section-btn choose-section-header-btn" type="button">Choose Section</button>
+        </div>
       </div>
       <p class="section-label">${escapeHtml(q.topic)}</p>
       ${supportingLabel ? `<p class="lesson-label">${escapeHtml(supportingLabel)}</p>` : ''}
@@ -1556,11 +1643,18 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
     </div>
   `
 
-  app.querySelector('.header-section-btn')!.addEventListener('click', () => {
+  app.querySelector('.choose-section-header-btn')!.addEventListener('click', () => {
     stopTimer()
     state.selectedSection = null
     questions = []
     render()
+  })
+
+  app.querySelector('.done-test-btn')!.addEventListener('click', () => {
+    if (!response.answered && response.selectedIndexes.length > 0) {
+      response.answered = true
+    }
+    finishQuiz('stopped')
   })
 
   app.querySelector('.back-btn')?.addEventListener('click', () => {
@@ -1590,7 +1684,7 @@ function renderQuestion(app: HTMLDivElement, q: Question) {
       if (state.currentIndex < questions.length - 1) {
         state.currentIndex++
       } else {
-        finishQuiz()
+        finishQuiz('completed')
         return
       }
       render()
